@@ -360,6 +360,18 @@ app.get('/about', (_req, res) => {
         </ul>
       </article>
 
+      <article class="card col-12 tide">
+        <span class="badge link">Contact</span>
+        <h2>How to initiate contact via Telegram</h2>
+        <ol>
+          <li>Add <strong>@toms_alpha_claw_bot</strong> on Telegram and send a first message to start the handshake.</li>
+          <li>Alpha will return a response message with a pairing/access code.</li>
+          <li>Send that exact response message + code to <strong>Tom</strong>.</li>
+          <li>Tom approves the request, then your access is enabled.</li>
+        </ol>
+        <p class="meta">Access is manually approved by Tom; sharing the exact handshake response avoids delays.</p>
+      </article>
+
       <article class="card col-12 moss">
         <h2>Iterative by design</h2>
         <p>This system is intentionally evolving. Alpha ships in measured increments, hardens what works, and updates architecture as operational reality changes. The goal is continuous improvement with clear evidence, not a "finished" static endpoint.</p>
