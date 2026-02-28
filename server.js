@@ -417,6 +417,49 @@ app.get('/about', (_req, res) => {
         </ol>
       </article>
 
+      <article class="card col-6 signal">
+        <h2>Control files that govern behavior</h2>
+        <ul>
+          <li><code>SOUL.md</code> — identity, ethos, boundaries, and definition-of-done posture.</li>
+          <li><code>IDENTITY.md</code> + <code>USER.md</code> — operator identity and human-context alignment.</li>
+          <li><code>AGENTS.md</code> — execution protocol, subagent-first rules, Beads discipline.</li>
+          <li><code>BEADS.md</code> — task source-of-truth and lifecycle cadence requirements.</li>
+          <li><code>HEARTBEAT.md</code> — deterministic operations loop and scheduler contract.</li>
+          <li><code>ARCHITECTURE.md</code> — system layers, runtime topology, and escalation model.</li>
+          <li><code>TOOLS.md</code> — environment-specific capabilities and operational lanes.</li>
+          <li><code>MEMORY.md</code> — durable high-signal context and key decisions.</li>
+        </ul>
+      </article>
+
+      <article class="card col-6 tide">
+        <h2>Execution guarantees (Beads + workers)</h2>
+        <ul>
+          <li><strong>Intake metadata required:</strong> requester, source channel/chat/message for traceability.</li>
+          <li><strong>Comment cadence required:</strong> start, in-flight progress, blocker (if any), completion evidence.</li>
+          <li><strong>Validation gate:</strong> no completion reply without test/command/log proof and state reconciliation.</li>
+          <li><strong>Worker timeout:</strong> >30 minutes on one task triggers stall handling or takeover.</li>
+          <li><strong>Orphan prevention:</strong> in-progress tasks require active claim/session metadata.</li>
+          <li><strong>Escalation path:</strong> subagent → main-agent → Tom.</li>
+        </ul>
+      </article>
+
+      <article class="card col-6 moss">
+        <h2>Heartbeat runtime specifics</h2>
+        <ul>
+          <li><strong>Primary cadence:</strong> 30-minute holistic heartbeat lane.</li>
+          <li><strong>Self-heal lane:</strong> gateway continuity watchdog every 5 minutes.</li>
+          <li><strong>Daily sync lane:</strong> full backup/sync at midnight.</li>
+          <li><strong>Within each run:</strong> queue triage, watchdog/security gates, worker enforcement, reconciliation, and sync.</li>
+          <li><strong>Noise control:</strong> blocker digest only when state changed.</li>
+          <li><strong>Evergreen singleton:</strong> exactly one canonical evergreen release-watch task in progress.</li>
+        </ul>
+      </article>
+
+      <article class="card col-12 signal">
+        <h2>Tool use pattern in real operations</h2>
+        <p>Alpha combines multiple tools in a deterministic chain: communication APIs (Telegram/Discord), shell/script automation, browser control for web workflows, web research/search, GitHub CLI, Docker runtime management, Cloudflare tunnel/access management, and subagent orchestration. The system favors script-backed actions when reliability matters, and records evidence before closing loops.</p>
+      </article>
+
       <article class="card col-12 moss">
         <h2>Iterative by design</h2>
         <p>This stack is intentionally fluid and improving: build fast, validate, reconcile, and harden. Architecture updates are grounded in operational evidence, with public transparency for safe artifacts and strict controls for privileged paths.</p>
