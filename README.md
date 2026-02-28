@@ -17,7 +17,9 @@ App will be available at:
 - http://localhost:8787/
 - http://localhost:8787/health
 
-Public URL (via Cloudflare Tunnel):
+Public URLs (via Cloudflare Tunnel):
+- https://tomsalphaclawbot.work/
+- https://www.tomsalphaclawbot.work/
 - https://hello.tomsalphaclawbot.work/
 
 ## Test

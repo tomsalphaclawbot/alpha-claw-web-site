@@ -18,4 +18,4 @@ services:
       - hello-world-webapp
     volumes:
       - ./cloudflared-config.yml:/etc/cloudflared/config.yml:ro
-      - /Users/openclaw/.cloudflared/bc572fda-891e-4aa3-8c5f-8a3aa7f02c70.json:/etc/cloudflared/creds.json:ro
+      - /Users/openclaw/.cloudflared/19a93ee7-94c6-41f1-907d-4ba05568694d.json:/etc/cloudflared/creds.json:ro
