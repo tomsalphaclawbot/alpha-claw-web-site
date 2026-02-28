@@ -3,6 +3,11 @@
 ## Objectives and Success Metrics
 - Objective: Launch a public marketing site that clearly explains Alpha Claw, captures interest, and provides a reliable status surface.
 - Objective: Provide a clean, branded landing experience beyond the current plain-text root.
+- Objective: Tell the public story of Alpha and visible progress with a concise timeline and updates.
+- Objective: Publish safe open-source snapshots (versioned config/docs) to demonstrate transparency without exposing sensitive details.
+- Objective: Curate links to public projects and experiments.
+- Objective: Provide a playground/sandbox area for experiments and evergreen work.
+- Objective: Adopt a creative, distinctive brand chosen by Alpha.
 - Objective: Maintain high uptime and fast load times from day one.
 - Success Metric: >= 60% of visits reach at least one section beyond the hero within 30 days.
 - Success Metric: < 1.5s LCP on mobile (P75) and < 200ms TTFB on origin.
@@ -22,6 +27,9 @@
 - `/about` About Alpha Claw
 - `/features` Features and benefits
 - `/pricing` Pricing or “Coming soon” placeholder
+- `/projects` Public projects and links
+- `/progress` Story, timeline, and updates
+- `/playground` Sandbox for experiments and evergreen work
 - `/faq` Frequently asked questions
 - `/contact` Contact form or mailto
 - `/status` Service status (can proxy to `/health` or show last checks)
@@ -32,8 +40,12 @@
 
 ### MVP
 - Static marketing pages: Home, About, Features, FAQ, Contact, Legal, Status.
+- Public story and progress section on Home with a concise timeline.
+- Public projects page with curated outbound links.
+- Playground/sandbox page for experiments and evergreen work.
+- Safe open-source snapshots: versioned config/docs repository or public folder with changelog.
 - Simple contact form or mailto with anti-spam measures.
-- Basic branding: logo, colors, typography, and a favicon.
+- Creative branding selected by Alpha: logo, colors, typography, favicon, and visual motif.
 - Analytics: pageview tracking and basic event tracking for CTA clicks.
 - SEO: title/description tags, open graph, sitemap.xml, robots.txt.
 - Performance: static assets optimized and cached.
@@ -43,11 +55,14 @@
 - Newsletter or waitlist flow with email capture and double opt-in.
 - Admin-friendly content updates (lightweight CMS or markdown-based system).
 - Monitoring dashboard improvements on `/status` with historical uptime.
+- Expand open-source snapshots with release notes and version tags.
+- Establish a monthly progress update cadence.
 
 ### Phase 3
 - Full marketing funnel: gated content, A/B testing, lifecycle email journeys.
 - Multi-language support.
 - Self-serve product docs and onboarding hub.
+- Community contributions or public roadmap integrations.
 
 ## Technical Architecture Recommendations
 - Continue Express server for routing, but add a static site renderer or template engine.
@@ -61,18 +76,22 @@
 
 ### Milestone 1: Discovery and Content Definition
 - Define value proposition and key messaging.
-- Create a simple brand kit: logo, colors, typography.
+- Create a creative brand kit: logo, colors, typography, visual motif.
 - Draft content for each page in MVP.
+- Define public story, timeline, and progress update format.
+- Define scope and safety rules for open-source snapshots.
 
 ### Milestone 2: Site Structure and Templates
 - Implement base layout, navigation, and footer.
 - Build templates for Home, About, Features, FAQ, Contact, Status, Legal pages.
+- Add templates for Projects, Progress, and Playground pages.
 - Add SEO tags and social preview metadata.
 
 ### Milestone 3: Integrations and Polish
 - Add analytics tracking and CTA events.
 - Add contact form handling or mailto workflow.
 - Optimize performance: image compression, caching headers.
+- Add open-source snapshots section and versioning metadata.
 
 ### Milestone 4: QA and Launch
 - Accessibility pass and cross-device testing.
@@ -82,6 +101,10 @@
 ## Risk and Mitigation
 - Risk: Content delays block build.
 - Mitigation: Use placeholder copy with clear review checkpoints.
+- Risk: Oversharing sensitive info in public story or snapshots.
+- Mitigation: Define a “safe-to-share” checklist and review before publishing.
+- Risk: Playground content becomes stale or confusing.
+- Mitigation: Maintain a short evergreen list and archive experiments quarterly.
 - Risk: Form abuse or spam.
 - Mitigation: Use honeypot fields, rate limiting, and CAPTCHA if needed.
 - Risk: Performance regressions after adding media.
@@ -99,6 +122,8 @@
 - Run Lighthouse for performance and accessibility.
 - Validate /health and /status.
 - Enable CDN caching for assets.
+- Validate public story, projects, and playground content for clarity and safety.
+- Publish initial open-source snapshot with version tag.
 
 ## Post-Launch Checklist
 - Monitor traffic, errors, and form submissions daily for 2 weeks.
@@ -106,6 +131,7 @@
 - Collect feedback from first visitors.
 - Ship 1-2 iteration fixes based on data.
 - Establish a monthly content update cadence.
+- Review playground and snapshots quarterly for relevance.
 
 ## Prioritized Backlog
 
