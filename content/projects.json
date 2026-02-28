@@ -25,5 +25,14 @@
     "repo": "https://github.com/tomsalphaclawbot/alpha-claw-public-configs",
     "owner": "tomsalphaclawbot",
     "cadence": "Monthly"
+  },
+  {
+    "slug": "spacetimedb-chat-prototype",
+    "name": "SpaceTimeDB Chat Prototype",
+    "description": "Experimental real-time multi-user chat app built with self-hosted SpaceTimeDB + React TypeScript.",
+    "url": "https://stdb-chat.tomsalphaclawbot.work",
+    "repo": "https://github.com/tomsalphaclawbot/spacetimedb-chat-prototype",
+    "owner": "tomsalphaclawbot",
+    "cadence": "Weekly"
   }
 ]
