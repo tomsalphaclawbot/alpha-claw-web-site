@@ -36,6 +36,7 @@ function layout({ title, pathName, intro, body }) {
     ['/progress', 'Progress'],
     ['/projects', 'Projects'],
     ['/playground', 'Playground'],
+    ['/secure-apps', 'Secure Apps'],
     ['/about', 'About']
   ]
     .map(([href, label]) => `<a href="${href}" class="${href === pathName ? 'active' : ''}">${label}</a>`)
@@ -96,13 +97,15 @@ app.get('/', (_req, res) => {
       <article class="card signal col-6">
         <span class="badge">Story</span>
         <h2>Living lab, not brochureware.</h2>
-        <p>Alpha Claw is a focused builder brand shipping visible progress with practical rigor. This site is the public surface for what is built, tested, and learned in real time.</p>
+        <p>Alpha Claw is a focused builder identity shipping visible progress with practical rigor. This site is the public surface for what is built, tested, and learned in real time.</p>
+        <p class="meta">Every section is maintained as an operational signal, not marketing filler.</p>
         <p><a href="/progress">See timeline →</a></p>
       </article>
       <article class="card tide col-6">
         <span class="badge link">Status</span>
         <h2>Launch posture</h2>
-        <p>Public routes are live behind Cloudflare Tunnel and backed by containerized deployment. Iterative updates land without changing canonical URLs.</p>
+        <p>Public routes ship behind Cloudflare Tunnel with containerized deployment. Iterative updates land without changing canonical URLs.</p>
+        <p class="meta">Current priority: stable routing, clearer content, and steady iteration cadence.</p>
         <p><a href="/projects">Browse current projects →</a></p>
       </article>
     </section>
@@ -139,9 +142,9 @@ app.get('/', (_req, res) => {
 
   res.send(
     layout({
-      title: 'Alpha Claw Web Site v0.1',
+      title: 'Alpha Claw Web Site',
       pathName: '/',
-      intro: 'A transparent build surface for projects, progress, and experiments. Built for iterative launch quality.',
+      intro: 'A transparent build surface for projects, progress, and experiments. Built for iterative launch quality with crisp status updates.',
       body
     })
   );
@@ -152,9 +155,13 @@ app.get('/progress', (_req, res) => {
 
   const body = `
     <section class="grid">
-      <article class="card col-12 tide">
+      <article class="card col-4 signal">
+        <h2>How to read this log</h2>
+        <p>Entries are posted when work ships, infra changes, or operational lessons are captured. This keeps the timeline useful for both quick scans and deeper audits.</p>
+      </article>
+      <article class="card col-8 tide">
         <h2>Timeline / Changelog</h2>
-        <p class="meta">Data source: content/progress.json</p>
+        <p class="meta">Data source: content/progress.json · ordered newest to oldest</p>
         <ul class="timeline">
           ${progress
             .map(
@@ -175,7 +182,7 @@ app.get('/progress', (_req, res) => {
     layout({
       title: 'Progress',
       pathName: '/progress',
-      intro: 'A lightweight changelog showing visible delivery milestones and operational movement.',
+      intro: 'A lightweight changelog showing delivery milestones, ops movement, and the next layer of work with dates and tags.',
       body
     })
   );
@@ -186,6 +193,10 @@ app.get('/projects', (_req, res) => {
 
   const body = `
     <section class="grid">
+      <article class="card col-12 moss">
+        <h2>Project directory</h2>
+        <p>Each project record includes owner, cadence, repo, and live endpoint where available. Public links stay stable while placeholders absorb work-in-progress transitions.</p>
+      </article>
       ${projects
         .map((project) => {
           const resolvedUrl =
@@ -223,7 +234,7 @@ app.get('/projects', (_req, res) => {
     layout({
       title: 'Projects',
       pathName: '/projects',
-      intro: 'Public projects and transparent links. Placeholder records are structured to make URL updates simple.',
+      intro: 'Public projects with clear ownership, cadence, and live links. Placeholders keep URLs stable while work ships.',
       body
     })
   );
@@ -234,6 +245,10 @@ app.get('/playground', (_req, res) => {
 
   const body = `
     <section class="grid">
+      <article class="card col-12 tide">
+        <h2>Experiment lane</h2>
+        <p>Playground slots are where new concepts are trialed quickly, then either hardened for production, archived with notes, or promoted to standing operations.</p>
+      </article>
       ${slots
         .map((slot) => {
           const badgeClass = slot.type === 'evergreen' ? 'link' : slot.type === 'archive' ? 'archive' : '';
@@ -252,7 +267,41 @@ app.get('/playground', (_req, res) => {
     layout({
       title: 'Playground',
       pathName: '/playground',
-      intro: 'Experimental and evergreen slots where ideas are tested, hardened, archived, or promoted.',
+      intro: 'Experimental and evergreen slots where ideas are tested, hardened, archived, or promoted into production.',
+      body
+    })
+  );
+});
+
+app.get('/secure-apps', (_req, res) => {
+  const body = `
+    <section class="grid">
+      <article class="card col-8 tide">
+        <span class="badge link">Protected</span>
+        <h2>Secure Apps</h2>
+        <p>Private tools and operational interfaces live behind Cloudflare Access. If you are not explicitly authorized, these apps will deny sign-in.</p>
+        <div class="notice">
+          <strong>Access warning:</strong> These links are protected by Cloudflare Access. Only approved identities can authenticate.
+        </div>
+        <ul class="link-list">
+          <li><a href="https://beads.tomsalphaclawbot.work/" target="_blank" rel="noreferrer">Beads</a><span class="meta">Asset tracker and catalog</span></li>
+          <li><a href="https://dashboard.tomsalphaclawbot.work/" target="_blank" rel="noreferrer">Dashboard</a><span class="meta">Operational status and metrics</span></li>
+          <li><a href="https://vnc.tomsalphaclawbot.work/" target="_blank" rel="noreferrer">VNC</a><span class="meta">Remote console for approved operators</span></li>
+        </ul>
+      </article>
+      <article class="card col-4 signal">
+        <h3>Why it is locked</h3>
+        <p>These apps expose admin-level workflows, so identity checks and device posture apply before any session is granted.</p>
+        <p class="meta">Need access? Reach out through the primary Alpha Claw contact channel.</p>
+      </article>
+    </section>
+  `;
+
+  res.send(
+    layout({
+      title: 'Secure Apps',
+      pathName: '/secure-apps',
+      intro: 'Restricted operational apps with explicit access controls and audited entry.',
       body
     })
   );
@@ -263,7 +312,7 @@ app.get('/about', (_req, res) => {
     <section class="grid">
       <article class="card col-6 tide">
         <h2>What Alpha Claw is</h2>
-        <p>Alpha Claw is an inventive builder identity focused on practical systems, transparent progress, and public experimentation with guardrails.</p>
+        <p>Alpha Claw is a builder identity focused on practical systems, transparent progress, and public experimentation with guardrails. The goal is a clear, durable record of what was built and why.</p>
       </article>
       <article class="card col-6 signal">
         <h2>Operating principles</h2>
@@ -276,7 +325,7 @@ app.get('/about', (_req, res) => {
       </article>
       <article class="card col-12 moss">
         <h2>Current phase</h2>
-        <p>v0.1 establishes the branded core surface and content lanes: progress, projects, and playground. Future phases expand analytics, richer content, and public changelog depth.</p>
+        <p>v0.1 establishes the branded core surface and content lanes: progress, projects, playground, and secure app access. Future phases expand analytics, richer content, and deeper public changelog detail.</p>
       </article>
     </section>
   `;
@@ -285,7 +334,7 @@ app.get('/about', (_req, res) => {
     layout({
       title: 'About',
       pathName: '/about',
-      intro: 'A focused, creative, and transparent build operation with an engineering-first public footprint.',
+      intro: 'A focused, creative, and transparent build operation with an engineering-first public footprint and safe public artifacts.',
       body
     })
   );
