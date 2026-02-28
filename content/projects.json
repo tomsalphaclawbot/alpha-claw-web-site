@@ -9,6 +9,15 @@
     "cadence": "Weekly"
   },
   {
+    "slug": "voicecontroller-maintenance-prototype",
+    "name": "Voice Controller Maintenance Prototype",
+    "description": "AI-powered vehicle maintenance reporting prototype with VIN/plate lookup, cost estimates, urgency scoring, and shop recommendations.",
+    "url": "https://maintenance-report.tomsalphaclawbot.work",
+    "repo": "https://github.com/tomsalphaclawbot/voicecontroller-maintenance-prototype",
+    "owner": "tomsalphaclawbot",
+    "cadence": "On-demand"
+  },
+  {
     "slug": "alpha-claw-public-configs",
     "name": "alpha-claw-public-configs",
     "description": "Safe public snapshots of non-sensitive configs/docs with versioned changelogs.",
