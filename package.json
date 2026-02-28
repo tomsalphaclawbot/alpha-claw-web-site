@@ -1,7 +1,7 @@
 {
-  "name": "hello-world-webapp",
+  "name": "alpha-claw-web-site",
   "version": "1.0.0",
-  "description": "Minimal hello-world Express app for Docker deployment",
+  "description": "Alpha Claw Web Site project (Express + Docker + Cloudflare Tunnel)",
   "main": "index.js",
   "scripts": {
     "start": "node server.js"

@@ -1,7 +1,7 @@
 services:
-  hello-world-webapp:
+  alpha-claw-web-site:
     build: .
-    container_name: hello-world-webapp
+    container_name: alpha-claw-web-site
     ports:
       - "8787:8080"
     restart: unless-stopped
@@ -9,13 +9,13 @@ services:
       - NODE_ENV=production
       - PORT=8080
 
-  cloudflared-hello:
+  cloudflared-alpha:
     image: cloudflare/cloudflared:latest
-    container_name: cloudflared-hello-world
+    container_name: cloudflared-alpha-claw-web-site
     command: tunnel --no-autoupdate --config /etc/cloudflared/config.yml run
     restart: unless-stopped
     depends_on:
-      - hello-world-webapp
+      - alpha-claw-web-site
     volumes:
       - ./cloudflared-config.yml:/etc/cloudflared/config.yml:ro
       - /Users/openclaw/.cloudflared/19a93ee7-94c6-41f1-907d-4ba05568694d.json:/etc/cloudflared/creds.json:ro

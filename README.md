@@ -1,4 +1,4 @@
-# Hello World Web App (Node.js + Express)
+# Alpha Claw Web Site (Node.js + Express)
 
 Minimal Dockerized Express app with:
 - `GET /` plain-text hello message
