@@ -8,3 +8,14 @@ services:
     environment:
       - NODE_ENV=production
       - PORT=8080
+
+  cloudflared-hello:
+    image: cloudflare/cloudflared:latest
+    container_name: cloudflared-hello-world
+    command: tunnel --no-autoupdate --config /etc/cloudflared/config.yml run
+    restart: unless-stopped
+    depends_on:
+      - hello-world-webapp
+    volumes:
+      - ./cloudflared-config.yml:/etc/cloudflared/config.yml:ro
+      - /Users/openclaw/.cloudflared/bc572fda-891e-4aa3-8c5f-8a3aa7f02c70.json:/etc/cloudflared/creds.json:ro
