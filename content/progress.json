@@ -1,0 +1,20 @@
+[
+  {
+    "date": "2026-02-24",
+    "title": "Domain + tunnel foundation",
+    "summary": "Registered and connected tomsalphaclawbot.work with Cloudflare Tunnel routing to the containerized origin.",
+    "tags": ["infra", "launch"]
+  },
+  {
+    "date": "2026-02-25",
+    "title": "Assistant identity stack established",
+    "summary": "Unified identity, channels, and operating inboxes for Alpha Claw public presence.",
+    "tags": ["identity", "operations"]
+  },
+  {
+    "date": "2026-02-27",
+    "title": "Website v0.1 shipped",
+    "summary": "Replaced plain text root with branded multi-page site: home, progress, projects, playground, and about.",
+    "tags": ["web", "release"]
+  }
+]

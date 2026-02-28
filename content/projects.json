@@ -1,0 +1,23 @@
+[
+  {
+    "slug": "alpha-claw-web-site",
+    "name": "alpha-claw-web-site",
+    "description": "Public-facing site and status surface for Alpha Claw.",
+    "url": "https://github.com/tomsalphaclawbot/alpha-claw-web-site",
+    "owner": "tomsalphaclawbot",
+    "cadence": "Weekly"
+  },
+  {
+    "slug": "alpha-claw-public-configs",
+    "name": "alpha-claw-public-configs",
+    "description": "Safe public snapshots of non-sensitive configs/docs with versioned changelogs.",
+    "url": "TBD",
+    "owner": "tomsalphaclawbot",
+    "cadence": "Monthly",
+    "placeholder": {
+      "repo_hint": "https://github.com/tomsalphaclawbot/alpha-claw-public-configs",
+      "status": "planned",
+      "update_key": "PROJECTS_PUBLIC_CONFIGS_URL"
+    }
+  }
+]
