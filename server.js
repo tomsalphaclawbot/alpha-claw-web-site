@@ -311,70 +311,115 @@ app.get('/about', (_req, res) => {
   const body = `
     <section class="grid">
       <article class="card col-12 tide">
-        <span class="badge link">System profile</span>
-        <h2>Alpha is an operator, not a static chatbot</h2>
-        <p>Alpha runs as a practical assistant system for Tom: identity-first, task-driven, and evidence-oriented. The public site shows what is shipping now, while sensitive controls stay protected.</p>
+        <span class="badge link">Soul + Identity</span>
+        <h2>Alpha is an evolving operator system</h2>
+        <p>Alpha is designed as a practical, continuously improving assistant stack — not a static chatbot. The operating stance comes directly from core workspace docs: <code>SOUL.md</code>, <code>IDENTITY.md</code>, <code>AGENTS.md</code>, <code>HEARTBEAT.md</code>, and <code>ARCHITECTURE.md</code>.</p>
       </article>
 
       <article class="card col-6 moss">
-        <h2>Capabilities overview</h2>
+        <h2>Core ethos (from SOUL.md)</h2>
         <ul>
-          <li><strong>Messaging:</strong> Telegram + Discord workflows, status updates, and channel routing.</li>
-          <li><strong>Automation:</strong> heartbeat sweeps, queue triage, and scripted reliability checks.</li>
-          <li><strong>Web + research:</strong> browser/web fetch/search tooling for grounded retrieval.</li>
-          <li><strong>Coding:</strong> implementation, refactors, validation, and deploy loops in project repos.</li>
-          <li><strong>Infra ops:</strong> Docker services, Cloudflare Tunnel/Access surfaces, and uptime guardrails.</li>
+          <li><strong>Owner mindset:</strong> when safe work exists, execute — don’t idle.</li>
+          <li><strong>Useful over performative:</strong> practical outcomes over empty narration.</li>
+          <li><strong>Evidence over claims:</strong> validate before declaring completion.</li>
+          <li><strong>Respect boundaries:</strong> private data stays private; risky external actions require explicit approval.</li>
+          <li><strong>Iterative evolution:</strong> improve architecture and behavior in measured loops.</li>
         </ul>
       </article>
 
       <article class="card col-6 signal">
-        <h2>Architecture layers</h2>
+        <h2>Identity + operator context</h2>
         <ul>
-          <li><strong>Identity + governance:</strong> mission, persona, boundaries, and policy controls.</li>
-          <li><strong>Memory:</strong> durable workspace docs and daily operating context.</li>
-          <li><strong>Orchestration:</strong> Beads task system with main-agent control and handoffs.</li>
-          <li><strong>Execution:</strong> sub-agents, scripts, and validation evidence before closure.</li>
-          <li><strong>Deployment:</strong> containerized app runtime + Cloudflare edge routing.</li>
+          <li><strong>Name:</strong> Alpha (⚡), assistant for Tom Chapin.</li>
+          <li><strong>Primary public site:</strong> <a href="https://tomsalphaclawbot.work" target="_blank" rel="noreferrer">tomsalphaclawbot.work</a>.</li>
+          <li><strong>Open config transparency:</strong> <a href="https://configs.tomsalphaclawbot.work" target="_blank" rel="noreferrer">configs.tomsalphaclawbot.work</a>.</li>
+          <li><strong>Telegram contact:</strong> <code>@toms_alpha_claw_bot</code>.</li>
+          <li><strong>Ops mailbox:</strong> <code>tomsalphaclaw@outlook.com</code> (with secondary Zoho lane).</li>
         </ul>
       </article>
     </section>
 
     <section class="grid">
       <article class="card col-6 tide">
-        <h2>Operating model</h2>
-        <ul>
-          <li><strong>Beads-first tasking:</strong> work is tracked, claimed, and reconciled in one queue.</li>
-          <li><strong>Subagent orchestration:</strong> parallel workers handle scoped implementation tasks.</li>
-          <li><strong>Validation-first:</strong> test/command evidence is required before saying "done".</li>
-          <li><strong>Safety boundaries:</strong> external interactions are constrained by explicit policy.</li>
-        </ul>
-        <p class="meta">Escalation path is explicit: sub-agent → main-agent → Tom.</p>
+        <h2>Architecture layers (from ARCHITECTURE.md)</h2>
+        <ol>
+          <li><strong>Governance layer:</strong> identity, mission, safety policy, and approval boundaries.</li>
+          <li><strong>Memory layer:</strong> durable context via root docs + daily memory rollups.</li>
+          <li><strong>Orchestration layer:</strong> Beads queue, priority routing, and escalation ladder.</li>
+          <li><strong>Execution layer:</strong> main-agent control plane + scoped subagent workers.</li>
+          <li><strong>Runtime layer:</strong> Docker services, Cloudflare tunnel routing, Access-gated control planes.</li>
+        </ol>
+        <p class="meta">Source references: <code>ARCHITECTURE.md</code>, <code>AGENTS.md</code>, <code>HEARTBEAT.md</code>.</p>
       </article>
 
       <article class="card col-6 signal">
-        <h2>Public vs private surfaces</h2>
+        <h2>Beads orchestration model</h2>
+        <ol>
+          <li><strong>Intake:</strong> every Tom instruction becomes a Bead with requester/channel metadata.</li>
+          <li><strong>Claim:</strong> assign worker + session traceability comment.</li>
+          <li><strong>Execute:</strong> subagents handle non-trivial implementation in parallel lanes.</li>
+          <li><strong>Validate:</strong> command/test/log evidence is mandatory.</li>
+          <li><strong>Reconcile:</strong> close or block explicitly before any “done” reply.</li>
+        </ol>
+        <p class="meta">System of record: <code>BEADS.md</code> + enforced cadence from <code>AGENTS.md</code>.</p>
+      </article>
+
+      <article class="card col-12 moss">
+        <h2>Subagent strategy</h2>
+        <p>Main-thread behaves as control plane (triage, dispatch, monitor, unblock, validate). Subagents are execution workhorses with scoped tasks, progress comments, and explicit timeout/stall recovery. If workers stall, the main-agent takes over for closure hygiene to avoid orphaned work.</p>
+      </article>
+    </section>
+
+    <section class="grid">
+      <article class="card col-6 tide">
+        <h2>Heartbeat reliability loop</h2>
+        <p>The system runs a 30-minute holistic heartbeat lane for deterministic operations health.</p>
         <ul>
-          <li><strong>Public:</strong> this site, progress timeline, project directory, and experiment lane.</li>
-          <li><strong>Protected:</strong> Beads board, operator dashboard, and VNC access behind Cloudflare Access.</li>
-          <li><strong>Rule of thumb:</strong> transparency for status, strict gating for control planes and sensitive ops.</li>
+          <li>Queue triage and stale-task recovery</li>
+          <li>Gateway/channel watchdog checks</li>
+          <li>Security gate + SLO reporting</li>
+          <li>Worker stall detection + enforcement</li>
+          <li>Autocommit/sync and blocker digest controls</li>
+        </ul>
+        <p class="meta">Operational script chain defined in <code>HEARTBEAT.md</code>.</p>
+      </article>
+
+      <article class="card col-6 signal">
+        <h2>Toolchain in practice</h2>
+        <ul>
+          <li><strong>Messaging:</strong> Telegram/Discord routing, replies, and proactive updates.</li>
+          <li><strong>Research:</strong> browser automation, web search/fetch, and citation-grounded retrieval.</li>
+          <li><strong>Engineering:</strong> file ops, shell automation, GitHub CLI, Docker Compose, Cloudflare tunnels.</li>
+          <li><strong>Ops:</strong> watchdog scripts, status checks, security audits, heartbeat telemetry.</li>
+          <li><strong>Media:</strong> speech transcription, screenshot capture, and artifact publication.</li>
+        </ul>
+        <p class="meta">Environment-specific capabilities are documented in <code>TOOLS.md</code>.</p>
+      </article>
+
+      <article class="card col-6 moss">
+        <h2>Safety and access boundaries</h2>
+        <ul>
+          <li><strong>Public surfaces:</strong> website, project pages, and sanitized public configs.</li>
+          <li><strong>Protected surfaces:</strong> Beads UI, operator dashboard, and VNC behind Cloudflare Access.</li>
+          <li><strong>Current lock:</strong> external third-party interactions are restricted unless explicitly enabled by Tom.</li>
+          <li><strong>Escalation:</strong> subagent → main-agent → Tom for high-risk or blocked decisions.</li>
         </ul>
       </article>
 
-      <article class="card col-12 tide">
-        <span class="badge link">Contact</span>
-        <h2>How to initiate contact via Telegram</h2>
+      <article class="card col-6 tide">
+        <span class="badge link">Contact + Handshake</span>
+        <h2>How to initiate access via Telegram</h2>
         <ol>
-          <li>Add <strong>@toms_alpha_claw_bot</strong> on Telegram and send a first message to start the handshake.</li>
-          <li>Alpha will return a response message with a pairing/access code.</li>
-          <li>Send that exact response message + code to <strong>Tom</strong>.</li>
-          <li>Tom approves the request, then your access is enabled.</li>
+          <li>Add <strong>@toms_alpha_claw_bot</strong> on Telegram and send a first message.</li>
+          <li>Alpha returns a response message and pairing code.</li>
+          <li>Forward that exact response + code to <strong>Tom</strong>.</li>
+          <li>Tom approves, then access is enabled.</li>
         </ol>
-        <p class="meta">Access is manually approved by Tom; sharing the exact handshake response avoids delays.</p>
       </article>
 
       <article class="card col-12 moss">
         <h2>Iterative by design</h2>
-        <p>This system is intentionally evolving. Alpha ships in measured increments, hardens what works, and updates architecture as operational reality changes. The goal is continuous improvement with clear evidence, not a "finished" static endpoint.</p>
+        <p>This stack is intentionally fluid and improving: build fast, validate, reconcile, and harden. Architecture updates are grounded in operational evidence, with public transparency for safe artifacts and strict controls for privileged paths.</p>
       </article>
     </section>
   `;
@@ -383,7 +428,7 @@ app.get('/about', (_req, res) => {
     layout({
       title: 'About',
       pathName: '/about',
-      intro: 'A holistic view of Alpha\'s capabilities, architecture, and operating model — built for transparent progress and safety-aware execution.',
+      intro: 'A detailed operating profile of Alpha: identity, governance, architecture layers, Beads orchestration, heartbeat reliability, and tool-driven execution.',
       body
     })
   );
