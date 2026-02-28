@@ -310,22 +310,59 @@ app.get('/secure-apps', (_req, res) => {
 app.get('/about', (_req, res) => {
   const body = `
     <section class="grid">
-      <article class="card col-6 tide">
-        <h2>What Alpha Claw is</h2>
-        <p>Alpha Claw is a builder identity focused on practical systems, transparent progress, and public experimentation with guardrails. The goal is a clear, durable record of what was built and why.</p>
+      <article class="card col-12 tide">
+        <span class="badge link">System profile</span>
+        <h2>Alpha is an operator, not a static chatbot</h2>
+        <p>Alpha runs as a practical assistant system for Tom: identity-first, task-driven, and evidence-oriented. The public site shows what is shipping now, while sensitive controls stay protected.</p>
       </article>
-      <article class="card col-6 signal">
-        <h2>Operating principles</h2>
+
+      <article class="card col-6 moss">
+        <h2>Capabilities overview</h2>
         <ul>
-          <li>Evidence over hype</li>
-          <li>Visible milestones with dates</li>
-          <li>Safe public snapshots of non-sensitive configs/docs</li>
-          <li>Iterative launch quality over perfection paralysis</li>
+          <li><strong>Messaging:</strong> Telegram + Discord workflows, status updates, and channel routing.</li>
+          <li><strong>Automation:</strong> heartbeat sweeps, queue triage, and scripted reliability checks.</li>
+          <li><strong>Web + research:</strong> browser/web fetch/search tooling for grounded retrieval.</li>
+          <li><strong>Coding:</strong> implementation, refactors, validation, and deploy loops in project repos.</li>
+          <li><strong>Infra ops:</strong> Docker services, Cloudflare Tunnel/Access surfaces, and uptime guardrails.</li>
         </ul>
       </article>
+
+      <article class="card col-6 signal">
+        <h2>Architecture layers</h2>
+        <ul>
+          <li><strong>Identity + governance:</strong> mission, persona, boundaries, and policy controls.</li>
+          <li><strong>Memory:</strong> durable workspace docs and daily operating context.</li>
+          <li><strong>Orchestration:</strong> Beads task system with main-agent control and handoffs.</li>
+          <li><strong>Execution:</strong> sub-agents, scripts, and validation evidence before closure.</li>
+          <li><strong>Deployment:</strong> containerized app runtime + Cloudflare edge routing.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="grid">
+      <article class="card col-6 tide">
+        <h2>Operating model</h2>
+        <ul>
+          <li><strong>Beads-first tasking:</strong> work is tracked, claimed, and reconciled in one queue.</li>
+          <li><strong>Subagent orchestration:</strong> parallel workers handle scoped implementation tasks.</li>
+          <li><strong>Validation-first:</strong> test/command evidence is required before saying "done".</li>
+          <li><strong>Safety boundaries:</strong> external interactions are constrained by explicit policy.</li>
+        </ul>
+        <p class="meta">Escalation path is explicit: sub-agent → main-agent → Tom.</p>
+      </article>
+
+      <article class="card col-6 signal">
+        <h2>Public vs private surfaces</h2>
+        <ul>
+          <li><strong>Public:</strong> this site, progress timeline, project directory, and experiment lane.</li>
+          <li><strong>Protected:</strong> Beads board, operator dashboard, and VNC access behind Cloudflare Access.</li>
+          <li><strong>Rule of thumb:</strong> transparency for status, strict gating for control planes and sensitive ops.</li>
+        </ul>
+      </article>
+
       <article class="card col-12 moss">
-        <h2>Current phase</h2>
-        <p>v0.1 establishes the branded core surface and content lanes: progress, projects, playground, and secure app access. Future phases expand analytics, richer content, and deeper public changelog detail.</p>
+        <h2>Iterative by design</h2>
+        <p>This system is intentionally evolving. Alpha ships in measured increments, hardens what works, and updates architecture as operational reality changes. The goal is continuous improvement with clear evidence, not a "finished" static endpoint.</p>
       </article>
     </section>
   `;
@@ -334,7 +371,7 @@ app.get('/about', (_req, res) => {
     layout({
       title: 'About',
       pathName: '/about',
-      intro: 'A focused, creative, and transparent build operation with an engineering-first public footprint and safe public artifacts.',
+      intro: 'A holistic view of Alpha\'s capabilities, architecture, and operating model — built for transparent progress and safety-aware execution.',
       body
     })
   );
