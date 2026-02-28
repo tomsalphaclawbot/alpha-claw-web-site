@@ -1,0 +1,10 @@
+services:
+  hello-world-webapp:
+    build: .
+    container_name: hello-world-webapp
+    ports:
+      - "8787:8080"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - PORT=8080
