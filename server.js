@@ -8,7 +8,7 @@ const port = process.env.PORT || 8080;
 const contentDir = path.join(__dirname, 'content');
 const publicDir = path.join(__dirname, 'public');
 
-const PROJECTS_PUBLIC_CONFIGS_URL = 'TBD';
+const PROJECTS_PUBLIC_CONFIGS_URL = 'https://configs.tomsalphaclawbot.work';
 
 app.use('/public', express.static(publicDir, { maxAge: '7d' }));
 
@@ -188,16 +188,26 @@ app.get('/projects', (_req, res) => {
     <section class="grid">
       ${projects
         .map((project) => {
-          const isPlaceholder = project.url === 'TBD';
+          const resolvedUrl =
+            project.url === 'TBD' && project.placeholder?.update_key === 'PROJECTS_PUBLIC_CONFIGS_URL'
+              ? PROJECTS_PUBLIC_CONFIGS_URL
+              : project.url;
+          const isPlaceholder = resolvedUrl === 'TBD';
           const linkHtml = isPlaceholder
             ? `<span class="meta">URL pending · repo hint: ${esc(project.placeholder?.repo_hint || '')}</span>`
-            : `<a href="${esc(project.url)}" target="_blank" rel="noreferrer">${esc(project.url)}</a>`;
+            : `<a href="${esc(resolvedUrl)}" target="_blank" rel="noreferrer">${esc(resolvedUrl)}</a>`;
+          const repoHtml = project.repo
+            ? `<a href="${esc(project.repo)}" target="_blank" rel="noreferrer">${esc(project.repo)}</a>`
+            : project.placeholder?.repo_hint
+              ? `<a href="${esc(project.placeholder.repo_hint)}" target="_blank" rel="noreferrer">${esc(project.placeholder.repo_hint)}</a>`
+              : '';
 
           return `<article class="card col-6 ${isPlaceholder ? 'signal' : 'tide'}">
             <h2>${esc(project.name)}</h2>
             <p>${esc(project.description)}</p>
             <p class="meta">Owner: ${esc(project.owner)} · Update cadence: ${esc(project.cadence)}</p>
-            <p>${linkHtml}</p>
+            <p>Live: ${linkHtml}</p>
+            ${repoHtml ? `<p>Repo: ${repoHtml}</p>` : ''}
             ${
               isPlaceholder
                 ? `<p class="meta">update_key=${esc(project.placeholder?.update_key || 'PROJECTS_PUBLIC_CONFIGS_URL')} · status=${esc(project.placeholder?.status || 'planned')}</p>`
