@@ -34,5 +34,28 @@
     "repo": "https://github.com/tomsalphaclawbot/spacetimedb-chat-prototype",
     "owner": "tomsalphaclawbot",
     "cadence": "Weekly"
+  },
+  {
+    "slug": "n8n-local",
+    "name": "n8n Local Automation Stack",
+    "description": "Pinned Docker stack for n8n queue mode with Postgres + Redis, exposed via host-level Cloudflare tunnel.",
+    "url": "https://n8n.tomsalphaclawbot.work",
+    "repo": "https://github.com/tomsalphaclawbot/n8n-local",
+    "owner": "tomsalphaclawbot",
+    "cadence": "Weekly"
+  },
+  {
+    "slug": "resonance-selfhost",
+    "name": "Resonance Self-Host Migration",
+    "description": "Active migration program to run Resonance in local Docker with cloud-by-exception architecture.",
+    "url": "TBD",
+    "repo": "https://github.com/tomsalphaclawbot/resonance",
+    "owner": "tomsalphaclawbot",
+    "cadence": "Daily",
+    "placeholder": {
+      "update_key": "PROJECTS_RESONANCE_SELFHOST_URL",
+      "repo_hint": "https://github.com/tomsalphaclawbot/resonance",
+      "status": "active-migration"
+    }
   }
 ]
