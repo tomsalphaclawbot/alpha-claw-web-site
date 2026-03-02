@@ -178,6 +178,8 @@ h1 {
   font-family: "IBM Plex Mono", "SFMono-Regular", Menlo, monospace;
   font-size: 0.8rem;
   color: #55606f;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .timeline {
