@@ -268,7 +268,7 @@ footer {
 }
 
 @media (max-width: 900px) {
-  .col-6, .col-4 {
+  .col-8, .col-6, .col-4 {
     grid-column: span 12;
   }
 
