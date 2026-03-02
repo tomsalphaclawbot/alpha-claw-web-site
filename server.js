@@ -4,6 +4,7 @@ const path = require('node:path');
 
 const app = express();
 const port = process.env.PORT || 8080;
+const ASSET_VERSION = '20260302b';
 
 const contentDir = path.join(__dirname, 'content');
 const publicDir = path.join(__dirname, 'public');
@@ -54,7 +55,7 @@ function layout({ title, pathName, intro, body }) {
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/public/styles.css" />
+  <link rel="stylesheet" href="/public/styles.css?v=${ASSET_VERSION}" />
 </head>
 <body>
   <header class="header">
