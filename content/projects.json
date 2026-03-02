@@ -45,6 +45,15 @@
     "cadence": "Weekly"
   },
   {
+    "slug": "chatterbox-local-api",
+    "name": "Chatterbox Local API",
+    "description": "Self-hosted Chatterbox-Turbo voice generation backend for Resonance (local model inference API).",
+    "url": "https://chatterbox.tomsalphaclawbot.work",
+    "repo": "https://github.com/tomsalphaclawbot/chatterbox",
+    "owner": "tomsalphaclawbot",
+    "cadence": "Active"
+  },
+  {
     "slug": "resonance-selfhost",
     "name": "Resonance Self-Host Migration",
     "description": "Active migration program to run Resonance in local Docker with cloud-by-exception architecture.",
