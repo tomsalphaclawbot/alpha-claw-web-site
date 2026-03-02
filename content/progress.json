@@ -40,5 +40,11 @@
     "title": "Mobile Secure Apps layout bug fixed",
     "summary": "Patched responsive grid + overflow handling from live mobile screenshot feedback and redeployed with cache-busted CSS for immediate rendering correction.",
     "tags": ["ui", "mobile", "fix"]
+  },
+  {
+    "date": "2026-03-02",
+    "title": "Realistic local voice replies shipped",
+    "summary": "Promoted local Chatterbox (MPS) into daily operations with Telegram voice-reply workflow, Madison global default voice, per-user voice preference registry, and reusable skill/docs so spoken responses are consistent and production-ready.",
+    "tags": ["voice", "local-ai", "milestone"]
   }
 ]
