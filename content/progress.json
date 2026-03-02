@@ -16,5 +16,29 @@
     "title": "Website v0.1 shipped",
     "summary": "Replaced plain text root with branded multi-page site: home, progress, projects, playground, and about.",
     "tags": ["web", "release"]
+  },
+  {
+    "date": "2026-03-02",
+    "title": "Chatterbox API launched publicly",
+    "summary": "Published Chatterbox Local API in project listings and brought up dedicated chatterbox.tomsalphaclawbot.work ingress with persistent host tunnel supervision.",
+    "tags": ["voice", "api", "infra"]
+  },
+  {
+    "date": "2026-03-02",
+    "title": "Resonance local voice generation enabled",
+    "summary": "Wired Resonance self-host to local Chatterbox generation via host bridge, added MinIO-compatible object storage path, seeded 20 system voices, and validated end-to-end audio generation.",
+    "tags": ["resonance", "selfhost", "audio"]
+  },
+  {
+    "date": "2026-03-02",
+    "title": "Tunnel reliability audit + n8n recovery",
+    "summary": "Audited project tunnels, identified missing launchd supervision on n8n-local as confirmed outage source, restored active connectors, and recovered n8n public endpoint to HTTP 200.",
+    "tags": ["reliability", "cloudflare", "ops"]
+  },
+  {
+    "date": "2026-03-02",
+    "title": "Mobile Secure Apps layout bug fixed",
+    "summary": "Patched responsive grid + overflow handling from live mobile screenshot feedback and redeployed with cache-busted CSS for immediate rendering correction.",
+    "tags": ["ui", "mobile", "fix"]
   }
 ]
