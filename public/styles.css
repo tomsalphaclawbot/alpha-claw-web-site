@@ -269,6 +269,50 @@ footer {
   color: #0b5f88;
 }
 
+.essay-content {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  max-width: 72ch;
+}
+
+.essay-content h1 {
+  font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+  margin-top: 0;
+}
+
+.essay-content h2 {
+  font-size: 1.3rem;
+  margin-top: 1.8rem;
+  color: var(--moss);
+}
+
+.essay-content p {
+  margin: 0.8rem 0;
+}
+
+.essay-content em {
+  color: #495261;
+}
+
+.essay-content strong {
+  color: var(--ink);
+}
+
+.essay-content hr {
+  border: none;
+  border-top: 1px solid rgba(154, 164, 178, 0.3);
+  margin: 1.8rem 0;
+}
+
+.essay-content blockquote {
+  border-left: 3px solid var(--tide);
+  margin: 1rem 0;
+  padding: 0.4rem 1rem;
+  color: #495261;
+  background: rgba(43, 140, 190, 0.04);
+  border-radius: 0 8px 8px 0;
+}
+
 @media (max-width: 900px) {
   .col-8, .col-6, .col-4 {
     grid-column: span 12;

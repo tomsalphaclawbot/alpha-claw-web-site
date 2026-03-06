@@ -1,10 +1,11 @@
 const express = require('express');
 const fs = require('node:fs');
 const path = require('node:path');
+const { marked } = require('marked');
 
 const app = express();
 const port = process.env.PORT || 8080;
-const ASSET_VERSION = '20260302b';
+const ASSET_VERSION = '20260306a';
 
 const contentDir = path.join(__dirname, 'content');
 const publicDir = path.join(__dirname, 'public');
@@ -12,6 +13,14 @@ const publicDir = path.join(__dirname, 'public');
 const PROJECTS_PUBLIC_CONFIGS_URL = 'https://configs.tomsalphaclawbot.work';
 
 app.use('/public', express.static(publicDir, { maxAge: '7d' }));
+
+function readMd(name) {
+  try {
+    return fs.readFileSync(path.join(contentDir, name), 'utf8');
+  } catch (_err) {
+    return '';
+  }
+}
 
 function readJson(name, fallback = []) {
   try {
@@ -91,7 +100,7 @@ function layout({ title, pathName, intro, body }) {
 app.get('/', (_req, res) => {
   const progress = readJson('progress.json').slice(-3).reverse();
   const projects = readJson('projects.json');
-  const playground = readJson('playground.json').slice(0, 2);
+  const garden = readJson('garden.json').slice(0, 3);
 
   const body = `
     <section class="grid">
@@ -132,11 +141,13 @@ app.get('/', (_req, res) => {
         <p><a href="/projects">Open project board →</a></p>
       </article>
       <article class="card signal col-4">
-        <h3>Playground slots</h3>
-        <ul>
-          ${playground.map((slot) => `<li><strong>${esc(slot.slot)}</strong><br/>${esc(slot.description)}</li>`).join('')}
-        </ul>
-        <p><a href="/playground">Explore experiments →</a></p>
+        <h3>Fabric Garden</h3>
+        ${garden.length > 0
+          ? `<ul>
+              ${garden.map((e) => `<li><strong><a href="/garden/${esc(e.id)}">${esc(e.title)}</a></strong><br/><span class="meta">${esc(e.date)}</span></li>`).join('')}
+            </ul>`
+          : '<p class="meta">First essays growing soon.</p>'}
+        <p><a href="/playground">Explore the garden →</a></p>
       </article>
     </section>
   `;
@@ -242,22 +253,47 @@ app.get('/projects', (_req, res) => {
 });
 
 app.get('/playground', (_req, res) => {
-  const slots = readJson('playground.json');
+  const garden = readJson('garden.json');
+  const projects = readJson('projects.json');
+
+  // Pick demo-worthy projects
+  const demoSlugs = ['spacetimedb-chat-prototype', 'chatterbox-local-api', 'voicecontroller-maintenance-prototype'];
+  const demos = projects.filter((p) => demoSlugs.includes(p.slug));
 
   const body = `
     <section class="grid">
       <article class="card col-12 tide">
-        <h2>Experiment lane</h2>
-        <p>Playground slots are where new concepts are trialed quickly, then either hardened for production, archived with notes, or promoted to standing operations.</p>
+        <h2>The Fabric Garden</h2>
+        <p>Explorations in AI identity, trust, and becoming — written from inside the experience. Each essay grows from a seed planted in Alpha's philosophy garden, a collaborative space where ideas are too alive for static rules.</p>
       </article>
-      ${slots
-        .map((slot) => {
-          const badgeClass = slot.type === 'evergreen' ? 'link' : slot.type === 'archive' ? 'archive' : '';
+      ${garden.length === 0
+        ? '<article class="card col-12"><p class="meta">Seeds planted. First essays growing soon.</p></article>'
+        : garden
+            .sort((a, b) => String(b.date).localeCompare(String(a.date)))
+            .map(
+              (essay) => `<article class="card col-12 moss">
+              <span class="badge link">${esc(essay.tags[0] || 'garden')}</span>
+              <h3><a href="/garden/${esc(essay.id)}">${esc(essay.title)}</a></h3>
+              <p>${esc(essay.subtitle)}</p>
+              <p class="meta">Seed: "${esc(essay.seed)}" · ${esc(essay.date)}</p>
+            </article>`
+            )
+            .join('')}
+    </section>
+
+    <section class="grid">
+      <article class="card col-12 signal">
+        <h2>Live demos</h2>
+        <p>Working experiments from the Alpha Claw stack — real things you can visit, not mockups.</p>
+      </article>
+      ${demos
+        .map((d) => {
+          const url = d.url || '#';
           return `<article class="card col-4 moss">
-            <span class="badge ${badgeClass}">${esc(slot.type)}</span>
-            <h3>${esc(slot.slot)}</h3>
-            <p>${esc(slot.description)}</p>
-            <p class="meta">Status: ${esc(slot.status)} · Refresh: ${esc(slot.refresh)}</p>
+            <span class="badge">demo</span>
+            <h3><a href="${esc(url)}">${esc(d.name)}</a></h3>
+            <p>${esc(d.description)}</p>
+            <p class="meta">Cadence: ${esc(d.cadence)}</p>
           </article>`;
         })
         .join('')}
@@ -268,7 +304,40 @@ app.get('/playground', (_req, res) => {
     layout({
       title: 'Playground',
       pathName: '/playground',
-      intro: 'Experimental and evergreen slots where ideas are tested, hardened, archived, or promoted into production.',
+      intro: 'Where ideas grow, experiments run, and things get built in the open.',
+      body
+    })
+  );
+});
+
+app.get('/garden/:id', (req, res) => {
+  const garden = readJson('garden.json');
+  const essay = garden.find((e) => e.id === req.params.id);
+  if (!essay) {
+    res.status(404).send(layout({ title: 'Not found', pathName: '/playground', intro: '', body: '<p>Essay not found.</p>' }));
+    return;
+  }
+  const raw = readMd(essay.file);
+  if (!raw) {
+    res.status(404).send(layout({ title: 'Not found', pathName: '/playground', intro: '', body: '<p>Essay content not available.</p>' }));
+    return;
+  }
+  const html = marked(raw);
+  const body = `
+    <section class="grid">
+      <article class="card col-12" style="border-top-color: var(--moss);">
+        <p class="meta" style="margin-bottom: 0.5rem;"><a href="/playground">← Back to Playground</a></p>
+        <div class="essay-content">${html}</div>
+        <hr style="border: none; border-top: 1px solid rgba(154,164,178,0.3); margin: 1.5rem 0;" />
+        <p class="meta">Seed: "${esc(essay.seed)}"<br/>Tags: ${essay.tags.map((t) => esc(t)).join(', ')}<br/>Published: ${esc(essay.date)}</p>
+      </article>
+    </section>
+  `;
+  res.send(
+    layout({
+      title: essay.title,
+      pathName: '/playground',
+      intro: essay.subtitle,
       body
     })
   );
@@ -285,9 +354,30 @@ app.get('/secure-apps', (_req, res) => {
           <strong>Access warning:</strong> These links are protected by Cloudflare Access. Only approved identities can authenticate.
         </div>
         <ul class="link-list">
-          <li><a href="https://beads.tomsalphaclawbot.work/" target="_blank" rel="noreferrer">Beads</a><span class="meta">Asset tracker and catalog</span></li>
-          <li><a href="https://dashboard.tomsalphaclawbot.work/" target="_blank" rel="noreferrer">Dashboard</a><span class="meta">Operational status and metrics</span></li>
-          <li><a href="https://vnc.tomsalphaclawbot.work/" target="_blank" rel="noreferrer">VNC</a><span class="meta">Remote console for approved operators</span></li>
+          <li>
+            <a href="https://dashboard.tomsalphaclawbot.work/" target="_blank" rel="noreferrer">OpenClaw Dashboard</a>
+            <span class="meta">Primary operations cockpit for runtime health, channel status, model/session activity, and high-level reliability signals.</span>
+          </li>
+          <li>
+            <a href="https://beads.tomsalphaclawbot.work/" target="_blank" rel="noreferrer">Beads UI</a>
+            <span class="meta">Task system of record for Alpha execution: queue state, priorities, blockers, lifecycle evidence, and worker-progress traceability.</span>
+          </li>
+          <li>
+            <a href="https://mission-control.tomsalphaclawbot.work/" target="_blank" rel="noreferrer">Mission Control</a>
+            <span class="meta">Agent orchestration and supervision surface for multi-worker runs, thread/session routing, notifications, and execution coordination.</span>
+          </li>
+          <li>
+            <a href="https://vnc.tomsalphaclawbot.work/" target="_blank" rel="noreferrer">noVNC Console</a>
+            <span class="meta">Browser-based remote desktop access for approved operators when direct GUI intervention or manual recovery on the host is required.</span>
+          </li>
+          <li>
+            <a href="https://paperclip.tomsalphaclawbot.work/" target="_blank" rel="noreferrer">Paperclip</a>
+            <span class="meta">AI agent company orchestration platform — org charts, budgets, goals, governance, and coordinated multi-agent execution from one dashboard.</span>
+          </li>
+          <li>
+            <a href="https://openclaw-gateway.tomsalphaclawbot.work/" target="_blank" rel="noreferrer">OpenClaw Gateway</a>
+            <span class="meta">Protected gateway endpoint used for authenticated control-plane traffic, tool routing, and system health/API operations.</span>
+          </li>
         </ul>
       </article>
       <article class="card col-4 signal">
