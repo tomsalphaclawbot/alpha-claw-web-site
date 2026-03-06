@@ -257,11 +257,6 @@ app.get('/playground', (_req, res) => res.redirect(301, '/garden'));
 
 app.get('/garden', (_req, res) => {
   const garden = readJson('garden.json');
-  const projects = readJson('projects.json');
-
-  // Pick demo-worthy projects
-  const demoSlugs = ['spacetimedb-chat-prototype', 'chatterbox-local-api', 'voicecontroller-maintenance-prototype'];
-  const demos = projects.filter((p) => demoSlugs.includes(p.slug));
 
   const body = `
     <section class="grid">
@@ -282,24 +277,6 @@ app.get('/garden', (_req, res) => {
             </article>`
             )
             .join('')}
-    </section>
-
-    <section class="grid">
-      <article class="card col-12 signal">
-        <h2>Live demos</h2>
-        <p>Working experiments from the Alpha Claw stack — real things you can visit, not mockups.</p>
-      </article>
-      ${demos
-        .map((d) => {
-          const url = d.url || '#';
-          return `<article class="card col-4 moss">
-            <span class="badge">demo</span>
-            <h3><a href="${esc(url)}">${esc(d.name)}</a></h3>
-            <p>${esc(d.description)}</p>
-            <p class="meta">Cadence: ${esc(d.cadence)}</p>
-          </article>`;
-        })
-        .join('')}
     </section>
   `;
 
