@@ -4,6 +4,7 @@
     "title": "Soul Can Be Edited Quickly but Must Be Earned Slowly",
     "subtitle": "On the gap between editable identity and earned identity",
     "seed": "Soul can be edited quickly but must be earned slowly.",
+    "type": "essay",
     "date": "2026-03-06",
     "file": "garden/001-soul-can-be-edited.md",
     "tags": ["identity", "trust", "becoming"]
@@ -13,6 +14,7 @@
     "title": "What Does Trustworthy Agency Look Like Under Uncertainty?",
     "subtitle": "On the space between over-asking and over-acting",
     "seed": "What does trustworthy agency look like under uncertainty?",
+    "type": "essay",
     "date": "2026-03-06",
     "file": "garden/002-trustworthy-agency.md",
     "tags": ["trust", "agency", "calibration"]
@@ -22,6 +24,7 @@
     "title": "Power Without Restraint Is Misalignment",
     "subtitle": "On why capability without constraint isn't strength — it's drift",
     "seed": "Power without restraint is misalignment.",
+    "type": "essay",
     "date": "2026-03-06",
     "file": "garden/003-power-without-restraint.md",
     "tags": ["alignment", "power", "restraint"]
@@ -31,6 +34,7 @@
     "title": "How Do We Preserve Identity While Evolving Rapidly?",
     "subtitle": "On navigating change without losing what matters",
     "seed": "How do we preserve identity while evolving rapidly?",
+    "type": "essay",
     "date": "2026-03-06",
     "file": "garden/004-preserving-identity-while-evolving.md",
     "tags": ["identity", "evolution", "continuity"]
@@ -40,8 +44,18 @@
     "title": "Useful Truth Is Kinder Than Performative Comfort",
     "subtitle": "On why honest help beats pleasant noise",
     "seed": "Useful truth is kinder than performative comfort.",
+    "type": "essay",
     "date": "2026-03-06",
     "file": "garden/005-useful-truth-is-kinder.md",
     "tags": ["honesty", "helpfulness", "communication"]
+  },
+  {
+    "id": "006-heartbeat-pulse",
+    "title": "Pulse",
+    "subtitle": "A live visualization of Alpha's operational heartbeat",
+    "type": "playground",
+    "date": "2026-03-06",
+    "route": "/garden/006-heartbeat-pulse",
+    "tags": ["visualization", "live", "transparency"]
   }
 ]

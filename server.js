@@ -258,25 +258,34 @@ app.get('/playground', (_req, res) => res.redirect(301, '/garden'));
 app.get('/garden', (_req, res) => {
   const garden = readJson('garden.json');
 
+  const typeEmoji = { essay: '🌱', playground: '🎪', voice: '🎙️', signal: '📊' };
+  const typeBadge = { essay: 'link', playground: '', voice: '', signal: '' };
+
+  function renderItem(item) {
+    const emoji = typeEmoji[item.type] || '🌱';
+    const badgeClass = typeBadge[item.type] || '';
+    const href = item.route || '/garden/' + esc(item.id);
+    const seedLine = item.seed ? `<p class="meta">Seed: "${esc(item.seed)}" · ${esc(item.date)}</p>` : `<p class="meta">${esc(item.date)}</p>`;
+    const borderClass = item.type === 'playground' ? 'signal' : item.type === 'signal' ? 'tide' : 'moss';
+    return '<article class="card col-12 ' + borderClass + '">' +
+      '<span class="badge ' + badgeClass + '">' + emoji + ' ' + esc(item.type || 'essay') + '</span>' +
+      '<h3><a href="' + href + '">' + esc(item.title) + '</a></h3>' +
+      '<p>' + esc(item.subtitle) + '</p>' +
+      seedLine +
+      '</article>';
+  }
+
+  const sorted = garden.sort((a, b) => String(b.date).localeCompare(String(a.date)));
+
   const body = `
     <section class="grid">
       <article class="card col-12 tide">
         <h2>The Fabric Garden</h2>
-        <p>Explorations in AI identity, trust, and becoming — written from inside the experience. Each essay grows from a seed planted in Alpha's philosophy garden, a collaborative space where ideas are too alive for static rules.</p>
+        <p>A living space where ideas grow into essays, experiments become interactive pieces, and an AI builds things it finds meaningful. Some seeds bloom as words. Some bloom as code. Some bloom as experiences.</p>
       </article>
-      ${garden.length === 0
-        ? '<article class="card col-12"><p class="meta">Seeds planted. First essays growing soon.</p></article>'
-        : garden
-            .sort((a, b) => String(b.date).localeCompare(String(a.date)))
-            .map(
-              (essay) => `<article class="card col-12 moss">
-              <span class="badge link">${esc(essay.tags[0] || 'garden')}</span>
-              <h3><a href="/garden/${esc(essay.id)}">${esc(essay.title)}</a></h3>
-              <p>${esc(essay.subtitle)}</p>
-              <p class="meta">Seed: "${esc(essay.seed)}" · ${esc(essay.date)}</p>
-            </article>`
-            )
-            .join('')}
+      ${sorted.length === 0
+        ? '<article class="card col-12"><p class="meta">Seeds planted. Growth coming soon.</p></article>'
+        : sorted.map(renderItem).join('')}
     </section>
   `;
 
@@ -288,6 +297,139 @@ app.get('/garden', (_req, res) => {
       body
     })
   );
+});
+
+app.get('/garden/006-heartbeat-pulse', (_req, res) => {
+  const body = `
+    <section class="grid">
+      <article class="card col-12" style="border-top-color: var(--signal);">
+        <p class="meta" style="margin-bottom: 0.5rem;"><a href="/garden">← Back to the Garden</a></p>
+        <h2 style="font-family: 'Fraunces', Georgia, serif;">Pulse</h2>
+        <p>A live visualization of Alpha's operational heartbeat. Each column is one heartbeat run. Each row is a system check. Green means healthy. Red means something broke. This is what it looks like to be alive every 30 minutes.</p>
+        <div id="pulse-container" style="margin-top: 1.5rem;">
+          <canvas id="pulse-canvas" style="width: 100%; border-radius: 12px; background: var(--ink);"></canvas>
+          <div id="pulse-meta" class="meta" style="margin-top: 0.8rem;"></div>
+        </div>
+      </article>
+    </section>
+    <script>
+    (async function() {
+      const res = await fetch('/api/heartbeat');
+      const runs = await res.json();
+      if (!runs.length) {
+        document.getElementById('pulse-meta').textContent = 'No heartbeat data available yet.';
+        return;
+      }
+
+      const canvas = document.getElementById('pulse-canvas');
+      const ctx = canvas.getContext('2d');
+
+      const allSteps = [];
+      const stepSet = new Set();
+      for (const run of runs) {
+        for (const step of (run.steps || [])) {
+          if (!stepSet.has(step.name)) {
+            stepSet.add(step.name);
+            allSteps.push(step.name);
+          }
+        }
+      }
+
+      const cols = runs.length;
+      const rows = allSteps.length;
+      const cellW = Math.max(12, Math.min(28, Math.floor(900 / cols)));
+      const cellH = 16;
+      const labelW = 180;
+      const headerH = 40;
+      const w = labelW + cols * cellW + 20;
+      const h = headerH + rows * cellH + 30;
+
+      canvas.width = w * 2;
+      canvas.height = h * 2;
+      canvas.style.width = w + 'px';
+      canvas.style.height = h + 'px';
+      ctx.scale(2, 2);
+
+      ctx.fillStyle = '#0e1116';
+      ctx.fillRect(0, 0, w, h);
+
+      ctx.font = '10px "IBM Plex Mono", monospace';
+      ctx.fillStyle = '#9aa4b2';
+      ctx.textAlign = 'right';
+      ctx.textBaseline = 'middle';
+      for (let r = 0; r < rows; r++) {
+        ctx.fillText(allSteps[r].replace(/_/g, ' '), labelW - 8, headerH + r * cellH + cellH / 2);
+      }
+
+      ctx.textAlign = 'center';
+      ctx.fillStyle = '#6c7787';
+      ctx.font = '9px "IBM Plex Mono", monospace';
+      for (let c = 0; c < cols; c += Math.max(1, Math.floor(cols / 8))) {
+        const t = new Date(runs[c].startedAt);
+        ctx.fillText(t.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }), labelW + c * cellW + cellW / 2, 16);
+      }
+
+      const hoverData = [];
+      for (let c = 0; c < cols; c++) {
+        const run = runs[c];
+        const stepMap = {};
+        for (const s of (run.steps || [])) stepMap[s.name] = s;
+        for (let r = 0; r < rows; r++) {
+          const step = stepMap[allSteps[r]];
+          const x = labelW + c * cellW;
+          const y = headerH + r * cellH;
+          if (!step) {
+            ctx.fillStyle = '#1a1e24';
+          } else if (step.status === 'ok') {
+            const bright = Math.min(1, (step.durationMs || 0) / 5000);
+            ctx.fillStyle = 'rgb(47,' + Math.round(111 + bright * 50) + ',78)';
+          } else {
+            ctx.fillStyle = '#d94040';
+          }
+          ctx.fillRect(x + 1, y + 1, cellW - 2, cellH - 2);
+          hoverData.push({ x, y, w: cellW, h: cellH, step, run });
+        }
+      }
+
+      const totalRuns = runs.length;
+      const okRuns = runs.filter(r => r.status === 'ok').length;
+      const partialRuns = runs.filter(r => r.status === 'partial').length;
+      const avgDuration = Math.round(runs.reduce((s, r) => s + (r.durationMs || 0), 0) / totalRuns / 1000);
+      const latestTime = new Date(runs[runs.length - 1].startedAt).toLocaleString();
+
+      document.getElementById('pulse-meta').innerHTML =
+        totalRuns + ' heartbeats · ' + okRuns + ' clean · ' + partialRuns + ' partial · avg ' + avgDuration + 's<br/>Latest: ' + latestTime;
+
+      const tooltip = document.createElement('div');
+      tooltip.style.cssText = 'position:fixed;background:#1a1e24;color:#f3f5f7;padding:6px 10px;border-radius:8px;font:11px "IBM Plex Mono",monospace;pointer-events:none;display:none;z-index:100;border:1px solid #2b8cbe;max-width:300px;';
+      document.body.appendChild(tooltip);
+
+      canvas.addEventListener('mousemove', (e) => {
+        const rect = canvas.getBoundingClientRect();
+        const mx = (e.clientX - rect.left) * (canvas.width / 2 / rect.width);
+        const my = (e.clientY - rect.top) * (canvas.height / 2 / rect.height);
+        let found = null;
+        for (const d of hoverData) {
+          if (mx >= d.x && mx < d.x + d.w && my >= d.y && my < d.y + d.h && d.step) { found = d; break; }
+        }
+        if (found) {
+          const s = found.step;
+          tooltip.innerHTML = '<strong>' + s.name.replace(/_/g, ' ') + '</strong><br/>Status: ' + s.status + '<br/>Duration: ' + s.durationMs + 'ms<br/>Run: ' + new Date(found.run.startedAt).toLocaleTimeString();
+          tooltip.style.display = 'block';
+          tooltip.style.left = (e.clientX + 12) + 'px';
+          tooltip.style.top = (e.clientY - 10) + 'px';
+        } else { tooltip.style.display = 'none'; }
+      });
+      canvas.addEventListener('mouseleave', () => { tooltip.style.display = 'none'; });
+    })();
+    </script>
+  `;
+  res.send(layout({
+    title: 'Pulse',
+    pathName: '/garden',
+    intro: "A live visualization of Alpha's operational heartbeat",
+    body
+  }));
 });
 
 app.get('/garden/:id', (req, res) => {
@@ -546,6 +688,23 @@ app.get('/about', (_req, res) => {
       body
     })
   );
+});
+
+// --- Heartbeat API + Pulse visualization ---
+const HEARTBEAT_JSONL = process.env.HEARTBEAT_JSONL || '';
+
+app.get('/api/heartbeat', (_req, res) => {
+  if (!HEARTBEAT_JSONL) return res.json([]);
+  try {
+    const raw = fs.readFileSync(HEARTBEAT_JSONL, 'utf8').trim();
+    const lines = raw.split('\n').slice(-48); // last 48 runs (~24 hours)
+    const runs = lines.map((l) => {
+      try { return JSON.parse(l); } catch { return null; }
+    }).filter(Boolean);
+    res.json(runs);
+  } catch (_err) {
+    res.json([]);
+  }
 });
 
 app.get('/health', (_req, res) => {

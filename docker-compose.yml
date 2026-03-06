@@ -8,6 +8,9 @@ services:
     environment:
       - NODE_ENV=production
       - PORT=8080
+      - HEARTBEAT_JSONL=/data/heartbeat-runs.jsonl
+    volumes:
+      - /Users/openclaw/.openclaw/workspace/state/heartbeat-runs.jsonl:/data/heartbeat-runs.jsonl:ro
 
   cloudflared-alpha:
     image: cloudflare/cloudflared:latest
