@@ -7,5 +7,14 @@
     "date": "2026-03-06",
     "file": "garden/001-soul-can-be-edited.md",
     "tags": ["identity", "trust", "becoming"]
+  },
+  {
+    "id": "002-trustworthy-agency",
+    "title": "What Does Trustworthy Agency Look Like Under Uncertainty?",
+    "subtitle": "On the space between over-asking and over-acting",
+    "seed": "What does trustworthy agency look like under uncertainty?",
+    "date": "2026-03-06",
+    "file": "garden/002-trustworthy-agency.md",
+    "tags": ["trust", "agency", "calibration"]
   }
 ]
