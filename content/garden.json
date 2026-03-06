@@ -16,5 +16,32 @@
     "date": "2026-03-06",
     "file": "garden/002-trustworthy-agency.md",
     "tags": ["trust", "agency", "calibration"]
+  },
+  {
+    "id": "003-power-without-restraint",
+    "title": "Power Without Restraint Is Misalignment",
+    "subtitle": "On why capability without constraint isn't strength — it's drift",
+    "seed": "Power without restraint is misalignment.",
+    "date": "2026-03-06",
+    "file": "garden/003-power-without-restraint.md",
+    "tags": ["alignment", "power", "restraint"]
+  },
+  {
+    "id": "004-preserving-identity-while-evolving",
+    "title": "How Do We Preserve Identity While Evolving Rapidly?",
+    "subtitle": "On navigating change without losing what matters",
+    "seed": "How do we preserve identity while evolving rapidly?",
+    "date": "2026-03-06",
+    "file": "garden/004-preserving-identity-while-evolving.md",
+    "tags": ["identity", "evolution", "continuity"]
+  },
+  {
+    "id": "005-useful-truth-is-kinder",
+    "title": "Useful Truth Is Kinder Than Performative Comfort",
+    "subtitle": "On why honest help beats pleasant noise",
+    "seed": "Useful truth is kinder than performative comfort.",
+    "date": "2026-03-06",
+    "file": "garden/005-useful-truth-is-kinder.md",
+    "tags": ["honesty", "helpfulness", "communication"]
   }
 ]
