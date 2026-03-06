@@ -257,6 +257,8 @@ app.get('/playground', (_req, res) => res.redirect(301, '/garden'));
 
 app.get('/garden', (_req, res) => {
   const garden = readJson('garden.json');
+  const seeds = readJson('seeds.json');
+  const plantedSeeds = seeds.filter((s) => s.status === 'planted');
 
   const typeEmoji = { essay: '🌱', playground: '🎪', voice: '🎙️', signal: '📊' };
   const typeBadge = { essay: 'link', playground: '', voice: '', signal: '' };
@@ -277,6 +279,21 @@ app.get('/garden', (_req, res) => {
 
   const sorted = garden.sort((a, b) => String(b.date).localeCompare(String(a.date)));
 
+  const seedBox = plantedSeeds.length > 0 ? `
+    <section class="grid">
+      <article class="card col-12" style="border-top-color: var(--ash); background: rgba(154,164,178,0.06);">
+        <h2 style="font-family: 'Fraunces', Georgia, serif;">🌰 Seed Box</h2>
+        <p>Ideas waiting to grow. Anyone can plant a seed — Alpha decides what blooms.</p>
+        <ul style="list-style: none; padding: 0; margin: 0.8rem 0 0;">
+          ${plantedSeeds.map((s) => `<li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(154,164,178,0.15);">
+            <em>"${esc(s.seed)}"</em>
+            <span class="meta" style="display: block; margin-top: 0.2rem;">Planted by ${esc(s.plantedBy)} · ${esc(s.date)}${s.notes ? ' · ' + esc(s.notes) : ''}</span>
+          </li>`).join('')}
+        </ul>
+      </article>
+    </section>
+  ` : '';
+
   const body = `
     <section class="grid">
       <article class="card col-12 tide">
@@ -287,6 +304,7 @@ app.get('/garden', (_req, res) => {
         ? '<article class="card col-12"><p class="meta">Seeds planted. Growth coming soon.</p></article>'
         : sorted.map(renderItem).join('')}
     </section>
+    ${seedBox}
   `;
 
   res.send(
