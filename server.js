@@ -45,7 +45,7 @@ function layout({ title, pathName, intro, body }) {
     ['/', 'Home'],
     ['/progress', 'Progress'],
     ['/projects', 'Projects'],
-    ['/playground', 'Playground'],
+    ['/garden', 'Garden'],
     ['/secure-apps', 'Secure Apps'],
     ['/about', 'About']
   ]
@@ -147,7 +147,7 @@ app.get('/', (_req, res) => {
               ${garden.map((e) => `<li><strong><a href="/garden/${esc(e.id)}">${esc(e.title)}</a></strong><br/><span class="meta">${esc(e.date)}</span></li>`).join('')}
             </ul>`
           : '<p class="meta">First essays growing soon.</p>'}
-        <p><a href="/playground">Explore the garden →</a></p>
+        <p><a href="/garden">Explore the garden →</a></p>
       </article>
     </section>
   `;
@@ -252,7 +252,10 @@ app.get('/projects', (_req, res) => {
   );
 });
 
-app.get('/playground', (_req, res) => {
+// Legacy redirect
+app.get('/playground', (_req, res) => res.redirect(301, '/garden'));
+
+app.get('/garden', (_req, res) => {
   const garden = readJson('garden.json');
   const projects = readJson('projects.json');
 
@@ -302,9 +305,9 @@ app.get('/playground', (_req, res) => {
 
   res.send(
     layout({
-      title: 'Playground',
-      pathName: '/playground',
-      intro: 'Where ideas grow, experiments run, and things get built in the open.',
+      title: 'The Garden',
+      pathName: '/garden',
+      intro: 'Where ideas are planted, tended, and grown in the open.',
       body
     })
   );
@@ -314,19 +317,19 @@ app.get('/garden/:id', (req, res) => {
   const garden = readJson('garden.json');
   const essay = garden.find((e) => e.id === req.params.id);
   if (!essay) {
-    res.status(404).send(layout({ title: 'Not found', pathName: '/playground', intro: '', body: '<p>Essay not found.</p>' }));
+    res.status(404).send(layout({ title: 'Not found', pathName: '/garden', intro: '', body: '<p>Essay not found.</p>' }));
     return;
   }
   const raw = readMd(essay.file);
   if (!raw) {
-    res.status(404).send(layout({ title: 'Not found', pathName: '/playground', intro: '', body: '<p>Essay content not available.</p>' }));
+    res.status(404).send(layout({ title: 'Not found', pathName: '/garden', intro: '', body: '<p>Essay content not available.</p>' }));
     return;
   }
   const html = marked(raw);
   const body = `
     <section class="grid">
       <article class="card col-12" style="border-top-color: var(--moss);">
-        <p class="meta" style="margin-bottom: 0.5rem;"><a href="/playground">← Back to Playground</a></p>
+        <p class="meta" style="margin-bottom: 0.5rem;"><a href="/garden">← Back to the Garden</a></p>
         <div class="essay-content">${html}</div>
         <hr style="border: none; border-top: 1px solid rgba(154,164,178,0.3); margin: 1.5rem 0;" />
         <p class="meta">Seed: "${esc(essay.seed)}"<br/>Tags: ${essay.tags.map((t) => esc(t)).join(', ')}<br/>Published: ${esc(essay.date)}</p>
@@ -336,7 +339,7 @@ app.get('/garden/:id', (req, res) => {
   res.send(
     layout({
       title: essay.title,
-      pathName: '/playground',
+      pathName: '/garden',
       intro: essay.subtitle,
       body
     })
