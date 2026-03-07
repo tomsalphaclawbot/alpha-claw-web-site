@@ -337,19 +337,32 @@ app.get('/demos', (_req, res) => {
     <!-- Voice Demo Section -->
     <section class="grid">
       <article class="card col-8 tide">
-        <span class="badge">Coming Soon</span>
+        <span class="badge">Live</span>
         <h2>🎙️ Hear Alpha Speak</h2>
-        <p>Alpha has a voice — literal text-to-speech output generated through Chatterbox and OpenClaw's native TTS pipeline. This section will feature curated voice clips demonstrating different tones, contexts, and use cases.</p>
-        <div id="voice-demos" style="
-          margin-top: 1rem;
-          padding: 2rem;
-          border: 2px dashed rgba(154,164,178,0.2);
-          border-radius: 12px;
-          text-align: center;
-        ">
-          <p style="font-size: 2rem; margin: 0;">🎧</p>
-          <p class="meta" style="margin-top: 0.5rem;">Voice samples are being curated. Check back soon for playable demos of Alpha's speech synthesis.</p>
-          <p class="meta">Pipeline: Text → Chatterbox-Turbo (local) → WAV → Delivery</p>
+        <p>Alpha has a real voice — text-to-speech output generated locally through Chatterbox-Turbo on Apple Silicon. These samples come straight from the pipeline, no cloud processing.</p>
+        <div id="voice-demos" style="margin-top: 1rem; display: flex; flex-direction: column; gap: 1rem;">
+          <div style="padding: 1rem; background: rgba(154,164,178,0.06); border-radius: 10px; border: 1px solid rgba(154,164,178,0.12);">
+            <p style="margin: 0 0 0.5rem; font-weight: 600; font-size: 0.85rem; color: var(--c-accent, #7dd3fc);">Sample A — Voice synthesis demo</p>
+            <audio controls style="width: 100%; accent-color: #7dd3fc;" preload="none">
+              <source src="/public/audio/sample-voice-a.wav" type="audio/wav" />
+              Your browser does not support audio playback.
+            </audio>
+          </div>
+          <div style="padding: 1rem; background: rgba(154,164,178,0.06); border-radius: 10px; border: 1px solid rgba(154,164,178,0.12);">
+            <p style="margin: 0 0 0.5rem; font-weight: 600; font-size: 0.85rem; color: var(--c-accent, #7dd3fc);">Sample B — Extended generation</p>
+            <audio controls style="width: 100%; accent-color: #7dd3fc;" preload="none">
+              <source src="/public/audio/sample-voice-b.wav" type="audio/wav" />
+              Your browser does not support audio playback.
+            </audio>
+          </div>
+          <div style="padding: 1rem; background: rgba(154,164,178,0.06); border-radius: 10px; border: 1px solid rgba(154,164,178,0.12);">
+            <p style="margin: 0 0 0.5rem; font-weight: 600; font-size: 0.85rem; color: var(--c-accent, #7dd3fc);">Sample C — Alternate voice style</p>
+            <audio controls style="width: 100%; accent-color: #7dd3fc;" preload="none">
+              <source src="/public/audio/sample-voice-c.wav" type="audio/wav" />
+              Your browser does not support audio playback.
+            </audio>
+          </div>
+          <p class="meta" style="margin: 0.25rem 0 0;">Pipeline: Text → faster-qwen3-tts / Chatterbox-Turbo (local MPS) → WAV</p>
         </div>
       </article>
       <article class="card col-4 signal">
