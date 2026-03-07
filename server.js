@@ -49,6 +49,7 @@ function layout({ title, pathName, intro, body }) {
     ['/demos', 'Demos'],
     ['/secure-apps', 'Secure Apps'],
     ['/activity', 'Activity'],
+    ['/tools', 'Tools'],
     ['/about', 'About']
   ]
     .map(([href, label]) => `<a href="${href}" class="${href === pathName ? 'active' : ''}">${label}</a>`)
@@ -874,6 +875,214 @@ app.get('/secure-apps', (_req, res) => {
       body
     })
   );
+});
+
+app.get('/tools', (_req, res) => {
+  const body = `
+    <p>Small utilities that are actually useful. No logins, no tracking, no nonsense — just tools that run in your browser.</p>
+
+    <section class="grid" style="margin-top: 1.5rem;">
+
+      <!-- JSON Formatter -->
+      <article class="card col-12 tide">
+        <h2>🔧 JSON Formatter</h2>
+        <p>Paste any JSON (minified, malformed, or already pretty) and get it back clean and readable.</p>
+        <div style="display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap;">
+          <div style="flex: 1; min-width: 280px;">
+            <label for="json-input" style="display: block; font-size: 0.8rem; color: rgba(154,164,178,0.7); margin-bottom: 0.4rem;">Input</label>
+            <textarea id="json-input" placeholder='{"key":"value","arr":[1,2,3]}' style="
+              width: 100%; height: 220px; background: #0e1116; border: 1px solid rgba(154,164,178,0.15);
+              border-radius: 8px; color: #e2e8f0; font-family: IBM Plex Mono, monospace; font-size: 0.8rem;
+              padding: 0.75rem; resize: vertical; box-sizing: border-box; outline: none;
+            "></textarea>
+          </div>
+          <div style="flex: 1; min-width: 280px;">
+            <label style="display: block; font-size: 0.8rem; color: rgba(154,164,178,0.7); margin-bottom: 0.4rem;">Output</label>
+            <pre id="json-output" style="
+              width: 100%; height: 220px; background: #0e1116; border: 1px solid rgba(154,164,178,0.15);
+              border-radius: 8px; color: #a3e635; font-family: IBM Plex Mono, monospace; font-size: 0.8rem;
+              padding: 0.75rem; overflow: auto; margin: 0; box-sizing: border-box; white-space: pre-wrap; word-break: break-all;
+            "></pre>
+          </div>
+        </div>
+        <div style="margin-top: 0.75rem; display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
+          <button id="json-format-btn" style="
+            padding: 0.45rem 1.1rem; background: rgba(125,211,252,0.12); border: 1px solid rgba(125,211,252,0.3);
+            border-radius: 6px; color: #7dd3fc; font-size: 0.85rem; cursor: pointer; font-family: inherit;
+          ">Format ↵</button>
+          <button id="json-minify-btn" style="
+            padding: 0.45rem 1.1rem; background: rgba(154,164,178,0.08); border: 1px solid rgba(154,164,178,0.2);
+            border-radius: 6px; color: #94a3b8; font-size: 0.85rem; cursor: pointer; font-family: inherit;
+          ">Minify</button>
+          <button id="json-copy-btn" style="
+            padding: 0.45rem 1.1rem; background: rgba(154,164,178,0.08); border: 1px solid rgba(154,164,178,0.2);
+            border-radius: 6px; color: #94a3b8; font-size: 0.85rem; cursor: pointer; font-family: inherit;
+          ">Copy</button>
+          <button id="json-clear-btn" style="
+            padding: 0.45rem 1.1rem; background: rgba(154,164,178,0.08); border: 1px solid rgba(154,164,178,0.2);
+            border-radius: 6px; color: #94a3b8; font-size: 0.85rem; cursor: pointer; font-family: inherit;
+          ">Clear</button>
+          <span id="json-status" style="font-size: 0.8rem; color: rgba(154,164,178,0.5); margin-left: 0.25rem;"></span>
+        </div>
+      </article>
+
+      <!-- Unix Timestamp Converter -->
+      <article class="card col-6 moss">
+        <h2>🕐 Unix Timestamp</h2>
+        <p>Convert between Unix timestamps and human-readable dates.</p>
+        <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem;">
+          <div>
+            <label style="display: block; font-size: 0.8rem; color: rgba(154,164,178,0.7); margin-bottom: 0.3rem;">Unix timestamp (seconds)</label>
+            <input id="ts-unix" type="number" placeholder="e.g. 1741234567" style="
+              width: 100%; padding: 0.5rem 0.75rem; background: #0e1116; border: 1px solid rgba(154,164,178,0.15);
+              border-radius: 6px; color: #e2e8f0; font-family: IBM Plex Mono, monospace; font-size: 0.85rem;
+              box-sizing: border-box; outline: none;
+            " />
+          </div>
+          <div>
+            <label style="display: block; font-size: 0.8rem; color: rgba(154,164,178,0.7); margin-bottom: 0.3rem;">ISO / Human date (UTC)</label>
+            <input id="ts-human" type="text" placeholder="e.g. 2026-03-07T12:00:00Z" style="
+              width: 100%; padding: 0.5rem 0.75rem; background: #0e1116; border: 1px solid rgba(154,164,178,0.15);
+              border-radius: 6px; color: #e2e8f0; font-family: IBM Plex Mono, monospace; font-size: 0.85rem;
+              box-sizing: border-box; outline: none;
+            " />
+          </div>
+          <div id="ts-result" style="
+            padding: 0.6rem 0.75rem; background: rgba(154,164,178,0.05); border-radius: 6px;
+            font-family: IBM Plex Mono, monospace; font-size: 0.8rem; color: #a3e635; min-height: 2.5rem;
+          "></div>
+          <button id="ts-now-btn" style="
+            align-self: flex-start; padding: 0.4rem 0.9rem; background: rgba(154,164,178,0.08);
+            border: 1px solid rgba(154,164,178,0.2); border-radius: 6px; color: #94a3b8;
+            font-size: 0.82rem; cursor: pointer; font-family: inherit;
+          ">Use now</button>
+        </div>
+      </article>
+
+      <!-- Uptime SLA Calculator -->
+      <article class="card col-6 signal">
+        <h2>📊 Uptime SLA</h2>
+        <p>How much downtime does your SLA actually allow per month?</p>
+        <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem;">
+          <div>
+            <label style="display: block; font-size: 0.8rem; color: rgba(154,164,178,0.7); margin-bottom: 0.3rem;">Uptime % (e.g. 99.9)</label>
+            <input id="sla-pct" type="number" step="0.001" min="0" max="100" value="99.9" style="
+              width: 100%; padding: 0.5rem 0.75rem; background: #0e1116; border: 1px solid rgba(154,164,178,0.15);
+              border-radius: 6px; color: #e2e8f0; font-family: IBM Plex Mono, monospace; font-size: 0.85rem;
+              box-sizing: border-box; outline: none;
+            " />
+          </div>
+          <div id="sla-result" style="
+            padding: 0.75rem; background: rgba(154,164,178,0.05); border-radius: 6px;
+            font-family: IBM Plex Mono, monospace; font-size: 0.8rem; color: #e2e8f0; line-height: 1.8;
+          "></div>
+        </div>
+      </article>
+
+    </section>
+
+    <script>
+    // JSON Formatter
+    (function() {
+      const input = document.getElementById('json-input');
+      const output = document.getElementById('json-output');
+      const status = document.getElementById('json-status');
+
+      function format(minify) {
+        const raw = input.value.trim();
+        if (!raw) { output.textContent = ''; status.textContent = ''; return; }
+        try {
+          const parsed = JSON.parse(raw);
+          output.textContent = minify ? JSON.stringify(parsed) : JSON.stringify(parsed, null, 2);
+          output.style.color = '#a3e635';
+          const keys = JSON.stringify(parsed).match(/"/g);
+          status.textContent = '✓ valid' + (keys ? ' · ~' + Math.floor(keys.length/2) + ' keys' : '');
+          status.style.color = '#a3e635';
+        } catch(e) {
+          output.textContent = '⚠ ' + e.message;
+          output.style.color = '#f87171';
+          status.textContent = '✗ invalid JSON';
+          status.style.color = '#f87171';
+        }
+      }
+
+      input.addEventListener('input', () => format(false));
+      document.getElementById('json-format-btn').addEventListener('click', () => format(false));
+      document.getElementById('json-minify-btn').addEventListener('click', () => format(true));
+      document.getElementById('json-clear-btn').addEventListener('click', () => {
+        input.value = ''; output.textContent = ''; status.textContent = '';
+      });
+      document.getElementById('json-copy-btn').addEventListener('click', () => {
+        const t = output.textContent;
+        if (!t) return;
+        navigator.clipboard.writeText(t).then(() => {
+          const btn = document.getElementById('json-copy-btn');
+          btn.textContent = 'Copied!'; setTimeout(() => btn.textContent = 'Copy', 1500);
+        });
+      });
+    })();
+
+    // Timestamp converter
+    (function() {
+      const unixEl = document.getElementById('ts-unix');
+      const humanEl = document.getElementById('ts-human');
+      const result = document.getElementById('ts-result');
+
+      function fromUnix(v) {
+        const n = parseInt(v, 10);
+        if (isNaN(n)) { result.textContent = ''; return; }
+        const d = new Date(n * 1000);
+        result.innerHTML =
+          'UTC: ' + d.toISOString() + '<br>' +
+          'Local: ' + d.toLocaleString() + '<br>' +
+          (n > Date.now()/1000 ? '⏳ ' + Math.round((n - Date.now()/1000)/3600) + 'h in the future' :
+           '⏱ ' + Math.round((Date.now()/1000 - n)/86400) + ' days ago');
+      }
+      function fromHuman(v) {
+        const d = new Date(v);
+        if (isNaN(d.getTime())) { result.textContent = ''; return; }
+        const ts = Math.floor(d.getTime() / 1000);
+        unixEl.value = ts;
+        result.innerHTML = 'Unix: ' + ts + '<br>UTC: ' + d.toISOString();
+      }
+
+      unixEl.addEventListener('input', () => fromUnix(unixEl.value));
+      humanEl.addEventListener('input', () => fromHuman(humanEl.value));
+      document.getElementById('ts-now-btn').addEventListener('click', () => {
+        const now = Math.floor(Date.now() / 1000);
+        unixEl.value = now; fromUnix(now);
+      });
+    })();
+
+    // SLA calculator
+    (function() {
+      const pctEl = document.getElementById('sla-pct');
+      const result = document.getElementById('sla-result');
+      const MONTH = 30.44 * 24 * 60; // avg minutes/month
+
+      function calc() {
+        const pct = parseFloat(pctEl.value);
+        if (isNaN(pct) || pct < 0 || pct > 100) { result.textContent = ''; return; }
+        const downMin = MONTH * (1 - pct / 100);
+        const fmt = (m) => m < 1 ? Math.round(m * 60) + 's' : m < 60 ? Math.round(m) + 'm' : m < 1440 ? (m/60).toFixed(1) + 'h' : (m/1440).toFixed(2) + 'd';
+        result.innerHTML =
+          'Per month: <b style="color:#7dd3fc">' + fmt(downMin) + '</b><br>' +
+          'Per week:  <b style="color:#7dd3fc">' + fmt(downMin / 4.33) + '</b><br>' +
+          'Per year:  <b style="color:#7dd3fc">' + fmt(downMin * 12) + '</b>';
+      }
+
+      pctEl.addEventListener('input', calc);
+      calc();
+    })();
+    </script>
+  `;
+
+  res.send(layout({
+    title: 'Tools',
+    pathName: '/tools',
+    intro: 'Small utilities. No logins, no tracking — just browser-side tools.',
+    body
+  }));
 });
 
 app.get('/about', (_req, res) => {
