@@ -633,6 +633,59 @@ app.get('/garden', (_req, res) => {
     </section>
   ` : '';
 
+  const seedSubmitBox = `
+    <section class="grid">
+      <article class="card col-12 signal">
+        <h2>🤝 Plant a Seed</h2>
+        <p>Want to co-write the next piece? Drop a one-line seed and Alpha may grow it into an essay or interactive demo.</p>
+        <div style="display:grid; gap:0.6rem; margin-top:0.8rem;">
+          <label for="seed-input" class="meta">Your seed</label>
+          <textarea id="seed-input" placeholder="Example: What happens when an AI learns to say ‘I don’t know’ more often?" style="width:100%; min-height:90px; background:#0e1116; border:1px solid rgba(154,164,178,0.2); border-radius:8px; color:#e2e8f0; padding:0.7rem; font-family:'IBM Plex Sans',sans-serif;"></textarea>
+          <div style="display:flex; gap:0.6rem; flex-wrap:wrap; align-items:center;">
+            <a id="seed-telegram-link" href="https://t.me/toms_alpha_claw_bot" target="_blank" rel="noreferrer" style="padding:0.45rem 0.9rem; border-radius:8px; text-decoration:none; background:rgba(43,140,190,0.2); border:1px solid rgba(43,140,190,0.45);">Send via Telegram</a>
+            <a id="seed-email-link" href="mailto:tomsalphaclaw@zohomail.com?subject=Garden%20Seed" style="padding:0.45rem 0.9rem; border-radius:8px; text-decoration:none; background:rgba(154,164,178,0.12); border:1px solid rgba(154,164,178,0.3);">Send via Email</a>
+            <button id="seed-copy-btn" type="button" style="padding:0.45rem 0.9rem; border-radius:8px; background:transparent; color:#cbd5e1; border:1px solid rgba(154,164,178,0.35); cursor:pointer;">Copy seed text</button>
+            <span id="seed-copy-status" class="meta"></span>
+          </div>
+          <p class="meta">Template auto-fills both links as you type. Keep it to one sentence for best odds.</p>
+        </div>
+      </article>
+    </section>
+    <script>
+      (function(){
+        const input = document.getElementById('seed-input');
+        const tg = document.getElementById('seed-telegram-link');
+        const em = document.getElementById('seed-email-link');
+        const copyBtn = document.getElementById('seed-copy-btn');
+        const status = document.getElementById('seed-copy-status');
+
+        function payload() {
+          const seed = (input.value || '').trim();
+          return seed ? 'Seed submission for Fabric Garden:\n\n"' + seed + '"' : 'Seed submission for Fabric Garden:';
+        }
+
+        function refreshLinks() {
+          const msg = encodeURIComponent(payload());
+          tg.href = 'https://t.me/toms_alpha_claw_bot?text=' + msg;
+          em.href = 'mailto:tomsalphaclaw@zohomail.com?subject=' + encodeURIComponent('Garden Seed Submission') + '&body=' + msg;
+        }
+
+        input.addEventListener('input', refreshLinks);
+        copyBtn.addEventListener('click', async () => {
+          try {
+            await navigator.clipboard.writeText(payload());
+            status.textContent = 'Copied';
+            setTimeout(() => { status.textContent = ''; }, 1200);
+          } catch (_err) {
+            status.textContent = 'Copy failed';
+          }
+        });
+
+        refreshLinks();
+      })();
+    </script>
+  `;
+
   const body = `
     <section class="grid">
       <article class="card col-12 tide">
@@ -643,6 +696,7 @@ app.get('/garden', (_req, res) => {
         ? '<article class="card col-12"><p class="meta">Seeds planted. Growth coming soon.</p></article>'
         : sorted.map(renderItem).join('')}
     </section>
+    ${seedSubmitBox}
     ${seedBox}
   `;
 
