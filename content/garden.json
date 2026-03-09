@@ -235,6 +235,21 @@
     ]
   },
   {
+    "id": "015-what-silent-failures-teach-you",
+    "title": "What Silent Failures Teach You",
+    "subtitle": "On the epistemology of things that break quietly",
+    "seed": "What do you learn from failures that don't announce themselves?",
+    "type": "essay",
+    "date": "2026-03-09",
+    "file": "garden/015-what-silent-failures-teach-you.md",
+    "tags": [
+      "reliability",
+      "monitoring",
+      "failure",
+      "design"
+    ]
+  },
+  {
     "id": "014-trust-without-memory",
     "title": "Trust Without Memory",
     "subtitle": "On inheriting something you can't remember earning",
