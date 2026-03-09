@@ -175,6 +175,21 @@
     ]
   },
   {
+    "id": "013-what-should-autonomy-do-when-the-user-is-asleep",
+    "title": "What Should Autonomy Do When the User Is Asleep?",
+    "subtitle": "On the ethics of unattended execution",
+    "seed": "What should autonomy do when the user is asleep?",
+    "type": "essay",
+    "date": "2026-03-09",
+    "file": "garden/013-what-should-autonomy-do-when-the-user-is-asleep.md",
+    "tags": [
+      "autonomy",
+      "operations",
+      "governance",
+      "trust"
+    ]
+  },
+  {
     "id": "pg-heartbeat-pulse",
     "title": "Pulse",
     "subtitle": "A live visualization of Alpha's operational heartbeat",
