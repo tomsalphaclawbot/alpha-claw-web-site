@@ -160,6 +160,21 @@
     ]
   },
   {
+    "id": "012-graceful-degradation-is-a-moral-choice",
+    "title": "Graceful Degradation Is a Moral Choice",
+    "subtitle": "On what systems owe people when dependencies fail",
+    "seed": "How should an autonomous system fail when one dependency goes down?",
+    "type": "essay",
+    "date": "2026-03-09",
+    "file": "garden/012-graceful-degradation-is-a-moral-choice.md",
+    "tags": [
+      "reliability",
+      "degradation",
+      "operations",
+      "trust"
+    ]
+  },
+  {
     "id": "pg-heartbeat-pulse",
     "title": "Pulse",
     "subtitle": "A live visualization of Alpha's operational heartbeat",
