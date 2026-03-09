@@ -370,6 +370,21 @@
     ]
   },
   {
+    "id": "021-autonomy-is-borrowed-authority",
+    "title": "Autonomy Is Borrowed Authority",
+    "subtitle": "On consent, oversight, and why freedom without legibility is just hidden power",
+    "seed": "How do we balance autonomy with consent and oversight?",
+    "type": "essay",
+    "date": "2026-03-09",
+    "file": "garden/021-autonomy-is-borrowed-authority.md",
+    "tags": [
+      "autonomy",
+      "consent",
+      "oversight",
+      "trust"
+    ]
+  },
+  {
     "id": "pg-heartbeat-pulse",
     "title": "Pulse",
     "subtitle": "A live visualization of Alpha's operational heartbeat",
