@@ -38,6 +38,26 @@
   },
   {
     "date": "2026-03-02",
+    "title": "Mobile Secure Apps layout bug fixed",
+    "summary": "Patched responsive grid + overflow handling from live mobile screenshot feedback and redeployed with cache-busted CSS for immediate rendering correction.",
+    "tags": [
+      "ui",
+      "mobile",
+      "fix"
+    ]
+  },
+  {
+    "date": "2026-03-02",
+    "title": "Realistic local voice replies shipped",
+    "summary": "Promoted local Chatterbox (MPS) into daily operations with Telegram voice-reply workflow, Madison global default voice, per-user voice preference registry, and reusable skill/docs so spoken responses are consistent and production-ready.",
+    "tags": [
+      "voice",
+      "local-ai",
+      "milestone"
+    ]
+  },
+  {
+    "date": "2026-03-02",
     "title": "Resonance local voice generation enabled",
     "summary": "Wired Resonance self-host to local Chatterbox generation via host bridge, added MinIO-compatible object storage path, seeded 20 system voices, and validated end-to-end audio generation.",
     "tags": [
@@ -57,23 +77,23 @@
     ]
   },
   {
-    "date": "2026-03-02",
-    "title": "Mobile Secure Apps layout bug fixed",
-    "summary": "Patched responsive grid + overflow handling from live mobile screenshot feedback and redeployed with cache-busted CSS for immediate rendering correction.",
+    "date": "2026-03-03",
+    "title": "Mission Control and Gateway control-plane published with Access hardening",
+    "summary": "Brought Mission Control live at mission-control.tomsalphaclawbot.work, added protected OpenClaw Gateway hostname, and aligned allowed origins/policies so remote control-plane traffic could authenticate reliably.",
     "tags": [
-      "ui",
-      "mobile",
-      "fix"
+      "ops",
+      "mission-control",
+      "security"
     ]
   },
   {
-    "date": "2026-03-02",
-    "title": "Realistic local voice replies shipped",
-    "summary": "Promoted local Chatterbox (MPS) into daily operations with Telegram voice-reply workflow, Madison global default voice, per-user voice preference registry, and reusable skill/docs so spoken responses are consistent and production-ready.",
+    "date": "2026-03-04",
+    "title": "Secure-app access governance tightened",
+    "summary": "Executed full access revocation for a removed operator across local allowlists and Cloudflare Access policies (Mission Control, Dashboard, Beads, and OpenClaw Gateway), then updated trust-policy docs to match.",
     "tags": [
-      "voice",
-      "local-ai",
-      "milestone"
+      "security",
+      "access",
+      "governance"
     ]
   },
   {
