@@ -1,0 +1,162 @@
+[
+  {
+    "date": "2026-03-08",
+    "title": "Deploy refreshed alpha-claw-web-site and validate public pages",
+    "summary": "Deployed refreshed alpha-claw-web-site and validate public pages",
+    "tags": [
+      "ops"
+    ]
+  },
+  {
+    "date": "2026-03-08",
+    "title": "Refresh personal site data (projects + progress) using latest memory/project inventory",
+    "summary": "Refreshed personal site data (projects + progress) using latest memory/project inventory",
+    "tags": [
+      "ops"
+    ]
+  },
+  {
+    "date": "2026-03-08",
+    "title": "Publish hello-world-nextjs project to GitHub",
+    "summary": "Published hello-world-nextjs project to GitHub",
+    "tags": [
+      "ops"
+    ]
+  },
+  {
+    "date": "2026-03-08",
+    "title": "Build/deploy hello-world Next.js app in Docker Compose + expose via Cloudflare tunnel",
+    "summary": "Shipped hello-world Next.js app in Docker Compose + expose via Cloudflare tunnel",
+    "tags": [
+      "ops"
+    ]
+  },
+  {
+    "date": "2026-03-08",
+    "title": "Harden Vapi->Alpha proxy behavior + immediate forwarded ack + structured async response injection",
+    "summary": "Harden Vapi->Alpha proxy behavior + immediate forwarded ack + structured async response injection",
+    "tags": [
+      "ops"
+    ]
+  },
+  {
+    "date": "2026-03-08",
+    "title": "Switch Vapi assistant to male ElevenLabs voice while preserving SSML support",
+    "summary": "Switch Vapi assistant to male ElevenLabs voice while preserving SSML support",
+    "tags": [
+      "ops"
+    ]
+  },
+  {
+    "date": "2026-03-08",
+    "title": "Switch Vapi assistant voice to SSML-capable provider and enable SSML parsing",
+    "summary": "Switch Vapi assistant voice to SSML-capable provider and enable SSML parsing",
+    "tags": [
+      "ops"
+    ]
+  },
+  {
+    "date": "2026-03-08",
+    "title": "Add SSML break tag at start of personalized welcome greeting",
+    "summary": "Add SSML break tag at start of personalized welcome greeting",
+    "tags": [
+      "ops"
+    ]
+  },
+  {
+    "date": "2026-03-08",
+    "title": "Use first-name-only personalization for call greeting",
+    "summary": "Use first-name-only personalization for call greeting",
+    "tags": [
+      "ops"
+    ]
+  },
+  {
+    "date": "2026-03-08",
+    "title": "Remove local fast-path and restore strict direct-to-OpenClaw tool-call routing",
+    "summary": "Remove local fast-path and restore strict direct-to-OpenClaw tool-call routing",
+    "tags": [
+      "ops"
+    ]
+  },
+  {
+    "date": "2026-03-08",
+    "title": "Trial SSML pause in blocked-caller deny message",
+    "summary": "Trial SSML pause in blocked-caller deny message",
+    "tags": [
+      "ops"
+    ]
+  },
+  {
+    "date": "2026-03-08",
+    "title": "Add stronger sacrificial lead-in to blocked-caller message to mitigate first-word clipping",
+    "summary": "Add stronger sacrificial lead-in to blocked-caller message to mitigate first-word clipping",
+    "tags": [
+      "ops"
+    ]
+  },
+  {
+    "date": "2026-03-08",
+    "title": "Add configurable pre-answer ring delay for assistant-request responses",
+    "summary": "Add configurable pre-answer ring delay for assistant-request responses",
+    "tags": [
+      "ops"
+    ]
+  },
+  {
+    "date": "2026-03-08",
+    "title": "Enforce immediate hangup behavior for blocked callers via assistant-request error response",
+    "summary": "Enforce immediate hangup behavior for blocked callers via assistant-request error response",
+    "tags": [
+      "ops"
+    ]
+  },
+  {
+    "date": "2026-03-08",
+    "title": "Set exact unauthorized-caller spoken rejection wording",
+    "summary": "Set exact unauthorized-caller spoken rejection wording",
+    "tags": [
+      "ops"
+    ]
+  },
+  {
+    "date": "2026-03-08",
+    "title": "Fix Vapi phone routing regression (assistantId silently reattached)",
+    "summary": "Fix Vapi phone routing regression (assistantId silently reattached)",
+    "tags": [
+      "ops"
+    ]
+  },
+  {
+    "date": "2026-03-08",
+    "title": "Switch Vapi phone number to assistant-request routing (remove fixed assistantId)",
+    "summary": "Switch Vapi phone number to assistant-request routing (remove fixed assistantId)",
+    "tags": [
+      "ops"
+    ]
+  },
+  {
+    "date": "2026-03-08",
+    "title": "Fix greeting-at-answer + reliable allowed-callers response in vapi-openclaw",
+    "summary": "Fix greeting-at-answer + reliable allowed-callers response in vapi-openclaw",
+    "tags": [
+      "ops"
+    ]
+  },
+  {
+    "date": "2026-03-08",
+    "title": "Diagnose failed inbound call + fix tool-call argument parsing regression",
+    "summary": "Diagnose failed inbound call + fix tool-call argument parsing regression",
+    "tags": [
+      "ops"
+    ]
+  },
+  {
+    "date": "2026-03-05",
+    "title": "Add public Vapi hello webhook smoke test + persist call correlation keys",
+    "summary": "Add public Vapi hello webhook smoke test + persist call correlation keys",
+    "tags": [
+      "ops"
+    ]
+  }
+]

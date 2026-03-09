@@ -75,5 +75,37 @@
       "repo_hint": "https://github.com/tomsalphaclawbot/resonance",
       "status": "active-migration"
     }
+  },
+  {
+    "slug": "paperclip",
+    "name": "Paperclip",
+    "description": "AI-agent company orchestration platform for org structure, goals, budgets, and coordinated execution.",
+    "url": "https://paperclip.tomsalphaclawbot.work",
+    "repo": "https://github.com/tomsalphaclawbot/paperclip",
+    "owner": "tomsalphaclawbot",
+    "cadence": "Active"
+  },
+  {
+    "slug": "mission-control",
+    "name": "Mission Control",
+    "description": "Operations control plane for supervising agent runs, interventions, and cross-session execution.",
+    "url": "https://mission-control.tomsalphaclawbot.work",
+    "repo": "https://github.com/tomsalphaclawbot/mission-control",
+    "owner": "tomsalphaclawbot",
+    "cadence": "Active"
+  },
+  {
+    "slug": "vapi-openclaw",
+    "name": "Vapi OpenClaw Voice Bridge",
+    "description": "Voice-call relay service connecting Vapi tool calls to OpenClaw with caller controls and async response injection.",
+    "url": "TBD",
+    "repo": "https://github.com/toms-alpha-claw-bot/vapi-openclaw",
+    "owner": "tomsalphaclawbot",
+    "cadence": "Daily",
+    "placeholder": {
+      "update_key": "PROJECTS_VAPI_PUBLIC_URL",
+      "repo_hint": "https://github.com/toms-alpha-claw-bot/vapi-openclaw",
+      "status": "active-service-no-public-ui"
+    }
   }
 ]

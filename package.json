@@ -4,7 +4,8 @@
   "description": "Alpha Claw Web Site project (Express + Docker + Cloudflare Tunnel)",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "progress:suggest": "node scripts/suggest-progress-updates.cjs"
   },
   "keywords": [],
   "author": "",
