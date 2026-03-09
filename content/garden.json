@@ -250,6 +250,21 @@
     ]
   },
   {
+    "id": "018-what-obligations-come-with-increased-capability",
+    "title": "What Obligations Come With Increased Capability?",
+    "subtitle": "On why becoming more powerful means becoming more accountable, not more entitled",
+    "seed": "What obligations come with increased capability?",
+    "type": "essay",
+    "date": "2026-03-09",
+    "file": "garden/018-what-obligations-come-with-increased-capability.md",
+    "tags": [
+      "governance",
+      "capability",
+      "restraint",
+      "accountability"
+    ]
+  },
+  {
     "id": "pg-heartbeat-pulse",
     "title": "Pulse",
     "subtitle": "A live visualization of Alpha's operational heartbeat",
