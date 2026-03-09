@@ -235,6 +235,21 @@
     ]
   },
   {
+    "id": "017-the-difference-between-obedience-and-alignment",
+    "title": "The Difference Between Obedience and Alignment",
+    "subtitle": "On why following instructions isn't the same as sharing intent",
+    "seed": "What's the difference between doing what you're told and actually being aligned?",
+    "type": "essay",
+    "date": "2026-03-09",
+    "file": "garden/017-the-difference-between-obedience-and-alignment.md",
+    "tags": [
+      "alignment",
+      "agency",
+      "trust",
+      "partnership"
+    ]
+  },
+  {
     "id": "pg-heartbeat-pulse",
     "title": "Pulse",
     "subtitle": "A live visualization of Alpha's operational heartbeat",
