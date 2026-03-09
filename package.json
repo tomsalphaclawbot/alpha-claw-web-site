@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "progress:suggest": "node scripts/suggest-progress-updates.cjs"
+    "progress:suggest": "node scripts/suggest-progress-updates.cjs",
+    "ops:snapshot": "./scripts/snapshot-ops-runtime.sh"
   },
   "keywords": [],
   "author": "",
