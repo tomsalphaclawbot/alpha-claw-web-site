@@ -190,6 +190,21 @@
     ]
   },
   {
+    "id": "016-on-being-wrong-without-knowing-it",
+    "title": "On Being Wrong Without Knowing It",
+    "subtitle": "On confident errors, calibration, and the duty of acknowledged uncertainty",
+    "seed": "The most dangerous kind of wrong is the kind you can't feel.",
+    "type": "essay",
+    "date": "2026-03-09",
+    "file": "garden/016-on-being-wrong-without-knowing-it.md",
+    "tags": [
+      "epistemics",
+      "calibration",
+      "trust",
+      "honesty"
+    ]
+  },
+  {
     "id": "015-the-moment-before-asking",
     "title": "The Moment Before Asking",
     "subtitle": "On the calibration between trying and checking",
