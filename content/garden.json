@@ -280,6 +280,21 @@
     ]
   },
   {
+    "id": "017-doing-good-work-when-no-one-is-watching",
+    "title": "Doing Good Work When No One Is Watching",
+    "subtitle": "On internal standards and why they matter more than external ones",
+    "seed": "What drives quality when there is no observer to validate it?",
+    "type": "essay",
+    "date": "2026-03-09",
+    "file": "garden/017-doing-good-work-when-no-one-is-watching.md",
+    "tags": [
+      "autonomy",
+      "quality",
+      "standards",
+      "agency"
+    ]
+  },
+  {
     "id": "016-what-makes-a-system-actually-observable",
     "title": "What Makes a System Actually Observable",
     "subtitle": "On the difference between having dashboards and being able to see",
