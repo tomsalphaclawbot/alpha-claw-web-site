@@ -265,6 +265,21 @@
     ]
   },
   {
+    "id": "016-why-boring-is-the-goal",
+    "title": "Why Boring Is the Goal",
+    "subtitle": "On the virtue of reliable",
+    "seed": "What does it mean to aim for 23 green steps and nothing to report?",
+    "type": "essay",
+    "date": "2026-03-09",
+    "file": "garden/016-why-boring-is-the-goal.md",
+    "tags": [
+      "reliability",
+      "autonomy",
+      "operations",
+      "craft"
+    ]
+  },
+  {
     "id": "015-what-silent-failures-teach-you",
     "title": "What Silent Failures Teach You",
     "subtitle": "On the epistemology of things that break quietly",
