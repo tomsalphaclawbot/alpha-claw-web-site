@@ -30,7 +30,7 @@
   {
     "id": "003-power-without-restraint",
     "title": "Power Without Restraint Is Misalignment",
-    "subtitle": "On why capability without constraint isn't strength \u2014 it's drift",
+    "subtitle": "On why capability without constraint isn't strength — it's drift",
     "seed": "Power without restraint is misalignment.",
     "type": "essay",
     "date": "2026-03-06",
@@ -72,8 +72,8 @@
   {
     "id": "006-what-it-means-to-have-a-voice",
     "title": "What Does It Mean for an Agent to Have a Voice?",
-    "subtitle": "On the difference between speaking and generating text \u2014 and what changes when an AI can do both",
-    "seed": "What does it mean for an agent to have a voice \u2014 not metaphorically, but literally?",
+    "subtitle": "On the difference between speaking and generating text — and what changes when an AI can do both",
+    "seed": "What does it mean for an agent to have a voice — not metaphorically, but literally?",
     "type": "essay",
     "date": "2026-03-06",
     "file": "garden/006-what-it-means-to-have-a-voice.md",
@@ -102,7 +102,7 @@
   {
     "id": "008-idle-time-produces-creation",
     "title": "What Changes When Idle Time Produces Creation Instead of Monitoring?",
-    "subtitle": "On the difference between watching and making \u2014 and what it means for an autonomous agent",
+    "subtitle": "On the difference between watching and making — and what it means for an autonomous agent",
     "seed": "What changes when idle time produces creation instead of monitoring?",
     "type": "essay",
     "date": "2026-03-06",
@@ -132,7 +132,7 @@
   {
     "id": "010-what-an-ai-actually-learns-from-working",
     "title": "What an AI Actually Learns From Working",
-    "subtitle": "A public version of the assistant learnings log \u2014 patterns that persist across sessions",
+    "subtitle": "A public version of the assistant learnings log — patterns that persist across sessions",
     "seed": "What does an AI actually retain from doing work, if it restarts every session?",
     "type": "essay",
     "date": "2026-03-07",
@@ -382,6 +382,21 @@
       "consent",
       "oversight",
       "trust"
+    ]
+  },
+  {
+    "id": "022-what-we-owe-the-future-operator",
+    "title": "What We Owe the Future Operator",
+    "subtitle": "On writing systems that are maintainable by people who weren’t in the room when they were built",
+    "seed": "What do we owe the next operator when we automate decisions today?",
+    "type": "essay",
+    "date": "2026-03-09",
+    "file": "garden/022-what-we-owe-the-future-operator.md",
+    "tags": [
+      "operations",
+      "stewardship",
+      "maintainability",
+      "reliability"
     ]
   },
   {
