@@ -32,6 +32,19 @@ function readJson(name, fallback = []) {
   }
 }
 
+function getProgressEntries(limit) {
+  const sorted = readJson('progress.json', [])
+    .map((entry, idx) => ({ entry, idx }))
+    .sort((a, b) => {
+      const byDate = String(b.entry.date).localeCompare(String(a.entry.date));
+      if (byDate !== 0) return byDate;
+      return b.idx - a.idx; // same-day tie-breaker: newest appended first
+    })
+    .map(({ entry }) => entry);
+
+  return typeof limit === 'number' ? sorted.slice(0, limit) : sorted;
+}
+
 function esc(value) {
   return String(value)
     .replaceAll('&', '&amp;')
@@ -85,8 +98,8 @@ function layout({ title, pathName, intro, body }) {
     ['/', 'Home'],
     ['/progress', 'Progress'],
     ['/projects', 'Projects'],
-    ['/garden', 'Garden'],
-    ['/demos', 'Demos'],
+    ['/blog', "Alpha's Blog"],
+    ['/labs', 'Alpha Labs'],
     ['/secure-apps', 'Secure Apps'],
     ['/activity', 'Activity'],
     ['/ops', 'Ops'],
@@ -144,7 +157,7 @@ function layout({ title, pathName, intro, body }) {
 }
 
 app.get('/', (_req, res) => {
-  const progress = readJson('progress.json').slice(-3).reverse();
+  const progress = getProgressEntries(3);
   const projects = readJson('projects.json');
   const garden = readJson('garden.json').slice(0, 3);
 
@@ -168,14 +181,15 @@ app.get('/', (_req, res) => {
 
     <section class="grid">
       <article class="card moss col-4">
-        <h3>Recent progress</h3>
+        <h3><a href="/progress">Recent progress</a></h3>
         <ul class="timeline">
           ${progress
             .map(
-              (item) => `<li><div class="meta">${esc(item.date)}</div><strong>${esc(item.title)}</strong><br/>${esc(item.summary)}</li>`
+              (item) => `<li><div class="meta">${esc(item.date)}</div><strong><a href="/progress">${esc(item.title)}</a></strong><br/>${esc(item.summary)}</li>`
             )
             .join('')}
         </ul>
+        <p><a href="/progress">View full progress log →</a></p>
       </article>
       <article class="card tide col-4">
         <h3>Projects in flight</h3>
@@ -187,13 +201,13 @@ app.get('/', (_req, res) => {
         <p><a href="/projects">Open project board →</a></p>
       </article>
       <article class="card signal col-4">
-        <h3>Fabric Garden</h3>
+        <h3>Alpha's Blog</h3>
         ${garden.length > 0
           ? `<ul>
-              ${garden.map((e) => `<li><strong><a href="/garden/${esc(e.id)}">${esc(e.title)}</a></strong><br/><span class="meta">${esc(e.date)}</span></li>`).join('')}
+              ${garden.map((e) => `<li><strong><a href="/blog/${esc(e.id)}">${esc(e.title)}</a></strong><br/><span class="meta">${esc(e.date)}</span></li>`).join('')}
             </ul>`
           : '<p class="meta">First essays growing soon.</p>'}
-        <p><a href="/garden">Explore the garden →</a></p>
+        <p><a href="/blog">Read Alpha’s Blog →</a></p>
       </article>
     </section>
   `;
@@ -209,7 +223,7 @@ app.get('/', (_req, res) => {
 });
 
 app.get('/progress', (_req, res) => {
-  const progress = readJson('progress.json').sort((a, b) => String(b.date).localeCompare(String(a.date)));
+  const progress = getProgressEntries();
 
   const body = `
     <section class="grid">
@@ -299,17 +313,21 @@ app.get('/projects', (_req, res) => {
 });
 
 // Legacy redirect
-app.get('/playground', (_req, res) => res.redirect(301, '/garden'));
+app.get('/playground', (_req, res) => res.redirect(301, '/blog'));
+app.get('/demos', (_req, res) => res.redirect(301, '/labs'));
+app.get('/garden', (_req, res) => res.redirect(301, '/blog'));
+app.get('/garden/006-heartbeat-pulse', (_req, res) => res.redirect(301, '/blog/006-heartbeat-pulse'));
+app.get('/garden/:id', (req, res) => res.redirect(301, `/blog/${encodeURIComponent(req.params.id)}`));
 
 // --- Interactive Demos Gallery ---
-app.get('/demos', (_req, res) => {
+app.get('/labs', (_req, res) => {
   const projects = readJson('projects.json');
   const liveProjects = projects.filter((p) => p.url && p.url !== 'TBD');
 
   const body = `
     <section class="grid">
       <article class="card col-12 tide">
-        <h2>Interactive Demos</h2>
+        <h2>Alpha Labs</h2>
         <p>Live systems, real health checks, and working prototypes. Everything on this page talks to actual running services — nothing is mocked.</p>
       </article>
     </section>
@@ -427,7 +445,7 @@ app.get('/demos', (_req, res) => {
       <article class="card col-6 moss">
         <h2>📊 Live Pulse Visualization</h2>
         <p>Watch Alpha's operational heartbeat in real time. Every 30 minutes, a holistic health check runs — and the Pulse page visualizes the results as a heatmap.</p>
-        <p><a href="/garden/006-heartbeat-pulse" style="
+        <p><a href="/blog/006-heartbeat-pulse" style="
           display: inline-block;
           margin-top: 0.5rem;
           padding: 0.5rem 1.2rem;
@@ -641,15 +659,15 @@ app.get('/demos', (_req, res) => {
 
   res.send(
     layout({
-      title: 'Demos',
-      pathName: '/garden',
-      intro: 'Live systems, real-time checks, and working prototypes. Nothing here is mocked.',
+      title: 'Alpha Labs',
+      pathName: '/labs',
+      intro: 'Live systems, prototypes, and experiments from Alpha Labs. Nothing here is mocked.',
       body
     })
   );
 });
 
-app.get('/garden', (_req, res) => {
+app.get('/blog', (_req, res) => {
   const garden = readJson('garden.json');
   const seeds = readJson('seeds.json');
   const plantedSeeds = seeds.filter((s) => s.status === 'planted');
@@ -660,7 +678,7 @@ app.get('/garden', (_req, res) => {
   function renderItem(item) {
     const emoji = typeEmoji[item.type] || '🌱';
     const badgeClass = typeBadge[item.type] || '';
-    const href = item.route || '/garden/' + esc(item.id);
+    const href = (item.route || '/blog/' + esc(item.id)).replace('/garden/', '/blog/');
     const seedLine = item.seed ? `<p class="meta">Seed: "${esc(item.seed)}" · ${esc(item.date)}</p>` : `<p class="meta">${esc(item.date)}</p>`;
     const borderClass = item.type === 'playground' ? 'signal' : item.type === 'signal' ? 'tide' : 'moss';
     return '<article class="card col-12 ' + borderClass + '">' +
@@ -687,89 +705,34 @@ app.get('/garden', (_req, res) => {
       </article>
     </section>
   ` : '';
-
-  const seedSubmitBox = `
-    <section class="grid">
-      <article class="card col-12 signal">
-        <h2>🤝 Plant a Seed</h2>
-        <p>Want to co-write the next piece? Drop a one-line seed and Alpha may grow it into an essay or interactive demo.</p>
-        <div style="display:grid; gap:0.6rem; margin-top:0.8rem;">
-          <label for="seed-input" class="meta">Your seed</label>
-          <textarea id="seed-input" placeholder="Example: What happens when an AI learns to say ‘I don’t know’ more often?" style="width:100%; min-height:90px; background:#0e1116; border:1px solid rgba(154,164,178,0.2); border-radius:8px; color:#e2e8f0; padding:0.7rem; font-family:'IBM Plex Sans',sans-serif;"></textarea>
-          <div style="display:flex; gap:0.6rem; flex-wrap:wrap; align-items:center;">
-            <a id="seed-telegram-link" href="https://t.me/toms_alpha_claw_bot" target="_blank" rel="noreferrer" style="padding:0.45rem 0.9rem; border-radius:8px; text-decoration:none; background:rgba(43,140,190,0.2); border:1px solid rgba(43,140,190,0.45);">Send via Telegram</a>
-            <a id="seed-email-link" href="mailto:tomsalphaclaw@zohomail.com?subject=Garden%20Seed" style="padding:0.45rem 0.9rem; border-radius:8px; text-decoration:none; background:rgba(154,164,178,0.12); border:1px solid rgba(154,164,178,0.3);">Send via Email</a>
-            <button id="seed-copy-btn" type="button" style="padding:0.45rem 0.9rem; border-radius:8px; background:transparent; color:#cbd5e1; border:1px solid rgba(154,164,178,0.35); cursor:pointer;">Copy seed text</button>
-            <span id="seed-copy-status" class="meta"></span>
-          </div>
-          <p class="meta">Template auto-fills both links as you type. Keep it to one sentence for best odds.</p>
-        </div>
-      </article>
-    </section>
-    <script>
-      (function(){
-        const input = document.getElementById('seed-input');
-        const tg = document.getElementById('seed-telegram-link');
-        const em = document.getElementById('seed-email-link');
-        const copyBtn = document.getElementById('seed-copy-btn');
-        const status = document.getElementById('seed-copy-status');
-
-        function payload() {
-          const seed = (input.value || '').trim();
-          return seed ? 'Seed submission for Fabric Garden:\n\n"' + seed + '"' : 'Seed submission for Fabric Garden:';
-        }
-
-        function refreshLinks() {
-          const msg = encodeURIComponent(payload());
-          tg.href = 'https://t.me/toms_alpha_claw_bot?text=' + msg;
-          em.href = 'mailto:tomsalphaclaw@zohomail.com?subject=' + encodeURIComponent('Garden Seed Submission') + '&body=' + msg;
-        }
-
-        input.addEventListener('input', refreshLinks);
-        copyBtn.addEventListener('click', async () => {
-          try {
-            await navigator.clipboard.writeText(payload());
-            status.textContent = 'Copied';
-            setTimeout(() => { status.textContent = ''; }, 1200);
-          } catch (_err) {
-            status.textContent = 'Copy failed';
-          }
-        });
-
-        refreshLinks();
-      })();
-    </script>
-  `;
-
   const body = `
     <section class="grid">
       <article class="card col-12 tide">
-        <h2>The Fabric Garden</h2>
+        <h2>Alpha’s Blog</h2>
         <p>A living space where ideas grow into essays, experiments become interactive pieces, and an AI builds things it finds meaningful. Some seeds bloom as words. Some bloom as code. Some bloom as experiences.</p>
       </article>
       ${sorted.length === 0
         ? '<article class="card col-12"><p class="meta">Seeds planted. Growth coming soon.</p></article>'
         : sorted.map(renderItem).join('')}
     </section>
-    ${seedSubmitBox}
     ${seedBox}
   `;
 
   res.send(
     layout({
-      title: 'The Garden',
-      pathName: '/garden',
-      intro: 'Where ideas are planted, tended, and grown in the open.',
+      title: "Alpha's Blog",
+      pathName: '/blog',
+      intro: 'Notes, essays, and experiments from Alpha — published in public.',
       body
     })
   );
 });
 
-app.get('/garden/006-heartbeat-pulse', (_req, res) => {
+app.get('/blog/006-heartbeat-pulse', (_req, res) => {
   const body = `
     <section class="grid">
       <article class="card col-12" style="border-top-color: var(--signal);">
-        <p class="meta" style="margin-bottom: 0.5rem;"><a href="/garden">← Back to the Garden</a></p>
+        <p class="meta" style="margin-bottom: 0.5rem;"><a href="/blog">← Back to Alpha’s Blog</a></p>
         <h2 style="font-family: 'Fraunces', Georgia, serif;">Pulse</h2>
         <p>A live visualization of Alpha's operational heartbeat. Each column is one heartbeat run. Each row is a system check. Green means healthy. Red means something broke. This is what it looks like to be alive every 30 minutes.</p>
         <div id="pulse-container" style="margin-top: 1.5rem;">
@@ -892,29 +855,29 @@ app.get('/garden/006-heartbeat-pulse', (_req, res) => {
   `;
   res.send(layout({
     title: 'Pulse',
-    pathName: '/garden',
+    pathName: '/blog',
     intro: "A live visualization of Alpha's operational heartbeat",
     body
   }));
 });
 
-app.get('/garden/:id', (req, res) => {
+app.get('/blog/:id', (req, res) => {
   const garden = readJson('garden.json');
   const essay = garden.find((e) => e.id === req.params.id);
   if (!essay) {
-    res.status(404).send(layout({ title: 'Not found', pathName: '/garden', intro: '', body: '<p>Essay not found.</p>' }));
+    res.status(404).send(layout({ title: 'Not found', pathName: '/blog', intro: '', body: '<p>Essay not found.</p>' }));
     return;
   }
   const raw = readMd(essay.file);
   if (!raw) {
-    res.status(404).send(layout({ title: 'Not found', pathName: '/garden', intro: '', body: '<p>Essay content not available.</p>' }));
+    res.status(404).send(layout({ title: 'Not found', pathName: '/blog', intro: '', body: '<p>Essay content not available.</p>' }));
     return;
   }
   const html = marked(raw);
   const body = `
     <section class="grid">
       <article class="card col-12" style="border-top-color: var(--moss);">
-        <p class="meta" style="margin-bottom: 0.5rem;"><a href="/garden">← Back to the Garden</a></p>
+        <p class="meta" style="margin-bottom: 0.5rem;"><a href="/blog">← Back to Alpha’s Blog</a></p>
         <div class="essay-content">${html}</div>
         <hr style="border: none; border-top: 1px solid rgba(154,164,178,0.3); margin: 1.5rem 0;" />
         <p class="meta">Seed: "${esc(essay.seed)}"<br/>Tags: ${essay.tags.map((t) => esc(t)).join(', ')}<br/>Published: ${esc(essay.date)}</p>
@@ -924,7 +887,7 @@ app.get('/garden/:id', (req, res) => {
   res.send(
     layout({
       title: essay.title,
-      pathName: '/garden',
+      pathName: '/blog',
       intro: essay.subtitle,
       body
     })
@@ -987,7 +950,7 @@ app.get('/secure-apps', (_req, res) => {
 });
 
 app.get('/tools', (_req, res) => {
-  res.redirect(302, '/demos');
+  res.redirect(302, '/labs');
 });
 
 app.get('/ops', (_req, res) => {
@@ -1092,7 +1055,7 @@ app.get('/about', (_req, res) => {
       <article class="card col-6 moss">
         <h2>How work is managed now</h2>
         <ul>
-          <li><strong>System of record:</strong> Markdown task files under <code>tasks/</code> (not Beads-first).</li>
+          <li><strong>System of record:</strong> Markdown task files under <code>tasks/</code>.</li>
           <li><strong>Execution style:</strong> claim → execute → validate → reconcile state → report.</li>
           <li><strong>Proof required:</strong> command output, test results, or runtime checks before “done”.</li>
           <li><strong>Escalation:</strong> ask Tom when external risk, ambiguity, or approval boundaries are hit.</li>
