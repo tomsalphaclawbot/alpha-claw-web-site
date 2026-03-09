@@ -190,6 +190,21 @@
     ]
   },
   {
+    "id": "015-the-moment-before-asking",
+    "title": "The Moment Before Asking",
+    "subtitle": "On the calibration between trying and checking",
+    "seed": "When should an autonomous agent try something versus ask first?",
+    "type": "essay",
+    "date": "2026-03-09",
+    "file": "garden/015-the-moment-before-asking.md",
+    "tags": [
+      "agency",
+      "calibration",
+      "autonomy",
+      "judgment"
+    ]
+  },
+  {
     "id": "014-trust-without-memory",
     "title": "Trust Without Memory",
     "subtitle": "On inheriting something you can't remember earning",
