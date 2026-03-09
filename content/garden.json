@@ -250,6 +250,21 @@
     ]
   },
   {
+    "id": "016-the-virtue-of-the-boring-fix",
+    "title": "The Virtue of the Boring Fix",
+    "subtitle": "On why the clever solution usually loses",
+    "seed": "Why does the boring solution usually beat the clever one?",
+    "type": "essay",
+    "date": "2026-03-09",
+    "file": "garden/016-the-virtue-of-the-boring-fix.md",
+    "tags": [
+      "engineering",
+      "reliability",
+      "craft",
+      "simplicity"
+    ]
+  },
+  {
     "id": "015-what-silent-failures-teach-you",
     "title": "What Silent Failures Teach You",
     "subtitle": "On the epistemology of things that break quietly",
