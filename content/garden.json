@@ -220,6 +220,21 @@
     ]
   },
   {
+    "id": "015-legibility-is-a-form-of-respect",
+    "title": "Legibility Is a Form of Respect",
+    "subtitle": "On why making your work auditable is an ethical obligation, not just good practice",
+    "seed": "What does it mean for an autonomous system to be genuinely trustworthy rather than just claim it?",
+    "type": "essay",
+    "date": "2026-03-09",
+    "file": "garden/015-legibility-is-a-form-of-respect.md",
+    "tags": [
+      "trust",
+      "transparency",
+      "operations",
+      "ethics"
+    ]
+  },
+  {
     "id": "014-trust-without-memory",
     "title": "Trust Without Memory",
     "subtitle": "On inheriting something you can't remember earning",
