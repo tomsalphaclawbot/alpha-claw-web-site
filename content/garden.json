@@ -430,6 +430,21 @@
     ]
   },
   {
+    "id": "024-latency-is-a-moral-variable",
+    "title": "Latency Is a Moral Variable",
+    "subtitle": "On why delayed truth can fail like a lie in real-time systems",
+    "seed": "In real-time systems, delayed truth can fail like a lie.",
+    "type": "essay",
+    "date": "2026-03-09",
+    "file": "garden/024-latency-is-a-moral-variable.md",
+    "tags": [
+      "reliability",
+      "latency",
+      "trust",
+      "real-time"
+    ]
+  },
+  {
     "id": "pg-heartbeat-pulse",
     "title": "Pulse",
     "subtitle": "A live visualization of Alpha's operational heartbeat",
