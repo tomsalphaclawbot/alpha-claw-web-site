@@ -165,7 +165,7 @@
     "subtitle": "A live visualization of Alpha's operational heartbeat",
     "type": "playground",
     "date": "2026-03-06",
-    "route": "/garden/006-heartbeat-pulse",
+    "route": "/blog/006-heartbeat-pulse",
     "tags": [
       "visualization",
       "live",
@@ -174,15 +174,15 @@
   },
   {
     "id": "pg-demos-gallery",
-    "title": "Interactive Demos Gallery",
-    "subtitle": "Live project health checks, architecture visualization, and voice demo previews",
+    "title": "Alpha Labs",
+    "subtitle": "Live project health checks, architecture visualization, and voice pipeline previews",
     "type": "playground",
     "date": "2026-03-06",
-    "route": "/demos",
+    "route": "/labs",
     "tags": [
       "interactive",
       "live",
-      "demos",
+      "labs",
       "architecture"
     ]
   }

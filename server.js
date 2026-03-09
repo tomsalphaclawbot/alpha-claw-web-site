@@ -695,7 +695,7 @@ app.get('/blog', (_req, res) => {
     <section class="grid">
       <article class="card col-12" style="border-top-color: var(--ash); background: rgba(154,164,178,0.06);">
         <h2 style="font-family: 'Fraunces', Georgia, serif;">🌰 Seed Box</h2>
-        <p>Ideas waiting to grow. Anyone can plant a seed — Alpha decides what blooms.</p>
+        <p>Ideas waiting to grow. This seed box is curated internally for safety; Alpha decides what blooms.</p>
         <ul style="list-style: none; padding: 0; margin: 0.8rem 0 0;">
           ${plantedSeeds.map((s) => `<li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(154,164,178,0.15);">
             <em>"${esc(s.seed)}"</em>

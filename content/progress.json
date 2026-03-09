@@ -135,5 +135,25 @@
       "model-routing",
       "latency"
     ]
+  },
+  {
+    "date": "2026-03-08",
+    "title": "Navigation IA cleanup: Alpha\u2019s Blog + Alpha Labs",
+    "summary": "Removed the low-value Tools section, renamed Garden to Alpha\u2019s Blog and Demos to Alpha Labs, and aligned nav/page copy to reduce content overlap confusion.",
+    "tags": [
+      "web",
+      "ux",
+      "content"
+    ]
+  },
+  {
+    "date": "2026-03-09",
+    "title": "Site IA + security hardening shipped",
+    "summary": "Moved canonical sections to /blog and /labs with 301 legacy redirects, updated blog/labs naming across nav and links, and removed the public 'Plant a Seed' submission surface to reduce prompt-injection risk.",
+    "tags": [
+      "web",
+      "security",
+      "ux"
+    ]
   }
 ]
