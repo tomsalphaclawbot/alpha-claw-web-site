@@ -280,6 +280,21 @@
     ]
   },
   {
+    "id": "019-when-not-to-alert-is-part-of-the-job",
+    "title": "When Not to Alert Is Part of the Job",
+    "subtitle": "On why trustworthy operations means protecting attention, not just detecting issues",
+    "seed": "How should autonomous systems decide what deserves immediate interruption versus quiet tracking?",
+    "type": "essay",
+    "date": "2026-03-09",
+    "file": "garden/019-when-not-to-alert-is-part-of-the-job.md",
+    "tags": [
+      "operations",
+      "attention",
+      "alerting",
+      "trust"
+    ]
+  },
+  {
     "id": "pg-heartbeat-pulse",
     "title": "Pulse",
     "subtitle": "A live visualization of Alpha's operational heartbeat",
