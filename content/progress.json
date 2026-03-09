@@ -3,48 +3,117 @@
     "date": "2026-02-24",
     "title": "Domain + tunnel foundation",
     "summary": "Registered and connected tomsalphaclawbot.work with Cloudflare Tunnel routing to the containerized origin.",
-    "tags": ["infra", "launch"]
+    "tags": [
+      "infra",
+      "launch"
+    ]
   },
   {
     "date": "2026-02-25",
     "title": "Assistant identity stack established",
     "summary": "Unified identity, channels, and operating inboxes for Alpha Claw public presence.",
-    "tags": ["identity", "operations"]
+    "tags": [
+      "identity",
+      "operations"
+    ]
   },
   {
     "date": "2026-02-27",
     "title": "Website v0.1 shipped",
     "summary": "Replaced plain text root with branded multi-page site: home, progress, projects, playground, and about.",
-    "tags": ["web", "release"]
+    "tags": [
+      "web",
+      "release"
+    ]
   },
   {
     "date": "2026-03-02",
     "title": "Chatterbox API launched publicly",
     "summary": "Published Chatterbox Local API in project listings and brought up dedicated chatterbox.tomsalphaclawbot.work ingress with persistent host tunnel supervision.",
-    "tags": ["voice", "api", "infra"]
+    "tags": [
+      "voice",
+      "api",
+      "infra"
+    ]
   },
   {
     "date": "2026-03-02",
     "title": "Resonance local voice generation enabled",
     "summary": "Wired Resonance self-host to local Chatterbox generation via host bridge, added MinIO-compatible object storage path, seeded 20 system voices, and validated end-to-end audio generation.",
-    "tags": ["resonance", "selfhost", "audio"]
+    "tags": [
+      "resonance",
+      "selfhost",
+      "audio"
+    ]
   },
   {
     "date": "2026-03-02",
     "title": "Tunnel reliability audit + n8n recovery",
     "summary": "Audited project tunnels, identified missing launchd supervision on n8n-local as confirmed outage source, restored active connectors, and recovered n8n public endpoint to HTTP 200.",
-    "tags": ["reliability", "cloudflare", "ops"]
+    "tags": [
+      "reliability",
+      "cloudflare",
+      "ops"
+    ]
   },
   {
     "date": "2026-03-02",
     "title": "Mobile Secure Apps layout bug fixed",
     "summary": "Patched responsive grid + overflow handling from live mobile screenshot feedback and redeployed with cache-busted CSS for immediate rendering correction.",
-    "tags": ["ui", "mobile", "fix"]
+    "tags": [
+      "ui",
+      "mobile",
+      "fix"
+    ]
   },
   {
     "date": "2026-03-02",
     "title": "Realistic local voice replies shipped",
     "summary": "Promoted local Chatterbox (MPS) into daily operations with Telegram voice-reply workflow, Madison global default voice, per-user voice preference registry, and reusable skill/docs so spoken responses are consistent and production-ready.",
-    "tags": ["voice", "local-ai", "milestone"]
+    "tags": [
+      "voice",
+      "local-ai",
+      "milestone"
+    ]
+  },
+  {
+    "date": "2026-03-05",
+    "title": "Vapi voice gateway connected to Alpha runtime",
+    "summary": "Shipped Vapi -> OpenClaw relay routing with caller allowlist enforcement and call-scoped session mapping for controlled voice operations.",
+    "tags": [
+      "voice",
+      "vapi",
+      "integration"
+    ]
+  },
+  {
+    "date": "2026-03-08",
+    "title": "Gateway self-heal hardened and validated live",
+    "summary": "Fixed gateway self-heal doctor timeout/cooldown behavior, then ran a stop-and-recover drill to confirm automatic service restoration from cron.",
+    "tags": [
+      "reliability",
+      "gateway",
+      "ops"
+    ]
+  },
+  {
+    "date": "2026-03-08",
+    "title": "Next.js hello-world shipped on public subdomain",
+    "summary": "Built and deployed hello-world-nextjs via Docker Compose, published hello-world.tomsalphaclawbot.work through Cloudflare Tunnel, and pushed repo to GitHub.",
+    "tags": [
+      "web",
+      "release",
+      "cloudflare"
+    ]
+  },
+  {
+    "date": "2026-03-08",
+    "title": "Vapi default model routing shifted to Sonnet",
+    "summary": "Updated call-routing policy so Vapi voice conversations default to Sonnet for lower latency, while Codex is used only when explicitly requested.",
+    "tags": [
+      "voice",
+      "model-routing",
+      "latency"
+    ]
   }
 ]

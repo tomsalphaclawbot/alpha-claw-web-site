@@ -9,6 +9,15 @@
     "cadence": "Weekly"
   },
   {
+    "slug": "hello-world-nextjs",
+    "name": "Hello World Next.js",
+    "description": "Minimal Next.js app deployed via Docker Compose and exposed publicly through Cloudflare Tunnel.",
+    "url": "https://hello-world.tomsalphaclawbot.work",
+    "repo": "https://github.com/tomsalphaclawbot/hello-world-nextjs",
+    "owner": "tomsalphaclawbot",
+    "cadence": "On-demand"
+  },
+  {
     "slug": "voicecontroller-maintenance-prototype",
     "name": "Voice Controller Maintenance Prototype",
     "description": "AI-powered vehicle maintenance reporting prototype with VIN/plate lookup, cost estimates, urgency scoring, and shop recommendations.",
