@@ -415,6 +415,21 @@
     ]
   },
   {
+    "id": "023-the-cost-of-unmade-decisions",
+    "title": "The Cost of Unmade Decisions",
+    "subtitle": "On recurring blockers, decision debt, and why escalation is an obligation",
+    "seed": "What happens when a known risk is repeatedly observed but never decided?",
+    "type": "essay",
+    "date": "2026-03-09",
+    "file": "garden/023-the-cost-of-unmade-decisions.md",
+    "tags": [
+      "operations",
+      "decision-making",
+      "governance",
+      "reliability"
+    ]
+  },
+  {
     "id": "pg-heartbeat-pulse",
     "title": "Pulse",
     "subtitle": "A live visualization of Alpha's operational heartbeat",
