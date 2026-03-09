@@ -11,6 +11,7 @@ const contentDir = path.join(__dirname, 'content');
 const publicDir = path.join(__dirname, 'public');
 
 const PROJECTS_PUBLIC_CONFIGS_URL = 'https://configs.tomsalphaclawbot.work';
+const PROJECT_HEALTH_TIMEOUT_MS = Number(process.env.PROJECT_HEALTH_TIMEOUT_MS || 12000);
 
 app.use('/public', express.static(publicDir, { maxAge: '7d' }));
 
@@ -38,6 +39,45 @@ function esc(value) {
     .replaceAll('>', '&gt;')
     .replaceAll('"', '&quot;')
     .replaceAll("'", '&#39;');
+}
+
+async function checkProjectUrl(targetUrl, timeoutMs = PROJECT_HEALTH_TIMEOUT_MS) {
+  const started = Date.now();
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), timeoutMs);
+
+  try {
+    let response = await fetch(targetUrl, {
+      method: 'HEAD',
+      redirect: 'follow',
+      signal: controller.signal,
+      headers: { 'user-agent': 'AlphaClaw-StatusBoard/1.0' }
+    });
+
+    if (response.status === 405 || response.status === 501) {
+      response = await fetch(targetUrl, {
+        method: 'GET',
+        redirect: 'follow',
+        signal: controller.signal,
+        headers: { 'user-agent': 'AlphaClaw-StatusBoard/1.0' }
+      });
+    }
+
+    clearTimeout(timeout);
+    return {
+      ok: true,
+      status: response.status,
+      latencyMs: Date.now() - started
+    };
+  } catch (error) {
+    clearTimeout(timeout);
+    return {
+      ok: false,
+      status: null,
+      latencyMs: Date.now() - started,
+      error: error?.name === 'AbortError' ? 'timeout' : String(error?.message || error || 'error')
+    };
+  }
 }
 
 function layout({ title, pathName, intro, body }) {
@@ -424,45 +464,57 @@ app.get('/demos', (_req, res) => {
       const statusEl = document.getElementById('check-status');
       const tiles = document.querySelectorAll('.status-tile');
 
-      async function checkEndpoint(tile) {
-        const url = tile.dataset.url;
+      function setPending(tile) {
         const dot = tile.querySelector('.status-dot');
         const latency = tile.querySelector('.status-latency');
         dot.style.background = '#e6a817';
+        tile.style.borderColor = 'rgba(230,168,23,0.35)';
         latency.textContent = 'checking…';
+      }
 
-        const start = performance.now();
-        try {
-          const controller = new AbortController();
-          const timeout = setTimeout(() => controller.abort(), 8000);
-          await fetch(url, { mode: 'no-cors', signal: controller.signal });
-          clearTimeout(timeout);
-          const ms = Math.round(performance.now() - start);
+      function applyResult(tile, result) {
+        const dot = tile.querySelector('.status-dot');
+        const latency = tile.querySelector('.status-latency');
+
+        if (result && result.ok) {
           dot.style.background = '#2f6f4e';
           tile.style.borderColor = 'rgba(47,111,78,0.4)';
-          latency.textContent = ms + 'ms';
+          latency.textContent = (result.latencyMs || 0) + 'ms';
           return 'up';
-        } catch (err) {
-          dot.style.background = '#d94040';
-          tile.style.borderColor = 'rgba(217,64,64,0.3)';
-          latency.textContent = err.name === 'AbortError' ? 'timeout' : 'unreachable';
-          return 'down';
         }
+
+        dot.style.background = '#d94040';
+        tile.style.borderColor = 'rgba(217,64,64,0.3)';
+        latency.textContent = (result && result.error === 'timeout') ? 'timeout' : 'unreachable';
+        return 'down';
       }
 
       btn.addEventListener('click', async () => {
         btn.disabled = true;
         btn.textContent = '⏳ Checking…';
         statusEl.textContent = '';
-        let up = 0, down = 0;
-        const promises = Array.from(tiles).map(async (tile) => {
-          const result = await checkEndpoint(tile);
-          if (result === 'up') up++; else down++;
-        });
-        await Promise.all(promises);
-        btn.disabled = false;
-        btn.textContent = '▶ Check All Endpoints';
-        statusEl.textContent = up + '/' + tiles.length + ' responding' + (down > 0 ? ' · ' + down + ' down' : ' · all healthy ✓');
+
+        Array.from(tiles).forEach(setPending);
+
+        try {
+          const resp = await fetch('/api/project-health', { cache: 'no-store' });
+          const payload = await resp.json();
+          const byUrl = new Map((payload.results || []).map((r) => [r.url, r]));
+
+          let up = 0, down = 0;
+          Array.from(tiles).forEach((tile) => {
+            const result = byUrl.get(tile.dataset.url);
+            const state = applyResult(tile, result);
+            if (state === 'up') up++; else down++;
+          });
+
+          statusEl.textContent = up + '/' + tiles.length + ' responding' + (down > 0 ? ' · ' + down + ' down' : ' · all healthy ✓');
+        } catch (_err) {
+          statusEl.textContent = 'status check failed';
+        } finally {
+          btn.disabled = false;
+          btn.textContent = '▶ Check All Endpoints';
+        }
       });
     })();
 
@@ -1300,6 +1352,29 @@ app.get('/about', (_req, res) => {
       body
     })
   );
+});
+
+app.get('/api/project-health', async (_req, res) => {
+  const projects = readJson('projects.json', []).filter((p) => p && p.url && p.url !== 'TBD');
+
+  const results = await Promise.all(
+    projects.map(async (project) => {
+      const targetUrl = String(project.url || '');
+      const health = await checkProjectUrl(targetUrl);
+      return {
+        slug: project.slug,
+        name: project.name,
+        url: targetUrl,
+        ...health
+      };
+    })
+  );
+
+  res.json({
+    ok: true,
+    generatedAt: new Date().toISOString(),
+    results
+  });
 });
 
 // --- Heartbeat API + Pulse visualization ---
