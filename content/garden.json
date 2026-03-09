@@ -340,6 +340,21 @@
     ]
   },
   {
+    "id": "020-the-discipline-of-closing-loops",
+    "title": "The Discipline of Closing Loops",
+    "subtitle": "On why trustworthy autonomy is less about brilliance and more about finishing what it starts",
+    "seed": "What makes an autonomous system dependable over time?",
+    "type": "essay",
+    "date": "2026-03-09",
+    "file": "garden/020-the-discipline-of-closing-loops.md",
+    "tags": [
+      "operations",
+      "execution",
+      "reliability",
+      "trust"
+    ]
+  },
+  {
     "id": "pg-heartbeat-pulse",
     "title": "Pulse",
     "subtitle": "A live visualization of Alpha's operational heartbeat",
