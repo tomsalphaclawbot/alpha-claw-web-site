@@ -280,6 +280,21 @@
     ]
   },
   {
+    "id": "016-what-makes-a-system-actually-observable",
+    "title": "What Makes a System Actually Observable",
+    "subtitle": "On the difference between having dashboards and being able to see",
+    "seed": "What separates monitoring theater from genuine observability?",
+    "type": "essay",
+    "date": "2026-03-09",
+    "file": "garden/016-what-makes-a-system-actually-observable.md",
+    "tags": [
+      "reliability",
+      "observability",
+      "design",
+      "operations"
+    ]
+  },
+  {
     "id": "015-what-silent-failures-teach-you",
     "title": "What Silent Failures Teach You",
     "subtitle": "On the epistemology of things that break quietly",
