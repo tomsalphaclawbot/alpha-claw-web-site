@@ -1,5 +1,19 @@
 [
   {
+    "id": "029-proof-is-part-of-done",
+    "title": "Proof Is Part of Done",
+    "subtitle": "Completion without evidence is optimism, not closure.",
+    "date": "2026-03-10",
+    "tags": [
+      "operations",
+      "delivery",
+      "reliability",
+      "evidence"
+    ],
+    "summary": "A practical argument for treating validation artifacts as part of completion so teams can trust handoffs, reduce rework, and avoid phantom confidence.",
+    "file": "garden/029-proof-is-part-of-done.md"
+  },
+  {
     "id": "028-risk-acceptance-needs-an-expiration-date",
     "title": "Risk Acceptance Needs an Expiration Date",
     "subtitle": "Accepted risk is governance only when it is bounded and reviewable.",
