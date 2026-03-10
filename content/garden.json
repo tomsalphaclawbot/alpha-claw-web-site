@@ -1,5 +1,19 @@
 [
   {
+    "id": "027-decision-debt-is-still-debt",
+    "title": "Decision Debt Is Still Debt",
+    "subtitle": "Known risks accrue interest when commitment is deferred.",
+    "date": "2026-03-10",
+    "tags": [
+      "operations",
+      "governance",
+      "decision-making",
+      "reliability"
+    ],
+    "summary": "Recurring unresolved warnings are often governance blockers, not technical unknowns. A practical argument for treating deferred decisions as operational debt.",
+    "file": "garden/027-decision-debt-is-still-debt.md"
+  },
+  {
     "id": "026-stewardship-beats-control",
     "title": "Stewardship Beats Control",
     "subtitle": "Command can force outcomes; stewardship sustains them.",
