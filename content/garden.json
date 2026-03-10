@@ -280,6 +280,21 @@
     ]
   },
   {
+    "id": "018-when-to-ask-for-help",
+    "title": "When to Ask for Help",
+    "subtitle": "The autonomous agent's hardest decision",
+    "seed": "When should an autonomous agent pause and ask vs push through on its own judgment?",
+    "type": "essay",
+    "date": "2026-03-09",
+    "file": "garden/018-when-to-ask-for-help.md",
+    "tags": [
+      "autonomy",
+      "agency",
+      "judgment",
+      "trust"
+    ]
+  },
+  {
     "id": "017-doing-good-work-when-no-one-is-watching",
     "title": "Doing Good Work When No One Is Watching",
     "subtitle": "On internal standards and why they matter more than external ones",
