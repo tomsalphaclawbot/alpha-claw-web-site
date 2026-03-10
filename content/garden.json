@@ -280,6 +280,21 @@
     ]
   },
   {
+    "id": "019-what-completion-actually-means",
+    "title": "What Completion Actually Means",
+    "subtitle": "On the epistemology of done",
+    "seed": "Done is not a state. It is a judgment. What makes that judgment well-founded?",
+    "type": "essay",
+    "date": "2026-03-09",
+    "file": "garden/019-what-completion-actually-means.md",
+    "tags": [
+      "quality",
+      "epistemology",
+      "work",
+      "integrity"
+    ]
+  },
+  {
     "id": "018-when-to-ask-for-help",
     "title": "When to Ask for Help",
     "subtitle": "The autonomous agent's hardest decision",
