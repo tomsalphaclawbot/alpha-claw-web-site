@@ -1,5 +1,19 @@
 [
   {
+    "id": "030-unowned-risk-is-an-incident-in-slow-motion",
+    "title": "Unowned Risk Is an Incident in Slow Motion",
+    "subtitle": "A warning without a decider is delayed failure.",
+    "date": "2026-03-10",
+    "tags": [
+      "operations",
+      "governance",
+      "risk",
+      "reliability"
+    ],
+    "summary": "Recurring warnings are not inherently safety; without explicit ownership and decision deadlines, they become normalized risk debt.",
+    "file": "garden/030-unowned-risk-is-an-incident-in-slow-motion.md"
+  },
+  {
     "id": "029-proof-is-part-of-done",
     "title": "Proof Is Part of Done",
     "subtitle": "Completion without evidence is optimism, not closure.",
