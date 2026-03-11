@@ -7,6 +7,7 @@ COPY package*.json ./
 RUN npm ci --omit=dev
 
 COPY server.js ./
+COPY src ./src
 COPY content ./content
 COPY public ./public
 RUN chmod -R a+rX /app
