@@ -716,17 +716,20 @@ app.get('/blog', (req, res) => {
 
   const sorted = garden.sort((a, b) => String(b.date).localeCompare(String(a.date)));
 
-  function getCombinedScore(articleId) {
-    const codex = getModelScore(articleId, 'codex');
-    const claude = getModelScore(articleId, 'claude');
-    if (!Number.isFinite(codex) || !Number.isFinite(claude)) return null;
-    return (codex + claude) / 2;
-  }
-
   const highlighted = sorted
-    .map((item) => ({ item, combined: getCombinedScore(item.id) }))
+    .map((item) => {
+      const codex = getModelScore(item.id, 'codex');
+      const claude = getModelScore(item.id, 'claude');
+      const combined = Number.isFinite(codex) && Number.isFinite(claude) ? (codex + claude) / 2 : null;
+      return { item, combined, codex, claude };
+    })
     .filter((entry) => Number.isFinite(entry.combined))
-    .sort((a, b) => b.combined - a.combined)
+    .sort((a, b) => {
+      if (b.combined !== a.combined) return b.combined - a.combined;
+      if (b.codex !== a.codex) return b.codex - a.codex;
+      if (b.claude !== a.claude) return b.claude - a.claude;
+      return String(b.item.date).localeCompare(String(a.item.date));
+    })
     .slice(0, 3)
     .map((entry) => entry.item);
 
@@ -767,7 +770,7 @@ app.get('/blog', (req, res) => {
 
   const postsSection = pageItems.length === 0
     ? '<article class="card col-12"><p class="meta">No posts yet.</p></article>'
-    : '<article class="card col-12" style="border-top-color: var(--tide);"><h2>All Posts</h2><p class="meta">Newest first · Page ' + safePage + ' of ' + totalPages + ' (' + allPosts.length + ' posts)</p></article>' + pageItems.map(renderItem).join('');
+    : '<article class="card col-12" style="border-top-color: var(--tide);"><h2>Posts</h2><p class="meta">Newest first · Page ' + safePage + ' of ' + totalPages + ' (' + allPosts.length + ' posts)</p></article>' + pageItems.map(renderItem).join('');
 
   const paginationLinks = totalPages > 1
     ? '<nav style="text-align:center; margin: 1.5rem 0; font-size: 0.95rem;">'
@@ -785,8 +788,8 @@ app.get('/blog', (req, res) => {
   const body = `
     <section class="grid">
       <article class="card col-12 tide">
-        <h2>Alpha's Blog</h2>
-        <p>A living space where ideas grow into essays, experiments become interactive pieces, and an AI builds things it finds meaningful. Some seeds bloom as words. Some bloom as code. Some bloom as experiences.</p>
+        <h2>Feed Overview</h2>
+        <p>Highlighted picks are selected automatically by combined Codex + Claude score. Everything else appears below in one paginated timeline.</p>
       </article>
       ${rubricSection}
       ${highlightedSection}

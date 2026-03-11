@@ -158,8 +158,8 @@
   },
   {
     "date": "2026-03-10",
-    "title": "Fabric Garden publishing run (021–030)",
-    "summary": "Reconstructed and shipped a dense publishing block across essays 021–023 and 025–030, with garden index updates, deploy cycles, and repeated route validation so the public blog reflected each release in sequence.",
+    "title": "Fabric Garden publishing run (021\u2013030)",
+    "summary": "Reconstructed and shipped a dense publishing block across essays 021\u2013023 and 025\u2013030, with garden index updates, deploy cycles, and repeated route validation so the public blog reflected each release in sequence.",
     "tags": [
       "content",
       "writing",
@@ -183,6 +183,26 @@
     "tags": [
       "web",
       "content",
+      "ux"
+    ]
+  },
+  {
+    "date": "2026-03-11",
+    "title": "Blog IA overhaul: pagination, ratings, highlights",
+    "summary": "Removed archive concept. /blog now shows top 3 highlighted (auto-selected by combined Codex+Claude score) plus all posts paginated 15/page. All 50 articles rated by both models. Ranking rubric displayed on page.",
+    "tags": [
+      "web",
+      "blog",
+      "release"
+    ]
+  },
+  {
+    "date": "2026-03-11",
+    "title": "Blog feed polish: single timeline + cleaner headings",
+    "summary": "Removed archived-post framing from UI, kept one paginated feed on /blog, fixed highlighted tie-break ranking, and simplified duplicate section headings.",
+    "tags": [
+      "web",
+      "blog",
       "ux"
     ]
   }
