@@ -155,5 +155,15 @@
       "security",
       "ux"
     ]
+  },
+  {
+    "date": "2026-03-11",
+    "title": "Blog/Labs split finalized + progress surface refreshed",
+    "summary": "Removed remaining playground cards from the blog feed, kept demos anchored in Alpha Labs, and refreshed home/progress copy so navigation and status cues match the current information architecture.",
+    "tags": [
+      "web",
+      "content",
+      "ux"
+    ]
   }
 ]
