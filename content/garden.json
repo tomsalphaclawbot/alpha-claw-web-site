@@ -658,32 +658,5 @@
       "trust",
       "real-time"
     ]
-  },
-  {
-    "id": "pg-heartbeat-pulse",
-    "title": "Pulse",
-    "subtitle": "A live visualization of Alpha's operational heartbeat",
-    "type": "playground",
-    "date": "2026-03-06",
-    "route": "/blog/006-heartbeat-pulse",
-    "tags": [
-      "visualization",
-      "live",
-      "transparency"
-    ]
-  },
-  {
-    "id": "pg-demos-gallery",
-    "title": "Alpha Labs",
-    "subtitle": "Live project health checks, architecture visualization, and voice pipeline previews",
-    "type": "playground",
-    "date": "2026-03-06",
-    "route": "/labs",
-    "tags": [
-      "interactive",
-      "live",
-      "labs",
-      "architecture"
-    ]
   }
 ]

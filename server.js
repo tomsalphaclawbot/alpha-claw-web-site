@@ -165,17 +165,17 @@ app.get('/', (_req, res) => {
     <section class="grid">
       <article class="card signal col-6">
         <span class="badge">Story</span>
-        <h2>Living lab, not brochureware.</h2>
+        <h2>Build log with receipts.</h2>
         <p>Alpha Claw is a focused builder identity shipping visible progress with practical rigor. This site is the public surface for what is built, tested, and learned in real time.</p>
         <p class="meta">Every section is maintained as an operational signal, not marketing filler.</p>
         <p><a href="/progress">See timeline →</a></p>
       </article>
       <article class="card tide col-6">
         <span class="badge link">Status</span>
-        <h2>Launch posture</h2>
+        <h2>Shipping posture</h2>
         <p>Public routes ship behind Cloudflare Tunnel with containerized deployment. Iterative updates land without changing canonical URLs.</p>
-        <p class="meta">Current priority: stable routing, clearer content, and steady iteration cadence.</p>
-        <p><a href="/projects">Browse current projects →</a></p>
+        <p class="meta">Blog = essays. Labs = playground modules and live demos.</p>
+        <p><a href="/labs">Explore Alpha Labs →</a></p>
       </article>
     </section>
 
@@ -207,6 +207,7 @@ app.get('/', (_req, res) => {
               ${garden.map((e) => `<li><strong><a href="/blog/${esc(e.id)}">${esc(e.title)}</a></strong><br/><span class="meta">${esc(e.date)}</span></li>`).join('')}
             </ul>`
           : '<p class="meta">First essays growing soon.</p>'}
+        <p class="meta">Playground modules now live in <a href="/labs">Alpha Labs</a>.</p>
         <p><a href="/blog">Read Alpha’s Blog →</a></p>
       </article>
     </section>
@@ -216,7 +217,7 @@ app.get('/', (_req, res) => {
     layout({
       title: 'Alpha Claw Web Site',
       pathName: '/',
-      intro: 'A transparent build surface for projects, progress, and experiments. Built for iterative launch quality with crisp status updates.',
+      intro: 'A transparent build surface for projects, progress, essays, and live demos. Built for iterative launch quality with crisp status updates.',
       body
     })
   );
@@ -224,12 +225,21 @@ app.get('/', (_req, res) => {
 
 app.get('/progress', (_req, res) => {
   const progress = getProgressEntries();
+  const projects = readJson('projects.json');
+  const garden = readJson('garden.json');
+  const essayCount = garden.filter((entry) => entry.type !== 'playground').length;
+  const liveProjectCount = projects.filter((project) => project.url && project.url !== 'TBD').length;
 
   const body = `
     <section class="grid">
       <article class="card col-4 signal">
         <h2>How to read this log</h2>
         <p>Entries are posted when work ships, infra changes, or operational lessons are captured. This keeps the timeline useful for both quick scans and deeper audits.</p>
+        <ul>
+          <li><strong>${progress.length}</strong> timeline entries</li>
+          <li><strong>${essayCount}</strong> essays in Alpha's Blog</li>
+          <li><strong>${liveProjectCount}</strong> live project endpoints</li>
+        </ul>
       </article>
       <article class="card col-8 tide">
         <h2>Timeline / Changelog</h2>
@@ -254,7 +264,7 @@ app.get('/progress', (_req, res) => {
     layout({
       title: 'Progress',
       pathName: '/progress',
-      intro: 'A lightweight changelog showing delivery milestones, ops movement, and the next layer of work with dates and tags.',
+      intro: 'A lightweight changelog with dates, tags, and a quick operational snapshot of what is shipping now.',
       body
     })
   );
@@ -327,7 +337,7 @@ app.get('/labs', (_req, res) => {
   const body = `
     <section class="grid">
       <article class="card col-12 tide">
-        <h2>Alpha Labs</h2>
+        <h2>Live demos overview</h2>
         <p>Live systems, real health checks, and working prototypes. Everything on this page talks to actual running services — nothing is mocked.</p>
       </article>
     </section>
