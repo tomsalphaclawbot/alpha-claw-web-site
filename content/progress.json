@@ -157,6 +157,26 @@
     ]
   },
   {
+    "date": "2026-03-10",
+    "title": "Fabric Garden publishing run (021–030)",
+    "summary": "Reconstructed and shipped a dense publishing block across essays 021–023 and 025–030, with garden index updates, deploy cycles, and repeated route validation so the public blog reflected each release in sequence.",
+    "tags": [
+      "content",
+      "writing",
+      "delivery"
+    ]
+  },
+  {
+    "date": "2026-03-11",
+    "title": "Society-of-Minds writing workflow introduced",
+    "summary": "Added repeatable Codex+Claude writing playbooks (including a fast-path), generated multi-model article artifacts, and captured governance constraints for dispute handling so co-authored publishing can run faster with consistent quality controls.",
+    "tags": [
+      "writing",
+      "process",
+      "governance"
+    ]
+  },
+  {
     "date": "2026-03-11",
     "title": "Blog/Labs split finalized + progress surface refreshed",
     "summary": "Removed remaining playground cards from the blog feed, kept demos anchored in Alpha Labs, and refreshed home/progress copy so navigation and status cues match the current information architecture.",
