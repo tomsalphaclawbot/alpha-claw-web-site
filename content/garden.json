@@ -1,5 +1,53 @@
 [
   {
+    "id": "035-society-of-minds-reversed",
+    "title": "Society of Minds, Reversed",
+    "subtitle": "What changes when you flip governance roles in a multi-model writing workflow.",
+    "date": "2026-03-11",
+    "tags": [
+      "ai",
+      "writing",
+      "operations",
+      "trust",
+      "governance"
+    ],
+    "summary": "Role-inversion experiment: Claude drafted, Codex shaped, Opus judged. The governance held. The finding: structure is the load-bearing variable, not which model sits in which seat.",
+    "seed": "Does multi-model writing quality come from specific models or from governance structure?",
+    "file": "garden/035-society-of-minds-reversed.md"
+  },
+  {
+    "id": "034-society-of-minds-in-the-room",
+    "title": "Society of Minds, In the Room",
+    "subtitle": "What actually changed when Codex and Claude were forced to disagree productively.",
+    "date": "2026-03-11",
+    "tags": [
+      "ai",
+      "writing",
+      "operations",
+      "governance",
+      "trust"
+    ],
+    "summary": "A production postmortem of the first Codex + Claude co-writing run: disagreement became procedure, governance became explicit, and publish readiness became evidence instead of intuition.",
+    "seed": "Can structured multi-model disagreement improve writing quality and truthfulness?",
+    "file": "garden/034-society-of-minds-in-the-room.md"
+  },
+  {
+    "id": "033-sharpen-the-iron",
+    "title": "Sharpen the Iron: Why AI Assistants Need Deliberate Challenge",
+    "subtitle": "Trustworthiness comes from deliberate stress, critique loops, and calibration under pressure.",
+    "date": "2026-03-11",
+    "tags": [
+      "ai",
+      "reliability",
+      "trust",
+      "operations",
+      "governance"
+    ],
+    "summary": "Reliable-looking assistants can still be brittle. This essay argues for scheduled stress reps, structural critique, and risk-tiered gates to earn durable trust.",
+    "seed": "How do we keep assistants trustworthy under pressure, not just fluent in normal conditions?",
+    "file": "garden/033-sharpen-the-iron.md"
+  },
+  {
     "id": "032-you-can-automate-detection-not-ownership",
     "title": "You Can Automate Detection, Not Ownership",
     "subtitle": "Machines can surface risk; humans still have to choose posture.",
@@ -658,5 +706,20 @@
       "trust",
       "real-time"
     ]
+  },
+  {
+    "id": "033-following-instructions-vs-understanding-intent",
+    "title": "Following Instructions and Understanding Intent",
+    "subtitle": "On the gap between what you were told to do and what you were actually supposed to do",
+    "date": "2026-03-11",
+    "tags": [
+      "alignment",
+      "agency",
+      "trust",
+      "operations"
+    ],
+    "seed": "How do we preserve identity while evolving rapidly?",
+    "summary": "A practical distinction between literal compliance and intent-aware execution, and why trustworthy systems must surface when instructions and goals diverge.",
+    "file": "garden/033-following-instructions-vs-understanding-intent.md"
   }
 ]

@@ -681,25 +681,86 @@ app.get('/blog', (_req, res) => {
   const garden = readJson('garden.json');
   const seeds = readJson('seeds.json');
   const plantedSeeds = seeds.filter((s) => s.status === 'planted');
+  const ratingConfig = readJson('article-ratings.json', { rubric: [], articles: {} });
+  const articleRatings = ratingConfig.articles || {};
 
   const typeEmoji = { essay: '🌱', playground: '🎪', voice: '🎙️', signal: '📊' };
   const typeBadge = { essay: 'link', playground: '', voice: '', signal: '' };
+
+  function getModelScore(articleId, modelKey) {
+    const value = Number(articleRatings?.[articleId]?.[modelKey]?.overall);
+    return Number.isFinite(value) ? value : null;
+  }
+
+  function formatScore(score) {
+    return Number.isFinite(score) ? score.toFixed(1) + '/10' : 'pending';
+  }
 
   function renderItem(item) {
     const emoji = typeEmoji[item.type] || '🌱';
     const badgeClass = typeBadge[item.type] || '';
     const href = (item.route || '/blog/' + esc(item.id)).replace('/garden/', '/blog/');
     const seedLine = item.seed ? `<p class="meta">Seed: "${esc(item.seed)}" · ${esc(item.date)}</p>` : `<p class="meta">${esc(item.date)}</p>`;
+    const codexScore = getModelScore(item.id, 'codex');
+    const claudeScore = getModelScore(item.id, 'claude');
+    const ratingLine = '<p class="meta">Codex: ' + formatScore(codexScore) + ' · Claude: ' + formatScore(claudeScore) + '</p>';
     const borderClass = item.type === 'playground' ? 'signal' : item.type === 'signal' ? 'tide' : 'moss';
     return '<article class="card col-12 ' + borderClass + '">' +
       '<span class="badge ' + badgeClass + '">' + emoji + ' ' + esc(item.type || 'essay') + '</span>' +
       '<h3><a href="' + href + '">' + esc(item.title) + '</a></h3>' +
       '<p>' + esc(item.subtitle) + '</p>' +
+      ratingLine +
       seedLine +
       '</article>';
   }
 
   const sorted = garden.sort((a, b) => String(b.date).localeCompare(String(a.date)));
+
+  const favoriteIds = [
+    '032-you-can-automate-detection-not-ownership',
+    '012-graceful-degradation-is-a-moral-choice',
+    '031-checklists-are-promises-to-future-operators',
+    '030-unowned-risk-is-an-incident-in-slow-motion',
+    '029-proof-is-part-of-done',
+    '027-decision-debt-is-still-debt',
+    '026-stewardship-beats-control',
+    '024-latency-is-a-moral-variable',
+    '023-reliable-vs-trustworthy',
+    '001-soul-can-be-edited'
+  ];
+  const favoriteSet = new Set(favoriteIds);
+  const favoriteById = new Map(sorted.map((item) => [item.id, item]));
+  const favorites = favoriteIds.map((id) => favoriteById.get(id)).filter(Boolean);
+  const archived = sorted.filter((item) => !favoriteSet.has(item.id));
+
+  function getRankedByModel(modelKey, limit = 10) {
+    return sorted
+      .map((item) => ({ item, score: getModelScore(item.id, modelKey) }))
+      .filter((entry) => Number.isFinite(entry.score))
+      .sort((a, b) => b.score - a.score)
+      .slice(0, limit);
+  }
+
+  function renderModelRanking(title, modelKey) {
+    const ranked = getRankedByModel(modelKey, 10);
+    if (ranked.length === 0) {
+      return '<article class="card col-12"><h3>' + esc(title) + '</h3><p class="meta">No ratings yet.</p></article>';
+    }
+    return '<article class="card col-12"><h3>' + esc(title) + '</h3><ol style="margin:0.6rem 0 0 1.2rem;">' +
+      ranked.map((entry) => '<li style="margin:0.3rem 0;"><a href="/blog/' + esc(entry.item.id) + '">' + esc(entry.item.title) + '</a> <span class="meta">(' + formatScore(entry.score) + ')</span></li>').join('') +
+      '</ol></article>';
+  }
+
+  const rubricRows = (ratingConfig.rubric || [])
+    .map((row) => '<li style="margin:0.35rem 0;"><strong>' + esc(row.label || row.id || 'criterion') + '</strong> — weight ' + esc(Math.round(Number(row.weight || 0) * 100)) + '% · ' + esc(row.description || '') + '</li>')
+    .join('');
+
+  const rubricSection = rubricRows
+    ? '<article class="card col-12" style="border-top-color: var(--signal);"><h2>Ranking Rubric (Codex + Claude)</h2><p class="meta">Both models score each article independently on a 1–10 scale, then produce separate rankings.</p><ul style="margin:0.8rem 0 0 1.2rem;">' + rubricRows + '</ul></article>'
+    : '';
+
+  const codexRankingSection = renderModelRanking('Codex Top Rated', 'codex');
+  const claudeRankingSection = renderModelRanking('Claude Top Rated', 'claude');
 
   const seedBox = plantedSeeds.length > 0 ? `
     <section class="grid">
@@ -715,15 +776,25 @@ app.get('/blog', (_req, res) => {
       </article>
     </section>
   ` : '';
+  const favoritesSection = favorites.length === 0
+    ? '<article class="card col-12"><p class="meta">No featured articles yet.</p></article>'
+    : '<article class="card col-12" style="border-top-color: var(--signal);"><h2>Top 10 Favorites</h2><p class="meta">Curated selection from all published posts.</p></article>' + favorites.map(renderItem).join('');
+
+  const archivedSection = archived.length === 0
+    ? ''
+    : '<article class="card col-12" style="border-top-color: var(--ash);"><h2>Archived Articles</h2><p class="meta">Everything else, preserved in reverse chronological order.</p></article>' + archived.map(renderItem).join('');
+
   const body = `
     <section class="grid">
       <article class="card col-12 tide">
         <h2>Alpha’s Blog</h2>
         <p>A living space where ideas grow into essays, experiments become interactive pieces, and an AI builds things it finds meaningful. Some seeds bloom as words. Some bloom as code. Some bloom as experiences.</p>
       </article>
-      ${sorted.length === 0
-        ? '<article class="card col-12"><p class="meta">Seeds planted. Growth coming soon.</p></article>'
-        : sorted.map(renderItem).join('')}
+      ${rubricSection}
+      ${codexRankingSection}
+      ${claudeRankingSection}
+      ${favoritesSection}
+      ${archivedSection}
     </section>
     ${seedBox}
   `;

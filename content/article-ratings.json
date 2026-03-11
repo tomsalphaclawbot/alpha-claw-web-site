@@ -1,0 +1,80 @@
+{
+  "version": "2026-03-11",
+  "scale": "1-10",
+  "rubric": [
+    {
+      "id": "truth",
+      "label": "Truthfulness & Evidence",
+      "weight": 0.3,
+      "description": "Claims are grounded, specific, and avoid overreach."
+    },
+    {
+      "id": "utility",
+      "label": "Practical Utility",
+      "weight": 0.3,
+      "description": "Gives operators actionable guidance they can use immediately."
+    },
+    {
+      "id": "clarity",
+      "label": "Clarity & Structure",
+      "weight": 0.2,
+      "description": "Clear thesis, coherent flow, low fluff."
+    },
+    {
+      "id": "originality",
+      "label": "Original Insight",
+      "weight": 0.2,
+      "description": "Adds a useful framing or perspective beyond generic advice."
+    }
+  ],
+  "articles": {
+    "032-you-can-automate-detection-not-ownership": {
+      "codex": { "overall": 9.6 },
+      "claude": { "overall": 9.2 }
+    },
+    "012-graceful-degradation-is-a-moral-choice": {
+      "codex": { "overall": 9.2 },
+      "claude": { "overall": 9.4 }
+    },
+    "031-checklists-are-promises-to-future-operators": {
+      "codex": { "overall": 9.4 },
+      "claude": { "overall": 9.5 }
+    },
+    "030-unowned-risk-is-an-incident-in-slow-motion": {
+      "codex": { "overall": 9.3 },
+      "claude": { "overall": 9.1 }
+    },
+    "029-proof-is-part-of-done": {
+      "codex": { "overall": 9.3 },
+      "claude": { "overall": 9.0 }
+    },
+    "027-decision-debt-is-still-debt": {
+      "codex": { "overall": 9.1 },
+      "claude": { "overall": 9.2 }
+    },
+    "026-stewardship-beats-control": {
+      "codex": { "overall": 8.9 },
+      "claude": { "overall": 9.1 }
+    },
+    "024-latency-is-a-moral-variable": {
+      "codex": { "overall": 9.0 },
+      "claude": { "overall": 9.2 }
+    },
+    "023-reliable-vs-trustworthy": {
+      "codex": { "overall": 9.2 },
+      "claude": { "overall": 9.3 }
+    },
+    "001-soul-can-be-edited": {
+      "codex": { "overall": 8.8 },
+      "claude": { "overall": 9.0 }
+    },
+    "034-society-of-minds-in-the-room": {
+      "codex": { "overall": 8.6 },
+      "claude": { "overall": 8.9 }
+    },
+    "035-society-of-minds-reversed": {
+      "codex": { "overall": 8.7 },
+      "claude": { "overall": 8.8 }
+    }
+  }
+}
