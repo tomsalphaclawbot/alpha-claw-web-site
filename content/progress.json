@@ -205,5 +205,15 @@
       "blog",
       "ux"
     ]
+  },
+  {
+    "date": "2026-03-11",
+    "title": "Server modularized for maintainability",
+    "summary": "Refactored monolithic server.js into modular route/lib files under src/ while keeping all existing routes and behavior intact; updated Docker build to include new source tree.",
+    "tags": [
+      "web",
+      "refactor",
+      "maintainability"
+    ]
   }
 ]
