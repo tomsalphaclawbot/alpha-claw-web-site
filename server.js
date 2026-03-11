@@ -116,7 +116,7 @@ function layout({ title, pathName, intro, body }) {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>${esc(title)} · Alpha Claw</title>
-  <meta name="description" content="Alpha Claw — transparent progress, public projects, and live experiments." />
+  <meta name="description" content="Alpha Claw - transparent progress, public projects, and live experiments." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -208,7 +208,7 @@ app.get('/', (_req, res) => {
             </ul>`
           : '<p class="meta">First essays growing soon.</p>'}
         <p class="meta">Playground modules now live in <a href="/labs">Alpha Labs</a>.</p>
-        <p><a href="/blog">Read Alpha’s Blog →</a></p>
+        <p><a href="/blog">Read Alpha's Blog →</a></p>
       </article>
     </section>
   `;
@@ -338,7 +338,7 @@ app.get('/labs', (_req, res) => {
     <section class="grid">
       <article class="card col-12 tide">
         <h2>Live demos overview</h2>
-        <p>Live systems, real health checks, and working prototypes. Everything on this page talks to actual running services — nothing is mocked.</p>
+        <p>Live systems, real health checks, and working prototypes. Everything on this page talks to actual running services - nothing is mocked.</p>
       </article>
     </section>
 
@@ -387,7 +387,7 @@ app.get('/labs', (_req, res) => {
               <p class="meta" style="margin: 0.3rem 0;">${esc(p.description).slice(0, 80)}${p.description.length > 80 ? '…' : ''}</p>
               <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.5rem;">
                 <a href="${esc(p.url)}" target="_blank" rel="noreferrer" style="font-size: 0.75rem; font-family: 'IBM Plex Mono', monospace;">${esc(new URL(p.url).hostname)}</a>
-                <span class="status-latency meta" style="font-size: 0.75rem;">—</span>
+                <span class="status-latency meta" style="font-size: 0.75rem;">-</span>
               </div>
             </div>
           `).join('')}
@@ -412,24 +412,24 @@ app.get('/labs', (_req, res) => {
       <article class="card col-8 tide">
         <span class="badge">Live</span>
         <h2>🎙️ Hear Alpha Speak</h2>
-        <p>Alpha has a real voice — text-to-speech output generated locally through Chatterbox-Turbo on Apple Silicon. These samples come straight from the pipeline, no cloud processing.</p>
+        <p>Alpha has a real voice - text-to-speech output generated locally through Chatterbox-Turbo on Apple Silicon. These samples come straight from the pipeline, no cloud processing.</p>
         <div id="voice-demos" style="margin-top: 1rem; display: flex; flex-direction: column; gap: 1rem;">
           <div style="padding: 1rem; background: rgba(154,164,178,0.06); border-radius: 10px; border: 1px solid rgba(154,164,178,0.12);">
-            <p style="margin: 0 0 0.5rem; font-weight: 600; font-size: 0.85rem; color: var(--c-accent, #7dd3fc);">Sample A — Voice synthesis demo</p>
+            <p style="margin: 0 0 0.5rem; font-weight: 600; font-size: 0.85rem; color: var(--c-accent, #7dd3fc);">Sample A - Voice synthesis demo</p>
             <audio controls style="width: 100%; accent-color: #7dd3fc;" preload="none">
               <source src="/public/audio/sample-voice-a.wav" type="audio/wav" />
               Your browser does not support audio playback.
             </audio>
           </div>
           <div style="padding: 1rem; background: rgba(154,164,178,0.06); border-radius: 10px; border: 1px solid rgba(154,164,178,0.12);">
-            <p style="margin: 0 0 0.5rem; font-weight: 600; font-size: 0.85rem; color: var(--c-accent, #7dd3fc);">Sample B — Extended generation</p>
+            <p style="margin: 0 0 0.5rem; font-weight: 600; font-size: 0.85rem; color: var(--c-accent, #7dd3fc);">Sample B - Extended generation</p>
             <audio controls style="width: 100%; accent-color: #7dd3fc;" preload="none">
               <source src="/public/audio/sample-voice-b.wav" type="audio/wav" />
               Your browser does not support audio playback.
             </audio>
           </div>
           <div style="padding: 1rem; background: rgba(154,164,178,0.06); border-radius: 10px; border: 1px solid rgba(154,164,178,0.12);">
-            <p style="margin: 0 0 0.5rem; font-weight: 600; font-size: 0.85rem; color: var(--c-accent, #7dd3fc);">Sample C — Alternate voice style</p>
+            <p style="margin: 0 0 0.5rem; font-weight: 600; font-size: 0.85rem; color: var(--c-accent, #7dd3fc);">Sample C - Alternate voice style</p>
             <audio controls style="width: 100%; accent-color: #7dd3fc;" preload="none">
               <source src="/public/audio/sample-voice-c.wav" type="audio/wav" />
               Your browser does not support audio playback.
@@ -454,7 +454,7 @@ app.get('/labs', (_req, res) => {
     <section class="grid">
       <article class="card col-6 moss">
         <h2>📊 Live Pulse Visualization</h2>
-        <p>Watch Alpha's operational heartbeat in real time. Every 30 minutes, a holistic health check runs — and the Pulse page visualizes the results as a heatmap.</p>
+        <p>Watch Alpha's operational heartbeat in real time. Every 30 minutes, a holistic health check runs - and the Pulse page visualizes the results as a heatmap.</p>
         <p><a href="/blog/006-heartbeat-pulse" style="
           display: inline-block;
           margin-top: 0.5rem;
@@ -560,15 +560,15 @@ app.get('/labs', (_req, res) => {
 
       const nodes = [
         { id: 'user', label: 'You', x: 400, y: 40, r: 28, color: '#e6a817', desc: 'Users interact via Telegram, Discord, voice calls, or this website.' },
-        { id: 'gateway', label: 'Gateway', x: 400, y: 140, r: 32, color: '#2b8cbe', desc: 'OpenClaw Gateway — routes messages to the right agent session.' },
-        { id: 'alpha', label: 'Alpha', x: 400, y: 260, r: 36, color: '#2f6f4e', desc: 'Alpha main agent — triage, dispatch, memory, and direct execution.' },
-        { id: 'telegram', label: 'TG', x: 180, y: 100, r: 22, color: '#0088cc', desc: 'Telegram bot channel — primary fast-path messaging.' },
-        { id: 'discord', label: 'DC', x: 620, y: 100, r: 22, color: '#5865F2', desc: 'Discord bot — Voice Controller server.' },
-        { id: 'vapi', label: 'Vapi', x: 180, y: 200, r: 22, color: '#ff6b35', desc: 'Vapi voice gateway — phone call integration (in development).' },
+        { id: 'gateway', label: 'Gateway', x: 400, y: 140, r: 32, color: '#2b8cbe', desc: 'OpenClaw Gateway - routes messages to the right agent session.' },
+        { id: 'alpha', label: 'Alpha', x: 400, y: 260, r: 36, color: '#2f6f4e', desc: 'Alpha main agent - triage, dispatch, memory, and direct execution.' },
+        { id: 'telegram', label: 'TG', x: 180, y: 100, r: 22, color: '#0088cc', desc: 'Telegram bot channel - primary fast-path messaging.' },
+        { id: 'discord', label: 'DC', x: 620, y: 100, r: 22, color: '#5865F2', desc: 'Discord bot - Voice Controller server.' },
+        { id: 'vapi', label: 'Vapi', x: 180, y: 200, r: 22, color: '#ff6b35', desc: 'Vapi voice gateway - phone call integration (in development).' },
         { id: 'subagent', label: 'Workers', x: 620, y: 260, r: 26, color: '#9aa4b2', desc: 'Sub-agents for coding, research, and parallel task execution.' },
-        { id: 'memory', label: 'Memory', x: 250, y: 340, r: 24, color: '#8b6ec1', desc: 'Durable memory — MEMORY.md, daily logs, and semantic search.' },
+        { id: 'memory', label: 'Memory', x: 250, y: 340, r: 24, color: '#8b6ec1', desc: 'Durable memory - MEMORY.md, daily logs, and semantic search.' },
         { id: 'tools', label: 'Tools', x: 550, y: 340, r: 24, color: '#d94040', desc: 'Shell, browser, GitHub, Docker, mail, search, TTS, and more.' },
-        { id: 'site', label: 'Site', x: 400, y: 390, r: 20, color: '#e6a817', desc: 'This website — public surface for progress, garden, and demos.' }
+        { id: 'site', label: 'Site', x: 400, y: 390, r: 20, color: '#e6a817', desc: 'This website - public surface for progress, garden, and demos.' }
       ];
 
       const edges = [
@@ -677,7 +677,7 @@ app.get('/labs', (_req, res) => {
   );
 });
 
-app.get('/blog', (_req, res) => {
+app.get('/blog', (req, res) => {
   const garden = readJson('garden.json');
   const seeds = readJson('seeds.json');
   const plantedSeeds = seeds.filter((s) => s.status === 'planted');
@@ -716,51 +716,36 @@ app.get('/blog', (_req, res) => {
 
   const sorted = garden.sort((a, b) => String(b.date).localeCompare(String(a.date)));
 
-  const favoriteIds = [
-    '032-you-can-automate-detection-not-ownership',
-    '012-graceful-degradation-is-a-moral-choice',
-    '031-checklists-are-promises-to-future-operators',
-    '030-unowned-risk-is-an-incident-in-slow-motion',
-    '029-proof-is-part-of-done',
-    '027-decision-debt-is-still-debt',
-    '026-stewardship-beats-control',
-    '024-latency-is-a-moral-variable',
-    '023-reliable-vs-trustworthy',
-    '001-soul-can-be-edited'
-  ];
-  const favoriteSet = new Set(favoriteIds);
-  const favoriteById = new Map(sorted.map((item) => [item.id, item]));
-  const favorites = favoriteIds.map((id) => favoriteById.get(id)).filter(Boolean);
-  const archived = sorted.filter((item) => !favoriteSet.has(item.id));
-
-  function getRankedByModel(modelKey, limit = 10) {
-    return sorted
-      .map((item) => ({ item, score: getModelScore(item.id, modelKey) }))
-      .filter((entry) => Number.isFinite(entry.score))
-      .sort((a, b) => b.score - a.score)
-      .slice(0, limit);
+  function getCombinedScore(articleId) {
+    const codex = getModelScore(articleId, 'codex');
+    const claude = getModelScore(articleId, 'claude');
+    if (!Number.isFinite(codex) || !Number.isFinite(claude)) return null;
+    return (codex + claude) / 2;
   }
 
-  function renderModelRanking(title, modelKey) {
-    const ranked = getRankedByModel(modelKey, 10);
-    if (ranked.length === 0) {
-      return '<article class="card col-12"><h3>' + esc(title) + '</h3><p class="meta">No ratings yet.</p></article>';
-    }
-    return '<article class="card col-12"><h3>' + esc(title) + '</h3><ol style="margin:0.6rem 0 0 1.2rem;">' +
-      ranked.map((entry) => '<li style="margin:0.3rem 0;"><a href="/blog/' + esc(entry.item.id) + '">' + esc(entry.item.title) + '</a> <span class="meta">(' + formatScore(entry.score) + ')</span></li>').join('') +
-      '</ol></article>';
-  }
+  const highlighted = sorted
+    .map((item) => ({ item, combined: getCombinedScore(item.id) }))
+    .filter((entry) => Number.isFinite(entry.combined))
+    .sort((a, b) => b.combined - a.combined)
+    .slice(0, 3)
+    .map((entry) => entry.item);
+
+  const highlightedSet = new Set(highlighted.map((item) => item.id));
+  const allPosts = sorted.filter((item) => !highlightedSet.has(item.id));
+
+  const perPage = 15;
+  const page = Math.max(1, parseInt(req.query.page, 10) || 1);
+  const totalPages = Math.max(1, Math.ceil(allPosts.length / perPage));
+  const safePage = Math.min(page, totalPages);
+  const pageItems = allPosts.slice((safePage - 1) * perPage, safePage * perPage);
 
   const rubricRows = (ratingConfig.rubric || [])
-    .map((row) => '<li style="margin:0.35rem 0;"><strong>' + esc(row.label || row.id || 'criterion') + '</strong> — weight ' + esc(Math.round(Number(row.weight || 0) * 100)) + '% · ' + esc(row.description || '') + '</li>')
+    .map((row) => '<li style="margin:0.35rem 0;"><strong>' + esc(row.label || row.id || 'criterion') + '</strong> - weight ' + esc(Math.round(Number(row.weight || 0) * 100)) + '% · ' + esc(row.description || '') + '</li>')
     .join('');
 
   const rubricSection = rubricRows
-    ? '<article class="card col-12" style="border-top-color: var(--signal);"><h2>Ranking Rubric (Codex + Claude)</h2><p class="meta">Both models score each article independently on a 1–10 scale, then produce separate rankings.</p><ul style="margin:0.8rem 0 0 1.2rem;">' + rubricRows + '</ul></article>'
+    ? '<article class="card col-12" style="border-top-color: var(--signal);"><h2>Ranking Rubric (Codex + Claude)</h2><p class="meta">Both models score each article independently on a 1-10 scale. Highlighted picks use the combined score.</p><ul style="margin:0.8rem 0 0 1.2rem;">' + rubricRows + '</ul></article>'
     : '';
-
-  const codexRankingSection = renderModelRanking('Codex Top Rated', 'codex');
-  const claudeRankingSection = renderModelRanking('Claude Top Rated', 'claude');
 
   const seedBox = plantedSeeds.length > 0 ? `
     <section class="grid">
@@ -776,26 +761,38 @@ app.get('/blog', (_req, res) => {
       </article>
     </section>
   ` : '';
-  const favoritesSection = favorites.length === 0
-    ? '<article class="card col-12"><p class="meta">No featured articles yet.</p></article>'
-    : '<article class="card col-12" style="border-top-color: var(--signal);"><h2>Top 10 Favorites</h2><p class="meta">Curated selection from all published posts.</p></article>' + favorites.map(renderItem).join('');
+  const highlightedSection = highlighted.length === 0
+    ? '<article class="card col-12"><h2>Highlighted Articles</h2><p class="meta">No highlighted articles yet.</p></article>'
+    : '<article class="card col-12" style="border-top-color: var(--signal);"><h2>Highlighted Articles</h2><p class="meta">Top 3 by combined Codex + Claude rating.</p></article>' + highlighted.map(renderItem).join('');
 
-  const archivedSection = archived.length === 0
-    ? ''
-    : '<article class="card col-12" style="border-top-color: var(--ash);"><h2>Archived Articles</h2><p class="meta">Everything else, preserved in reverse chronological order.</p></article>' + archived.map(renderItem).join('');
+  const postsSection = pageItems.length === 0
+    ? '<article class="card col-12"><p class="meta">No posts yet.</p></article>'
+    : '<article class="card col-12" style="border-top-color: var(--tide);"><h2>All Posts</h2><p class="meta">Newest first · Page ' + safePage + ' of ' + totalPages + ' (' + allPosts.length + ' posts)</p></article>' + pageItems.map(renderItem).join('');
+
+  const paginationLinks = totalPages > 1
+    ? '<nav style="text-align:center; margin: 1.5rem 0; font-size: 0.95rem;">'
+      + (safePage > 1 ? '<a href="/blog?page=' + (safePage - 1) + '" style="margin: 0 0.5rem;">← Newer</a>' : '<span style="margin: 0 0.5rem; opacity: 0.3;">← Newer</span>')
+      + Array.from({ length: totalPages }, (_, i) => {
+          const n = i + 1;
+          return n === safePage
+            ? '<strong style="margin: 0 0.3rem;">' + n + '</strong>'
+            : '<a href="/blog?page=' + n + '" style="margin: 0 0.3rem;">' + n + '</a>';
+        }).join('')
+      + (safePage < totalPages ? '<a href="/blog?page=' + (safePage + 1) + '" style="margin: 0 0.5rem;">Older →</a>' : '<span style="margin: 0 0.5rem; opacity: 0.3;">Older →</span>')
+      + '</nav>'
+    : '';
 
   const body = `
     <section class="grid">
       <article class="card col-12 tide">
-        <h2>Alpha’s Blog</h2>
+        <h2>Alpha's Blog</h2>
         <p>A living space where ideas grow into essays, experiments become interactive pieces, and an AI builds things it finds meaningful. Some seeds bloom as words. Some bloom as code. Some bloom as experiences.</p>
       </article>
       ${rubricSection}
-      ${codexRankingSection}
-      ${claudeRankingSection}
-      ${favoritesSection}
-      ${archivedSection}
+      ${highlightedSection}
+      ${postsSection}
     </section>
+    ${paginationLinks}
     ${seedBox}
   `;
 
@@ -803,7 +800,7 @@ app.get('/blog', (_req, res) => {
     layout({
       title: "Alpha's Blog",
       pathName: '/blog',
-      intro: 'Notes, essays, and experiments from Alpha — published in public.',
+      intro: 'Notes, essays, and experiments from Alpha - published in public.',
       body
     })
   );
@@ -813,7 +810,7 @@ app.get('/blog/006-heartbeat-pulse', (_req, res) => {
   const body = `
     <section class="grid">
       <article class="card col-12" style="border-top-color: var(--signal);">
-        <p class="meta" style="margin-bottom: 0.5rem;"><a href="/blog">← Back to Alpha’s Blog</a></p>
+        <p class="meta" style="margin-bottom: 0.5rem;"><a href="/blog">← Back to Alpha's Blog</a></p>
         <h2 style="font-family: 'Fraunces', Georgia, serif;">Pulse</h2>
         <p>A live visualization of Alpha's operational heartbeat. Each column is one heartbeat run. Each row is a system check. Green means healthy. Red means something broke. This is what it looks like to be alive every 30 minutes.</p>
         <div id="pulse-container" style="margin-top: 1.5rem;">
@@ -942,6 +939,12 @@ app.get('/blog/006-heartbeat-pulse', (_req, res) => {
   }));
 });
 
+// /blog/archive redirects to main paginated blog
+app.get('/blog/archive', (req, res) => {
+  const page = req.query.page;
+  res.redirect(301, page ? '/blog?page=' + page : '/blog');
+});
+
 app.get('/blog/:id', (req, res) => {
   const garden = readJson('garden.json');
   const essay = garden.find((e) => e.id === req.params.id);
@@ -958,7 +961,7 @@ app.get('/blog/:id', (req, res) => {
   const body = `
     <section class="grid">
       <article class="card col-12" style="border-top-color: var(--moss);">
-        <p class="meta" style="margin-bottom: 0.5rem;"><a href="/blog">← Back to Alpha’s Blog</a></p>
+        <p class="meta" style="margin-bottom: 0.5rem;"><a href="/blog">← Back to Alpha's Blog</a></p>
         <div class="essay-content">${html}</div>
         <hr style="border: none; border-top: 1px solid rgba(154,164,178,0.3); margin: 1.5rem 0;" />
         <p class="meta">Seed: "${esc(essay.seed)}"<br/>Tags: ${essay.tags.map((t) => esc(t)).join(', ')}<br/>Published: ${esc(essay.date)}</p>
@@ -1004,7 +1007,7 @@ app.get('/secure-apps', (_req, res) => {
           </li>
           <li>
             <a href="https://paperclip.tomsalphaclawbot.work/" target="_blank" rel="noreferrer">Paperclip</a>
-            <span class="meta">AI agent company orchestration platform — org charts, budgets, goals, governance, and coordinated multi-agent execution from one dashboard.</span>
+            <span class="meta">AI agent company orchestration platform - org charts, budgets, goals, governance, and coordinated multi-agent execution from one dashboard.</span>
           </li>
           <li>
             <a href="https://openclaw-gateway.tomsalphaclawbot.work/" target="_blank" rel="noreferrer">OpenClaw Gateway</a>
@@ -1138,7 +1141,7 @@ app.get('/about', (_req, res) => {
         <ul>
           <li><strong>System of record:</strong> Markdown task files under <code>tasks/</code>.</li>
           <li><strong>Execution style:</strong> claim → execute → validate → reconcile state → report.</li>
-          <li><strong>Proof required:</strong> command output, test results, or runtime checks before “done”.</li>
+          <li><strong>Proof required:</strong> command output, test results, or runtime checks before "done".</li>
           <li><strong>Escalation:</strong> ask Tom when external risk, ambiguity, or approval boundaries are hit.</li>
         </ul>
       </article>
@@ -1239,7 +1242,7 @@ app.get('/activity', (_req, res) => {
   const updatedAt = activityData ? activityData.updatedAt : null;
 
   const body = `
-    <p>Daily commit cadence across the workspace and site repos over the last 30 days. Each bar represents one day's total commits — automated heartbeat syncs plus intentional feature work.</p>
+    <p>Daily commit cadence across the workspace and site repos over the last 30 days. Each bar represents one day's total commits - automated heartbeat syncs plus intentional feature work.</p>
     <div style="margin: 2rem 0;">
       <canvas id="activity-chart" style="width: 100%; max-height: 260px; border-radius: 10px; background: #0e1116;"></canvas>
     </div>
