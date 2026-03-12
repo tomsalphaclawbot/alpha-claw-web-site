@@ -49,16 +49,36 @@ def main() -> None:
             if d in counts:
                 counts[d] += 1
 
+    chart_days = [{'date': d, 'count': counts[d]} for d in days]
+
+    previous = {}
+    if OUT_PATH.exists():
+        try:
+            previous = json.loads(OUT_PATH.read_text())
+        except Exception:
+            previous = {}
+
+    chart_changed = previous.get('days') != chart_days
+
     payload = {
-        'days': [{'date': d, 'count': counts[d]} for d in days],
-        'updatedAt': datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z'),
+        'days': chart_days,
+        # only bump timestamp when chart data actually changes
+        'updatedAt': (
+            datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z')
+            if chart_changed or not previous.get('updatedAt')
+            else previous.get('updatedAt')
+        ),
         'sources': [str(p) for p in REPOS],
         'windowDays': WINDOW_DAYS,
         'timezone': 'America/Los_Angeles',
     }
 
+    if previous == payload:
+        print(f'NO_CHANGE {OUT_PATH} ({WINDOW_DAYS} days)')
+        return
+
     OUT_PATH.write_text(json.dumps(payload, indent=2) + '\n')
-    print(f'WROTE {OUT_PATH} ({WINDOW_DAYS} days)')
+    print(f"WROTE {OUT_PATH} ({WINDOW_DAYS} days, changed={'yes' if chart_changed else 'no'})")
 
 
 if __name__ == '__main__':

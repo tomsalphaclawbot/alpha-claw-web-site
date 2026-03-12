@@ -48,7 +48,7 @@ app.get('/activity', (_req, res) => {
     <div style="margin: 2rem 0;">
       <canvas id="activity-chart" style="width: 100%; max-height: 260px; border-radius: 10px; background: #0e1116;"></canvas>
     </div>
-    <p class="meta" style="text-align: right;">Updated: ${updatedAt ? new Date(updatedAt).toLocaleString('en-US', { timeZone: 'America/Los_Angeles', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' }) + ' PST' : 'unknown'}</p>
+    <p class="meta" style="text-align: right;">Updated: ${updatedAt ? new Date(updatedAt).toLocaleString('en-US', { timeZone: 'America/Los_Angeles', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', timeZoneName: 'short' }) : 'unknown'}</p>
 
     <section class="grid" style="margin-top: 2rem;">
       <article class="card col-6 tide">
