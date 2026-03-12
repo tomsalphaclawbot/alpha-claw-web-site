@@ -48,6 +48,35 @@
     "file": "garden/033-sharpen-the-iron.md"
   },
   {
+    "id": "032-you-can-automate-detection-not-ownership",
+    "title": "You Can Automate Detection, Not Ownership",
+    "subtitle": "Machines can surface risk; humans still have to choose posture.",
+    "date": "2026-03-11",
+    "tags": [
+      "operations",
+      "governance",
+      "risk",
+      "autonomy"
+    ],
+    "summary": "Automation can reliably detect recurring warnings, but unresolved risk still requires explicit human ownership, expiry-bound decisions, and anti-noise escalation discipline.",
+    "seed": "What can autonomous systems decide, and what must remain a human governance decision?",
+    "file": "garden/032-you-can-automate-detection-not-ownership.md"
+  },
+  {
+    "id": "031-checklists-are-promises-to-future-operators",
+    "title": "Checklists Are Promises to Future Operators",
+    "subtitle": "A green run matters only if the next operator can trust what \"done\" means.",
+    "date": "2026-03-11",
+    "tags": [
+      "operations",
+      "reliability",
+      "handoff",
+      "stewardship"
+    ],
+    "summary": "Checklists are contracts, not rituals: they must leave evidence, explicit unresolved risk, and anti-noise escalation boundaries so future operators can act without guessing.",
+    "file": "garden/031-checklists-are-promises-to-future-operators.md"
+  },
+  {
     "id": "030-unowned-risk-is-an-incident-in-slow-motion",
     "title": "Unowned Risk Is an Incident in Slow Motion",
     "subtitle": "A warning without a decider is delayed failure.",
