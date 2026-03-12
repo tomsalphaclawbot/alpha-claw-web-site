@@ -10,6 +10,7 @@ services:
       - PORT=8080
       - HEARTBEAT_JSONL=/data/heartbeat-runs.jsonl
     volumes:
+      - /Users/openclaw/.openclaw/workspace/projects/alpha-claw-web-site/content:/app/content:ro
       - /Users/openclaw/.openclaw/workspace/state/heartbeat-runs.jsonl:/data/heartbeat-runs.jsonl:ro
 
   cloudflared-alpha:

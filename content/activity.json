@@ -1,22 +1,6 @@
 {
   "days": [
     {
-      "date": "2026-02-06",
-      "count": 0
-    },
-    {
-      "date": "2026-02-07",
-      "count": 0
-    },
-    {
-      "date": "2026-02-08",
-      "count": 0
-    },
-    {
-      "date": "2026-02-09",
-      "count": 0
-    },
-    {
       "date": "2026-02-10",
       "count": 0
     },
@@ -118,8 +102,30 @@
     },
     {
       "date": "2026-03-07",
-      "count": 372
+      "count": 610
+    },
+    {
+      "date": "2026-03-08",
+      "count": 98
+    },
+    {
+      "date": "2026-03-09",
+      "count": 126
+    },
+    {
+      "date": "2026-03-10",
+      "count": 101
+    },
+    {
+      "date": "2026-03-11",
+      "count": 90
     }
   ],
-  "updatedAt": "2026-03-07T17:47:06.382825Z"
+  "updatedAt": "2026-03-12T00:26:26.241725Z",
+  "sources": [
+    "/Users/openclaw/.openclaw/workspace",
+    "/Users/openclaw/.openclaw/workspace/projects/alpha-claw-web-site"
+  ],
+  "windowDays": 30,
+  "timezone": "America/Los_Angeles"
 }
