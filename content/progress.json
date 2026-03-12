@@ -215,5 +215,15 @@
       "refactor",
       "maintainability"
     ]
+  },
+  {
+    "date": "2026-03-10",
+    "title": "Memory context engine cut over to lossless-claw",
+    "summary": "Cutover sequence began at 03:11:21Z when plugins.slots.contextEngine was set to lossless-claw, with toggles during stabilization; final verified active state (contextEngine=lossless-claw, plugin enabled, no engine-registration errors in current window) was confirmed later the same run.",
+    "tags": [
+      "memory",
+      "lcm",
+      "gateway"
+    ]
   }
 ]
