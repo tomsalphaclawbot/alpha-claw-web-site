@@ -5,6 +5,23 @@ function stripFrontmatter(raw) {
   return raw.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/, '');
 }
 
+function normalizeTitle(text) {
+  return String(text || '')
+    .trim()
+    .toLowerCase()
+    .replace(/[’]/g, "'")
+    .replace(/\s+/g, ' ');
+}
+
+function stripDuplicateTitleHeading(markdown, title) {
+  if (!markdown) return '';
+  const match = markdown.match(/^\s*#\s+([^\r\n]+)\s*(?:\r?\n){1,2}/);
+  if (!match) return markdown;
+  const headingText = match[1];
+  if (normalizeTitle(headingText) !== normalizeTitle(title)) return markdown;
+  return markdown.slice(match[0].length);
+}
+
 app.get('/blog', (req, res) => {
   const garden = readJson('garden.json');
   const seeds = readJson('seeds.json');
@@ -288,7 +305,7 @@ app.get('/blog/:id', (req, res) => {
     res.status(404).send(layout({ title: 'Not found', pathName: '/blog', intro: '', body: '<p>Essay content not available.</p>' }));
     return;
   }
-  const markdown = stripFrontmatter(raw);
+  const markdown = stripDuplicateTitleHeading(stripFrontmatter(raw), essay.title);
   const html = marked(markdown);
   const seedLine = essay.seed ? `Seed: "${esc(essay.seed)}"<br/>` : '';
   const body = `
