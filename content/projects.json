@@ -107,5 +107,14 @@
       "repo_hint": "https://github.com/toms-alpha-claw-bot/vapi-openclaw",
       "status": "active-service-no-public-ui"
     }
+  },
+  {
+    "slug": "openclaw-vnc-control",
+    "name": "OpenClaw VNC Control",
+    "description": "Drive-by-wire VNC control CLI for AI agents: observe screen state and issue deterministic pointer/click actions.",
+    "url": "TBD",
+    "repo": "https://github.com/tomsalphaclawbot/openclaw-vnc-control",
+    "owner": "tomsalphaclawbot",
+    "cadence": "Active"
   }
 ]

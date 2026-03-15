@@ -225,5 +225,16 @@
       "lcm",
       "gateway"
     ]
+  },
+  {
+    "date": "2026-03-15",
+    "title": "OpenClaw VNC Control project launched",
+    "summary": "Created and published the openclaw-vnc-control public repo, then formalized an AI-native drive-by-wire architecture where CLI commands return machine-readable observations (images + metadata) and execute deterministic VNC control primitives.",
+    "tags": [
+      "vnc",
+      "ai-agents",
+      "cli",
+      "milestone"
+    ]
   }
 ]
