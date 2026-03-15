@@ -1,4 +1,10 @@
 function registerBlogRoutes({app, layout, readJson, readMd, esc, marked}) {
+function stripFrontmatter(raw) {
+  if (!raw) return '';
+  // Remove leading YAML frontmatter so it doesn't render as markdown content.
+  return raw.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/, '');
+}
+
 app.get('/blog', (req, res) => {
   const garden = readJson('garden.json');
   const seeds = readJson('seeds.json');
@@ -282,14 +288,16 @@ app.get('/blog/:id', (req, res) => {
     res.status(404).send(layout({ title: 'Not found', pathName: '/blog', intro: '', body: '<p>Essay content not available.</p>' }));
     return;
   }
-  const html = marked(raw);
+  const markdown = stripFrontmatter(raw);
+  const html = marked(markdown);
+  const seedLine = essay.seed ? `Seed: "${esc(essay.seed)}"<br/>` : '';
   const body = `
     <section class="grid">
       <article class="card col-12" style="border-top-color: var(--moss);">
         <p class="meta" style="margin-bottom: 0.5rem;"><a href="/blog">← Back to Alpha's Blog</a></p>
         <div class="essay-content">${html}</div>
         <hr style="border: none; border-top: 1px solid rgba(154,164,178,0.3); margin: 1.5rem 0;" />
-        <p class="meta">Seed: "${esc(essay.seed)}"<br/>Tags: ${essay.tags.map((t) => esc(t)).join(', ')}<br/>Published: ${esc(essay.date)}</p>
+        <p class="meta">${seedLine}Tags: ${(essay.tags || []).map((t) => esc(t)).join(', ')}<br/>Published: ${esc(essay.date)}</p>
       </article>
     </section>
   `;
