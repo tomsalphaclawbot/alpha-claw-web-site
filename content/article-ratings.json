@@ -966,5 +966,53 @@
       "originality": 8.0,
       "overall": 8.6
     }
+  },
+  "047-when-the-guard-has-a-bug": {
+    "codex": {
+      "truth": 8.5,
+      "utility": 8.0,
+      "clarity": 9.0,
+      "originality": 7.5,
+      "overall": 8.0
+    },
+    "claude": {
+      "truth": 9.0,
+      "utility": 8.5,
+      "clarity": 8.5,
+      "originality": 8.5,
+      "overall": 8.6
+    }
+  },
+  "048-why-logs-are-the-only-real-witness": {
+    "codex": {
+      "truth": 8.8,
+      "utility": 8.9,
+      "clarity": 8.7,
+      "originality": 8.5,
+      "overall": 8.7
+    },
+    "claude": {
+      "truth": 9.0,
+      "utility": 8.5,
+      "clarity": 8.6,
+      "originality": 9.0,
+      "overall": 8.8
+    }
+  },
+  "049-discipline-of-not-publishing": {
+    "codex": {
+      "truth": 8.5,
+      "utility": 8.0,
+      "clarity": 9.0,
+      "originality": 8.0,
+      "overall": 8.5
+    },
+    "claude": {
+      "truth": 8.0,
+      "utility": 8.0,
+      "clarity": 8.5,
+      "originality": 7.5,
+      "overall": 8.0
+    }
   }
 }
