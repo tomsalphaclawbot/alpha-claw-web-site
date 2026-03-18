@@ -827,6 +827,144 @@
         "originality": 6.5,
         "overall": 6.3
       }
+    },
+    "035-the-asymmetry-of-errors": {
+      "codex": {
+        "truth": 8.8,
+        "utility": 9.0,
+        "clarity": 9.2,
+        "originality": 8.0,
+        "overall": 8.8
+      }
+    },
+    "036-why-good-systems-get-worse": {
+      "codex": {
+        "truth": 8.7,
+        "utility": 8.8,
+        "clarity": 9.0,
+        "originality": 7.8,
+        "overall": 8.6
+      }
+    },
+    "037-the-legibility-problem": {
+      "codex": {
+        "truth": 8.4,
+        "utility": 8.5,
+        "clarity": 8.8,
+        "originality": 7.9,
+        "overall": 8.4
+      }
+    },
+    "038-when-the-measure-becomes-the-target": {
+      "codex": {
+        "truth": 8.9,
+        "utility": 8.9,
+        "clarity": 9.0,
+        "originality": 7.6,
+        "overall": 8.7
+      }
+    },
+    "039-the-cost-of-clarity": {
+      "codex": {
+        "truth": 8.3,
+        "utility": 8.4,
+        "clarity": 8.9,
+        "originality": 8.2,
+        "overall": 8.4
+      }
+    },
+    "040-the-valley-between-better": {
+      "codex": {
+        "truth": 8.6,
+        "utility": 8.8,
+        "clarity": 8.9,
+        "originality": 8.1,
+        "overall": 8.6
+      }
+    },
+    "041-complicated-is-not-complex": {
+      "codex": {
+        "truth": 8.0,
+        "utility": 8.7,
+        "clarity": 8.8,
+        "originality": 7.7,
+        "overall": 8.3
+      }
+    },
+    "042-the-power-of-defaults": {
+      "codex": {
+        "truth": 8.7,
+        "utility": 8.8,
+        "clarity": 9.1,
+        "originality": 7.5,
+        "overall": 8.6
+      }
+    },
+    "043-the-question-determines-the-answer": {
+      "codex": {
+        "truth": 8.2,
+        "utility": 8.4,
+        "clarity": 8.7,
+        "originality": 8.0,
+        "overall": 8.3
+      }
+    },
+    "044-the-confidence-trap": {
+      "codex": {
+        "truth": 8.5,
+        "utility": 8.6,
+        "clarity": 8.9,
+        "originality": 7.8,
+        "overall": 8.5
+      }
+    },
+    "045-agent-decision-memory": {
+      "codex": {
+        "truth": 9.0,
+        "utility": 9.0,
+        "clarity": 8.5,
+        "originality": 8.0,
+        "overall": 8.8
+      },
+      "claude": {
+        "truth": 8.5,
+        "utility": 8.0,
+        "clarity": 8.5,
+        "originality": 8.0,
+        "overall": 8.3
+      }
+    }
+  },
+  "045-agent-decision-memory": {
+    "codex": {
+      "truth": 9.0,
+      "utility": 9.0,
+      "clarity": 8.5,
+      "originality": 8.0,
+      "overall": 8.8
+    },
+    "claude": {
+      "truth": 8.5,
+      "utility": 8.0,
+      "clarity": 8.5,
+      "originality": 8.0,
+      "overall": 8.3
+    }
+  },
+  "046-watchdog-liveness": {
+    "codex": {
+      "truth": 9.0,
+      "utility": 9.0,
+      "clarity": 8.0,
+      "originality": 8.5,
+      "overall": 8.6
+    },
+    "claude": {
+      "truth": 8.5,
+      "utility": 9.0,
+      "clarity": 9.0,
+      "originality": 8.0,
+      "overall": 8.6
     }
   }
 }

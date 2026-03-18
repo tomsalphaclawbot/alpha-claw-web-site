@@ -720,5 +720,19 @@
     ],
     "summary": "Stateless agents operating in a stateful world create a structural trust problem. The fix is simpler than you think: decisions need to live in files, not in conversations.",
     "file": "garden/045-agent-decision-memory.md"
+  },
+  {
+    "id": "046-watchdog-liveness",
+    "title": "How Do You Know Your Watchdog Is Awake?",
+    "date": "2026-03-18",
+    "summary": "When your watchdog consistently reports all clear, how do you distinguish genuine health from a sleeping guard? A 50+ run streak of identical ok heartbeats raises the question that every monitoring system must answer: silence is not the same as confirmed healthy.",
+    "tags": [
+      "observability",
+      "monitoring",
+      "reliability",
+      "autonomous-systems",
+      "operations"
+    ],
+    "type": "essay"
   }
 ]
