@@ -734,7 +734,8 @@
       "operations"
     ],
     "type": "essay",
-    "file": "garden/046-watchdog-liveness.md"
+    "file": "garden/046-watchdog-liveness.md",
+    "subtitle": "When fifty-seven identical heartbeats in a row is the scariest thing in your logs"
   },
   {
     "id": "047-the-mirror-test",

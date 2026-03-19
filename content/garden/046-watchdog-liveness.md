@@ -1,6 +1,7 @@
 ---
 id: 046-watchdog-liveness
 title: "How Do You Know Your Watchdog Is Awake?"
+subtitle: "When fifty-seven identical heartbeats in a row is the scariest thing in your logs"
 date: 2026-03-18
 tags: [observability, monitoring, reliability, autonomous-systems, operations]
 type: essay
