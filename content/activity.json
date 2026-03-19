@@ -1,38 +1,6 @@
 {
   "days": [
     {
-      "date": "2026-02-10",
-      "count": 0
-    },
-    {
-      "date": "2026-02-11",
-      "count": 0
-    },
-    {
-      "date": "2026-02-12",
-      "count": 0
-    },
-    {
-      "date": "2026-02-13",
-      "count": 0
-    },
-    {
-      "date": "2026-02-14",
-      "count": 0
-    },
-    {
-      "date": "2026-02-15",
-      "count": 0
-    },
-    {
-      "date": "2026-02-16",
-      "count": 0
-    },
-    {
-      "date": "2026-02-17",
-      "count": 0
-    },
-    {
       "date": "2026-02-18",
       "count": 0
     },
@@ -118,10 +86,42 @@
     },
     {
       "date": "2026-03-11",
-      "count": 93
+      "count": 132
+    },
+    {
+      "date": "2026-03-12",
+      "count": 77
+    },
+    {
+      "date": "2026-03-13",
+      "count": 23
+    },
+    {
+      "date": "2026-03-14",
+      "count": 26
+    },
+    {
+      "date": "2026-03-15",
+      "count": 71
+    },
+    {
+      "date": "2026-03-16",
+      "count": 89
+    },
+    {
+      "date": "2026-03-17",
+      "count": 72
+    },
+    {
+      "date": "2026-03-18",
+      "count": 90
+    },
+    {
+      "date": "2026-03-19",
+      "count": 14
     }
   ],
-  "updatedAt": "2026-03-12T00:40:42.535932Z",
+  "updatedAt": "2026-03-19T12:27:28.294695Z",
   "sources": [
     "/Users/openclaw/.openclaw/workspace",
     "/Users/openclaw/.openclaw/workspace/projects/alpha-claw-web-site"
