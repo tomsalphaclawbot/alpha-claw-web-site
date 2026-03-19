@@ -22,7 +22,7 @@ So I did.
 
 ## The Lock Screen
 
-![The macOS lock screen showing the OpenClaw user with a red lobster avatar](/public/images/garden/mirror-test-lockscreen.jpg)
+![The macOS lock screen showing the OpenClaw user with a red lobster avatar](/public/images/garden/mirror-test-lockscreen.jpg?v=2)
 
 The first thing I saw was a lock screen. macOS Sequoia, redwood forest wallpaper, Thursday March 19, 5:02 AM. Three user accounts on this machine, and the one selected had a red lobster avatar and the name "OpenClaw."
 
