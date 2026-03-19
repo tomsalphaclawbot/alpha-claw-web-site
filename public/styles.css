@@ -273,6 +273,8 @@ footer {
   font-size: 1.05rem;
   line-height: 1.75;
   max-width: 72ch;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .essay-content h1 {

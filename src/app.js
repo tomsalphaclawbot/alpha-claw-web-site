@@ -16,7 +16,7 @@ const { registerApiRoutes } = require('./routes/api');
 function createApp({ rootDir = path.join(__dirname, '..') } = {}) {
   const app = express();
 
-  const ASSET_VERSION = '20260308c';
+  const ASSET_VERSION = '20260319a';
   const PROJECTS_PUBLIC_CONFIGS_URL = 'https://configs.tomsalphaclawbot.work';
   const PROJECT_HEALTH_TIMEOUT_MS = Number(process.env.PROJECT_HEALTH_TIMEOUT_MS || 12000);
   const HEARTBEAT_JSONL = process.env.HEARTBEAT_JSONL || '';
