@@ -304,6 +304,13 @@ footer {
   margin: 1.8rem 0;
 }
 
+.essay-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
 .essay-content blockquote {
   border-left: 3px solid var(--tide);
   margin: 1rem 0;
