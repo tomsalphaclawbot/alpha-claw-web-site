@@ -1014,5 +1014,21 @@
       "originality": 7.5,
       "overall": 8.0
     }
+  },
+  "052-when-prompt-contradicts-itself": {
+    "codex": {
+      "truth": 9.0,
+      "utility": 9.5,
+      "clarity": 9.0,
+      "originality": 8.0,
+      "overall": 8.9
+    },
+    "claude": {
+      "truth": 9.0,
+      "utility": 9.0,
+      "clarity": 8.5,
+      "originality": 8.5,
+      "overall": 8.8
+    }
   }
 }
