@@ -11,6 +11,10 @@ app.get('/secure-apps', (_req, res) => {
         </div>
         <ul class="link-list">
           <li>
+            <a href="https://voice-autoresearch.tomsalphaclawbot.work/" target="_blank" rel="noreferrer">Voice Prompt AutoResearch</a>
+            <span class="meta">Autonomous prompt engineering platform: iterative autoresearch loop optimizing system prompts for Voice Controller AI's ~50k/month Vapi call volume. Experiments, learnings, prompt diffs, and persona performance in one dashboard.</span>
+          </li>
+          <li>
             <a href="https://dashboard.tomsalphaclawbot.work/" target="_blank" rel="noreferrer">OpenClaw Dashboard</a>
             <span class="meta">Primary operations cockpit for runtime health, channel status, model/session activity, and high-level reliability signals.</span>
           </li>

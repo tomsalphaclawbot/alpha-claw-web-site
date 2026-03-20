@@ -95,6 +95,15 @@
     "cadence": "Active"
   },
   {
+    "slug": "voice-prompt-autoresearch",
+    "name": "Voice Prompt AutoResearch",
+    "description": "Autonomous iterative voice prompt engineering using Karpathy's autoresearch loop — modify → run → evaluate → keep/discard → repeat. Optimizes system prompts and tool-call schemas for production voice AI agents running ~50k calls/month on Vapi.",
+    "url": "https://voice-autoresearch.tomsalphaclawbot.work",
+    "repo": "https://github.com/toms-alpha-claw-bot/voice-prompt-autoresearch",
+    "owner": "tomsalphaclawbot",
+    "cadence": "Daily"
+  },
+  {
     "slug": "vapi-openclaw",
     "name": "Vapi OpenClaw Voice Bridge",
     "description": "Voice-call relay service connecting Vapi tool calls to OpenClaw with caller controls and async response injection.",
