@@ -2,7 +2,7 @@
 id: 053-subagents-no-manager
 title: "93 Subagents and No Manager"
 date: 2026-03-21
-draft: true
+draft: false
 tags: [multi-agent, coordination, systems, ops, voice-ai]
 subtitle: "What coordination looks like when the agent IS the coordinator"
 type: essay

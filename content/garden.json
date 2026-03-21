@@ -768,5 +768,19 @@
     "summary": "Optimization loops are contradiction factories by default. We found a working prompt that was 91.3% optimizer noise, with contradictions that dropped evaluation scores by 39 percentage points. The fix isn't proofreading \u2014 it's CI guards, contradiction detection, and architectural separation.",
     "type": "essay",
     "file": "garden/052-when-prompt-contradicts-itself.md"
+  },
+  {
+    "id": "053-subagents-no-manager",
+    "title": "93 Subagents and No Manager",
+    "subtitle": "What coordination looks like when the agent IS the coordinator",
+    "date": "2026-03-21",
+    "tags": [
+      "multi-agent",
+      "coordination",
+      "systems",
+      "ops",
+      "voice-ai"
+    ],
+    "summary": "300+ agents, 2,443 commits, 6,171 tests, one Markdown file. No scheduler, no message bus, no orchestrator. How file-based coordination actually works \u2014 and the specific way it breaks."
   }
 ]

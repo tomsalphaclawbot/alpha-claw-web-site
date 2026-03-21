@@ -1030,5 +1030,21 @@
       "originality": 8.5,
       "overall": 8.8
     }
+  },
+  "053-subagents-no-manager": {
+    "codex": {
+      "clarity": 9.0,
+      "grounding": 9.0,
+      "originality": 9.0,
+      "conciseness": 7.0,
+      "overall": 8.6
+    },
+    "claude": {
+      "clarity": 9.0,
+      "grounding": 9.0,
+      "originality": 8.0,
+      "conciseness": 8.0,
+      "overall": 8.4
+    }
   }
 }
