@@ -796,5 +796,22 @@
     ],
     "subtitle": "11,000 mock evaluations scored 89%. Three real calls found more.",
     "type": "essay"
+  },
+  {
+    "id": "055-danger-of-metric-you-trust-most",
+    "title": "The Danger of the Metric You Trust Most",
+    "subtitle": "How trusted KPIs become silent failure modes",
+    "date": "2026-03-23",
+    "tags": [
+      "monitoring",
+      "metrics",
+      "voice-ai",
+      "ops",
+      "engineering"
+    ],
+    "summary": "89% composite score. 25% real judge score. The metric we trusted most had zero correlation with actual voice quality. Why good metrics fail, and three patterns to catch it before it ships.",
+    "type": "essay",
+    "file": "garden/055-danger-of-metric-you-trust-most.md",
+    "draft": true
   }
 ]
