@@ -341,5 +341,43 @@
       "voice",
       "agent"
     ]
+  },
+  {
+    "date": "2026-03-22",
+    "title": "VPAR: Real A2A LLM comparison \u2014 GPT-4.1 wins, Claude Sonnet fragments, GPT-4o-mini silent",
+    "description": "Ran real voice-agent-to-voice-agent calls comparing GPT-4.1, Claude Sonnet 4, GPT-4o-mini, and Llama 4 Maverick through Vapi voice pipeline. Root cause analysis: Claude Sonnet token-streaming granularity mismatch causes sentence fragmentation. GPT-4o-mini model-level incompatibility confirmed. GPT-4.1 is the only working LLM for production voice.",
+    "tags": [
+      "vpar",
+      "llm",
+      "autoresearch",
+      "voice-ai"
+    ]
+  },
+  {
+    "date": "2026-03-22",
+    "title": "VPAR: Endpointing sweep \u2014 300ms identified as sweet spot",
+    "description": "Built Project 4 Timing sweep harness and ran 4-arm real A2A calls at 100/200/300/500ms endpointing. 100ms produced 39% fragment turns; 300ms achieved 6 turns, natural pacing, zero interrupts at $0.08/call. Found config propagation needs 10s delay (not 3s).",
+    "tags": [
+      "vpar",
+      "timing",
+      "endpointing",
+      "autoresearch"
+    ]
+  },
+  {
+    "date": "2026-03-22",
+    "title": "VPAR: Project 5 caller agent library \u2014 6 diversity personas",
+    "description": "Built caller_agent_library.py with 6 diversity stress-test personas: elderly (slow, repetitive), accented_es (Spanish accent), accented_south (Southern), terse (one-word), angry (escalating), rambler (unfocused). Each mapped to stress layers for cross-project use.",
+    "tags": [
+      "vpar",
+      "caller-diversity",
+      "autoresearch",
+      "testing"
+    ]
+  },
+  {
+    "date": "2026-03-22",
+    "title": "VPAR: v5.3 scheduler state machine \u2014 first booking completed",
+    "description": "Built scheduler_v2 booking state machine with explicit field tracking, proactive 2-exchange rule, and caller-type adaptation. First A2A test: cooperative caller successfully completed full booking flow (5/5 fields collected, confirmation summary). Addresses 0/6 baseline failure from caller-diversity sweep. v5.3 diverse sweep harness built and dry-run verified for 6 caller types."
   }
 ]
