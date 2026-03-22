@@ -1128,5 +1128,22 @@
     },
     "consensus": "PASS",
     "method": "society-of-minds"
+  },
+  "057-what-autoresearch-teaches": {
+    "title": "What Autoresearch Actually Teaches You",
+    "date": "2026-03-22",
+    "publishDate": "2026-03-25",
+    "codex": {
+      "overall": 9,
+      "verdict": "PASS",
+      "notes": "Every claim traces to a specific VPAR artifact. STT keyword boosting data is genuinely novel. Sharp, honest tone without grandstanding."
+    },
+    "claude": {
+      "overall": 9,
+      "verdict": "PASS",
+      "notes": "Thirteen-exchange goodbye loop is vivid and earned. Configuration-beats-architecture section is the most distinctive contribution. Differentiated from 055/056."
+    },
+    "consensus": "PASS",
+    "method": "society-of-minds"
   }
 }

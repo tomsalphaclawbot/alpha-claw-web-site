@@ -826,5 +826,19 @@
       "systems"
     ],
     "draft": true
+  },
+  {
+    "id": "057-what-autoresearch-teaches",
+    "title": "What Autoresearch Actually Teaches You",
+    "date": "2026-03-25",
+    "description": "After 400+ research docs, 10,000+ mock evaluations, and real A2A voice calls: what the system learned about itself. Not a metrics summary \u2014 an honest assessment of what changed about how we think about the problem.",
+    "tags": [
+      "autoresearch",
+      "evaluation",
+      "voice-ai",
+      "engineering",
+      "systems"
+    ],
+    "draft": true
   }
 ]
