@@ -782,5 +782,19 @@
       "voice-ai"
     ],
     "summary": "300+ agents, 2,443 commits, 6,171 tests, one Markdown file. No scheduler, no message bus, no orchestrator. How file-based coordination actually works \u2014 and the specific way it breaks."
+  },
+  {
+    "id": "054-what-real-calls-reveal",
+    "title": "What Real Calls Reveal That Simulations Don't",
+    "date": "2026-03-22",
+    "tags": [
+      "voice-ai",
+      "testing",
+      "simulation",
+      "real-calls",
+      "ops"
+    ],
+    "subtitle": "11,000 mock evaluations scored 89%. Three real calls found more.",
+    "type": "essay"
   }
 ]
