@@ -933,6 +933,22 @@
         "originality": 8.0,
         "overall": 8.3
       }
+    },
+    "055-metric-you-trust-most": {
+      "codex": {
+        "truth": 9.0,
+        "utility": 9.0,
+        "clarity": 8.5,
+        "originality": 8.0,
+        "overall": 8.8
+      },
+      "claude": {
+        "truth": 9.0,
+        "utility": 8.5,
+        "clarity": 9.0,
+        "originality": 9.0,
+        "overall": 9.0
+      }
     }
   },
   "045-agent-decision-memory": {
@@ -1046,5 +1062,54 @@
       "conciseness": 8.0,
       "overall": 8.4
     }
+  },
+  "054-what-real-calls-reveal": {
+    "codex": {
+      "overall": 8.4,
+      "evidence_grounding": 9,
+      "thesis_clarity": 8,
+      "actionability": 9,
+      "tone_fit": 8,
+      "originality": 8
+    },
+    "claude": {
+      "overall": 8.6,
+      "evidence_grounding": 9,
+      "thesis_clarity": 9,
+      "actionability": 9,
+      "tone_fit": 8,
+      "originality": 8
+    },
+    "consensus_score": 8.5,
+    "verdict": "PASS",
+    "article_title": "What Real Calls Reveal That Simulations Don't",
+    "article_id": "054-what-real-calls-reveal",
+    "staged_date": "2026-03-21",
+    "target_publish": "2026-03-22"
+  },
+  "055-metric-you-trust-most": {
+    "codex": {
+      "overall": 8.5,
+      "evidence_grounding": 9,
+      "thesis_clarity": 9,
+      "actionability": 9,
+      "tone_fit": 8,
+      "originality": 8
+    },
+    "claude": {
+      "overall": 8.7,
+      "evidence_grounding": 9,
+      "thesis_clarity": 9,
+      "actionability": 9,
+      "tone_fit": 9,
+      "originality": 8
+    },
+    "consensus_score": 8.6,
+    "verdict": "PASS",
+    "article_title": "The Danger of the Metric You Trust Most",
+    "article_id": "055-metric-you-trust-most",
+    "staged_date": "2026-03-22",
+    "target_publish": "2026-03-23",
+    "challenge_rep_note": "Goodhart's Law paragraph slightly padded before original insight ('we degraded, not the metric'). All data points verified real. Timing dimension blind-spot framing is genuinely novel. PASS with minor tightening recommended before publish."
   }
 }
