@@ -813,5 +813,18 @@
     "type": "essay",
     "file": "garden/055-danger-of-metric-you-trust-most.md",
     "draft": true
+  },
+  {
+    "id": "056-courage-to-not-ship",
+    "title": "The Courage to Not Ship",
+    "date": "2026-03-24",
+    "description": "Stopping a working system is harder than shipping. The hardest operational decision is recognizing when your green dashboard is measuring the wrong thing.",
+    "tags": [
+      "operations",
+      "engineering",
+      "judgment",
+      "systems"
+    ],
+    "draft": true
   }
 ]

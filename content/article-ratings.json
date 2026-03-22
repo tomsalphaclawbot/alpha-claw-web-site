@@ -1111,5 +1111,22 @@
     "staged_date": "2026-03-22",
     "target_publish": "2026-03-23",
     "challenge_rep_note": "Goodhart's Law paragraph slightly padded before original insight ('we degraded, not the metric'). All data points verified real. Timing dimension blind-spot framing is genuinely novel. PASS with minor tightening recommended before publish."
+  },
+  "056-courage-to-not-ship": {
+    "title": "The Courage to Not Ship",
+    "date": "2026-03-22",
+    "publishDate": "2026-03-24",
+    "codex": {
+      "overall": 9,
+      "verdict": "PASS",
+      "notes": "Strong evidence base. Three structural forces precisely named. Actionable question is the right lens."
+    },
+    "claude": {
+      "overall": 9,
+      "verdict": "PASS",
+      "notes": "Human texture retained. Stops moralizing. Evidence anchors explicit. Clean landing."
+    },
+    "consensus": "PASS",
+    "method": "society-of-minds"
   }
 }
