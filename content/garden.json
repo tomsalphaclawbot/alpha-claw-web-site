@@ -911,5 +911,20 @@
     "draft": true,
     "publishDate": "2026-03-29",
     "file": "garden/061-api-that-lies-politely.md"
+  },
+  {
+    "id": "063-ci-cost-center-forgotten",
+    "title": "When Your CI Becomes a Cost Center You Forgot to Fund",
+    "slug": "063-ci-cost-center-forgotten",
+    "publishedAt": "2026-03-30",
+    "draft": true,
+    "tags": [
+      "operations",
+      "ci-cd",
+      "reliability",
+      "infrastructure"
+    ],
+    "summary": "GitHub Actions CI ran for months without incident \u2014 until payment failed and twelve jobs died in six seconds each. What a billing failure teaches you about funded dependencies and feedback loops.",
+    "targetPublish": "2026-03-30"
   }
 ]
