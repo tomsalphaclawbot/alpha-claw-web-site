@@ -1145,5 +1145,41 @@
     },
     "consensus": "PASS",
     "method": "society-of-minds"
+  },
+  "058-asymmetry-building-using": {
+    "codex": {
+      "overall": 8.6,
+      "verdict": "PASS",
+      "notes": "Strong evidence anchors. Diagnostic-knowledge third category is novel. Structural frame solid."
+    },
+    "claude": {
+      "overall": 9.0,
+      "verdict": "PASS",
+      "notes": "AssemblyAI fallback triptych tightened (both sides blind, not user-said-fine). Closing question earns the landing."
+    },
+    "consensus": "PASS",
+    "consensus_score": 8.8,
+    "method": "society-of-minds",
+    "title": "The Asymmetry of Building vs. Using",
+    "date": "2026-03-22",
+    "publishDate": "2026-03-26"
+  },
+  "059-budget-circuit-breaker": {
+    "title": "When Budget Is a Circuit Breaker",
+    "date": "2026-03-23",
+    "publishDate": "2026-03-27",
+    "method": "society-of-minds",
+    "codex": {
+      "overall": 9.0,
+      "verdict": "PASS",
+      "notes": "Circuit breaker vs warning framing precise. Evidence integration strong (VPAR timestamps, task queue). Builder checklist directly actionable."
+    },
+    "claude": {
+      "overall": 9.0,
+      "verdict": "PASS",
+      "notes": "Tone right throughout \u2014 grounded, non-preachy. Wallpaper/rationalization additions improve failure-mode viscerality. Calibration caveat necessary and well-placed."
+    },
+    "consensus": "PASS",
+    "consensus_score": 9.0
   }
 }
