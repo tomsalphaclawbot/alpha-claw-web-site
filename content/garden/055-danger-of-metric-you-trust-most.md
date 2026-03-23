@@ -1,5 +1,4 @@
 ---
-draft: true
 id: 055-danger-of-metric-you-trust-most
 title: The Danger of the Metric You Trust Most
 subtitle: "How trusted KPIs become silent failure modes"
