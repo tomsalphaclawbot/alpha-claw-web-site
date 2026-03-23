@@ -866,5 +866,19 @@
     ],
     "draft": true,
     "publishDate": "2026-03-27"
+  },
+  {
+    "id": "060-tests-that-lie",
+    "title": "Tests That Lie: When the Safety Net Becomes the Hazard",
+    "summary": "Ten consecutive CI failures from stale mock calibration tests. When tests encode past reality, they do not protect future quality \u2014 they train you to ignore the alarm until it does not matter.",
+    "tags": [
+      "ci",
+      "testing",
+      "vpar",
+      "quality",
+      "operations"
+    ],
+    "draft": true,
+    "publishDate": "2026-03-28"
   }
 ]
