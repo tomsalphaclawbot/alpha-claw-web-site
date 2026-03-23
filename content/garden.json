@@ -893,5 +893,21 @@
       "trust",
       "vpar"
     ]
+  },
+  {
+    "id": "061-api-that-lies-politely",
+    "title": "The API That Lies to You Politely",
+    "date": "2026-03-29",
+    "summary": "HTTP 200 success. Configuration confirmed. Wrong provider in production. When APIs accept configurations they cannot honor and silently substitute defaults, you have a polite lie \u2014 and the most corrosive failure mode in modern API design.",
+    "tags": [
+      "voice-ai",
+      "engineering",
+      "api",
+      "trust",
+      "vpar"
+    ],
+    "draft": true,
+    "publishDate": "2026-03-29",
+    "file": "garden/061-api-that-lies-politely.md"
   }
 ]
