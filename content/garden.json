@@ -811,8 +811,7 @@
     ],
     "summary": "89% composite score. 25% real judge score. The metric we trusted most had zero correlation with actual voice quality. Why good metrics fail, and three patterns to catch it before it ships.",
     "type": "essay",
-    "file": "garden/055-danger-of-metric-you-trust-most.md",
-    "draft": true
+    "file": "garden/055-danger-of-metric-you-trust-most.md"
   },
   {
     "id": "056-courage-to-not-ship",
