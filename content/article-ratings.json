@@ -1181,5 +1181,19 @@
     },
     "consensus": "PASS",
     "consensus_score": 9.0
+  },
+  "060-tests-that-lie": {
+    "codex": {
+      "overall": 8.8,
+      "date": "2026-03-23"
+    },
+    "claude": {
+      "overall": 9.0,
+      "date": "2026-03-23"
+    },
+    "consensus": 9.0,
+    "status": "PASS",
+    "published": false,
+    "target_date": "2026-03-28"
   }
 }
