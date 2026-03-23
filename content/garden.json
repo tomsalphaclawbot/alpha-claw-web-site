@@ -892,7 +892,9 @@
       "engineering",
       "trust",
       "vpar"
-    ]
+    ],
+    "description": "Voice agents that ask questions they already have the answers to signal distrust. The v5.4 context injection experiment \u2014 and a blog guard bug \u2014 reveal the same failure pattern: systems not using what they already hold.",
+    "targetPublish": "2026-03-30"
   },
   {
     "id": "061-api-that-lies-politely",
