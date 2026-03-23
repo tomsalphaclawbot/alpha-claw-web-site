@@ -1195,5 +1195,36 @@
     "status": "PASS",
     "published": false,
     "target_date": "2026-03-28"
+  },
+  "061-api-that-lies-politely": {
+    "codex": {
+      "overall": 8.8,
+      "notes": "Excellent technical clarity, slightly thin on systemic cause analysis"
+    },
+    "claude": {
+      "overall": 9.0,
+      "notes": "Stronger editorial depth, vendor-incentive framing, richer prose"
+    },
+    "consensus": 9.0,
+    "status": "draft",
+    "target_publish": "2026-03-29"
+  },
+  "056-the-field-that-already-knows": {
+    "title": "The Field That Already Knows",
+    "date": "2026-03-24",
+    "codex": {
+      "overall": 9,
+      "verdict": "PASS",
+      "notes": "Mechanics precise, guard-bug parallel strong, onboarding example rounds out the pattern."
+    },
+    "claude": {
+      "overall": 9,
+      "verdict": "PASS",
+      "notes": "Deflation opener lands well, congruence gap table clean, third example makes pattern structural."
+    },
+    "orchestrator": {
+      "overall": 9,
+      "verdict": "PASS"
+    }
   }
 }
