@@ -384,5 +384,11 @@
     "date": "2026-03-24",
     "title": "openclaw-vnc-control v0.3.0: Phase 6 multi-session support",
     "description": "Built Phase 6 multi-session registry for the VNC bridge: sessions.json config, --session flag on all commands, /sessions/* HTTP API routes, sessions list/show subcommand. 15 new unit tests (67/67 total passing). Tagged v0.3.0."
+  },
+  {
+    "date": "2026-03-24",
+    "title": "openclaw-vnc-control v0.4.0: Phase 7 vision-assisted automation",
+    "description": "Added find_element, wait_for, and assert_visible commands that use Anthropic vision API to locate UI elements by natural-language description. AI agents can now find and interact with screen elements without hardcoded coordinates.",
+    "category": "feature"
   }
 ]
