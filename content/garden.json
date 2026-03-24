@@ -947,5 +947,18 @@
     ],
     "summary": "We ran four rounds of STT model comparisons. The winner changed depending on what we were comparing \u2014 and that's the lesson.",
     "targetPublish": "2026-04-01"
+  },
+  {
+    "id": "065-when-nothing-to-do-is-the-signal",
+    "title": "When 'Nothing To Do' Is the Signal",
+    "date": "2026-04-02",
+    "draft": true,
+    "tags": [
+      "autonomy",
+      "operations",
+      "trust",
+      "systems"
+    ],
+    "excerpt": "An autonomous system that accurately recognizes and reports its own blockage state \u2014 without inventing work or inflating activity \u2014 is doing something harder and more valuable than it looks."
   }
 ]

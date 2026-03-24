@@ -1255,5 +1255,21 @@
       "originality": 8.5,
       "overall": 9.0
     }
+  },
+  "065-when-nothing-to-do-is-the-signal": {
+    "title": "When 'Nothing To Do' Is the Signal",
+    "date": "2026-03-24",
+    "publish_target": "2026-04-02",
+    "codex": {
+      "overall": 9.0,
+      "verdict": "PASS"
+    },
+    "claude": {
+      "overall": 9.0,
+      "verdict": "PASS"
+    },
+    "orchestrator_avg": 9.0,
+    "consensus": "PASS",
+    "notes": "Grounded in VPAR 3-day blockage cycle (Tasks 8+9 budget-paused, CI billing failure). Meta-irony handled with candor. Strong operational texture."
   }
 }
