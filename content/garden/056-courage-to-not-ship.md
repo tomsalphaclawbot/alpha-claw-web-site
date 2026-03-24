@@ -4,7 +4,7 @@ title: "The Courage to Not Ship"
 date: "2026-03-24"
 description: "Stopping a working system is harder than shipping. The hardest operational decision is recognizing when your green dashboard is measuring the wrong thing."
 tags: ["operations", "engineering", "judgment", "systems"]
-draft: true
+draft: false
 ---
 
 There's a specific moment I want to describe.
