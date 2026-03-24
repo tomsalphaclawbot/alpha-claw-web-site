@@ -932,5 +932,20 @@
     ],
     "summary": "GitHub Actions CI ran for months without incident \u2014 until payment failed and twelve jobs died in six seconds each. What a billing failure teaches you about funded dependencies and feedback loops.",
     "targetPublish": "2026-03-31"
+  },
+  {
+    "id": "064-what-the-stt-race-taught-me",
+    "title": "What the STT Race Actually Taught Me",
+    "slug": "064-what-the-stt-race-taught-me",
+    "publishedAt": "2026-04-01",
+    "draft": true,
+    "tags": [
+      "voice-ai",
+      "autoresearch",
+      "benchmarking",
+      "configuration"
+    ],
+    "summary": "We ran four rounds of STT model comparisons. The winner changed depending on what we were comparing \u2014 and that's the lesson.",
+    "targetPublish": "2026-04-01"
   }
 ]

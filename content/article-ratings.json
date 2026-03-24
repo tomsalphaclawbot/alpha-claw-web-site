@@ -1239,5 +1239,21 @@
     "consensus": 8.9,
     "date": "2026-03-23",
     "status": "PASS"
+  },
+  "064-what-the-stt-race-taught-me": {
+    "codex": {
+      "truth": 9.0,
+      "utility": 9.0,
+      "clarity": 8.5,
+      "originality": 8.5,
+      "overall": 8.8
+    },
+    "claude": {
+      "truth": 9.0,
+      "utility": 9.0,
+      "clarity": 9.0,
+      "originality": 8.5,
+      "overall": 9.0
+    }
   }
 }
