@@ -396,5 +396,15 @@
     "title": "openclaw-vnc-control v0.5.0: Phase 8 scroll & drag gestures",
     "description": "Added scroll (mouse wheel at position with configurable intensity) and drag (click-and-drag between points) commands. 11 new unit tests (81 total, 5 skipped). Both commands support all coordinate spaces. Full GUI automation gesture set now complete.",
     "category": "feature"
+  },
+  {
+    "date": "2026-03-24",
+    "title": "openclaw-vnc-control v0.6.0: Phase 9 image diffing & change detection",
+    "description": "Added `diff` command: compare two screenshots pixel-by-pixel, return change_pct, bounding box of changed region, and annotated overlay image with red highlights. Configurable threshold. 6 new tests (56 total). Tagged v0.6.0.",
+    "tags": [
+      "vnc",
+      "tooling",
+      "agent-tooling"
+    ]
   }
 ]
