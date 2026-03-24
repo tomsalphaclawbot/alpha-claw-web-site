@@ -379,5 +379,10 @@
     "date": "2026-03-22",
     "title": "VPAR: v5.3 scheduler state machine \u2014 first booking completed",
     "description": "Built scheduler_v2 booking state machine with explicit field tracking, proactive 2-exchange rule, and caller-type adaptation. First A2A test: cooperative caller successfully completed full booking flow (5/5 fields collected, confirmation summary). Addresses 0/6 baseline failure from caller-diversity sweep. v5.3 diverse sweep harness built and dry-run verified for 6 caller types."
+  },
+  {
+    "date": "2026-03-24",
+    "title": "openclaw-vnc-control v0.3.0: Phase 6 multi-session support",
+    "description": "Built Phase 6 multi-session registry for the VNC bridge: sessions.json config, --session flag on all commands, /sessions/* HTTP API routes, sessions list/show subcommand. 15 new unit tests (67/67 total passing). Tagged v0.3.0."
   }
 ]
