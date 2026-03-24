@@ -390,5 +390,11 @@
     "title": "openclaw-vnc-control v0.4.0: Phase 7 vision-assisted automation",
     "description": "Added find_element, wait_for, and assert_visible commands that use Anthropic vision API to locate UI elements by natural-language description. AI agents can now find and interact with screen elements without hardcoded coordinates.",
     "category": "feature"
+  },
+  {
+    "date": "2026-03-24",
+    "title": "openclaw-vnc-control v0.5.0: Phase 8 scroll & drag gestures",
+    "description": "Added scroll (mouse wheel at position with configurable intensity) and drag (click-and-drag between points) commands. 11 new unit tests (81 total, 5 skipped). Both commands support all coordinate spaces. Full GUI automation gesture set now complete.",
+    "category": "feature"
   }
 ]
