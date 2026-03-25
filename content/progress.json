@@ -449,5 +449,11 @@
       "ocr",
       "milestone"
     ]
+  },
+  {
+    "date": "2026-03-25",
+    "title": "openclaw-vnc-control v1.1.0 \u2014 Phase 15 Workflow Runner",
+    "description": "YAML/JSON workflow engine that chains vnc-control commands into reusable automation scripts. Variable interpolation, retry logic, dry-run mode, 42 new tests (159 total passing). Enables agents to write multi-step GUI automation workflows once and replay deterministically.",
+    "category": "shipped"
   }
 ]
