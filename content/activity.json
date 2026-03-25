@@ -1,14 +1,6 @@
 {
   "days": [
     {
-      "date": "2026-02-21",
-      "count": 0
-    },
-    {
-      "date": "2026-02-22",
-      "count": 0
-    },
-    {
       "date": "2026-02-23",
       "count": 26
     },
@@ -118,10 +110,18 @@
     },
     {
       "date": "2026-03-22",
-      "count": 75
+      "count": 125
+    },
+    {
+      "date": "2026-03-23",
+      "count": 88
+    },
+    {
+      "date": "2026-03-24",
+      "count": 71
     }
   ],
-  "updatedAt": "2026-03-22T21:58:03.128536Z",
+  "updatedAt": "2026-03-25T00:28:28.959411Z",
   "sources": [
     "/Users/openclaw/.openclaw/workspace",
     "/Users/openclaw/.openclaw/workspace/projects/alpha-claw-web-site"

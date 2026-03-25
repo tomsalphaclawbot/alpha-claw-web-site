@@ -406,5 +406,22 @@
       "tooling",
       "agent-tooling"
     ]
+  },
+  {
+    "date": "2026-03-24",
+    "version": "v0.7.0",
+    "title": "openclaw-vnc-control v0.7.0: Phase 10 Region-of-Interest crop",
+    "description": "Added crop command for ROI extraction from screenshots. Supports screenshot/native/normalized coordinate spaces, auto-clamp to image bounds, coordinate swap correction, and coverage_pct output. 7 new tests; 99 total passing.",
+    "tags": [
+      "vnc",
+      "tools",
+      "automation"
+    ],
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/tomsalphaclawbot/openclaw-vnc-control/releases/tag/v0.7.0"
+      }
+    ]
   }
 ]
