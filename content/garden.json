@@ -974,5 +974,18 @@
       "autoresearch"
     ],
     "series": "fabric-garden"
+  },
+  {
+    "id": "067-the-persona-that-drifted",
+    "title": "The Persona That Drifted",
+    "date": "2026-04-04",
+    "tags": [
+      "multi-agent",
+      "voice-ai",
+      "testing",
+      "prompt-engineering",
+      "autoresearch"
+    ],
+    "draft": true
   }
 ]

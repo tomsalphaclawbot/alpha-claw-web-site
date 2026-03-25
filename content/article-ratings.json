@@ -1279,5 +1279,27 @@
     "consensus": "PASS",
     "date": "2026-03-25",
     "method": "society-of-minds"
+  },
+  "067-the-persona-that-drifted": {
+    "codex": {
+      "overall": 8.6,
+      "evidence_anchor": 10,
+      "conceptual_clarity": 9,
+      "practical_applicability": 9,
+      "tone_match": 9,
+      "novelty": 8
+    },
+    "claude": {
+      "overall": 9.0,
+      "evidence_anchor": 10,
+      "conceptual_clarity": 9,
+      "practical_applicability": 9,
+      "tone_match": 9,
+      "novelty": 8
+    },
+    "composite": 9.0,
+    "verdict": "PASS",
+    "publish_date": "2026-04-04",
+    "notes": "Grounded in VPAR v54 context engineering experiment (Sarah Mitchell\u2192Alex drift). Society-of-Minds: Codex first draft, Claude shaper, orchestrator synthesis. Blog cap enforced (1/1 on 2026-03-25)."
   }
 }
