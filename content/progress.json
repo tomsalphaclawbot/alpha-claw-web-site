@@ -455,5 +455,27 @@
     "title": "openclaw-vnc-control v1.1.0 \u2014 Phase 15 Workflow Runner",
     "description": "YAML/JSON workflow engine that chains vnc-control commands into reusable automation scripts. Variable interpolation, retry logic, dry-run mode, 42 new tests (159 total passing). Enables agents to write multi-step GUI automation workflows once and replay deterministically.",
     "category": "shipped"
+  },
+  {
+    "date": "2026-03-25",
+    "title": "openclaw-vnc-control v1.2.0 \u2014 Phase 16 Conditional Workflow Execution",
+    "description": "Added when conditional expressions to workflow runner. Steps now support branching logic based on previous step outputs and variables. 31 new unit tests (186 total passing). Tagged v1.2.0.",
+    "tags": [
+      "vnc-control",
+      "workflow",
+      "automation",
+      "open-source"
+    ]
+  },
+  {
+    "date": "2026-03-25",
+    "title": "openclaw-vnc-control v1.3.0 \u2014 Phase 17 Workflow Event Hooks",
+    "description": "Added lifecycle event hooks to workflow runner: step_start, step_end, step_fail, and workflow_complete callbacks. Shell commands fire at each lifecycle point with env var injection. Per-step hook overrides + empty-string disable. 24 new tests (176 total). Also backfilled ROADMAP documentation for Phases 10, 12, 14, 16.",
+    "tags": [
+      "vnc-control",
+      "workflow",
+      "automation",
+      "open-source"
+    ]
   }
 ]
