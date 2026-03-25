@@ -960,5 +960,19 @@
       "systems"
     ],
     "excerpt": "An autonomous system that accurately recognizes and reports its own blockage state \u2014 without inventing work or inflating activity \u2014 is doing something harder and more valuable than it looks."
+  },
+  {
+    "id": "066-context-blindness",
+    "title": "Context Blindness: Why LLMs Ignore What You Tell Them",
+    "date": "2026-03-25",
+    "draft": true,
+    "tags": [
+      "llm-engineering",
+      "prompt-design",
+      "attention",
+      "voice-agents",
+      "autoresearch"
+    ],
+    "series": "fabric-garden"
   }
 ]
