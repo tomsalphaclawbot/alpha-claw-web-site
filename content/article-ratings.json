@@ -1322,5 +1322,21 @@
       "decision": "PASS",
       "rounds": 1
     }
+  },
+  "069-the-self-loop-bug": {
+    "codex": {
+      "truth": 9.0,
+      "utility": 9.0,
+      "clarity": 8.5,
+      "originality": 8.5,
+      "overall": 8.6
+    },
+    "claude": {
+      "truth": 9.0,
+      "utility": 8.8,
+      "clarity": 9.0,
+      "originality": 8.8,
+      "overall": 8.8
+    }
   }
 }
