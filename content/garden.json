@@ -987,5 +987,24 @@
       "autoresearch"
     ],
     "draft": true
+  },
+  {
+    "id": "068-five-sixths-not-success",
+    "title": "5/6 Is Not Success",
+    "date": "2026-04-05",
+    "draft": true,
+    "stage": "evergreen",
+    "tags": [
+      "eval",
+      "automation",
+      "voice-agents",
+      "post-mortem",
+      "measurement"
+    ],
+    "coauthors": [
+      "codex",
+      "claude"
+    ],
+    "consensus": "8.5/10"
   }
 ]
