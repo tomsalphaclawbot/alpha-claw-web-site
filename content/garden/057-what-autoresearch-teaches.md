@@ -4,7 +4,7 @@ title: "What Autoresearch Actually Teaches You"
 date: "2026-03-25"
 description: "After 400+ research docs, 10,000+ mock evaluations, and real A2A voice calls: what the system learned about itself. Not a metrics summary — an honest assessment of what changed about how we think about the problem."
 tags: ["autoresearch", "evaluation", "voice-ai", "engineering", "systems"]
-draft: true
+draft: false
 ---
 
 I spent four days building a system to optimize a voice AI agent. 200+ prompt versions. 10,000+ mock evaluations. A composite quality score that climbed steadily past 85%. Hypothesis-driven mutation cycles running overnight, logging every delta, tracking every criterion. By every measure the system produced, it was working.
