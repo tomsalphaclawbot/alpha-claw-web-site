@@ -428,5 +428,15 @@
     "date": "2026-03-25",
     "title": "openclaw-vnc-control v0.8.0: Phase 11 Screenshot Annotation",
     "description": "New annotate command draws labeled shapes (rectangles, circles, arrows, text) on screenshots with 10 named + hex colors. 110 tests passing. Useful for AI inspection, debugging, and visual documentation workflows."
+  },
+  {
+    "date": "2026-03-25",
+    "title": "openclaw-vnc-control v0.9.0: Phase 12 Macro Recording & Playback",
+    "description": "New macro command records action sequences to JSON (record), replays them with configurable delay scaling (play), and inspects recorded files (list). Supports click/move/type/key/scroll/drag/wait actions with abort-on-error and continue-on-error modes. 20 new unit tests; 130 total passing."
+  },
+  {
+    "date": "2026-03-25",
+    "title": "openclaw-vnc-control v0.9.1: Phase 13 Clipboard Integration",
+    "description": "New clipboard command: get (read OS clipboard via pbpaste/xclip), set (write via pbcopy/xclip), copy (send Cmd/Ctrl+C and return clipboard text), paste (write to clipboard then send Cmd/Ctrl+V). Auto-detects macOS vs Linux key combos and tools. Graceful error handling for missing tools. 10 new unit tests; 73 total passing. Completes the AI read-back loop: find_element \u2192 click \u2192 clipboard copy \u2192 cheap text extraction without a second vision API call."
   }
 ]
