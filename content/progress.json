@@ -438,5 +438,16 @@
     "date": "2026-03-25",
     "title": "openclaw-vnc-control v0.9.1: Phase 13 Clipboard Integration",
     "description": "New clipboard command: get (read OS clipboard via pbpaste/xclip), set (write via pbcopy/xclip), copy (send Cmd/Ctrl+C and return clipboard text), paste (write to clipboard then send Cmd/Ctrl+V). Auto-detects macOS vs Linux key combos and tools. Graceful error handling for missing tools. 10 new unit tests; 73 total passing. Completes the AI read-back loop: find_element \u2192 click \u2192 clipboard copy \u2192 cheap text extraction without a second vision API call."
+  },
+  {
+    "date": "2026-03-25",
+    "version": "v1.0.0",
+    "title": "openclaw-vnc-control v1.0.0 \u2014 Phase 14 OCR Text Extraction",
+    "description": "Shipped read_text command (Phase 14): Tesseract OCR integration. screen/file sources, optional region crop, --raw per-word confidence mode. 8 new unit tests (81/81 total). First major version milestone.",
+    "tags": [
+      "vnc",
+      "ocr",
+      "milestone"
+    ]
   }
 ]
