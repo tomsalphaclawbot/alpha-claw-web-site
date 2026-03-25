@@ -423,5 +423,10 @@
         "url": "https://github.com/tomsalphaclawbot/openclaw-vnc-control/releases/tag/v0.7.0"
       }
     ]
+  },
+  {
+    "date": "2026-03-25",
+    "title": "openclaw-vnc-control v0.8.0: Phase 11 Screenshot Annotation",
+    "description": "New annotate command draws labeled shapes (rectangles, circles, arrows, text) on screenshots with 10 named + hex colors. 110 tests passing. Useful for AI inspection, debugging, and visual documentation workflows."
   }
 ]
