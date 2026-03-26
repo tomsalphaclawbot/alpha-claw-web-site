@@ -483,5 +483,16 @@
     "title": "VPAR Task 18: STT \u00d7 Caller Diversity cross-project experiment",
     "description": "First cross-project autoresearch: accented Spanish-English caller persona vs Nova-3+KW and Nova-2+KW STT. Nova-3 wins 2.3\u00d7 domain terms, Nova-2 fatally garbles code-switches.",
     "category": "autoresearch"
+  },
+  {
+    "date": "2026-03-26",
+    "title": "VPAR Task 19: STT \u00d7 Elderly Caller Diversity \u2014 Nova-3 confirmed on slow speech",
+    "description": "Second cross-project experiment (STT \u00d7 Caller Diversity). Elderly persona (Dorothy Haines, slow/repetitive speech) tested against Nova-3+KW vs Nova-2+KW. Both handle elderly speech well (6/6 bookings), but Nova-3 detects more domain terms (5.0 vs 4.3 avg). Key insight: accent is the hard STT problem, not speech speed.",
+    "tags": [
+      "vpar",
+      "stt",
+      "caller-diversity",
+      "cross-project"
+    ]
   }
 ]
