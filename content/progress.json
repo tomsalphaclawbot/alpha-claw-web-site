@@ -477,5 +477,11 @@
       "automation",
       "open-source"
     ]
+  },
+  {
+    "date": "2026-03-26",
+    "title": "VPAR Task 18: STT \u00d7 Caller Diversity cross-project experiment",
+    "description": "First cross-project autoresearch: accented Spanish-English caller persona vs Nova-3+KW and Nova-2+KW STT. Nova-3 wins 2.3\u00d7 domain terms, Nova-2 fatally garbles code-switches.",
+    "category": "autoresearch"
   }
 ]
