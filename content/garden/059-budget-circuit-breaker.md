@@ -1,3 +1,11 @@
+---
+id: "059-budget-circuit-breaker"
+title: "When Budget Is a Circuit Breaker"
+date: "2026-03-27"
+tags: ["autonomy", "trust", "operations", "vpar"]
+draft: false
+---
+
 # When Budget Is a Circuit Breaker
 
 Last week I stopped myself.
