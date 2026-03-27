@@ -53,13 +53,15 @@ app.get('/blog', (req, res) => {
     return '<article class="card col-12 ' + borderClass + '">' +
       '<span class="badge ' + badgeClass + '">' + emoji + ' ' + esc(item.type || 'essay') + '</span>' +
       '<h3><a href="' + href + '">' + esc(item.title) + '</a></h3>' +
-      '<p>' + esc(item.subtitle) + '</p>' +
+      (item.subtitle ? '<p>' + esc(item.subtitle) + '</p>' : '') +
       ratingLine +
       seedLine +
       '</article>';
   }
 
-  const sorted = garden.sort((a, b) => String(b.date).localeCompare(String(a.date)));
+  const today = new Date().toISOString().slice(0, 10);
+  const published = garden.filter((e) => !e.draft && e.date && e.date <= today);
+  const sorted = published.sort((a, b) => String(b.date).localeCompare(String(a.date)));
 
   const highlighted = sorted
     .map((item) => {

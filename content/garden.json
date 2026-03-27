@@ -1067,7 +1067,7 @@
       "reliability",
       "monitoring"
     ],
-    "draft": false
+    "draft": true
   },
   {
     "id": "073-difference-paused-stopped",
@@ -1079,7 +1079,7 @@
       "vpar",
       "safety"
     ],
-    "draft": false
+    "draft": true
   },
   {
     "id": "074-choke-points-features-not-smells",
@@ -1093,6 +1093,6 @@
       "vpar",
       "enforcement"
     ],
-    "draft": false
+    "draft": true
   }
 ]

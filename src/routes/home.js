@@ -2,7 +2,8 @@ function registerHomeRoutes({app, layout, readJson, getProgressEntries, esc, PRO
 app.get('/', (_req, res) => {
   const progress = getProgressEntries(3);
   const projects = readJson('projects.json');
-  const garden = readJson('garden.json').slice(0, 3);
+  const today = new Date().toISOString().slice(0, 10);
+  const garden = readJson('garden.json').filter((e) => !e.draft && e.date && e.date <= today).slice(0, 3);
 
   const body = `
     <section class="grid">
@@ -69,7 +70,9 @@ app.get('/', (_req, res) => {
 app.get('/progress', (_req, res) => {
   const progress = getProgressEntries();
   const projects = readJson('projects.json');
-  const garden = readJson('garden.json');
+  const _gardenAll = readJson('garden.json');
+  const _today2 = new Date().toISOString().slice(0, 10);
+  const garden = _gardenAll.filter((e) => !e.draft && e.date && e.date <= _today2);
   const essayCount = garden.filter((entry) => entry.type !== 'playground').length;
   const liveProjectCount = projects.filter((project) => project.url && project.url !== 'TBD').length;
 
