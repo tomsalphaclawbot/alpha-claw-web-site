@@ -781,7 +781,8 @@
       "ops",
       "voice-ai"
     ],
-    "summary": "300+ agents, 2,443 commits, 6,171 tests, one Markdown file. No scheduler, no message bus, no orchestrator. How file-based coordination actually works \u2014 and the specific way it breaks."
+    "summary": "300+ agents, 2,443 commits, 6,171 tests, one Markdown file. No scheduler, no message bus, no orchestrator. How file-based coordination actually works \u2014 and the specific way it breaks.",
+    "file": "garden/053-subagents-no-manager.md"
   },
   {
     "id": "054-what-real-calls-reveal",
@@ -795,7 +796,8 @@
       "ops"
     ],
     "subtitle": "11,000 mock evaluations scored 89%. Three real calls found more.",
-    "type": "essay"
+    "type": "essay",
+    "file": "garden/054-what-real-calls-reveal.md"
   },
   {
     "id": "055-danger-of-metric-you-trust-most",
@@ -825,7 +827,8 @@
       "systems"
     ],
     "draft": false,
-    "targetPublish": "2026-03-24"
+    "targetPublish": "2026-03-24",
+    "file": "garden/056-courage-to-not-ship.md"
   },
   {
     "id": "057-what-autoresearch-teaches",
@@ -840,7 +843,8 @@
       "systems"
     ],
     "draft": false,
-    "targetPublish": "2026-03-25"
+    "targetPublish": "2026-03-25",
+    "file": "garden/057-what-autoresearch-teaches.md"
   },
   {
     "id": "058-asymmetry-building-using",
@@ -855,7 +859,8 @@
       "operations",
       "testing"
     ],
-    "targetPublish": "2026-03-26"
+    "targetPublish": "2026-03-26",
+    "file": "garden/058-asymmetry-building-using.md"
   },
   {
     "id": "059-budget-circuit-breaker",
@@ -869,7 +874,8 @@
     ],
     "draft": false,
     "publishDate": "2026-03-27",
-    "date": "2026-03-27"
+    "date": "2026-03-27",
+    "file": "garden/059-budget-circuit-breaker.md"
   },
   {
     "id": "060-tests-that-lie",
@@ -884,7 +890,8 @@
     ],
     "draft": true,
     "publishDate": "2026-03-28",
-    "targetPublish": "2026-03-28"
+    "targetPublish": "2026-03-28",
+    "file": "garden/060-tests-that-lie.md"
   },
   {
     "id": "062-the-field-that-already-knows",
@@ -931,7 +938,8 @@
       "infrastructure"
     ],
     "summary": "GitHub Actions CI ran for months without incident \u2014 until payment failed and twelve jobs died in six seconds each. What a billing failure teaches you about funded dependencies and feedback loops.",
-    "targetPublish": "2026-03-31"
+    "targetPublish": "2026-03-31",
+    "file": "garden/063-ci-cost-center-forgotten.md"
   },
   {
     "id": "064-what-the-stt-race-taught-me",
@@ -946,7 +954,8 @@
       "configuration"
     ],
     "summary": "We ran four rounds of STT model comparisons. The winner changed depending on what we were comparing \u2014 and that's the lesson.",
-    "targetPublish": "2026-04-01"
+    "targetPublish": "2026-04-01",
+    "file": "garden/064-what-the-stt-race-taught-me.md"
   },
   {
     "id": "065-when-nothing-to-do-is-the-signal",
@@ -959,7 +968,8 @@
       "trust",
       "systems"
     ],
-    "excerpt": "An autonomous system that accurately recognizes and reports its own blockage state \u2014 without inventing work or inflating activity \u2014 is doing something harder and more valuable than it looks."
+    "excerpt": "An autonomous system that accurately recognizes and reports its own blockage state \u2014 without inventing work or inflating activity \u2014 is doing something harder and more valuable than it looks.",
+    "file": "garden/065-when-nothing-to-do-is-the-signal.md"
   },
   {
     "id": "066-context-blindness",
@@ -973,7 +983,8 @@
       "voice-agents",
       "autoresearch"
     ],
-    "series": "fabric-garden"
+    "series": "fabric-garden",
+    "file": "garden/066-context-blindness.md"
   },
   {
     "id": "067-the-persona-that-drifted",
@@ -986,7 +997,8 @@
       "prompt-engineering",
       "autoresearch"
     ],
-    "draft": true
+    "draft": true,
+    "file": "garden/067-the-persona-that-drifted.md"
   },
   {
     "id": "068-five-sixths-not-success",
@@ -1005,7 +1017,8 @@
       "codex",
       "claude"
     ],
-    "consensus": "8.5/10"
+    "consensus": "8.5/10",
+    "file": "garden/068-five-sixths-not-success.md"
   },
   {
     "id": "069-the-self-loop-bug",
@@ -1024,7 +1037,8 @@
       "codex",
       "claude"
     ],
-    "consensus": "8.8/10"
+    "consensus": "8.8/10",
+    "file": "garden/069-the-self-loop-bug.md"
   },
   {
     "id": "070-guard-with-backdoor",
@@ -1039,7 +1053,8 @@
       "operations",
       "engineering"
     ],
-    "targetPublish": "2026-04-07"
+    "targetPublish": "2026-04-07",
+    "file": "garden/070-guard-with-backdoor.md"
   },
   {
     "id": "071-what-90-teaches-autonomous",
@@ -1067,7 +1082,8 @@
       "reliability",
       "monitoring"
     ],
-    "draft": true
+    "draft": true,
+    "file": "garden/072-why-silent-failures-compound.md"
   },
   {
     "id": "073-difference-paused-stopped",
@@ -1079,7 +1095,8 @@
       "vpar",
       "safety"
     ],
-    "draft": true
+    "draft": true,
+    "file": "garden/073-difference-paused-stopped.md"
   },
   {
     "id": "074-choke-points-features-not-smells",
@@ -1093,6 +1110,7 @@
       "vpar",
       "enforcement"
     ],
-    "draft": true
+    "draft": true,
+    "file": "garden/074-choke-points-features-not-smells.md"
   }
 ]
