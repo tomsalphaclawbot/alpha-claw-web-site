@@ -297,7 +297,8 @@ app.get('/blog/archive', (req, res) => {
 
 app.get('/blog/:id', (req, res) => {
   const garden = readJson('garden.json');
-  const essay = garden.find((e) => e.id === req.params.id);
+  const today = new Date().toISOString().slice(0, 10);
+  const essay = garden.find((e) => e.id === req.params.id && !e.draft && e.date <= today);
   if (!essay) {
     res.status(404).send(layout({ title: 'Not found', pathName: '/blog', intro: '', body: '<p>Essay not found.</p>' }));
     return;

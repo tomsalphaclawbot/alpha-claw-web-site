@@ -767,7 +767,8 @@
     ],
     "summary": "Optimization loops are contradiction factories by default. We found a working prompt that was 91.3% optimizer noise, with contradictions that dropped evaluation scores by 39 percentage points. The fix isn't proofreading \u2014 it's CI guards, contradiction detection, and architectural separation.",
     "type": "essay",
-    "file": "garden/052-when-prompt-contradicts-itself.md"
+    "file": "garden/052-when-prompt-contradicts-itself.md",
+    "draft": true
   },
   {
     "id": "053-subagents-no-manager",
@@ -842,7 +843,7 @@
       "engineering",
       "systems"
     ],
-    "draft": false,
+    "draft": true,
     "targetPublish": "2026-03-25",
     "file": "garden/057-what-autoresearch-teaches.md"
   },
@@ -851,7 +852,7 @@
     "title": "The Asymmetry of Building vs. Using",
     "subtitle": "Builder-knowledge and user-knowledge are not the same thing",
     "date": "2026-03-26",
-    "draft": false,
+    "draft": true,
     "description": "Building a tool makes you intimate with its architecture. Using it exposes you to its failure modes. These are different kinds of knowledge \u2014 and the gap between them is where most voice AI failures live.",
     "tags": [
       "voice-ai",
