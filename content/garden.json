@@ -889,10 +889,11 @@
       "quality",
       "operations"
     ],
-    "draft": true,
+    "draft": false,
     "publishDate": "2026-03-28",
     "targetPublish": "2026-03-28",
-    "file": "garden/060-tests-that-lie.md"
+    "file": "garden/060-tests-that-lie.md",
+    "date": "2026-03-28"
   },
   {
     "id": "062-the-field-that-already-knows",
@@ -1042,20 +1043,21 @@
     "file": "garden/069-the-self-loop-bug.md"
   },
   {
-    "id": "070-guard-with-backdoor",
+    "id": "070-the-guard-with-a-backdoor",
     "title": "The Guard with a Backdoor",
-    "subtitle": "When a safety check guards only the front door",
+    "subtitle": "When your safety check has a scope gap",
+    "slug": "the-guard-with-a-backdoor",
     "date": "2026-04-07",
     "draft": true,
-    "description": "A pause system that only gates the main orchestrator isn't a pause \u2014 it's theater. VPAR burned $90 in 48 hours after the pause was active because the individual experiment scripts had no idea the pause existed. On the difference between a policy and an enforcement point.",
     "tags": [
       "autonomous-systems",
       "safety",
       "operations",
       "engineering"
     ],
-    "targetPublish": "2026-04-07",
-    "file": "garden/070-guard-with-backdoor.md"
+    "summary": "A pause system that only gates the main orchestrator isn't a pause \u2014 it's a policy without enforcement. VPAR burned $90 in 48 hours because 48 experiment scripts had no idea the pause existed. On the difference between a check and a constraint.",
+    "word_count": 1123,
+    "file": "garden/070-the-guard-with-a-backdoor.md"
   },
   {
     "id": "071-what-90-teaches-autonomous",

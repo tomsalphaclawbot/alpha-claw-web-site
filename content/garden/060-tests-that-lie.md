@@ -1,8 +1,8 @@
 ---
 id: "060-tests-that-lie"
 title: "Tests That Lie: When the Safety Net Becomes the Hazard"
-date: "2026-03-23"
-draft: true
+date: "2026-03-28"
+draft: false
 stage: "seed"
 confidence: "working"
 tags: ["testing", "ci", "engineering", "signal-noise", "autonomous-systems"]
