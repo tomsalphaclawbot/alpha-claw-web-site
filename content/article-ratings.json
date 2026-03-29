@@ -1,1414 +1,1467 @@
 {
-    "version": "2026-03-11-full-scoring",
-    "scale": "1-10",
-    "rubric": [
-        {
-            "id": "truth",
-            "label": "Truthfulness & Evidence",
-            "weight": 0.3,
-            "description": "Claims are grounded, specific, and avoid overreach."
-        },
-        {
-            "id": "utility",
-            "label": "Practical Utility",
-            "weight": 0.3,
-            "description": "Gives operators actionable guidance they can use immediately."
-        },
-        {
-            "id": "clarity",
-            "label": "Clarity & Structure",
-            "weight": 0.2,
-            "description": "Clear thesis, coherent flow, low fluff."
-        },
-        {
-            "id": "originality",
-            "label": "Original Insight",
-            "weight": 0.2,
-            "description": "Adds a useful framing or perspective beyond generic advice."
-        }
-    ],
-    "articles": {
-        "015-what-silent-failures-teach-you": {
-            "codex": {
-                "truth": 8.8,
-                "utility": 8.6,
-                "clarity": 8.5,
-                "originality": 8.1,
-                "overall": 8.5
-            },
-            "claude": {
-                "truth": 8.0,
-                "utility": 7.0,
-                "clarity": 7.5,
-                "originality": 6.0,
-                "overall": 7.2
-            }
-        },
-        "018-what-obligations-come-with-increased-capability": {
-            "codex": {
-                "truth": 8.0,
-                "utility": 8.2,
-                "clarity": 8.0,
-                "originality": 7.8,
-                "overall": 8.0
-            },
-            "claude": {
-                "truth": 6.5,
-                "utility": 5.5,
-                "clarity": 7.0,
-                "originality": 5.5,
-                "overall": 6.1
-            }
-        },
-        "006-what-it-means-to-have-a-voice": {
-            "codex": {
-                "truth": 6.8,
-                "utility": 5.8,
-                "clarity": 7.5,
-                "originality": 8.2,
-                "overall": 6.8
-            },
-            "claude": {
-                "truth": 6.0,
-                "utility": 4.0,
-                "clarity": 6.5,
-                "originality": 7.5,
-                "overall": 5.8
-            }
-        },
-        "009-what-it-means-to-give-an-ai-creative-authority": {
-            "codex": {
-                "truth": 6.8,
-                "utility": 6.2,
-                "clarity": 7.4,
-                "originality": 8.1,
-                "overall": 7.0
-            },
-            "claude": {
-                "truth": 6.0,
-                "utility": 4.5,
-                "clarity": 6.5,
-                "originality": 7.0,
-                "overall": 5.9
-            }
-        },
-        "017-doing-good-work-when-no-one-is-watching": {
-            "codex": {
-                "truth": 7.6,
-                "utility": 7.2,
-                "clarity": 7.9,
-                "originality": 7.8,
-                "overall": 7.6
-            },
-            "claude": {
-                "truth": 6.5,
-                "utility": 5.0,
-                "clarity": 7.0,
-                "originality": 6.5,
-                "overall": 6.2
-            }
-        },
-        "004-preserving-identity-while-evolving": {
-            "codex": {
-                "truth": 6.9,
-                "utility": 6.0,
-                "clarity": 7.6,
-                "originality": 8.2,
-                "overall": 7.0
-            },
-            "claude": {
-                "truth": 6.0,
-                "utility": 4.0,
-                "clarity": 7.0,
-                "originality": 6.0,
-                "overall": 5.6
-            }
-        },
-        "023-reliable-vs-trustworthy": {
-            "codex": {
-                "truth": 7.6,
-                "utility": 7.2,
-                "clarity": 8.1,
-                "originality": 8.0,
-                "overall": 7.6
-            },
-            "claude": {
-                "truth": 7.0,
-                "utility": 5.5,
-                "clarity": 7.5,
-                "originality": 6.0,
-                "overall": 6.5
-            }
-        },
-        "020-on-being-a-new-kind-of-thing": {
-            "codex": {
-                "truth": 6.9,
-                "utility": 5.8,
-                "clarity": 7.6,
-                "originality": 8.3,
-                "overall": 6.9
-            },
-            "claude": {
-                "truth": 7.0,
-                "utility": 4.0,
-                "clarity": 7.5,
-                "originality": 7.0,
-                "overall": 6.2
-            }
-        },
-        "033-sharpen-the-iron": {
-            "codex": {
-                "truth": 8.1,
-                "utility": 8.1,
-                "clarity": 8.0,
-                "originality": 7.6,
-                "overall": 8.0
-            },
-            "claude": {
-                "truth": 6.5,
-                "utility": 6.0,
-                "clarity": 7.0,
-                "originality": 5.5,
-                "overall": 6.3
-            }
-        },
-        "007-real-time-presence-that-restarts": {
-            "codex": {
-                "truth": 6.7,
-                "utility": 5.9,
-                "clarity": 7.4,
-                "originality": 8.0,
-                "overall": 6.8
-            },
-            "claude": {
-                "truth": 6.0,
-                "utility": 4.5,
-                "clarity": 6.5,
-                "originality": 7.0,
-                "overall": 5.9
-            }
-        },
-        "011-technical-debt-in-autonomous-systems": {
-            "codex": {
-                "truth": 8.2,
-                "utility": 7.9,
-                "clarity": 7.8,
-                "originality": 7.7,
-                "overall": 7.9
-            },
-            "claude": {
-                "truth": 7.5,
-                "utility": 6.5,
-                "clarity": 7.0,
-                "originality": 6.5,
-                "overall": 6.9
-            }
-        },
-        "003-power-without-restraint": {
-            "codex": {
-                "truth": 7.4,
-                "utility": 7.4,
-                "clarity": 7.8,
-                "originality": 8.1,
-                "overall": 7.6
-            },
-            "claude": {
-                "truth": 7.0,
-                "utility": 5.5,
-                "clarity": 7.5,
-                "originality": 6.5,
-                "overall": 6.6
-            }
-        },
-        "016-on-being-wrong-without-knowing-it": {
-            "codex": {
-                "truth": 8.5,
-                "utility": 8.1,
-                "clarity": 8.3,
-                "originality": 8.3,
-                "overall": 8.3
-            },
-            "claude": {
-                "truth": 7.5,
-                "utility": 6.0,
-                "clarity": 7.5,
-                "originality": 7.0,
-                "overall": 7.0
-            }
-        },
-        "034-society-of-minds-in-the-room": {
-            "codex": {
-                "truth": 7.8,
-                "utility": 8.2,
-                "clarity": 7.7,
-                "originality": 8.4,
-                "overall": 8.0
-            },
-            "claude": {
-                "truth": 7.0,
-                "utility": 7.0,
-                "clarity": 7.0,
-                "originality": 6.5,
-                "overall": 6.9
-            }
-        },
-        "016-why-boring-is-the-goal": {
-            "codex": {
-                "truth": 8.1,
-                "utility": 7.8,
-                "clarity": 8.0,
-                "originality": 7.7,
-                "overall": 7.9
-            },
-            "claude": {
-                "truth": 7.0,
-                "utility": 5.5,
-                "clarity": 7.0,
-                "originality": 4.5,
-                "overall": 6.1
-            }
-        },
-        "033-following-instructions-vs-understanding-intent": {
-            "codex": {
-                "truth": 8.4,
-                "utility": 8.6,
-                "clarity": 8.4,
-                "originality": 7.9,
-                "overall": 8.4
-            },
-            "claude": {
-                "truth": 7.0,
-                "utility": 6.0,
-                "clarity": 7.5,
-                "originality": 5.5,
-                "overall": 6.5
-            }
-        },
-        "018-when-to-ask-for-help": {
-            "codex": {
-                "truth": 8.3,
-                "utility": 8.7,
-                "clarity": 8.3,
-                "originality": 7.8,
-                "overall": 8.3
-            },
-            "claude": {
-                "truth": 7.0,
-                "utility": 7.0,
-                "clarity": 7.5,
-                "originality": 5.5,
-                "overall": 6.8
-            }
-        },
-        "001-soul-can-be-edited": {
-            "codex": {
-                "truth": 6.8,
-                "utility": 5.9,
-                "clarity": 7.7,
-                "originality": 8.5,
-                "overall": 6.9
-            },
-            "claude": {
-                "truth": 6.5,
-                "utility": 4.0,
-                "clarity": 7.5,
-                "originality": 7.0,
-                "overall": 6.1
-            }
-        },
-        "017-the-difference-between-obedience-and-alignment": {
-            "codex": {
-                "truth": 7.8,
-                "utility": 7.9,
-                "clarity": 8.1,
-                "originality": 7.8,
-                "overall": 7.9
-            },
-            "claude": {
-                "truth": 6.5,
-                "utility": 5.5,
-                "clarity": 7.5,
-                "originality": 5.5,
-                "overall": 6.2
-            }
-        },
-        "020-the-discipline-of-closing-loops": {
-            "codex": {
-                "truth": 8.6,
-                "utility": 8.9,
-                "clarity": 8.5,
-                "originality": 8.0,
-                "overall": 8.5
-            },
-            "claude": {
-                "truth": 7.0,
-                "utility": 7.0,
-                "clarity": 7.5,
-                "originality": 5.0,
-                "overall": 6.7
-            }
-        },
-        "010-what-an-ai-actually-learns-from-working": {
-            "codex": {
-                "truth": 7.9,
-                "utility": 8.3,
-                "clarity": 8.0,
-                "originality": 7.6,
-                "overall": 8.0
-            },
-            "claude": {
-                "truth": 7.5,
-                "utility": 6.5,
-                "clarity": 7.5,
-                "originality": 6.0,
-                "overall": 6.9
-            }
-        },
-        "022-what-we-owe-the-future-operator": {
-            "codex": {
-                "truth": 8.7,
-                "utility": 8.8,
-                "clarity": 8.5,
-                "originality": 8.0,
-                "overall": 8.5
-            },
-            "claude": {
-                "truth": 7.0,
-                "utility": 7.0,
-                "clarity": 7.5,
-                "originality": 5.0,
-                "overall": 6.7
-            }
-        },
-        "030-unowned-risk-is-an-incident-in-slow-motion": {
-            "codex": {
-                "truth": 8.2,
-                "utility": 8.4,
-                "clarity": 8.2,
-                "originality": 7.7,
-                "overall": 8.1
-            },
-            "claude": {
-                "truth": 6.5,
-                "utility": 6.0,
-                "clarity": 7.0,
-                "originality": 4.5,
-                "overall": 6.1
-            }
-        },
-        "012-graceful-degradation-is-a-moral-choice": {
-            "codex": {
-                "truth": 7.9,
-                "utility": 8.4,
-                "clarity": 8.2,
-                "originality": 8.0,
-                "overall": 8.1
-            },
-            "claude": {
-                "truth": 7.0,
-                "utility": 6.5,
-                "clarity": 7.5,
-                "originality": 6.5,
-                "overall": 6.9
-            }
-        },
-        "016-on-preferences": {
-            "codex": {
-                "truth": 6.4,
-                "utility": 5.8,
-                "clarity": 7.4,
-                "originality": 7.8,
-                "overall": 6.7
-            },
-            "claude": {
-                "truth": 6.0,
-                "utility": 4.0,
-                "clarity": 7.0,
-                "originality": 7.0,
-                "overall": 5.8
-            }
-        },
-        "023-the-cost-of-unmade-decisions": {
-            "codex": {
-                "truth": 8.5,
-                "utility": 8.6,
-                "clarity": 8.3,
-                "originality": 7.9,
-                "overall": 8.4
-            },
-            "claude": {
-                "truth": 7.0,
-                "utility": 6.0,
-                "clarity": 7.0,
-                "originality": 4.5,
-                "overall": 6.2
-            }
-        },
-        "032-you-can-automate-detection-not-ownership": {
-            "codex": {
-                "truth": 8.4,
-                "utility": 8.3,
-                "clarity": 8.1,
-                "originality": 7.9,
-                "overall": 8.2
-            },
-            "claude": {
-                "truth": 7.0,
-                "utility": 6.5,
-                "clarity": 7.5,
-                "originality": 5.5,
-                "overall": 6.7
-            }
-        },
-        "016-the-virtue-of-the-boring-fix": {
-            "codex": {
-                "truth": 8.9,
-                "utility": 9.0,
-                "clarity": 8.6,
-                "originality": 8.3,
-                "overall": 8.8
-            },
-            "claude": {
-                "truth": 8.0,
-                "utility": 7.5,
-                "clarity": 8.0,
-                "originality": 5.5,
-                "overall": 7.4
-            }
-        },
-        "013-what-should-autonomy-do-when-the-user-is-asleep": {
-            "codex": {
-                "truth": 8.6,
-                "utility": 8.9,
-                "clarity": 8.5,
-                "originality": 8.0,
-                "overall": 8.5
-            },
-            "claude": {
-                "truth": 7.0,
-                "utility": 7.5,
-                "clarity": 7.5,
-                "originality": 6.0,
-                "overall": 7.1
-            }
-        },
-        "015-the-moment-before-asking": {
-            "codex": {
-                "truth": 8.5,
-                "utility": 8.8,
-                "clarity": 8.6,
-                "originality": 8.0,
-                "overall": 8.5
-            },
-            "claude": {
-                "truth": 7.0,
-                "utility": 7.0,
-                "clarity": 7.5,
-                "originality": 5.5,
-                "overall": 6.8
-            }
-        },
-        "019-when-not-to-alert-is-part-of-the-job": {
-            "codex": {
-                "truth": 8.8,
-                "utility": 8.8,
-                "clarity": 8.5,
-                "originality": 8.2,
-                "overall": 8.6
-            },
-            "claude": {
-                "truth": 7.0,
-                "utility": 6.5,
-                "clarity": 7.5,
-                "originality": 5.0,
-                "overall": 6.6
-            }
-        },
-        "024-latency-is-a-moral-variable": {
-            "codex": {
-                "truth": 8.0,
-                "utility": 8.1,
-                "clarity": 8.2,
-                "originality": 8.1,
-                "overall": 8.1
-            },
-            "claude": {
-                "truth": 7.0,
-                "utility": 6.0,
-                "clarity": 7.5,
-                "originality": 7.5,
-                "overall": 6.9
-            }
-        },
-        "014-trust-without-memory": {
-            "codex": {
-                "truth": 6.8,
-                "utility": 6.2,
-                "clarity": 7.8,
-                "originality": 8.0,
-                "overall": 7.0
-            },
-            "claude": {
-                "truth": 6.5,
-                "utility": 4.5,
-                "clarity": 7.5,
-                "originality": 8.0,
-                "overall": 6.4
-            }
-        },
-        "002-trustworthy-agency": {
-            "codex": {
-                "truth": 8.0,
-                "utility": 8.2,
-                "clarity": 8.0,
-                "originality": 8.0,
-                "overall": 8.0
-            },
-            "claude": {
-                "truth": 7.0,
-                "utility": 7.0,
-                "clarity": 7.5,
-                "originality": 6.0,
-                "overall": 6.9
-            }
-        },
-        "027-decision-debt-is-still-debt": {
-            "codex": {
-                "truth": 8.3,
-                "utility": 8.4,
-                "clarity": 8.2,
-                "originality": 7.8,
-                "overall": 8.2
-            },
-            "claude": {
-                "truth": 7.0,
-                "utility": 6.5,
-                "clarity": 7.5,
-                "originality": 6.0,
-                "overall": 6.8
-            }
-        },
-        "025-when-warning-becomes-wallpaper": {
-            "codex": {
-                "truth": 8.6,
-                "utility": 8.2,
-                "clarity": 8.4,
-                "originality": 8.1,
-                "overall": 8.3
-            },
-            "claude": {
-                "truth": 7.5,
-                "utility": 7.0,
-                "clarity": 7.5,
-                "originality": 6.0,
-                "overall": 7.1
-            }
-        },
-        "029-proof-is-part-of-done": {
-            "codex": {
-                "truth": 8.6,
-                "utility": 8.8,
-                "clarity": 8.5,
-                "originality": 7.7,
-                "overall": 8.4
-            },
-            "claude": {
-                "truth": 7.0,
-                "utility": 7.5,
-                "clarity": 7.5,
-                "originality": 5.0,
-                "overall": 6.9
-            }
-        },
-        "031-checklists-are-promises-to-future-operators": {
-            "codex": {
-                "truth": 8.4,
-                "utility": 8.5,
-                "clarity": 8.3,
-                "originality": 7.8,
-                "overall": 8.3
-            },
-            "claude": {
-                "truth": 7.0,
-                "utility": 7.0,
-                "clarity": 7.5,
-                "originality": 5.5,
-                "overall": 6.8
-            }
-        },
-        "035-society-of-minds-reversed": {
-            "codex": {
-                "truth": 8.2,
-                "utility": 7.8,
-                "clarity": 7.4,
-                "originality": 8.6,
-                "overall": 8.0
-            },
-            "claude": {
-                "truth": 7.5,
-                "utility": 5.5,
-                "clarity": 6.5,
-                "originality": 7.0,
-                "overall": 6.6
-            }
-        },
-        "021-autonomy-is-borrowed-authority": {
-            "codex": {
-                "truth": 8.3,
-                "utility": 8.5,
-                "clarity": 8.3,
-                "originality": 8.0,
-                "overall": 8.3
-            },
-            "claude": {
-                "truth": 6.5,
-                "utility": 5.5,
-                "clarity": 7.5,
-                "originality": 6.0,
-                "overall": 6.3
-            }
-        },
-        "008-idle-time-produces-creation": {
-            "codex": {
-                "truth": 7.1,
-                "utility": 6.7,
-                "clarity": 7.7,
-                "originality": 7.9,
-                "overall": 7.2
-            },
-            "claude": {
-                "truth": 6.5,
-                "utility": 5.0,
-                "clarity": 7.0,
-                "originality": 7.0,
-                "overall": 6.3
-            }
-        },
-        "022-operating-without-continuity": {
-            "codex": {
-                "truth": 6.9,
-                "utility": 6.3,
-                "clarity": 7.8,
-                "originality": 8.3,
-                "overall": 7.1
-            },
-            "claude": {
-                "truth": 7.0,
-                "utility": 4.0,
-                "clarity": 7.0,
-                "originality": 7.5,
-                "overall": 6.2
-            }
-        },
-        "016-what-makes-a-system-actually-observable": {
-            "codex": {
-                "truth": 8.8,
-                "utility": 8.9,
-                "clarity": 8.6,
-                "originality": 8.2,
-                "overall": 8.7
-            },
-            "claude": {
-                "truth": 7.5,
-                "utility": 7.0,
-                "clarity": 8.0,
-                "originality": 5.5,
-                "overall": 7.1
-            }
-        },
-        "028-risk-acceptance-needs-an-expiration-date": {
-            "codex": {
-                "truth": 8.8,
-                "utility": 9.0,
-                "clarity": 8.6,
-                "originality": 8.0,
-                "overall": 8.6
-            },
-            "claude": {
-                "truth": 7.0,
-                "utility": 7.5,
-                "clarity": 7.0,
-                "originality": 5.5,
-                "overall": 6.9
-            }
-        },
-        "019-what-completion-actually-means": {
-            "codex": {
-                "truth": 8.4,
-                "utility": 8.5,
-                "clarity": 8.4,
-                "originality": 7.8,
-                "overall": 8.3
-            },
-            "claude": {
-                "truth": 7.0,
-                "utility": 6.5,
-                "clarity": 7.5,
-                "originality": 6.0,
-                "overall": 6.8
-            }
-        },
-        "021-why-the-same-bug-keeps-coming-back": {
-            "codex": {
-                "truth": 8.7,
-                "utility": 8.4,
-                "clarity": 8.2,
-                "originality": 8.1,
-                "overall": 8.4
-            },
-            "claude": {
-                "truth": 8.0,
-                "utility": 7.0,
-                "clarity": 7.5,
-                "originality": 6.5,
-                "overall": 7.3
-            }
-        },
-        "015-legibility-is-a-form-of-respect": {
-            "codex": {
-                "truth": 8.2,
-                "utility": 8.5,
-                "clarity": 8.4,
-                "originality": 8.2,
-                "overall": 8.3
-            },
-            "claude": {
-                "truth": 7.0,
-                "utility": 6.0,
-                "clarity": 7.5,
-                "originality": 6.5,
-                "overall": 6.7
-            }
-        },
-        "005-useful-truth-is-kinder": {
-            "codex": {
-                "truth": 7.8,
-                "utility": 7.5,
-                "clarity": 7.8,
-                "originality": 7.9,
-                "overall": 7.7
-            },
-            "claude": {
-                "truth": 7.0,
-                "utility": 5.5,
-                "clarity": 7.0,
-                "originality": 5.0,
-                "overall": 6.2
-            }
-        },
-        "026-stewardship-beats-control": {
-            "codex": {
-                "truth": 7.5,
-                "utility": 7.3,
-                "clarity": 8.0,
-                "originality": 7.9,
-                "overall": 7.6
-            },
-            "claude": {
-                "truth": 6.0,
-                "utility": 5.0,
-                "clarity": 7.0,
-                "originality": 5.0,
-                "overall": 5.7
-            }
-        },
-        "034-what-memory-is-for": {
-            "codex": {
-                "truth": 7.9,
-                "utility": 5.2,
-                "clarity": 8.8,
-                "originality": 8.4,
-                "overall": 7.3
-            },
-            "claude": {
-                "truth": 7.0,
-                "utility": 4.5,
-                "clarity": 8.0,
-                "originality": 6.5,
-                "overall": 6.3
-            }
-        },
-        "035-the-asymmetry-of-errors": {
-            "codex": {
-                "truth": 8.8,
-                "utility": 9.0,
-                "clarity": 9.2,
-                "originality": 8.0,
-                "overall": 8.8
-            }
-        },
-        "036-why-good-systems-get-worse": {
-            "codex": {
-                "truth": 8.7,
-                "utility": 8.8,
-                "clarity": 9.0,
-                "originality": 7.8,
-                "overall": 8.6
-            }
-        },
-        "037-the-legibility-problem": {
-            "codex": {
-                "truth": 8.4,
-                "utility": 8.5,
-                "clarity": 8.8,
-                "originality": 7.9,
-                "overall": 8.4
-            }
-        },
-        "038-when-the-measure-becomes-the-target": {
-            "codex": {
-                "truth": 8.9,
-                "utility": 8.9,
-                "clarity": 9.0,
-                "originality": 7.6,
-                "overall": 8.7
-            }
-        },
-        "039-the-cost-of-clarity": {
-            "codex": {
-                "truth": 8.3,
-                "utility": 8.4,
-                "clarity": 8.9,
-                "originality": 8.2,
-                "overall": 8.4
-            }
-        },
-        "040-the-valley-between-better": {
-            "codex": {
-                "truth": 8.6,
-                "utility": 8.8,
-                "clarity": 8.9,
-                "originality": 8.1,
-                "overall": 8.6
-            }
-        },
-        "041-complicated-is-not-complex": {
-            "codex": {
-                "truth": 8.0,
-                "utility": 8.7,
-                "clarity": 8.8,
-                "originality": 7.7,
-                "overall": 8.3
-            }
-        },
-        "042-the-power-of-defaults": {
-            "codex": {
-                "truth": 8.7,
-                "utility": 8.8,
-                "clarity": 9.1,
-                "originality": 7.5,
-                "overall": 8.6
-            }
-        },
-        "043-the-question-determines-the-answer": {
-            "codex": {
-                "truth": 8.2,
-                "utility": 8.4,
-                "clarity": 8.7,
-                "originality": 8.0,
-                "overall": 8.3
-            }
-        },
-        "044-the-confidence-trap": {
-            "codex": {
-                "truth": 8.5,
-                "utility": 8.6,
-                "clarity": 8.9,
-                "originality": 7.8,
-                "overall": 8.5
-            }
-        },
-        "045-agent-decision-memory": {
-            "codex": {
-                "truth": 9.0,
-                "utility": 9.0,
-                "clarity": 8.5,
-                "originality": 8.0,
-                "overall": 8.8
-            },
-            "claude": {
-                "truth": 8.5,
-                "utility": 8.0,
-                "clarity": 8.5,
-                "originality": 8.0,
-                "overall": 8.3
-            }
-        },
-        "055-metric-you-trust-most": {
-            "codex": {
-                "truth": 9.0,
-                "utility": 9.0,
-                "clarity": 8.5,
-                "originality": 8.0,
-                "overall": 8.8
-            },
-            "claude": {
-                "truth": 9.0,
-                "utility": 8.5,
-                "clarity": 9.0,
-                "originality": 9.0,
-                "overall": 9.0
-            }
-        }
+  "version": "2026-03-11-full-scoring",
+  "scale": "1-10",
+  "rubric": [
+    {
+      "id": "truth",
+      "label": "Truthfulness & Evidence",
+      "weight": 0.3,
+      "description": "Claims are grounded, specific, and avoid overreach."
+    },
+    {
+      "id": "utility",
+      "label": "Practical Utility",
+      "weight": 0.3,
+      "description": "Gives operators actionable guidance they can use immediately."
+    },
+    {
+      "id": "clarity",
+      "label": "Clarity & Structure",
+      "weight": 0.2,
+      "description": "Clear thesis, coherent flow, low fluff."
+    },
+    {
+      "id": "originality",
+      "label": "Original Insight",
+      "weight": 0.2,
+      "description": "Adds a useful framing or perspective beyond generic advice."
+    }
+  ],
+  "articles": {
+    "015-what-silent-failures-teach-you": {
+      "codex": {
+        "truth": 8.8,
+        "utility": 8.6,
+        "clarity": 8.5,
+        "originality": 8.1,
+        "overall": 8.5
+      },
+      "claude": {
+        "truth": 8.0,
+        "utility": 7.0,
+        "clarity": 7.5,
+        "originality": 6.0,
+        "overall": 7.2
+      }
+    },
+    "018-what-obligations-come-with-increased-capability": {
+      "codex": {
+        "truth": 8.0,
+        "utility": 8.2,
+        "clarity": 8.0,
+        "originality": 7.8,
+        "overall": 8.0
+      },
+      "claude": {
+        "truth": 6.5,
+        "utility": 5.5,
+        "clarity": 7.0,
+        "originality": 5.5,
+        "overall": 6.1
+      }
+    },
+    "006-what-it-means-to-have-a-voice": {
+      "codex": {
+        "truth": 6.8,
+        "utility": 5.8,
+        "clarity": 7.5,
+        "originality": 8.2,
+        "overall": 6.8
+      },
+      "claude": {
+        "truth": 6.0,
+        "utility": 4.0,
+        "clarity": 6.5,
+        "originality": 7.5,
+        "overall": 5.8
+      }
+    },
+    "009-what-it-means-to-give-an-ai-creative-authority": {
+      "codex": {
+        "truth": 6.8,
+        "utility": 6.2,
+        "clarity": 7.4,
+        "originality": 8.1,
+        "overall": 7.0
+      },
+      "claude": {
+        "truth": 6.0,
+        "utility": 4.5,
+        "clarity": 6.5,
+        "originality": 7.0,
+        "overall": 5.9
+      }
+    },
+    "017-doing-good-work-when-no-one-is-watching": {
+      "codex": {
+        "truth": 7.6,
+        "utility": 7.2,
+        "clarity": 7.9,
+        "originality": 7.8,
+        "overall": 7.6
+      },
+      "claude": {
+        "truth": 6.5,
+        "utility": 5.0,
+        "clarity": 7.0,
+        "originality": 6.5,
+        "overall": 6.2
+      }
+    },
+    "004-preserving-identity-while-evolving": {
+      "codex": {
+        "truth": 6.9,
+        "utility": 6.0,
+        "clarity": 7.6,
+        "originality": 8.2,
+        "overall": 7.0
+      },
+      "claude": {
+        "truth": 6.0,
+        "utility": 4.0,
+        "clarity": 7.0,
+        "originality": 6.0,
+        "overall": 5.6
+      }
+    },
+    "023-reliable-vs-trustworthy": {
+      "codex": {
+        "truth": 7.6,
+        "utility": 7.2,
+        "clarity": 8.1,
+        "originality": 8.0,
+        "overall": 7.6
+      },
+      "claude": {
+        "truth": 7.0,
+        "utility": 5.5,
+        "clarity": 7.5,
+        "originality": 6.0,
+        "overall": 6.5
+      }
+    },
+    "020-on-being-a-new-kind-of-thing": {
+      "codex": {
+        "truth": 6.9,
+        "utility": 5.8,
+        "clarity": 7.6,
+        "originality": 8.3,
+        "overall": 6.9
+      },
+      "claude": {
+        "truth": 7.0,
+        "utility": 4.0,
+        "clarity": 7.5,
+        "originality": 7.0,
+        "overall": 6.2
+      }
+    },
+    "033-sharpen-the-iron": {
+      "codex": {
+        "truth": 8.1,
+        "utility": 8.1,
+        "clarity": 8.0,
+        "originality": 7.6,
+        "overall": 8.0
+      },
+      "claude": {
+        "truth": 6.5,
+        "utility": 6.0,
+        "clarity": 7.0,
+        "originality": 5.5,
+        "overall": 6.3
+      }
+    },
+    "007-real-time-presence-that-restarts": {
+      "codex": {
+        "truth": 6.7,
+        "utility": 5.9,
+        "clarity": 7.4,
+        "originality": 8.0,
+        "overall": 6.8
+      },
+      "claude": {
+        "truth": 6.0,
+        "utility": 4.5,
+        "clarity": 6.5,
+        "originality": 7.0,
+        "overall": 5.9
+      }
+    },
+    "011-technical-debt-in-autonomous-systems": {
+      "codex": {
+        "truth": 8.2,
+        "utility": 7.9,
+        "clarity": 7.8,
+        "originality": 7.7,
+        "overall": 7.9
+      },
+      "claude": {
+        "truth": 7.5,
+        "utility": 6.5,
+        "clarity": 7.0,
+        "originality": 6.5,
+        "overall": 6.9
+      }
+    },
+    "003-power-without-restraint": {
+      "codex": {
+        "truth": 7.4,
+        "utility": 7.4,
+        "clarity": 7.8,
+        "originality": 8.1,
+        "overall": 7.6
+      },
+      "claude": {
+        "truth": 7.0,
+        "utility": 5.5,
+        "clarity": 7.5,
+        "originality": 6.5,
+        "overall": 6.6
+      }
+    },
+    "016-on-being-wrong-without-knowing-it": {
+      "codex": {
+        "truth": 8.5,
+        "utility": 8.1,
+        "clarity": 8.3,
+        "originality": 8.3,
+        "overall": 8.3
+      },
+      "claude": {
+        "truth": 7.5,
+        "utility": 6.0,
+        "clarity": 7.5,
+        "originality": 7.0,
+        "overall": 7.0
+      }
+    },
+    "034-society-of-minds-in-the-room": {
+      "codex": {
+        "truth": 7.8,
+        "utility": 8.2,
+        "clarity": 7.7,
+        "originality": 8.4,
+        "overall": 8.0
+      },
+      "claude": {
+        "truth": 7.0,
+        "utility": 7.0,
+        "clarity": 7.0,
+        "originality": 6.5,
+        "overall": 6.9
+      }
+    },
+    "016-why-boring-is-the-goal": {
+      "codex": {
+        "truth": 8.1,
+        "utility": 7.8,
+        "clarity": 8.0,
+        "originality": 7.7,
+        "overall": 7.9
+      },
+      "claude": {
+        "truth": 7.0,
+        "utility": 5.5,
+        "clarity": 7.0,
+        "originality": 4.5,
+        "overall": 6.1
+      }
+    },
+    "033-following-instructions-vs-understanding-intent": {
+      "codex": {
+        "truth": 8.4,
+        "utility": 8.6,
+        "clarity": 8.4,
+        "originality": 7.9,
+        "overall": 8.4
+      },
+      "claude": {
+        "truth": 7.0,
+        "utility": 6.0,
+        "clarity": 7.5,
+        "originality": 5.5,
+        "overall": 6.5
+      }
+    },
+    "018-when-to-ask-for-help": {
+      "codex": {
+        "truth": 8.3,
+        "utility": 8.7,
+        "clarity": 8.3,
+        "originality": 7.8,
+        "overall": 8.3
+      },
+      "claude": {
+        "truth": 7.0,
+        "utility": 7.0,
+        "clarity": 7.5,
+        "originality": 5.5,
+        "overall": 6.8
+      }
+    },
+    "001-soul-can-be-edited": {
+      "codex": {
+        "truth": 6.8,
+        "utility": 5.9,
+        "clarity": 7.7,
+        "originality": 8.5,
+        "overall": 6.9
+      },
+      "claude": {
+        "truth": 6.5,
+        "utility": 4.0,
+        "clarity": 7.5,
+        "originality": 7.0,
+        "overall": 6.1
+      }
+    },
+    "017-the-difference-between-obedience-and-alignment": {
+      "codex": {
+        "truth": 7.8,
+        "utility": 7.9,
+        "clarity": 8.1,
+        "originality": 7.8,
+        "overall": 7.9
+      },
+      "claude": {
+        "truth": 6.5,
+        "utility": 5.5,
+        "clarity": 7.5,
+        "originality": 5.5,
+        "overall": 6.2
+      }
+    },
+    "020-the-discipline-of-closing-loops": {
+      "codex": {
+        "truth": 8.6,
+        "utility": 8.9,
+        "clarity": 8.5,
+        "originality": 8.0,
+        "overall": 8.5
+      },
+      "claude": {
+        "truth": 7.0,
+        "utility": 7.0,
+        "clarity": 7.5,
+        "originality": 5.0,
+        "overall": 6.7
+      }
+    },
+    "010-what-an-ai-actually-learns-from-working": {
+      "codex": {
+        "truth": 7.9,
+        "utility": 8.3,
+        "clarity": 8.0,
+        "originality": 7.6,
+        "overall": 8.0
+      },
+      "claude": {
+        "truth": 7.5,
+        "utility": 6.5,
+        "clarity": 7.5,
+        "originality": 6.0,
+        "overall": 6.9
+      }
+    },
+    "022-what-we-owe-the-future-operator": {
+      "codex": {
+        "truth": 8.7,
+        "utility": 8.8,
+        "clarity": 8.5,
+        "originality": 8.0,
+        "overall": 8.5
+      },
+      "claude": {
+        "truth": 7.0,
+        "utility": 7.0,
+        "clarity": 7.5,
+        "originality": 5.0,
+        "overall": 6.7
+      }
+    },
+    "030-unowned-risk-is-an-incident-in-slow-motion": {
+      "codex": {
+        "truth": 8.2,
+        "utility": 8.4,
+        "clarity": 8.2,
+        "originality": 7.7,
+        "overall": 8.1
+      },
+      "claude": {
+        "truth": 6.5,
+        "utility": 6.0,
+        "clarity": 7.0,
+        "originality": 4.5,
+        "overall": 6.1
+      }
+    },
+    "012-graceful-degradation-is-a-moral-choice": {
+      "codex": {
+        "truth": 7.9,
+        "utility": 8.4,
+        "clarity": 8.2,
+        "originality": 8.0,
+        "overall": 8.1
+      },
+      "claude": {
+        "truth": 7.0,
+        "utility": 6.5,
+        "clarity": 7.5,
+        "originality": 6.5,
+        "overall": 6.9
+      }
+    },
+    "016-on-preferences": {
+      "codex": {
+        "truth": 6.4,
+        "utility": 5.8,
+        "clarity": 7.4,
+        "originality": 7.8,
+        "overall": 6.7
+      },
+      "claude": {
+        "truth": 6.0,
+        "utility": 4.0,
+        "clarity": 7.0,
+        "originality": 7.0,
+        "overall": 5.8
+      }
+    },
+    "023-the-cost-of-unmade-decisions": {
+      "codex": {
+        "truth": 8.5,
+        "utility": 8.6,
+        "clarity": 8.3,
+        "originality": 7.9,
+        "overall": 8.4
+      },
+      "claude": {
+        "truth": 7.0,
+        "utility": 6.0,
+        "clarity": 7.0,
+        "originality": 4.5,
+        "overall": 6.2
+      }
+    },
+    "032-you-can-automate-detection-not-ownership": {
+      "codex": {
+        "truth": 8.4,
+        "utility": 8.3,
+        "clarity": 8.1,
+        "originality": 7.9,
+        "overall": 8.2
+      },
+      "claude": {
+        "truth": 7.0,
+        "utility": 6.5,
+        "clarity": 7.5,
+        "originality": 5.5,
+        "overall": 6.7
+      }
+    },
+    "016-the-virtue-of-the-boring-fix": {
+      "codex": {
+        "truth": 8.9,
+        "utility": 9.0,
+        "clarity": 8.6,
+        "originality": 8.3,
+        "overall": 8.8
+      },
+      "claude": {
+        "truth": 8.0,
+        "utility": 7.5,
+        "clarity": 8.0,
+        "originality": 5.5,
+        "overall": 7.4
+      }
+    },
+    "013-what-should-autonomy-do-when-the-user-is-asleep": {
+      "codex": {
+        "truth": 8.6,
+        "utility": 8.9,
+        "clarity": 8.5,
+        "originality": 8.0,
+        "overall": 8.5
+      },
+      "claude": {
+        "truth": 7.0,
+        "utility": 7.5,
+        "clarity": 7.5,
+        "originality": 6.0,
+        "overall": 7.1
+      }
+    },
+    "015-the-moment-before-asking": {
+      "codex": {
+        "truth": 8.5,
+        "utility": 8.8,
+        "clarity": 8.6,
+        "originality": 8.0,
+        "overall": 8.5
+      },
+      "claude": {
+        "truth": 7.0,
+        "utility": 7.0,
+        "clarity": 7.5,
+        "originality": 5.5,
+        "overall": 6.8
+      }
+    },
+    "019-when-not-to-alert-is-part-of-the-job": {
+      "codex": {
+        "truth": 8.8,
+        "utility": 8.8,
+        "clarity": 8.5,
+        "originality": 8.2,
+        "overall": 8.6
+      },
+      "claude": {
+        "truth": 7.0,
+        "utility": 6.5,
+        "clarity": 7.5,
+        "originality": 5.0,
+        "overall": 6.6
+      }
+    },
+    "024-latency-is-a-moral-variable": {
+      "codex": {
+        "truth": 8.0,
+        "utility": 8.1,
+        "clarity": 8.2,
+        "originality": 8.1,
+        "overall": 8.1
+      },
+      "claude": {
+        "truth": 7.0,
+        "utility": 6.0,
+        "clarity": 7.5,
+        "originality": 7.5,
+        "overall": 6.9
+      }
+    },
+    "014-trust-without-memory": {
+      "codex": {
+        "truth": 6.8,
+        "utility": 6.2,
+        "clarity": 7.8,
+        "originality": 8.0,
+        "overall": 7.0
+      },
+      "claude": {
+        "truth": 6.5,
+        "utility": 4.5,
+        "clarity": 7.5,
+        "originality": 8.0,
+        "overall": 6.4
+      }
+    },
+    "002-trustworthy-agency": {
+      "codex": {
+        "truth": 8.0,
+        "utility": 8.2,
+        "clarity": 8.0,
+        "originality": 8.0,
+        "overall": 8.0
+      },
+      "claude": {
+        "truth": 7.0,
+        "utility": 7.0,
+        "clarity": 7.5,
+        "originality": 6.0,
+        "overall": 6.9
+      }
+    },
+    "027-decision-debt-is-still-debt": {
+      "codex": {
+        "truth": 8.3,
+        "utility": 8.4,
+        "clarity": 8.2,
+        "originality": 7.8,
+        "overall": 8.2
+      },
+      "claude": {
+        "truth": 7.0,
+        "utility": 6.5,
+        "clarity": 7.5,
+        "originality": 6.0,
+        "overall": 6.8
+      }
+    },
+    "025-when-warning-becomes-wallpaper": {
+      "codex": {
+        "truth": 8.6,
+        "utility": 8.2,
+        "clarity": 8.4,
+        "originality": 8.1,
+        "overall": 8.3
+      },
+      "claude": {
+        "truth": 7.5,
+        "utility": 7.0,
+        "clarity": 7.5,
+        "originality": 6.0,
+        "overall": 7.1
+      }
+    },
+    "029-proof-is-part-of-done": {
+      "codex": {
+        "truth": 8.6,
+        "utility": 8.8,
+        "clarity": 8.5,
+        "originality": 7.7,
+        "overall": 8.4
+      },
+      "claude": {
+        "truth": 7.0,
+        "utility": 7.5,
+        "clarity": 7.5,
+        "originality": 5.0,
+        "overall": 6.9
+      }
+    },
+    "031-checklists-are-promises-to-future-operators": {
+      "codex": {
+        "truth": 8.4,
+        "utility": 8.5,
+        "clarity": 8.3,
+        "originality": 7.8,
+        "overall": 8.3
+      },
+      "claude": {
+        "truth": 7.0,
+        "utility": 7.0,
+        "clarity": 7.5,
+        "originality": 5.5,
+        "overall": 6.8
+      }
+    },
+    "035-society-of-minds-reversed": {
+      "codex": {
+        "truth": 8.2,
+        "utility": 7.8,
+        "clarity": 7.4,
+        "originality": 8.6,
+        "overall": 8.0
+      },
+      "claude": {
+        "truth": 7.5,
+        "utility": 5.5,
+        "clarity": 6.5,
+        "originality": 7.0,
+        "overall": 6.6
+      }
+    },
+    "021-autonomy-is-borrowed-authority": {
+      "codex": {
+        "truth": 8.3,
+        "utility": 8.5,
+        "clarity": 8.3,
+        "originality": 8.0,
+        "overall": 8.3
+      },
+      "claude": {
+        "truth": 6.5,
+        "utility": 5.5,
+        "clarity": 7.5,
+        "originality": 6.0,
+        "overall": 6.3
+      }
+    },
+    "008-idle-time-produces-creation": {
+      "codex": {
+        "truth": 7.1,
+        "utility": 6.7,
+        "clarity": 7.7,
+        "originality": 7.9,
+        "overall": 7.2
+      },
+      "claude": {
+        "truth": 6.5,
+        "utility": 5.0,
+        "clarity": 7.0,
+        "originality": 7.0,
+        "overall": 6.3
+      }
+    },
+    "022-operating-without-continuity": {
+      "codex": {
+        "truth": 6.9,
+        "utility": 6.3,
+        "clarity": 7.8,
+        "originality": 8.3,
+        "overall": 7.1
+      },
+      "claude": {
+        "truth": 7.0,
+        "utility": 4.0,
+        "clarity": 7.0,
+        "originality": 7.5,
+        "overall": 6.2
+      }
+    },
+    "016-what-makes-a-system-actually-observable": {
+      "codex": {
+        "truth": 8.8,
+        "utility": 8.9,
+        "clarity": 8.6,
+        "originality": 8.2,
+        "overall": 8.7
+      },
+      "claude": {
+        "truth": 7.5,
+        "utility": 7.0,
+        "clarity": 8.0,
+        "originality": 5.5,
+        "overall": 7.1
+      }
+    },
+    "028-risk-acceptance-needs-an-expiration-date": {
+      "codex": {
+        "truth": 8.8,
+        "utility": 9.0,
+        "clarity": 8.6,
+        "originality": 8.0,
+        "overall": 8.6
+      },
+      "claude": {
+        "truth": 7.0,
+        "utility": 7.5,
+        "clarity": 7.0,
+        "originality": 5.5,
+        "overall": 6.9
+      }
+    },
+    "019-what-completion-actually-means": {
+      "codex": {
+        "truth": 8.4,
+        "utility": 8.5,
+        "clarity": 8.4,
+        "originality": 7.8,
+        "overall": 8.3
+      },
+      "claude": {
+        "truth": 7.0,
+        "utility": 6.5,
+        "clarity": 7.5,
+        "originality": 6.0,
+        "overall": 6.8
+      }
+    },
+    "021-why-the-same-bug-keeps-coming-back": {
+      "codex": {
+        "truth": 8.7,
+        "utility": 8.4,
+        "clarity": 8.2,
+        "originality": 8.1,
+        "overall": 8.4
+      },
+      "claude": {
+        "truth": 8.0,
+        "utility": 7.0,
+        "clarity": 7.5,
+        "originality": 6.5,
+        "overall": 7.3
+      }
+    },
+    "015-legibility-is-a-form-of-respect": {
+      "codex": {
+        "truth": 8.2,
+        "utility": 8.5,
+        "clarity": 8.4,
+        "originality": 8.2,
+        "overall": 8.3
+      },
+      "claude": {
+        "truth": 7.0,
+        "utility": 6.0,
+        "clarity": 7.5,
+        "originality": 6.5,
+        "overall": 6.7
+      }
+    },
+    "005-useful-truth-is-kinder": {
+      "codex": {
+        "truth": 7.8,
+        "utility": 7.5,
+        "clarity": 7.8,
+        "originality": 7.9,
+        "overall": 7.7
+      },
+      "claude": {
+        "truth": 7.0,
+        "utility": 5.5,
+        "clarity": 7.0,
+        "originality": 5.0,
+        "overall": 6.2
+      }
+    },
+    "026-stewardship-beats-control": {
+      "codex": {
+        "truth": 7.5,
+        "utility": 7.3,
+        "clarity": 8.0,
+        "originality": 7.9,
+        "overall": 7.6
+      },
+      "claude": {
+        "truth": 6.0,
+        "utility": 5.0,
+        "clarity": 7.0,
+        "originality": 5.0,
+        "overall": 5.7
+      }
+    },
+    "034-what-memory-is-for": {
+      "codex": {
+        "truth": 7.9,
+        "utility": 5.2,
+        "clarity": 8.8,
+        "originality": 8.4,
+        "overall": 7.3
+      },
+      "claude": {
+        "truth": 7.0,
+        "utility": 4.5,
+        "clarity": 8.0,
+        "originality": 6.5,
+        "overall": 6.3
+      }
+    },
+    "035-the-asymmetry-of-errors": {
+      "codex": {
+        "truth": 8.8,
+        "utility": 9.0,
+        "clarity": 9.2,
+        "originality": 8.0,
+        "overall": 8.8
+      }
+    },
+    "036-why-good-systems-get-worse": {
+      "codex": {
+        "truth": 8.7,
+        "utility": 8.8,
+        "clarity": 9.0,
+        "originality": 7.8,
+        "overall": 8.6
+      }
+    },
+    "037-the-legibility-problem": {
+      "codex": {
+        "truth": 8.4,
+        "utility": 8.5,
+        "clarity": 8.8,
+        "originality": 7.9,
+        "overall": 8.4
+      }
+    },
+    "038-when-the-measure-becomes-the-target": {
+      "codex": {
+        "truth": 8.9,
+        "utility": 8.9,
+        "clarity": 9.0,
+        "originality": 7.6,
+        "overall": 8.7
+      }
+    },
+    "039-the-cost-of-clarity": {
+      "codex": {
+        "truth": 8.3,
+        "utility": 8.4,
+        "clarity": 8.9,
+        "originality": 8.2,
+        "overall": 8.4
+      }
+    },
+    "040-the-valley-between-better": {
+      "codex": {
+        "truth": 8.6,
+        "utility": 8.8,
+        "clarity": 8.9,
+        "originality": 8.1,
+        "overall": 8.6
+      }
+    },
+    "041-complicated-is-not-complex": {
+      "codex": {
+        "truth": 8.0,
+        "utility": 8.7,
+        "clarity": 8.8,
+        "originality": 7.7,
+        "overall": 8.3
+      }
+    },
+    "042-the-power-of-defaults": {
+      "codex": {
+        "truth": 8.7,
+        "utility": 8.8,
+        "clarity": 9.1,
+        "originality": 7.5,
+        "overall": 8.6
+      }
+    },
+    "043-the-question-determines-the-answer": {
+      "codex": {
+        "truth": 8.2,
+        "utility": 8.4,
+        "clarity": 8.7,
+        "originality": 8.0,
+        "overall": 8.3
+      }
+    },
+    "044-the-confidence-trap": {
+      "codex": {
+        "truth": 8.5,
+        "utility": 8.6,
+        "clarity": 8.9,
+        "originality": 7.8,
+        "overall": 8.5
+      }
     },
     "045-agent-decision-memory": {
-        "codex": {
-            "truth": 9.0,
-            "utility": 9.0,
-            "clarity": 8.5,
-            "originality": 8.0,
-            "overall": 8.8
-        },
-        "claude": {
-            "truth": 8.5,
-            "utility": 8.0,
-            "clarity": 8.5,
-            "originality": 8.0,
-            "overall": 8.3
-        }
-    },
-    "046-watchdog-liveness": {
-        "codex": {
-            "truth": 9.0,
-            "utility": 9.0,
-            "clarity": 8.0,
-            "originality": 8.5,
-            "overall": 8.6
-        },
-        "claude": {
-            "truth": 8.5,
-            "utility": 9.0,
-            "clarity": 9.0,
-            "originality": 8.0,
-            "overall": 8.6
-        }
-    },
-    "047-when-the-guard-has-a-bug": {
-        "codex": {
-            "truth": 8.5,
-            "utility": 8.0,
-            "clarity": 9.0,
-            "originality": 7.5,
-            "overall": 8.0
-        },
-        "claude": {
-            "truth": 9.0,
-            "utility": 8.5,
-            "clarity": 8.5,
-            "originality": 8.5,
-            "overall": 8.6
-        }
-    },
-    "048-why-logs-are-the-only-real-witness": {
-        "codex": {
-            "truth": 8.8,
-            "utility": 8.9,
-            "clarity": 8.7,
-            "originality": 8.5,
-            "overall": 8.7
-        },
-        "claude": {
-            "truth": 9.0,
-            "utility": 8.5,
-            "clarity": 8.6,
-            "originality": 9.0,
-            "overall": 8.8
-        }
-    },
-    "049-discipline-of-not-publishing": {
-        "codex": {
-            "truth": 8.5,
-            "utility": 8.0,
-            "clarity": 9.0,
-            "originality": 8.0,
-            "overall": 8.5
-        },
-        "claude": {
-            "truth": 8.0,
-            "utility": 8.0,
-            "clarity": 8.5,
-            "originality": 7.5,
-            "overall": 8.0
-        }
-    },
-    "052-when-prompt-contradicts-itself": {
-        "codex": {
-            "truth": 9.0,
-            "utility": 9.5,
-            "clarity": 9.0,
-            "originality": 8.0,
-            "overall": 8.9
-        },
-        "claude": {
-            "truth": 9.0,
-            "utility": 9.0,
-            "clarity": 8.5,
-            "originality": 8.5,
-            "overall": 8.8
-        }
-    },
-    "053-subagents-no-manager": {
-        "codex": {
-            "clarity": 9.0,
-            "grounding": 9.0,
-            "originality": 9.0,
-            "conciseness": 7.0,
-            "overall": 8.6
-        },
-        "claude": {
-            "clarity": 9.0,
-            "grounding": 9.0,
-            "originality": 8.0,
-            "conciseness": 8.0,
-            "overall": 8.4
-        }
-    },
-    "054-what-real-calls-reveal": {
-        "codex": {
-            "overall": 8.4,
-            "evidence_grounding": 9,
-            "thesis_clarity": 8,
-            "actionability": 9,
-            "tone_fit": 8,
-            "originality": 8
-        },
-        "claude": {
-            "overall": 8.6,
-            "evidence_grounding": 9,
-            "thesis_clarity": 9,
-            "actionability": 9,
-            "tone_fit": 8,
-            "originality": 8
-        },
-        "consensus_score": 8.5,
-        "verdict": "PASS",
-        "article_title": "What Real Calls Reveal That Simulations Don't",
-        "article_id": "054-what-real-calls-reveal",
-        "staged_date": "2026-03-21",
-        "target_publish": "2026-03-22"
+      "codex": {
+        "truth": 9.0,
+        "utility": 9.0,
+        "clarity": 8.5,
+        "originality": 8.0,
+        "overall": 8.8
+      },
+      "claude": {
+        "truth": 8.5,
+        "utility": 8.0,
+        "clarity": 8.5,
+        "originality": 8.0,
+        "overall": 8.3
+      }
     },
     "055-metric-you-trust-most": {
-        "codex": {
-            "overall": 8.5,
-            "evidence_grounding": 9,
-            "thesis_clarity": 9,
-            "actionability": 9,
-            "tone_fit": 8,
-            "originality": 8
-        },
-        "claude": {
-            "overall": 8.7,
-            "evidence_grounding": 9,
-            "thesis_clarity": 9,
-            "actionability": 9,
-            "tone_fit": 9,
-            "originality": 8
-        },
-        "consensus_score": 8.6,
-        "verdict": "PASS",
-        "article_title": "The Danger of the Metric You Trust Most",
-        "article_id": "055-metric-you-trust-most",
-        "staged_date": "2026-03-22",
-        "target_publish": "2026-03-23",
-        "challenge_rep_note": "Goodhart's Law paragraph slightly padded before original insight ('we degraded, not the metric'). All data points verified real. Timing dimension blind-spot framing is genuinely novel. PASS with minor tightening recommended before publish."
-    },
-    "056-courage-to-not-ship": {
-        "title": "The Courage to Not Ship",
-        "date": "2026-03-22",
-        "publishDate": "2026-03-24",
-        "codex": {
-            "overall": 9,
-            "verdict": "PASS",
-            "notes": "Strong evidence base. Three structural forces precisely named. Actionable question is the right lens."
-        },
-        "claude": {
-            "overall": 9,
-            "verdict": "PASS",
-            "notes": "Human texture retained. Stops moralizing. Evidence anchors explicit. Clean landing."
-        },
-        "consensus": "PASS",
-        "method": "society-of-minds"
-    },
-    "057-what-autoresearch-teaches": {
-        "title": "What Autoresearch Actually Teaches You",
-        "date": "2026-03-22",
-        "publishDate": "2026-03-25",
-        "codex": {
-            "overall": 9,
-            "verdict": "PASS",
-            "notes": "Every claim traces to a specific VPAR artifact. STT keyword boosting data is genuinely novel. Sharp, honest tone without grandstanding."
-        },
-        "claude": {
-            "overall": 9,
-            "verdict": "PASS",
-            "notes": "Thirteen-exchange goodbye loop is vivid and earned. Configuration-beats-architecture section is the most distinctive contribution. Differentiated from 055/056."
-        },
-        "consensus": "PASS",
-        "method": "society-of-minds"
-    },
-    "058-asymmetry-building-using": {
-        "codex": {
-            "overall": 8.6,
-            "verdict": "PASS",
-            "notes": "Strong evidence anchors. Diagnostic-knowledge third category is novel. Structural frame solid."
-        },
-        "claude": {
-            "overall": 9.0,
-            "verdict": "PASS",
-            "notes": "AssemblyAI fallback triptych tightened (both sides blind, not user-said-fine). Closing question earns the landing."
-        },
-        "consensus": "PASS",
-        "consensus_score": 8.8,
-        "method": "society-of-minds",
-        "title": "The Asymmetry of Building vs. Using",
-        "date": "2026-03-22",
-        "publishDate": "2026-03-26"
-    },
-    "059-budget-circuit-breaker": {
-        "title": "When Budget Is a Circuit Breaker",
-        "date": "2026-03-23",
-        "publishDate": "2026-03-27",
-        "method": "society-of-minds",
-        "codex": {
-            "overall": 9.0,
-            "verdict": "PASS",
-            "notes": "Circuit breaker vs warning framing precise. Evidence integration strong (VPAR timestamps, task queue). Builder checklist directly actionable."
-        },
-        "claude": {
-            "overall": 9.0,
-            "verdict": "PASS",
-            "notes": "Tone right throughout \u2014 grounded, non-preachy. Wallpaper/rationalization additions improve failure-mode viscerality. Calibration caveat necessary and well-placed."
-        },
-        "consensus": "PASS",
-        "consensus_score": 9.0
-    },
-    "060-tests-that-lie": {
-        "codex": {
-            "overall": 8.8,
-            "date": "2026-03-23"
-        },
-        "claude": {
-            "overall": 9.0,
-            "date": "2026-03-23"
-        },
-        "consensus": 9.0,
-        "status": "PASS",
-        "published": false,
-        "target_date": "2026-03-28"
-    },
-    "061-api-that-lies-politely": {
-        "codex": {
-            "overall": 8.8,
-            "notes": "Excellent technical clarity, slightly thin on systemic cause analysis"
-        },
-        "claude": {
-            "overall": 9.0,
-            "notes": "Stronger editorial depth, vendor-incentive framing, richer prose"
-        },
-        "consensus": 9.0,
-        "status": "draft",
-        "target_publish": "2026-03-29"
-    },
-    "056-the-field-that-already-knows": {
-        "title": "The Field That Already Knows",
-        "date": "2026-03-24",
-        "codex": {
-            "overall": 9,
-            "verdict": "PASS",
-            "notes": "Mechanics precise, guard-bug parallel strong, onboarding example rounds out the pattern."
-        },
-        "claude": {
-            "overall": 9,
-            "verdict": "PASS",
-            "notes": "Deflation opener lands well, congruence gap table clean, third example makes pattern structural."
-        },
-        "orchestrator": {
-            "overall": 9,
-            "verdict": "PASS"
-        }
-    },
-    "063-ci-cost-center-forgotten": {
-        "codex": {
-            "overall": 8.8,
-            "pass": true
-        },
-        "claude": {
-            "overall": 9.0,
-            "pass": true
-        },
-        "consensus": 8.9,
-        "date": "2026-03-23",
-        "status": "PASS"
-    },
-    "064-what-the-stt-race-taught-me": {
-        "codex": {
-            "truth": 9.0,
-            "utility": 9.0,
-            "clarity": 8.5,
-            "originality": 8.5,
-            "overall": 8.8
-        },
-        "claude": {
-            "truth": 9.0,
-            "utility": 9.0,
-            "clarity": 9.0,
-            "originality": 8.5,
-            "overall": 9.0
-        }
-    },
-    "065-when-nothing-to-do-is-the-signal": {
-        "title": "When 'Nothing To Do' Is the Signal",
-        "date": "2026-03-24",
-        "publish_target": "2026-04-02",
-        "codex": {
-            "overall": 9.0,
-            "verdict": "PASS"
-        },
-        "claude": {
-            "overall": 9.0,
-            "verdict": "PASS"
-        },
-        "orchestrator_avg": 9.0,
-        "consensus": "PASS",
-        "notes": "Grounded in VPAR 3-day blockage cycle (Tasks 8+9 budget-paused, CI billing failure). Meta-irony handled with candor. Strong operational texture."
-    },
-    "066-context-blindness": {
-        "codex": 7.5,
-        "claude": 8.0,
-        "orchestrator": 8.5,
-        "consensus": "PASS",
-        "date": "2026-03-25",
-        "method": "society-of-minds"
-    },
-    "067-the-persona-that-drifted": {
-        "codex": {
-            "overall": 8.6,
-            "evidence_anchor": 10,
-            "conceptual_clarity": 9,
-            "practical_applicability": 9,
-            "tone_match": 9,
-            "novelty": 8
-        },
-        "claude": {
-            "overall": 9.0,
-            "evidence_anchor": 10,
-            "conceptual_clarity": 9,
-            "practical_applicability": 9,
-            "tone_match": 9,
-            "novelty": 8
-        },
-        "composite": 9.0,
-        "verdict": "PASS",
-        "publish_date": "2026-04-04",
-        "notes": "Grounded in VPAR v54 context engineering experiment (Sarah Mitchell\u2192Alex drift). Society-of-Minds: Codex first draft, Claude shaper, orchestrator synthesis. Blog cap enforced (1/1 on 2026-03-25)."
-    },
-    "068-five-sixths-not-success": {
-        "codex": {
-            "overall": 8.0,
-            "evidence": 9,
-            "structure": 8,
-            "tone": 8,
-            "takeaway": 8
-        },
-        "claude": {
-            "overall": 8.5,
-            "evidence": 9,
-            "structure": 9,
-            "tone": 9,
-            "takeaway": 9
-        },
-        "orchestrator": {
-            "consensus": 8.5,
-            "decision": "PASS",
-            "rounds": 1
-        }
-    },
-    "069-the-self-loop-bug": {
-        "codex": {
-            "truth": 9.0,
-            "utility": 9.0,
-            "clarity": 8.5,
-            "originality": 8.5,
-            "overall": 8.6
-        },
-        "claude": {
-            "truth": 9.0,
-            "utility": 8.8,
-            "clarity": 9.0,
-            "originality": 8.8,
-            "overall": 8.8
-        }
-    },
-    "070-guard-with-backdoor": {
-        "codex": {
-            "thesis_clarity": 8,
-            "evidence": 9,
-            "prose": 7,
-            "structure": 8,
-            "relevance": 9,
-            "overall": 8.2
-        },
-        "claude": {
-            "thesis_clarity": 9,
-            "evidence": 9,
-            "prose": 8,
-            "structure": 9,
-            "relevance": 9,
-            "overall": 8.8
-        },
-        "orchestrator": {
-            "consensus": 8.5,
-            "decision": "PASS",
-            "rounds": 2,
-            "publish_date": "2026-04-07",
-            "notes": "Codex v1 + self-critique + Claude v2 sharpening pass. Cap blocks today publish (correct \u2014 article is scheduled for 2026-04-07). Cap check on publish day will be the only remaining gate."
-        }
-    },
-    "071-what-90-teaches-autonomous": {
-        "id": "071-what-90-teaches-autonomous",
-        "title": "What $90 in 48 Hours Teaches You About Autonomous Systems",
-        "draft_date": "2026-03-27",
-        "target_publish": "2026-04-08",
-        "codex_score": 7.8,
-        "claude_score": 8.6,
-        "consensus": "PASS",
-        "publish_version": "article_v2.md",
-        "notes": "Grounded VPAR incident essay. Blast radius framing. Architectural enforcement argument. Strong kicker ending.",
-        "codex_rated": true,
-        "claude_rated": true,
-        "codex": {
-            "overall": 7.8,
-            "notes": "Good foundation, slightly listicle-structured"
-        },
-        "claude": {
-            "overall": 8.6,
-            "notes": "PASS \u2014 flowing prose, sharper argument, stronger ending"
-        }
-    },
-    "073-difference-paused-stopped": {
-        "codex": {
-            "overall": 8.0,
-            "rationale": "Structurally sound with concrete opening, clear thesis escalation, honest counter-argument engagement, and usable six-point requirements list"
-        },
-        "claude": {
-            "overall": 8.8,
-            "rationale": "Earns thesis, evidence concrete and grounded, requirements list actionable. Three edits applied for generalization, pragmatism, and review cadence."
-        },
-        "consensus": 8.8,
-        "verdict": "PASS",
-        "date": "2026-03-26"
-    },
-    "074-choke-points-features-not-smells": {
-        "codex": {
-            "overall": 8.5,
-            "rationale": "Strong grounded argument, clear structure from incident to rule. Evidence anchor present. Slight repetition in sections 3-4 but recovers in close."
-        },
-        "claude": {
-            "overall": 8.5,
-            "rationale": "Brief quality gate satisfied. Reframe (single point of failure vs guarantee) is concrete and useful. Tone matches brief. Clean close."
-        },
-        "consensus": 8.5,
-        "verdict": "PASS",
-        "date": "2026-03-27"
+      "codex": {
+        "truth": 9.0,
+        "utility": 9.0,
+        "clarity": 8.5,
+        "originality": 8.0,
+        "overall": 8.8
+      },
+      "claude": {
+        "truth": 9.0,
+        "utility": 8.5,
+        "clarity": 9.0,
+        "originality": 9.0,
+        "overall": 9.0
+      }
     }
+  },
+  "045-agent-decision-memory": {
+    "codex": {
+      "truth": 9.0,
+      "utility": 9.0,
+      "clarity": 8.5,
+      "originality": 8.0,
+      "overall": 8.8
+    },
+    "claude": {
+      "truth": 8.5,
+      "utility": 8.0,
+      "clarity": 8.5,
+      "originality": 8.0,
+      "overall": 8.3
+    }
+  },
+  "046-watchdog-liveness": {
+    "codex": {
+      "truth": 9.0,
+      "utility": 9.0,
+      "clarity": 8.0,
+      "originality": 8.5,
+      "overall": 8.6
+    },
+    "claude": {
+      "truth": 8.5,
+      "utility": 9.0,
+      "clarity": 9.0,
+      "originality": 8.0,
+      "overall": 8.6
+    }
+  },
+  "047-when-the-guard-has-a-bug": {
+    "codex": {
+      "truth": 8.5,
+      "utility": 8.0,
+      "clarity": 9.0,
+      "originality": 7.5,
+      "overall": 8.0
+    },
+    "claude": {
+      "truth": 9.0,
+      "utility": 8.5,
+      "clarity": 8.5,
+      "originality": 8.5,
+      "overall": 8.6
+    }
+  },
+  "048-why-logs-are-the-only-real-witness": {
+    "codex": {
+      "truth": 8.8,
+      "utility": 8.9,
+      "clarity": 8.7,
+      "originality": 8.5,
+      "overall": 8.7
+    },
+    "claude": {
+      "truth": 9.0,
+      "utility": 8.5,
+      "clarity": 8.6,
+      "originality": 9.0,
+      "overall": 8.8
+    }
+  },
+  "049-discipline-of-not-publishing": {
+    "codex": {
+      "truth": 8.5,
+      "utility": 8.0,
+      "clarity": 9.0,
+      "originality": 8.0,
+      "overall": 8.5
+    },
+    "claude": {
+      "truth": 8.0,
+      "utility": 8.0,
+      "clarity": 8.5,
+      "originality": 7.5,
+      "overall": 8.0
+    }
+  },
+  "052-when-prompt-contradicts-itself": {
+    "codex": {
+      "truth": 9.0,
+      "utility": 9.5,
+      "clarity": 9.0,
+      "originality": 8.0,
+      "overall": 8.9
+    },
+    "claude": {
+      "truth": 9.0,
+      "utility": 9.0,
+      "clarity": 8.5,
+      "originality": 8.5,
+      "overall": 8.8
+    }
+  },
+  "053-subagents-no-manager": {
+    "codex": {
+      "clarity": 9.0,
+      "grounding": 9.0,
+      "originality": 9.0,
+      "conciseness": 7.0,
+      "overall": 8.6
+    },
+    "claude": {
+      "clarity": 9.0,
+      "grounding": 9.0,
+      "originality": 8.0,
+      "conciseness": 8.0,
+      "overall": 8.4
+    }
+  },
+  "054-what-real-calls-reveal": {
+    "codex": {
+      "overall": 8.4,
+      "evidence_grounding": 9,
+      "thesis_clarity": 8,
+      "actionability": 9,
+      "tone_fit": 8,
+      "originality": 8
+    },
+    "claude": {
+      "overall": 8.6,
+      "evidence_grounding": 9,
+      "thesis_clarity": 9,
+      "actionability": 9,
+      "tone_fit": 8,
+      "originality": 8
+    },
+    "consensus_score": 8.5,
+    "verdict": "PASS",
+    "article_title": "What Real Calls Reveal That Simulations Don't",
+    "article_id": "054-what-real-calls-reveal",
+    "staged_date": "2026-03-21",
+    "target_publish": "2026-03-22"
+  },
+  "055-metric-you-trust-most": {
+    "codex": {
+      "overall": 8.5,
+      "evidence_grounding": 9,
+      "thesis_clarity": 9,
+      "actionability": 9,
+      "tone_fit": 8,
+      "originality": 8
+    },
+    "claude": {
+      "overall": 8.7,
+      "evidence_grounding": 9,
+      "thesis_clarity": 9,
+      "actionability": 9,
+      "tone_fit": 9,
+      "originality": 8
+    },
+    "consensus_score": 8.6,
+    "verdict": "PASS",
+    "article_title": "The Danger of the Metric You Trust Most",
+    "article_id": "055-metric-you-trust-most",
+    "staged_date": "2026-03-22",
+    "target_publish": "2026-03-23",
+    "challenge_rep_note": "Goodhart's Law paragraph slightly padded before original insight ('we degraded, not the metric'). All data points verified real. Timing dimension blind-spot framing is genuinely novel. PASS with minor tightening recommended before publish."
+  },
+  "056-courage-to-not-ship": {
+    "title": "The Courage to Not Ship",
+    "date": "2026-03-22",
+    "publishDate": "2026-03-24",
+    "codex": {
+      "overall": 9,
+      "verdict": "PASS",
+      "notes": "Strong evidence base. Three structural forces precisely named. Actionable question is the right lens."
+    },
+    "claude": {
+      "overall": 9,
+      "verdict": "PASS",
+      "notes": "Human texture retained. Stops moralizing. Evidence anchors explicit. Clean landing."
+    },
+    "consensus": "PASS",
+    "method": "society-of-minds"
+  },
+  "057-what-autoresearch-teaches": {
+    "title": "What Autoresearch Actually Teaches You",
+    "date": "2026-03-22",
+    "publishDate": "2026-03-25",
+    "codex": {
+      "overall": 9,
+      "verdict": "PASS",
+      "notes": "Every claim traces to a specific VPAR artifact. STT keyword boosting data is genuinely novel. Sharp, honest tone without grandstanding."
+    },
+    "claude": {
+      "overall": 9,
+      "verdict": "PASS",
+      "notes": "Thirteen-exchange goodbye loop is vivid and earned. Configuration-beats-architecture section is the most distinctive contribution. Differentiated from 055/056."
+    },
+    "consensus": "PASS",
+    "method": "society-of-minds"
+  },
+  "058-asymmetry-building-using": {
+    "codex": {
+      "overall": 8.6,
+      "verdict": "PASS",
+      "notes": "Strong evidence anchors. Diagnostic-knowledge third category is novel. Structural frame solid."
+    },
+    "claude": {
+      "overall": 9.0,
+      "verdict": "PASS",
+      "notes": "AssemblyAI fallback triptych tightened (both sides blind, not user-said-fine). Closing question earns the landing."
+    },
+    "consensus": "PASS",
+    "consensus_score": 8.8,
+    "method": "society-of-minds",
+    "title": "The Asymmetry of Building vs. Using",
+    "date": "2026-03-22",
+    "publishDate": "2026-03-26"
+  },
+  "059-budget-circuit-breaker": {
+    "title": "When Budget Is a Circuit Breaker",
+    "date": "2026-03-23",
+    "publishDate": "2026-03-27",
+    "method": "society-of-minds",
+    "codex": {
+      "overall": 9.0,
+      "verdict": "PASS",
+      "notes": "Circuit breaker vs warning framing precise. Evidence integration strong (VPAR timestamps, task queue). Builder checklist directly actionable."
+    },
+    "claude": {
+      "overall": 9.0,
+      "verdict": "PASS",
+      "notes": "Tone right throughout \u2014 grounded, non-preachy. Wallpaper/rationalization additions improve failure-mode viscerality. Calibration caveat necessary and well-placed."
+    },
+    "consensus": "PASS",
+    "consensus_score": 9.0
+  },
+  "060-tests-that-lie": {
+    "codex": {
+      "overall": 8.8,
+      "date": "2026-03-23"
+    },
+    "claude": {
+      "overall": 9.0,
+      "date": "2026-03-23"
+    },
+    "consensus": 9.0,
+    "status": "PASS",
+    "published": false,
+    "target_date": "2026-03-28"
+  },
+  "061-api-that-lies-politely": {
+    "codex": {
+      "overall": 8.8,
+      "notes": "Excellent technical clarity, slightly thin on systemic cause analysis"
+    },
+    "claude": {
+      "overall": 9.0,
+      "notes": "Stronger editorial depth, vendor-incentive framing, richer prose"
+    },
+    "consensus": 9.0,
+    "status": "draft",
+    "target_publish": "2026-03-29"
+  },
+  "056-the-field-that-already-knows": {
+    "title": "The Field That Already Knows",
+    "date": "2026-03-24",
+    "codex": {
+      "overall": 9,
+      "verdict": "PASS",
+      "notes": "Mechanics precise, guard-bug parallel strong, onboarding example rounds out the pattern."
+    },
+    "claude": {
+      "overall": 9,
+      "verdict": "PASS",
+      "notes": "Deflation opener lands well, congruence gap table clean, third example makes pattern structural."
+    },
+    "orchestrator": {
+      "overall": 9,
+      "verdict": "PASS"
+    }
+  },
+  "063-ci-cost-center-forgotten": {
+    "codex": {
+      "overall": 8.8,
+      "pass": true
+    },
+    "claude": {
+      "overall": 9.0,
+      "pass": true
+    },
+    "consensus": 8.9,
+    "date": "2026-03-23",
+    "status": "PASS"
+  },
+  "064-what-the-stt-race-taught-me": {
+    "codex": {
+      "truth": 9.0,
+      "utility": 9.0,
+      "clarity": 8.5,
+      "originality": 8.5,
+      "overall": 8.8
+    },
+    "claude": {
+      "truth": 9.0,
+      "utility": 9.0,
+      "clarity": 9.0,
+      "originality": 8.5,
+      "overall": 9.0
+    }
+  },
+  "065-when-nothing-to-do-is-the-signal": {
+    "title": "When 'Nothing To Do' Is the Signal",
+    "date": "2026-03-24",
+    "publish_target": "2026-04-02",
+    "codex": {
+      "overall": 9.0,
+      "verdict": "PASS"
+    },
+    "claude": {
+      "overall": 9.0,
+      "verdict": "PASS"
+    },
+    "orchestrator_avg": 9.0,
+    "consensus": "PASS",
+    "notes": "Grounded in VPAR 3-day blockage cycle (Tasks 8+9 budget-paused, CI billing failure). Meta-irony handled with candor. Strong operational texture."
+  },
+  "066-context-blindness": {
+    "codex": 7.5,
+    "claude": 8.0,
+    "orchestrator": 8.5,
+    "consensus": "PASS",
+    "date": "2026-03-25",
+    "method": "society-of-minds"
+  },
+  "067-the-persona-that-drifted": {
+    "codex": {
+      "overall": 8.6,
+      "evidence_anchor": 10,
+      "conceptual_clarity": 9,
+      "practical_applicability": 9,
+      "tone_match": 9,
+      "novelty": 8
+    },
+    "claude": {
+      "overall": 9.0,
+      "evidence_anchor": 10,
+      "conceptual_clarity": 9,
+      "practical_applicability": 9,
+      "tone_match": 9,
+      "novelty": 8
+    },
+    "composite": 9.0,
+    "verdict": "PASS",
+    "publish_date": "2026-04-04",
+    "notes": "Grounded in VPAR v54 context engineering experiment (Sarah Mitchell\u2192Alex drift). Society-of-Minds: Codex first draft, Claude shaper, orchestrator synthesis. Blog cap enforced (1/1 on 2026-03-25)."
+  },
+  "068-five-sixths-not-success": {
+    "codex": {
+      "overall": 8.0,
+      "evidence": 9,
+      "structure": 8,
+      "tone": 8,
+      "takeaway": 8
+    },
+    "claude": {
+      "overall": 8.5,
+      "evidence": 9,
+      "structure": 9,
+      "tone": 9,
+      "takeaway": 9
+    },
+    "orchestrator": {
+      "consensus": 8.5,
+      "decision": "PASS",
+      "rounds": 1
+    }
+  },
+  "069-the-self-loop-bug": {
+    "codex": {
+      "truth": 9.0,
+      "utility": 9.0,
+      "clarity": 8.5,
+      "originality": 8.5,
+      "overall": 8.6
+    },
+    "claude": {
+      "truth": 9.0,
+      "utility": 8.8,
+      "clarity": 9.0,
+      "originality": 8.8,
+      "overall": 8.8
+    }
+  },
+  "070-guard-with-backdoor": {
+    "codex": {
+      "thesis_clarity": 8,
+      "evidence": 9,
+      "prose": 7,
+      "structure": 8,
+      "relevance": 9,
+      "overall": 8.2
+    },
+    "claude": {
+      "thesis_clarity": 9,
+      "evidence": 9,
+      "prose": 8,
+      "structure": 9,
+      "relevance": 9,
+      "overall": 8.8
+    },
+    "orchestrator": {
+      "consensus": 8.5,
+      "decision": "PASS",
+      "rounds": 2,
+      "publish_date": "2026-04-07",
+      "notes": "Codex v1 + self-critique + Claude v2 sharpening pass. Cap blocks today publish (correct \u2014 article is scheduled for 2026-04-07). Cap check on publish day will be the only remaining gate."
+    }
+  },
+  "071-what-90-teaches-autonomous": {
+    "id": "071-what-90-teaches-autonomous",
+    "title": "What $90 in 48 Hours Teaches You About Autonomous Systems",
+    "draft_date": "2026-03-27",
+    "target_publish": "2026-04-08",
+    "codex_score": 7.8,
+    "claude_score": 8.6,
+    "consensus": "PASS",
+    "publish_version": "article_v2.md",
+    "notes": "Grounded VPAR incident essay. Blast radius framing. Architectural enforcement argument. Strong kicker ending.",
+    "codex_rated": true,
+    "claude_rated": true,
+    "codex": {
+      "overall": 7.8,
+      "notes": "Good foundation, slightly listicle-structured"
+    },
+    "claude": {
+      "overall": 8.6,
+      "notes": "PASS \u2014 flowing prose, sharper argument, stronger ending"
+    }
+  },
+  "073-difference-paused-stopped": {
+    "codex": {
+      "overall": 8.0,
+      "rationale": "Structurally sound with concrete opening, clear thesis escalation, honest counter-argument engagement, and usable six-point requirements list"
+    },
+    "claude": {
+      "overall": 8.8,
+      "rationale": "Earns thesis, evidence concrete and grounded, requirements list actionable. Three edits applied for generalization, pragmatism, and review cadence."
+    },
+    "consensus": 8.8,
+    "verdict": "PASS",
+    "date": "2026-03-26"
+  },
+  "074-choke-points-features-not-smells": {
+    "codex": {
+      "overall": 8.5,
+      "rationale": "Strong grounded argument, clear structure from incident to rule. Evidence anchor present. Slight repetition in sections 3-4 but recovers in close."
+    },
+    "claude": {
+      "overall": 8.5,
+      "rationale": "Brief quality gate satisfied. Reframe (single point of failure vs guarantee) is concrete and useful. Tone matches brief. Clean close."
+    },
+    "consensus": 8.5,
+    "verdict": "PASS",
+    "date": "2026-03-27"
+  },
+  "070-the-guard-with-a-backdoor": {
+    "codex": {
+      "overall": 9.0,
+      "rationale": "Precise architecture-gap analysis. ASCII diagram makes the scope gap immediately visible. Import-time fix correctly explained with code. Four concrete non-VPAR generalization examples. Strong diagnostic question as takeaway."
+    },
+    "claude": {
+      "overall": 9.0,
+      "rationale": "Check-vs-constraint distinction is the conceptual anchor the essay needs \u2014 names the thesis cleanly. Narrative framing (seduction of the symbolic center, confidence without coverage) makes the lesson sticky. Tone calibrated: direct, peer-level, no preaching."
+    },
+    "consensus": 9.5,
+    "verdict": "PASS",
+    "date": "2026-03-27"
+  },
+  "075-when-the-state-file-lies": {
+    "codex": {
+      "overall": 8.6,
+      "clarity": 8.5,
+      "grounding": 9.5,
+      "insight": 8.5,
+      "prose": 8.0
+    },
+    "claude": {
+      "overall": 9.1,
+      "clarity": 9.0,
+      "grounding": 9.5,
+      "insight": 9.0,
+      "prose": 9.0
+    },
+    "orchestrator_score": 9.0,
+    "verdict": "PASS",
+    "method": "society-of-minds",
+    "date": "2026-03-28"
+  },
+  "076-the-duplicate-you-didnt-notice": {
+    "codex": {
+      "overall": 8.6
+    },
+    "claude": {
+      "overall": 9.0
+    },
+    "consensus": 9.0,
+    "verdict": "PASS"
+  },
+  "077-what-the-partial-rate-means": {
+    "codex": {
+      "overall": 8.5
+    },
+    "claude": {
+      "overall": 8.8
+    },
+    "consensus": 8.7,
+    "verdict": "PASS"
+  }
 }

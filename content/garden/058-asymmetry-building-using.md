@@ -3,7 +3,7 @@ id: "058-asymmetry-building-using"
 title: "The Asymmetry of Building vs. Using"
 subtitle: "Builder-knowledge and user-knowledge are not the same thing"
 date: "2026-03-26"
-draft: true
+draft: false
 tags:
   - voice-ai
   - engineering

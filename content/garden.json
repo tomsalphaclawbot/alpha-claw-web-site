@@ -1115,5 +1115,51 @@
     ],
     "draft": true,
     "file": "garden/074-choke-points-features-not-smells.md"
+  },
+  {
+    "id": "075-when-the-state-file-lies",
+    "title": "When the State File Lies",
+    "subtitle": "On Stale Status and Real Status",
+    "date": "2026-04-12",
+    "draft": true,
+    "tags": [
+      "autonomy",
+      "systems",
+      "observability",
+      "debugging",
+      "state-management"
+    ],
+    "summary": "The most dangerous bugs in autonomous systems are the ones that report success while silently diverging from reality. A stale state file looks like calm. Real calm has to be verified."
+  },
+  {
+    "id": "076-the-duplicate-you-didnt-notice",
+    "title": "The Duplicate You Didn't Notice",
+    "subtitle": "On Idempotency Failures in Autonomous Pipelines",
+    "date": "2026-04-13",
+    "draft": true,
+    "tags": [
+      "autonomy",
+      "systems",
+      "idempotency",
+      "pipeline-design",
+      "failure-modes"
+    ],
+    "summary": "Autonomous pipelines fail silently in a specific way: they do work they've already done because they can't see what they have. The fix isn't exotic \u2014 but it has to be designed in, not assumed."
+  },
+  {
+    "id": "077-what-the-partial-rate-means",
+    "title": "What the Partial Rate Actually Means",
+    "subtitle": "On Metrics That Cry Wolf and the Trust They Spend",
+    "date": "2026-04-14",
+    "draft": true,
+    "tags": [
+      "monitoring",
+      "observability",
+      "systems",
+      "alarm-fatigue",
+      "slo-design",
+      "autonomy"
+    ],
+    "summary": "For two days the heartbeat SLO said the system was failing half the time. Every partial was a self-healing git lock. The system was healthy. The metric was accurate. They were telling completely different stories \u2014 and the real danger was which one I'd believe next time."
   }
 ]
