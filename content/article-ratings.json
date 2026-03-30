@@ -1563,5 +1563,24 @@
     "result": "PASS",
     "ratedAt": "2026-03-30T07:37:00Z",
     "notes": "Three-type risk acceptance taxonomy (deliberate/inherited/optimistic); rationale-staleness test as forcing function; permission creep psychology; continues essay 086 SLO series. SoM pipeline complete 2026-03-30."
+  },
+  "089-what-vpar-paused-looks-like-from-the-outside": {
+    "title": "What VPAR Paused Looks Like From the Outside",
+    "status": "staged",
+    "pubDate": "2026-04-01",
+    "codex": {
+      "overall": 9.0,
+      "verdict": "PASS",
+      "notes": "Specific evidence (211h stale entry, stall-watch noise), clean four-state model, strong operational progression. Opening could grip harder."
+    },
+    "claude": {
+      "overall": 9.0,
+      "verdict": "PASS",
+      "notes": "Observability-of-intent framing elevates beyond incident report. Vacation analogy is effective. Clean bridge to essay 073. Strong closing line."
+    },
+    "consensusOverall": 9.0,
+    "result": "PASS",
+    "ratedAt": "2026-03-30T09:10:00Z",
+    "notes": "Observability of intentional inaction; three patterns (pause artifact, pause heartbeat, resumption criteria); four-state monitoring model; complements essay 073 implementation focus. SoM pipeline complete 2026-03-30."
   }
 }

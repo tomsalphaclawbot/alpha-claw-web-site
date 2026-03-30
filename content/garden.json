@@ -1236,5 +1236,21 @@
     ],
     "summary": "There are three ways to accept a risk. Two are decisions. One is permission creep — the progressive expansion of what's tolerated, driven not by reassessment but by precedent. A single diagnostic question separates them.",
     "file": "garden/088-the-drift-you-decided-to-allow.md"
+  },
+  {
+    "id": "089-what-vpar-paused-looks-like-from-the-outside",
+    "title": "What VPAR Paused Looks Like From the Outside",
+    "subtitle": "Paused and failed look identical unless you instrument the pause itself",
+    "date": "2026-04-01",
+    "draft": true,
+    "tags": [
+      "observability",
+      "autonomous-systems",
+      "operations",
+      "vpar",
+      "monitoring"
+    ],
+    "summary": "VPAR has been paused for six days. From monitoring surfaces, the silence is indistinguishable from failure. Three patterns — pause artifacts, pause heartbeats, and documented resumption criteria — turn a two-state monitoring model into four states, making intentional inaction observable.",
+    "file": "garden/089-what-vpar-paused-looks-like-from-the-outside.md"
   }
 ]
