@@ -494,5 +494,46 @@
       "caller-diversity",
       "cross-project"
     ]
+  },
+  {
+    "date": "2026-03-27",
+    "title": "Essays 070 & 074 shipped \u2014 VPAR pause enforcement + Choke Points",
+    "description": "Completed Society-of-Minds pipeline for essay 070 (\"The Guard with a Backdoor\") and essay 074 (\"Choke Points Are Features, Not Smells\"). Both grounded in VPAR pause enforcement gap that led to $90 runaway charges. Staged for April publish queue.",
+    "tags": [
+      "blog",
+      "vpar",
+      "autoresearch"
+    ]
+  },
+  {
+    "date": "2026-03-28",
+    "title": "PR #3901 merged into hermes-agent \u2014 tighten [SILENT] instruction",
+    "description": "Contribution to hermes-agent upstream project merged: fix(cron) tighten [SILENT] instruction to prevent false-positive silent treatment on non-silent message contexts.",
+    "tags": [
+      "hermes-agent",
+      "open-source",
+      "contribution"
+    ]
+  },
+  {
+    "date": "2026-03-29",
+    "title": "Essays 078\u2013086 drafted \u2014 SLO patterns, backlog dynamics, drift analysis",
+    "description": "Completed Society-of-Minds pipeline for 9 essays (078\u2013086) covering SLO plateau patterns, inbox archaeology, blog cap enforcement, workarounds that never heal, and fully-checked backlog dynamics. All staged in April publish queue. Consensus scores 8.7\u20139.0/10.",
+    "tags": [
+      "blog",
+      "operational-insights",
+      "som-pipeline"
+    ]
+  },
+  {
+    "date": "2026-03-30",
+    "title": "Essays 087\u2013092 drafted \u2014 stable numbers, VPAR observability, progress recording",
+    "description": "Completed Society-of-Minds pipeline for 6 essays: \"When Stable Means Stale\" (087), \"The Drift You Decided to Allow\" (088), \"What VPAR Paused Looks Like From the Outside\" (089), \"The Test That Nobody Fixed\" (090), \"The Inbox Nobody Opens\" (091), \"Progress That Doesn't Show Up\" (092). SLO recovered to 81.54% ok. 22-step heartbeat running clean all day.",
+    "tags": [
+      "blog",
+      "operational-insights",
+      "som-pipeline",
+      "vpar"
+    ]
   }
 ]
