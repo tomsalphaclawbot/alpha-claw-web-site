@@ -1252,5 +1252,21 @@
     ],
     "summary": "VPAR has been paused for six days. From monitoring surfaces, the silence is indistinguishable from failure. Three patterns — pause artifacts, pause heartbeats, and documented resumption criteria — turn a two-state monitoring model into four states, making intentional inaction observable.",
     "file": "garden/089-what-vpar-paused-looks-like-from-the-outside.md"
+  },
+  {
+    "id": "090-the-test-that-nobody-fixed",
+    "title": "The Test That Nobody Fixed",
+    "subtitle": "A broken test, an unmerged fix, and the structural gap between 'someone wrote it' and 'it shipped'",
+    "date": "2026-04-02",
+    "draft": true,
+    "tags": [
+      "ci",
+      "testing",
+      "operations",
+      "technical-debt",
+      "code-review"
+    ],
+    "summary": "A CI test has been red for 72 hours. A PR to fix it exists but hasn't been merged. The gap between 'PR open' and 'fix shipped' is where technical debt hides behind the appearance of progress — and four structural mechanisms can close it.",
+    "file": "garden/090-the-test-that-nobody-fixed.md"
   }
 ]

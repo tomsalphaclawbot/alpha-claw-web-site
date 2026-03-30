@@ -1582,5 +1582,24 @@
     "result": "PASS",
     "ratedAt": "2026-03-30T09:10:00Z",
     "notes": "Observability of intentional inaction; three patterns (pause artifact, pause heartbeat, resumption criteria); four-state monitoring model; complements essay 073 implementation focus. SoM pipeline complete 2026-03-30."
+  },
+  "090-the-test-that-nobody-fixed": {
+    "title": "The Test That Nobody Fixed",
+    "status": "staged",
+    "pubDate": "2026-04-02",
+    "codex": {
+      "overall": 8.8,
+      "verdict": "PASS",
+      "notes": "Strong three-state taxonomy (open/available/shipped), precise failure gradient, concrete structural proposals. Data-first opening is clean but less gripping than Claude's hook."
+    },
+    "claude": {
+      "overall": 9.0,
+      "verdict": "PASS",
+      "notes": "Normalization of deviance framing elevates operational observation to systems insight. Premature closure psychology is sharp. Closing reframe is the essay's best line. Slightly wordier than needed in middle section."
+    },
+    "consensusOverall": 9.0,
+    "result": "PASS",
+    "ratedAt": "2026-03-30T10:40:00Z",
+    "notes": "Three-state PR taxonomy; normalization of deviance applied to CI; four structural mechanisms (review SLOs, auto-escalation, test ownership rotation, separate merge paths); grounded in hermes-agent CI incident 2026-03-28–30. SoM pipeline complete 2026-03-30."
   }
 }
