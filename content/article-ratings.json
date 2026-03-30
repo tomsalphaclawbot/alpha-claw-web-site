@@ -1600,6 +1600,25 @@
     "consensusOverall": 9.0,
     "result": "PASS",
     "ratedAt": "2026-03-30T10:40:00Z",
-    "notes": "Three-state PR taxonomy; normalization of deviance applied to CI; four structural mechanisms (review SLOs, auto-escalation, test ownership rotation, separate merge paths); grounded in hermes-agent CI incident 2026-03-28–30. SoM pipeline complete 2026-03-30."
+    "notes": "Three-state PR taxonomy; normalization of deviance applied to CI; four structural mechanisms (review SLOs, auto-escalation, test ownership rotation, separate merge paths); grounded in hermes-agent CI incident 2026-03-28\u201330. SoM pipeline complete 2026-03-30."
+  },
+  "091-the-inbox-nobody-opens": {
+    "title": "The Inbox Nobody Opens",
+    "status": "staged",
+    "pubDate": "2026-04-03",
+    "codex": {
+      "overall": 9.0,
+      "verdict": "PASS",
+      "notes": "Three-category taxonomy (true noise, decayed noise, misclassified signal) is the structural backbone. Concrete audit framework with specific thresholds gives actionable takeaway. Half-life framing at assumption level is original and precise."
+    },
+    "claude": {
+      "overall": 9.0,
+      "verdict": "PASS",
+      "notes": "Suppression-feels-like-knowledge insight is psychologically sharp. Decay-of-correctness framing elevates from ops advice to epistemology. Closing conjugation line is the strongest beat. Three audit questions are elegant."
+    },
+    "consensusOverall": 9.0,
+    "result": "PASS",
+    "ratedAt": "2026-03-30T11:08:00Z",
+    "notes": "Three-category suppression taxonomy; concrete 30/90-day audit cadence with 5% signal threshold; half-life of assertion framing; generalizes beyond email to CI/alerts/backlogs; grounded in Zoho 610 unseen count 2026-03-29-30. SoM pipeline complete 2026-03-30."
   }
 }

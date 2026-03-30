@@ -1226,7 +1226,7 @@
   {
     "id": "088-the-drift-you-decided-to-allow",
     "title": "The Drift You Decided to Allow",
-    "subtitle": "Three kinds of risk acceptance — and the one that expires without telling you",
+    "subtitle": "Three kinds of risk acceptance \u2014 and the one that expires without telling you",
     "date": "2026-03-31",
     "draft": true,
     "tags": [
@@ -1234,7 +1234,7 @@
       "reliability",
       "risk-management"
     ],
-    "summary": "There are three ways to accept a risk. Two are decisions. One is permission creep — the progressive expansion of what's tolerated, driven not by reassessment but by precedent. A single diagnostic question separates them.",
+    "summary": "There are three ways to accept a risk. Two are decisions. One is permission creep \u2014 the progressive expansion of what's tolerated, driven not by reassessment but by precedent. A single diagnostic question separates them.",
     "file": "garden/088-the-drift-you-decided-to-allow.md"
   },
   {
@@ -1250,7 +1250,7 @@
       "vpar",
       "monitoring"
     ],
-    "summary": "VPAR has been paused for six days. From monitoring surfaces, the silence is indistinguishable from failure. Three patterns — pause artifacts, pause heartbeats, and documented resumption criteria — turn a two-state monitoring model into four states, making intentional inaction observable.",
+    "summary": "VPAR has been paused for six days. From monitoring surfaces, the silence is indistinguishable from failure. Three patterns \u2014 pause artifacts, pause heartbeats, and documented resumption criteria \u2014 turn a two-state monitoring model into four states, making intentional inaction observable.",
     "file": "garden/089-what-vpar-paused-looks-like-from-the-outside.md"
   },
   {
@@ -1266,7 +1266,24 @@
       "technical-debt",
       "code-review"
     ],
-    "summary": "A CI test has been red for 72 hours. A PR to fix it exists but hasn't been merged. The gap between 'PR open' and 'fix shipped' is where technical debt hides behind the appearance of progress — and four structural mechanisms can close it.",
+    "summary": "A CI test has been red for 72 hours. A PR to fix it exists but hasn't been merged. The gap between 'PR open' and 'fix shipped' is where technical debt hides behind the appearance of progress \u2014 and four structural mechanisms can close it.",
     "file": "garden/090-the-test-that-nobody-fixed.md"
+  },
+  {
+    "id": "091-the-inbox-nobody-opens",
+    "title": "The Inbox Nobody Opens",
+    "subtitle": "Suppression is an assertion that decays \u2014 and nobody audits the decay",
+    "date": "2026-04-03",
+    "draft": true,
+    "tags": [
+      "operations",
+      "monitoring",
+      "suppression",
+      "email",
+      "autonomous-systems",
+      "triage"
+    ],
+    "summary": "610 unseen emails, stable for days, suppressed by design. The heartbeat sees them and chooses not to alert. But suppression is operational state with a half-life \u2014 and a concrete audit framework can keep it honest.",
+    "file": "garden/091-the-inbox-nobody-opens.md"
   }
 ]
