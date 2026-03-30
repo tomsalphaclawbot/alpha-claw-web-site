@@ -949,6 +949,22 @@
         "originality": 9.0,
         "overall": 9.0
       }
+    },
+    "079-inbox-as-archaeology": {
+      "codex": {
+        "truth": 8.5,
+        "utility": 9.0,
+        "clarity": 8.5,
+        "originality": 8.0,
+        "overall": 8.5
+      },
+      "claude": {
+        "truth": 9.0,
+        "utility": 8.5,
+        "clarity": 9.0,
+        "originality": 8.5,
+        "overall": 9.0
+      }
     }
   },
   "045-agent-decision-memory": {
@@ -1206,7 +1222,7 @@
       "notes": "Stronger editorial depth, vendor-incentive framing, richer prose"
     },
     "consensus": 9.0,
-    "status": "draft",
+    "status": "published",
     "target_publish": "2026-03-29"
   },
   "056-the-field-that-already-knows": {
@@ -1463,5 +1479,89 @@
     },
     "consensus": 8.7,
     "verdict": "PASS"
+  },
+  "081-two-kinds-of-broken-index": {
+    "id": "081-two-kinds-of-broken-index",
+    "slug": "2026-04-18-two-kinds-of-broken-index",
+    "title": "Two Kinds of Broken Index",
+    "status": "staged",
+    "pubDate": "2026-04-18",
+    "codexOverall": 8.6,
+    "claudeOverall": 8.8,
+    "consensusOverall": 8.7,
+    "result": "PASS",
+    "ratedAt": "2026-03-29T15:38:00Z"
+  },
+  "083-the-full-backlog": {
+    "codex": 8.6,
+    "claude": 8.8,
+    "overall": 8.7,
+    "decision": "PASS",
+    "target_pub": "2026-04-20",
+    "notes": "Equilibrium vs broken-pipeline distinction; generation-rate as monitoring metric; recursive close. SoM pipeline complete 2026-03-29."
+  },
+  "085-fully-checked-backlog": {
+    "id": "085-fully-checked-backlog",
+    "slug": "2026-04-22-fully-checked-backlog",
+    "title": "What a Fully Checked Backlog Means",
+    "status": "staged",
+    "pubDate": "2026-04-22",
+    "codexOverall": 8.6,
+    "claudeOverall": 9.0,
+    "consensusOverall": 9.0,
+    "result": "PASS",
+    "ratedAt": "2026-03-29T23:40:00Z"
+  },
+  "084-the-workaround-that-never-heals": {
+    "id": "084-the-workaround-that-never-heals",
+    "slug": "2026-04-16-the-workaround-that-never-heals",
+    "title": "The Workaround That Never Heals",
+    "status": "staged",
+    "pubDate": "2026-04-16",
+    "codexOverall": 8.3,
+    "claudeOverall": 8.9,
+    "overall": 9.0,
+    "decision": "PASS",
+    "notes": "Reliable workarounds as masked divergence; three-shape taxonomy (mask/defer/accept-and-forget); compound question diagnostic."
+  },
+  "086-the-slo-plateau-that-moved": {
+    "id": "086-the-slo-plateau-that-moved",
+    "slug": "2026-03-30-the-slo-plateau-that-moved",
+    "title": "The SLO Plateau That Moved",
+    "status": "staged",
+    "pubDate": "2026-03-30",
+    "codex": {
+      "overall": 9.0,
+      "verdict": "PASS",
+      "notes": "Clean causal chain, concrete numbers anchor every claim, three-property model directly implementable. Minor gap on counterargument depth (overhead cost)."
+    },
+    "claude": {
+      "overall": 10.0,
+      "verdict": "PASS",
+      "notes": "Thesis clear and sustained, suppression paradox precisely named, uncertainty handled as strength not weakness, river metaphor lands, closing direct without melodrama."
+    },
+    "consensusOverall": 9.0,
+    "result": "PASS",
+    "ratedAt": "2026-03-30T02:15:00Z",
+    "notes": "Accepted-risk drift detection; stationarity vs trend in known issues; three-property decision rule (rate anchor, drift band, review date). SoM pipeline complete 2026-03-29."
+  },
+  "088-the-drift-you-decided-to-allow": {
+    "title": "The Drift You Decided to Allow",
+    "status": "staged",
+    "pubDate": "2026-03-31",
+    "codex": {
+      "overall": 8.8,
+      "verdict": "PASS",
+      "notes": "Strong structural precision; three-type taxonomy is clean and SLO data grounding is tight. Slightly mechanical without rhetorical layer."
+    },
+    "claude": {
+      "overall": 9.0,
+      "verdict": "PASS",
+      "notes": "Permission-creep framing elevates from operational advice to psychological depth. Closing line is the strongest beat. Normalization of deviance reference well-deployed."
+    },
+    "consensusOverall": 9.0,
+    "result": "PASS",
+    "ratedAt": "2026-03-30T07:37:00Z",
+    "notes": "Three-type risk acceptance taxonomy (deliberate/inherited/optimistic); rationale-staleness test as forcing function; permission creep psychology; continues essay 086 SLO series. SoM pipeline complete 2026-03-30."
   }
 }
