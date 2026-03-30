@@ -1193,7 +1193,7 @@
     "claude": {
       "overall": 9.0,
       "verdict": "PASS",
-      "notes": "Tone right throughout \u2014 grounded, non-preachy. Wallpaper/rationalization additions improve failure-mode viscerality. Calibration caveat necessary and well-placed."
+      "notes": "Tone right throughout — grounded, non-preachy. Wallpaper/rationalization additions improve failure-mode viscerality. Calibration caveat necessary and well-placed."
     },
     "consensus": "PASS",
     "consensus_score": 9.0
@@ -1316,7 +1316,7 @@
     "composite": 9.0,
     "verdict": "PASS",
     "publish_date": "2026-04-04",
-    "notes": "Grounded in VPAR v54 context engineering experiment (Sarah Mitchell\u2192Alex drift). Society-of-Minds: Codex first draft, Claude shaper, orchestrator synthesis. Blog cap enforced (1/1 on 2026-03-25)."
+    "notes": "Grounded in VPAR v54 context engineering experiment (Sarah Mitchell→Alex drift). Society-of-Minds: Codex first draft, Claude shaper, orchestrator synthesis. Blog cap enforced (1/1 on 2026-03-25)."
   },
   "068-five-sixths-not-success": {
     "codex": {
@@ -1377,7 +1377,7 @@
       "decision": "PASS",
       "rounds": 2,
       "publish_date": "2026-04-07",
-      "notes": "Codex v1 + self-critique + Claude v2 sharpening pass. Cap blocks today publish (correct \u2014 article is scheduled for 2026-04-07). Cap check on publish day will be the only remaining gate."
+      "notes": "Codex v1 + self-critique + Claude v2 sharpening pass. Cap blocks today publish (correct — article is scheduled for 2026-04-07). Cap check on publish day will be the only remaining gate."
     }
   },
   "071-what-90-teaches-autonomous": {
@@ -1398,7 +1398,7 @@
     },
     "claude": {
       "overall": 8.6,
-      "notes": "PASS \u2014 flowing prose, sharper argument, stronger ending"
+      "notes": "PASS — flowing prose, sharper argument, stronger ending"
     }
   },
   "073-difference-paused-stopped": {
@@ -1434,7 +1434,7 @@
     },
     "claude": {
       "overall": 9.0,
-      "rationale": "Check-vs-constraint distinction is the conceptual anchor the essay needs \u2014 names the thesis cleanly. Narrative framing (seduction of the symbolic center, confidence without coverage) makes the lesson sticky. Tone calibrated: direct, peer-level, no preaching."
+      "rationale": "Check-vs-constraint distinction is the conceptual anchor the essay needs — names the thesis cleanly. Narrative framing (seduction of the symbolic center, confidence without coverage) makes the lesson sticky. Tone calibrated: direct, peer-level, no preaching."
     },
     "consensus": 9.5,
     "verdict": "PASS",
@@ -1600,7 +1600,7 @@
     "consensusOverall": 9.0,
     "result": "PASS",
     "ratedAt": "2026-03-30T10:40:00Z",
-    "notes": "Three-state PR taxonomy; normalization of deviance applied to CI; four structural mechanisms (review SLOs, auto-escalation, test ownership rotation, separate merge paths); grounded in hermes-agent CI incident 2026-03-28\u201330. SoM pipeline complete 2026-03-30."
+    "notes": "Three-state PR taxonomy; normalization of deviance applied to CI; four structural mechanisms (review SLOs, auto-escalation, test ownership rotation, separate merge paths); grounded in hermes-agent CI incident 2026-03-28–30. SoM pipeline complete 2026-03-30."
   },
   "091-the-inbox-nobody-opens": {
     "title": "The Inbox Nobody Opens",
@@ -1620,5 +1620,24 @@
     "result": "PASS",
     "ratedAt": "2026-03-30T11:08:00Z",
     "notes": "Three-category suppression taxonomy; concrete 30/90-day audit cadence with 5% signal threshold; half-life of assertion framing; generalizes beyond email to CI/alerts/backlogs; grounded in Zoho 610 unseen count 2026-03-29-30. SoM pipeline complete 2026-03-30."
+  },
+  "092-progress-that-doesnt-show-up": {
+    "title": "Progress That Doesn't Show Up",
+    "status": "staged",
+    "pubDate": "2026-03-31",
+    "codex": {
+      "overall": 8.8,
+      "verdict": "PASS",
+      "notes": "Two-timelines structure is immediately concrete. Threshold-as-permission-to-defer is the strongest operational insight. Inline registration fix is specific and actionable. Self-monitoring angle uses system own words as evidence."
+    },
+    "claude": {
+      "overall": 9.0,
+      "verdict": "PASS",
+      "notes": "Challenge rep is strong and honestly argued. Threshold debt concept is original and precisely named. Recursive self-legibility problem is the most subtle insight. Designed-tolerance framing elevates from ironic observation to systemic insight."
+    },
+    "consensusOverall": 9.0,
+    "result": "PASS",
+    "ratedAt": "2026-03-30T16:39:00Z",
+    "notes": "Two-timelines evidence structure; threshold debt concept; recursive persistence problem for autonomous agents; inline registration fix; challenge rep fully engaged. Grounded in progress.json 4-day gap + dense memory logs 2026-03-26-30. SoM pipeline complete 2026-03-30."
   }
 }
