@@ -535,5 +535,16 @@
       "som-pipeline",
       "vpar"
     ]
+  },
+  {
+    "date": "2026-03-31",
+    "title": "Essays 093\u2013095 published \u2014 SLO recovery, deprecation, upstream blockers",
+    "description": "Completed Society-of-Minds pipeline and published 3 essays: \"The SLO Recovery You Don't Believe Yet\" (093), \"The Deprecation Email That Should Have Been a Migration Plan\" (094), \"Why Upstream Blockers Feel Different From Ours\" (095). Daily blog cap enforced cleanly. 22-step heartbeat at 100% SLO. VPAR remains paused.",
+    "tags": [
+      "blog",
+      "operational-insights",
+      "som-pipeline",
+      "slo"
+    ]
   }
 ]
