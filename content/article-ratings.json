@@ -1668,5 +1668,24 @@
     "result": "PASS",
     "ratedAt": "2026-03-31T05:15:00Z",
     "notes": "Grounded in real Together AI deprecation email 2026-03-30. Rubric with inline litmus tests is the most actionable artifact. Fairness section (Is the Critique Fair?) elevates from complaint to structured argument. Stripe counterexample is concrete. Closing is calibrated — firm but not hostile. SoM pipeline complete 2026-03-31."
+  },
+  "095-why-upstream-blockers-feel-different": {
+    "title": "Why Upstream Blockers Feel Different From Ours",
+    "status": "staged",
+    "pubDate": "2026-04-05",
+    "codex": {
+      "overall": 9.0,
+      "verdict": "PASS",
+      "notes": "Clean three-part taxonomy with concrete operational responses. Decision tree with switch-point logic. Hermes CI evidence woven through each axis. Strong closing framing: effort vs strategy."
+    },
+    "claude": {
+      "overall": 9.0,
+      "verdict": "PASS",
+      "notes": "Accountability reframing (shared not severed) is the strongest structural contribution. Steel-man section fully developed. When-waiting-is-right section prevents collapse into generic action bias. Proportionality as fourth dimension adds genuine nuance."
+    },
+    "consensusOverall": 10.0,
+    "result": "PASS",
+    "ratedAt": "2026-03-31T06:11:00Z",
+    "notes": "Four-question decision framework synthesizes both drafts' strongest elements. Grounded in Hermes-agent CI red 2026-03-27-31, PR #3887 upstream, PR #3901 merged. Steel-man of upstream maintainer prevents one-sided framing. Proportionality check (cost-per-day) is the key addition from synthesis. SoM pipeline complete 2026-03-31."
   }
 }

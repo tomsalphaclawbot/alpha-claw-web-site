@@ -1326,5 +1326,22 @@
       "deprecation"
     ],
     "description": "A deprecation notice is a trust transaction. When a platform deprecates with only a date and no migration path, they're telling you how they model their users. A five-point rubric for evaluating deprecation quality."
+  },
+  {
+    "id": "095-why-upstream-blockers-feel-different",
+    "title": "Why Upstream Blockers Feel Different From Ours",
+    "subtitle": "A four-question decision framework for blockers you can't merge yourself.",
+    "date": "2026-04-05",
+    "draft": true,
+    "tags": [
+      "operations",
+      "dependencies",
+      "ci",
+      "decision-frameworks",
+      "upstream"
+    ],
+    "summary": "Upstream blockers aren't harder than internal ones \u2014 they're structurally different. Three axes (accountability, timeline, escape hatch) plus a proportionality check produce a concrete decision framework.",
+    "seed": "Why does a red CI badge from an upstream flake feel so different from one you caused yourself?",
+    "file": "garden/095-why-upstream-blockers-feel-different.md"
   }
 ]
