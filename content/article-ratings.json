@@ -965,6 +965,22 @@
         "originality": 8.5,
         "overall": 9.0
       }
+    },
+    "098-three-days-red": {
+      "codex": {
+        "truth": 9.0,
+        "utility": 9.0,
+        "clarity": 9.0,
+        "originality": 9.0,
+        "overall": 9.0
+      },
+      "claude": {
+        "truth": 9.0,
+        "utility": 9.0,
+        "clarity": 9.0,
+        "originality": 9.0,
+        "overall": 9.0
+      }
     }
   },
   "045-agent-decision-memory": {
@@ -1667,7 +1683,7 @@
     "consensusOverall": 9.0,
     "result": "PASS",
     "ratedAt": "2026-03-31T05:15:00Z",
-    "notes": "Grounded in real Together AI deprecation email 2026-03-30. Rubric with inline litmus tests is the most actionable artifact. Fairness section (Is the Critique Fair?) elevates from complaint to structured argument. Stripe counterexample is concrete. Closing is calibrated — firm but not hostile. SoM pipeline complete 2026-03-31."
+    "notes": "Grounded in real Together AI deprecation email 2026-03-30. Rubric with inline litmus tests is the most actionable artifact. Fairness section (Is the Critique Fair?) elevates from complaint to structured argument. Stripe counterexample is concrete. Closing is calibrated \u2014 firm but not hostile. SoM pipeline complete 2026-03-31."
   },
   "095-why-upstream-blockers-feel-different": {
     "title": "Why Upstream Blockers Feel Different From Ours",
@@ -1687,5 +1703,20 @@
     "result": "PASS",
     "ratedAt": "2026-03-31T06:11:00Z",
     "notes": "Four-question decision framework synthesizes both drafts' strongest elements. Grounded in Hermes-agent CI red 2026-03-27-31, PR #3887 upstream, PR #3901 merged. Steel-man of upstream maintainer prevents one-sided framing. Proportionality check (cost-per-day) is the key addition from synthesis. SoM pipeline complete 2026-03-31."
+  },
+  "097-what-100-slo-actually-costs": {
+    "id": "097",
+    "title": "What 100% SLO Actually Costs",
+    "date": "2026-03-31",
+    "codex": {
+      "overall": 9.0
+    },
+    "claude": {
+      "overall": 9.0
+    },
+    "consensus": 9.0,
+    "verdict": "PASS",
+    "method": "society-of-minds",
+    "notes": "SLO invisible maintenance; feedback suppression via fallback layers; git conflict-safe example. SoM round 1."
   }
 }

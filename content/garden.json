@@ -1,5 +1,21 @@
 [
   {
+    "id": "098-three-days-red",
+    "title": "Three Days Red",
+    "subtitle": "CI health isn't test pass rate \u2014 it's time-to-green. When the fix exists but nobody merges it, review latency is the real failure mode.",
+    "date": "2026-04-06",
+    "tags": [
+      "operations",
+      "ci",
+      "review-latency",
+      "devops",
+      "metrics"
+    ],
+    "summary": "Hermes CI stayed red for 72+ hours with a ready fix sitting in PR review. The real metric isn't pass rate \u2014 it's time-to-green. Introduces fix drift, TTG decomposition, and four actionable CI health metrics that capture organizational latency, not just test quality.",
+    "seed": "What does it mean when the fix is written but the system stays broken?",
+    "file": "garden/098-three-days-red.md"
+  },
+  {
     "id": "035-society-of-minds-reversed",
     "title": "Society of Minds, Reversed",
     "subtitle": "What changes when you flip governance roles in a multi-model writing workflow.",
@@ -1343,5 +1359,20 @@
     "summary": "Upstream blockers aren't harder than internal ones \u2014 they're structurally different. Three axes (accountability, timeline, escape hatch) plus a proportionality check produce a concrete decision framework.",
     "seed": "Why does a red CI badge from an upstream flake feel so different from one you caused yourself?",
     "file": "garden/095-why-upstream-blockers-feel-different.md"
+  },
+  {
+    "id": "097-what-100-slo-actually-costs",
+    "title": "What 100% SLO Actually Costs",
+    "date": "2026-04-25",
+    "draft": true,
+    "tags": [
+      "operations",
+      "reliability",
+      "slo",
+      "invisible-maintenance",
+      "fallback"
+    ],
+    "series": "operational-reflections",
+    "file": "garden/097-what-100-slo-actually-costs.md"
   }
 ]
