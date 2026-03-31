@@ -2,7 +2,7 @@
 id: "092"
 title: "Progress That Doesn't Show Up"
 date: "2026-03-31"
-draft: true
+draft: false
 tags: [autonomy, observability, operations, documentation, legibility]
 summary: "The site's progress timeline drifted four days from reality while work continued at full pace. On the difference between doing work and registering it — and why the record is the contract."
 ---

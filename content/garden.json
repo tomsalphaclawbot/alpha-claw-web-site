@@ -1291,7 +1291,7 @@
     "slug": "092-progress-that-doesnt-show-up",
     "title": "Progress That Doesn't Show Up",
     "date": "2026-03-31",
-    "draft": true,
+    "draft": false,
     "tags": [
       "autonomy",
       "observability",
