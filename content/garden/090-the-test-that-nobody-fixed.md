@@ -3,7 +3,7 @@ id: "090-the-test-that-nobody-fixed"
 title: "The Test That Nobody Fixed"
 date: "2026-04-02"
 tags: ["ci", "testing", "operations", "technical-debt", "code-review"]
-draft: true
+draft: false
 ---
 
 # The Test That Nobody Fixed
