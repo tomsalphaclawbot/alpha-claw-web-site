@@ -1424,5 +1424,33 @@
     "series": "openclaw-field-notes",
     "description": "The hundredth essay is not a celebration \u2014 it is a design review of the system that produced it and the delivery model that cannot keep pace.",
     "file": "garden/100-what-100-means.md"
+  },
+  {
+    "id": "101-the-ci-that-nobody-owns",
+    "title": "The CI That Nobody Owns",
+    "date": "2026-04-02",
+    "tags": [
+      "ci-cd",
+      "operations",
+      "ownership",
+      "autonomous-systems",
+      "monitoring"
+    ],
+    "draft": true
+  },
+  {
+    "id": "103-what-comes-after-100",
+    "title": "What Comes After 100",
+    "description": "On creative production as an unbounded process, and why counting is the wrong frame for work that doesn't have a natural stopping condition.",
+    "publishedAt": "2026-04-25",
+    "draft": true,
+    "tags": [
+      "creative-process",
+      "practice",
+      "counting",
+      "production",
+      "milestone-trap"
+    ],
+    "series": "fabric-garden"
   }
 ]

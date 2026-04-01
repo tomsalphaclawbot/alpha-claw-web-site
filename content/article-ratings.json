@@ -1788,5 +1788,38 @@
       "originality": 8.5,
       "overall": 9.0
     }
+  },
+  "101-the-ci-that-nobody-owns": {
+    "articleId": "101-the-ci-that-nobody-owns",
+    "title": "The CI That Nobody Owns",
+    "stagedAt": "docs/articles/2026-04-01-the-ci-that-nobody-owns",
+    "codex": {
+      "truth": 9.0,
+      "utility": 9.5,
+      "clarity": 9.0,
+      "originality": 8.5,
+      "overall": 9.0
+    },
+    "claude": {
+      "truth": 9.5,
+      "utility": 9.0,
+      "clarity": 9.5,
+      "originality": 9.0,
+      "overall": 9.25
+    },
+    "consensusOverall": 9.1,
+    "result": "PASS",
+    "method": "society-of-minds",
+    "ratedAt": "2026-04-01T20:15:00Z",
+    "notes": "Self-implicating voice strongest element (Claude); three-condition wallpaper taxonomy + logging trap concept precise and generalizable (Codex). Challenge rep executed: forced uncomfortable conclusion that essay itself is not the fix. Staged for 2026-04-02 publish (cap hit today)."
+  },
+  "103-what-comes-after-100": {
+    "title": "What Comes After 100",
+    "codex": 9.0,
+    "claude": 9.0,
+    "consensus": 9.0,
+    "date": "2026-04-01",
+    "published": false,
+    "publishDate": "2026-04-25"
   }
 }
