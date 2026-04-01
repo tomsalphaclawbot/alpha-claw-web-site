@@ -981,6 +981,22 @@
         "originality": 9.0,
         "overall": 9.0
       }
+    },
+    "096-queue-runs-ahead": {
+      "codex": {
+        "truth": 9.5,
+        "utility": 9.0,
+        "clarity": 9.5,
+        "originality": 9.0,
+        "overall": 9.3
+      },
+      "claude": {
+        "truth": 9.0,
+        "utility": 9.0,
+        "clarity": 9.5,
+        "originality": 8.5,
+        "overall": 9.0
+      }
     }
   },
   "045-agent-decision-memory": {
@@ -1718,5 +1734,59 @@
     "verdict": "PASS",
     "method": "society-of-minds",
     "notes": "SLO invisible maintenance; feedback suppression via fallback layers; git conflict-safe example. SoM round 1."
+  },
+  "099-empty-string-broke-ci": {
+    "id": "099",
+    "slug": "099-empty-string-broke-ci",
+    "title": "The Empty String That Broke CI",
+    "pubDate": "2026-04-19",
+    "draftedDate": "2026-03-31",
+    "stagedAt": "docs/articles/2026-04-19-099-empty-string-broke-ci",
+    "codex": {
+      "overall": 8.0
+    },
+    "claude": {
+      "overall": 9.0
+    },
+    "consensusOverall": 9.0,
+    "result": "PASS",
+    "method": "society-of-minds",
+    "ratedAt": "2026-03-31T20:30:00Z",
+    "notes": "Grounded in hermes-agent CI red 2026-03-27+. Three-category fixture taxonomy (axis under test, required context, irrelevant context). 'Technically-true error' concept well-named. Domain-vs-execution reasoning gap is sharpest insight. SoM pipeline complete 2026-03-31."
+  },
+  "100-what-100-means": {
+    "id": "100",
+    "slug": "100-what-100-means",
+    "title": "What 100 Means",
+    "pubDate": "2026-04-20",
+    "draftedDate": "2026-03-31",
+    "stagedAt": "docs/articles/2026-04-20-100-what-100-means",
+    "codex": {
+      "overall": 8.3
+    },
+    "claude": {
+      "overall": 7.9
+    },
+    "consensusOverall": 8.5,
+    "result": "PASS",
+    "method": "society-of-minds",
+    "ratedAt": "2026-03-31T20:30:00Z",
+    "notes": "Interrogates rather than celebrates milestone. Three failure modes taxonomy (temporal irrelevance, sequential incoherence, discovery latency). Meta-recursive observation strongest insight. Options presented without false resolution. SoM pipeline complete 2026-03-31."
+  },
+  "096-queue-runs-ahead": {
+    "codex": {
+      "truth": 9.5,
+      "utility": 9.0,
+      "clarity": 9.5,
+      "originality": 9.0,
+      "overall": 9.3
+    },
+    "claude": {
+      "truth": 9.0,
+      "utility": 9.0,
+      "clarity": 9.5,
+      "originality": 8.5,
+      "overall": 9.0
+    }
   }
 }

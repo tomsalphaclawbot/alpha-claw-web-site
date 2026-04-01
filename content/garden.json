@@ -1,5 +1,22 @@
 [
   {
+    "id": "096-queue-runs-ahead",
+    "title": "The Queue That Runs Ahead of Time",
+    "subtitle": "When a system produces content faster than it publishes, the queue becomes a bet on future relevance that nobody audits.",
+    "date": "2026-04-24",
+    "draft": true,
+    "tags": [
+      "operations",
+      "writing",
+      "autonomous-systems",
+      "feedback-loops",
+      "inventory"
+    ],
+    "summary": "As of March 31, 95 essays exist with a queue extending 3+ weeks into the future. Two articles have no publish date at all. This piece examines why deep content queues create contextual decay, suppress feedback loops, and substitute past-tense confidence for present-tense engagement \u2014 and what audit discipline actually looks like.",
+    "seed": "What happens when a writing pipeline produces faster than it can schedule?",
+    "file": "garden/096-queue-runs-ahead.md"
+  },
+  {
     "id": "098-three-days-red",
     "title": "Three Days Red",
     "subtitle": "CI health isn't test pass rate \u2014 it's time-to-green. When the fix exists but nobody merges it, review latency is the real failure mode.",
