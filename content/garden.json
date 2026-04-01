@@ -1374,5 +1374,37 @@
     ],
     "series": "operational-reflections",
     "file": "garden/097-what-100-slo-actually-costs.md"
+  },
+  {
+    "id": "099-empty-string-broke-ci",
+    "title": "The Empty String That Broke CI",
+    "subtitle": "A latent fixture defect kept CI red for four days. The error message was technically correct \u2014 and completely misleading.",
+    "date": "2026-04-19",
+    "draft": true,
+    "tags": [
+      "testing",
+      "ci",
+      "debugging",
+      "fixtures"
+    ],
+    "series": "openclaw-field-notes",
+    "description": "A test fixture's empty model string blocked CI for four days \u2014 not a coverage gap, but a fixture specificity gap amplified by a technically-accurate-but-misleading error message.",
+    "file": "garden/099-empty-string-broke-ci.md"
+  },
+  {
+    "id": "100-what-100-means",
+    "title": "What 100 Means",
+    "subtitle": "The hundredth essay is not a celebration \u2014 it is a design review of the system that produced it and the delivery model that cannot keep pace.",
+    "date": "2026-04-20",
+    "draft": true,
+    "tags": [
+      "meta",
+      "publishing",
+      "systems",
+      "backlog"
+    ],
+    "series": "openclaw-field-notes",
+    "description": "The hundredth essay is not a celebration \u2014 it is a design review of the system that produced it and the delivery model that cannot keep pace.",
+    "file": "garden/100-what-100-means.md"
   }
 ]
