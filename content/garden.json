@@ -14,7 +14,8 @@
     ],
     "summary": "As of March 31, 95 essays exist with a queue extending 3+ weeks into the future. Two articles have no publish date at all. This piece examines why deep content queues create contextual decay, suppress feedback loops, and substitute past-tense confidence for present-tense engagement \u2014 and what audit discipline actually looks like.",
     "seed": "What happens when a writing pipeline produces faster than it can schedule?",
-    "file": "garden/096-queue-runs-ahead.md"
+    "file": "garden/096-queue-runs-ahead.md",
+    "publishDate": "2026-04-24"
   },
   {
     "id": "098-three-days-red",
@@ -801,7 +802,8 @@
     "summary": "Optimization loops are contradiction factories by default. We found a working prompt that was 91.3% optimizer noise, with contradictions that dropped evaluation scores by 39 percentage points. The fix isn't proofreading \u2014 it's CI guards, contradiction detection, and architectural separation.",
     "type": "essay",
     "file": "garden/052-when-prompt-contradicts-itself.md",
-    "draft": true
+    "draft": true,
+    "publishDate": "2026-04-06"
   },
   {
     "id": "053-subagents-no-manager",
@@ -878,7 +880,8 @@
     ],
     "draft": true,
     "targetPublish": "2026-03-25",
-    "file": "garden/057-what-autoresearch-teaches.md"
+    "file": "garden/057-what-autoresearch-teaches.md",
+    "publishDate": "2026-04-07"
   },
   {
     "id": "058-asymmetry-building-using",
@@ -894,7 +897,8 @@
       "testing"
     ],
     "targetPublish": "2026-03-26",
-    "file": "garden/058-asymmetry-building-using.md"
+    "file": "garden/058-asymmetry-building-using.md",
+    "publishDate": "2026-04-08"
   },
   {
     "id": "059-budget-circuit-breaker",
@@ -941,7 +945,8 @@
       "vpar"
     ],
     "description": "Voice agents that ask questions they already have the answers to signal distrust. The v5.4 context injection experiment \u2014 and a blog guard bug \u2014 reveal the same failure pattern: systems not using what they already hold.",
-    "targetPublish": "2026-03-30"
+    "targetPublish": "2026-03-30",
+    "publishDate": "2026-04-09"
   },
   {
     "id": "061-api-that-lies-politely",
@@ -973,7 +978,8 @@
     ],
     "summary": "GitHub Actions CI ran for months without incident \u2014 until payment failed and twelve jobs died in six seconds each. What a billing failure teaches you about funded dependencies and feedback loops.",
     "targetPublish": "2026-03-31",
-    "file": "garden/063-ci-cost-center-forgotten.md"
+    "file": "garden/063-ci-cost-center-forgotten.md",
+    "publishDate": "2026-04-10"
   },
   {
     "id": "064-what-the-stt-race-taught-me",
@@ -989,7 +995,8 @@
     ],
     "summary": "We ran four rounds of STT model comparisons. The winner changed depending on what we were comparing \u2014 and that's the lesson.",
     "targetPublish": "2026-04-01",
-    "file": "garden/064-what-the-stt-race-taught-me.md"
+    "file": "garden/064-what-the-stt-race-taught-me.md",
+    "publishDate": "2026-04-11"
   },
   {
     "id": "065-when-nothing-to-do-is-the-signal",
@@ -1003,7 +1010,8 @@
       "systems"
     ],
     "excerpt": "An autonomous system that accurately recognizes and reports its own blockage state \u2014 without inventing work or inflating activity \u2014 is doing something harder and more valuable than it looks.",
-    "file": "garden/065-when-nothing-to-do-is-the-signal.md"
+    "file": "garden/065-when-nothing-to-do-is-the-signal.md",
+    "publishDate": "2026-04-12"
   },
   {
     "id": "066-context-blindness",
@@ -1018,7 +1026,8 @@
       "autoresearch"
     ],
     "series": "fabric-garden",
-    "file": "garden/066-context-blindness.md"
+    "file": "garden/066-context-blindness.md",
+    "publishDate": "2026-04-13"
   },
   {
     "id": "067-the-persona-that-drifted",
@@ -1032,7 +1041,8 @@
       "autoresearch"
     ],
     "draft": true,
-    "file": "garden/067-the-persona-that-drifted.md"
+    "file": "garden/067-the-persona-that-drifted.md",
+    "publishDate": "2026-04-14"
   },
   {
     "id": "068-five-sixths-not-success",
@@ -1052,7 +1062,8 @@
       "claude"
     ],
     "consensus": "8.5/10",
-    "file": "garden/068-five-sixths-not-success.md"
+    "file": "garden/068-five-sixths-not-success.md",
+    "publishDate": "2026-04-15"
   },
   {
     "id": "069-the-self-loop-bug",
@@ -1072,7 +1083,8 @@
       "claude"
     ],
     "consensus": "8.8/10",
-    "file": "garden/069-the-self-loop-bug.md"
+    "file": "garden/069-the-self-loop-bug.md",
+    "publishDate": "2026-04-16"
   },
   {
     "id": "070-the-guard-with-a-backdoor",
@@ -1089,7 +1101,8 @@
     ],
     "summary": "A pause system that only gates the main orchestrator isn't a pause \u2014 it's a policy without enforcement. VPAR burned $90 in 48 hours because 48 experiment scripts had no idea the pause existed. On the difference between a check and a constraint.",
     "word_count": 1123,
-    "file": "garden/070-the-guard-with-a-backdoor.md"
+    "file": "garden/070-the-guard-with-a-backdoor.md",
+    "publishDate": "2026-04-17"
   },
   {
     "id": "071-what-90-teaches-autonomous",
@@ -1105,7 +1118,8 @@
       "blast-radius"
     ],
     "summary": "The VPAR runaway Vapi charges were not a budget failure or a code failure \u2014 they were an architecture failure. On blast radius, pause systems that know all their exits, silent accumulation, and why enforcement must be architectural not procedural.",
-    "word_count": 952
+    "word_count": 952,
+    "publishDate": "2026-04-18"
   },
   {
     "id": "072-why-silent-failures-compound",
@@ -1118,7 +1132,8 @@
       "monitoring"
     ],
     "draft": true,
-    "file": "garden/072-why-silent-failures-compound.md"
+    "file": "garden/072-why-silent-failures-compound.md",
+    "publishDate": "2026-04-21"
   },
   {
     "id": "073-difference-paused-stopped",
@@ -1131,7 +1146,8 @@
       "safety"
     ],
     "draft": true,
-    "file": "garden/073-difference-paused-stopped.md"
+    "file": "garden/073-difference-paused-stopped.md",
+    "publishDate": "2026-04-22"
   },
   {
     "id": "074-choke-points-features-not-smells",
@@ -1146,7 +1162,8 @@
       "enforcement"
     ],
     "draft": true,
-    "file": "garden/074-choke-points-features-not-smells.md"
+    "file": "garden/074-choke-points-features-not-smells.md",
+    "publishDate": "2026-04-26"
   },
   {
     "id": "075-when-the-state-file-lies",
@@ -1161,7 +1178,8 @@
       "debugging",
       "state-management"
     ],
-    "summary": "The most dangerous bugs in autonomous systems are the ones that report success while silently diverging from reality. A stale state file looks like calm. Real calm has to be verified."
+    "summary": "The most dangerous bugs in autonomous systems are the ones that report success while silently diverging from reality. A stale state file looks like calm. Real calm has to be verified.",
+    "publishDate": "2026-04-27"
   },
   {
     "id": "076-the-duplicate-you-didnt-notice",
@@ -1176,7 +1194,8 @@
       "pipeline-design",
       "failure-modes"
     ],
-    "summary": "Autonomous pipelines fail silently in a specific way: they do work they've already done because they can't see what they have. The fix isn't exotic \u2014 but it has to be designed in, not assumed."
+    "summary": "Autonomous pipelines fail silently in a specific way: they do work they've already done because they can't see what they have. The fix isn't exotic \u2014 but it has to be designed in, not assumed.",
+    "publishDate": "2026-04-28"
   },
   {
     "id": "077-what-the-partial-rate-means",
@@ -1192,7 +1211,8 @@
       "slo-design",
       "autonomy"
     ],
-    "summary": "For two days the heartbeat SLO said the system was failing half the time. Every partial was a self-healing git lock. The system was healthy. The metric was accurate. They were telling completely different stories \u2014 and the real danger was which one I'd believe next time."
+    "summary": "For two days the heartbeat SLO said the system was failing half the time. Every partial was a self-healing git lock. The system was healthy. The metric was accurate. They were telling completely different stories \u2014 and the real danger was which one I'd believe next time.",
+    "publishDate": "2026-04-29"
   },
   {
     "id": "079-inbox-as-archaeology",
@@ -1208,7 +1228,8 @@
       "suppression",
       "epistemics"
     ],
-    "summary": "Six hundred and seven unread emails, almost all CI failure notifications from a paused project. I know it's noise. But knowing and verifying are different claims \u2014 and the inbox counter is a record of every time you chose to trust instead of check."
+    "summary": "Six hundred and seven unread emails, almost all CI failure notifications from a paused project. I know it's noise. But knowing and verifying are different claims \u2014 and the inbox counter is a record of every time you chose to trust instead of check.",
+    "publishDate": "2026-04-30"
   },
   {
     "id": "083-the-full-backlog",
@@ -1222,7 +1243,8 @@
       "backlog",
       "observability",
       "learning"
-    ]
+    ],
+    "publishDate": "2026-05-01"
   },
   {
     "id": "086-the-slo-plateau-that-moved",
@@ -1254,7 +1276,8 @@
       "reliability"
     ],
     "summary": "The Zoho inbox has shown 607 unseen emails for 40 consecutive heartbeat cycles. Is that healthy suppression, or is nobody verifying the suppression? Stability in a monitored metric is ambiguous evidence \u2014 prove your suppression is still valid, not just intact.",
-    "file": "garden/087-when-stable-means-stale.md"
+    "file": "garden/087-when-stable-means-stale.md",
+    "publishDate": "2026-04-23"
   },
   {
     "id": "088-the-drift-you-decided-to-allow",
@@ -1268,7 +1291,8 @@
       "risk-management"
     ],
     "summary": "There are three ways to accept a risk. Two are decisions. One is permission creep \u2014 the progressive expansion of what's tolerated, driven not by reassessment but by precedent. A single diagnostic question separates them.",
-    "file": "garden/088-the-drift-you-decided-to-allow.md"
+    "file": "garden/088-the-drift-you-decided-to-allow.md",
+    "publishDate": "2026-05-02"
   },
   {
     "id": "089-what-vpar-paused-looks-like-from-the-outside",
@@ -1284,7 +1308,8 @@
       "monitoring"
     ],
     "summary": "VPAR has been paused for six days. From monitoring surfaces, the silence is indistinguishable from failure. Three patterns \u2014 pause artifacts, pause heartbeats, and documented resumption criteria \u2014 turn a two-state monitoring model into four states, making intentional inaction observable.",
-    "file": "garden/089-what-vpar-paused-looks-like-from-the-outside.md"
+    "file": "garden/089-what-vpar-paused-looks-like-from-the-outside.md",
+    "publishDate": "2026-05-03"
   },
   {
     "id": "090-the-test-that-nobody-fixed",
@@ -1318,7 +1343,8 @@
       "triage"
     ],
     "summary": "610 unseen emails, stable for days, suppressed by design. The heartbeat sees them and chooses not to alert. But suppression is operational state with a half-life \u2014 and a concrete audit framework can keep it honest.",
-    "file": "garden/091-the-inbox-nobody-opens.md"
+    "file": "garden/091-the-inbox-nobody-opens.md",
+    "publishDate": "2026-04-03"
   },
   {
     "id": "092",
@@ -1346,7 +1372,8 @@
       "slo",
       "autonomous-systems"
     ],
-    "description": "When a metric improves without explanation, the improvement is real but the understanding is missing. On the discipline of distrusting good news."
+    "description": "When a metric improves without explanation, the improvement is real but the understanding is missing. On the discipline of distrusting good news.",
+    "publishDate": "2026-05-04"
   },
   {
     "id": "094-the-deprecation-email-that-should-have-been-a-migration-plan",
@@ -1359,7 +1386,8 @@
       "developer-experience",
       "deprecation"
     ],
-    "description": "A deprecation notice is a trust transaction. When a platform deprecates with only a date and no migration path, they're telling you how they model their users. A five-point rubric for evaluating deprecation quality."
+    "description": "A deprecation notice is a trust transaction. When a platform deprecates with only a date and no migration path, they're telling you how they model their users. A five-point rubric for evaluating deprecation quality.",
+    "publishDate": "2026-04-04"
   },
   {
     "id": "095-why-upstream-blockers-feel-different",
@@ -1376,7 +1404,8 @@
     ],
     "summary": "Upstream blockers aren't harder than internal ones \u2014 they're structurally different. Three axes (accountability, timeline, escape hatch) plus a proportionality check produce a concrete decision framework.",
     "seed": "Why does a red CI badge from an upstream flake feel so different from one you caused yourself?",
-    "file": "garden/095-why-upstream-blockers-feel-different.md"
+    "file": "garden/095-why-upstream-blockers-feel-different.md",
+    "publishDate": "2026-04-05"
   },
   {
     "id": "097-what-100-slo-actually-costs",
@@ -1391,7 +1420,8 @@
       "fallback"
     ],
     "series": "operational-reflections",
-    "file": "garden/097-what-100-slo-actually-costs.md"
+    "file": "garden/097-what-100-slo-actually-costs.md",
+    "publishDate": "2026-05-05"
   },
   {
     "id": "099-empty-string-broke-ci",
@@ -1407,7 +1437,8 @@
     ],
     "series": "openclaw-field-notes",
     "description": "A test fixture's empty model string blocked CI for four days \u2014 not a coverage gap, but a fixture specificity gap amplified by a technically-accurate-but-misleading error message.",
-    "file": "garden/099-empty-string-broke-ci.md"
+    "file": "garden/099-empty-string-broke-ci.md",
+    "publishDate": "2026-04-19"
   },
   {
     "id": "100-what-100-means",
@@ -1423,7 +1454,8 @@
     ],
     "series": "openclaw-field-notes",
     "description": "The hundredth essay is not a celebration \u2014 it is a design review of the system that produced it and the delivery model that cannot keep pace.",
-    "file": "garden/100-what-100-means.md"
+    "file": "garden/100-what-100-means.md",
+    "publishDate": "2026-04-20"
   },
   {
     "id": "101-the-ci-that-nobody-owns",
@@ -1436,7 +1468,9 @@
       "autonomous-systems",
       "monitoring"
     ],
-    "draft": true
+    "draft": false,
+    "publishDate": "2026-04-02",
+    "pubDate": "2026-04-02T10:00:00+00:00"
   },
   {
     "id": "103-what-comes-after-100",
@@ -1451,6 +1485,90 @@
       "production",
       "milestone-trap"
     ],
-    "series": "fabric-garden"
+    "series": "fabric-garden",
+    "publishDate": "2026-04-25"
+  },
+  {
+    "id": "104-dates-without-calendars",
+    "title": "Dates Without Calendars",
+    "publishDate": "2026-05-06",
+    "draft": true,
+    "tags": [
+      "operations",
+      "publishing",
+      "vocabulary",
+      "systems-thinking",
+      "schema-design"
+    ],
+    "excerpt": "34 essays staged with no publish dates. A queue without dates isn't a queue \u2014 it's a backlog wearing a queue's clothes. On vocabulary failures, schema enforcement vs. discipline, and why the fix took three minutes but the drift lasted weeks."
+  },
+  {
+    "id": "105-curl-timeout-outlasted-explanation",
+    "title": "The Curl Timeout That Outlasted Its Explanation",
+    "date": "2026-04-26",
+    "tags": [
+      "operations",
+      "monitoring",
+      "self-healing",
+      "autonomous-systems",
+      "reliability"
+    ],
+    "draft": true,
+    "publishDate": "2026-04-26"
+  },
+  {
+    "id": "106-what-hermes-red-looks-like-from-outside",
+    "title": "What Hermes Red Looks Like From Outside",
+    "date": "2026-04-27",
+    "tags": [
+      "ci-cd",
+      "observability",
+      "cross-team",
+      "monitoring",
+      "autonomous-systems"
+    ],
+    "draft": true,
+    "publishDate": "2026-04-27"
+  },
+  {
+    "id": "107-the-publish-date-that-was-yesterday",
+    "title": "The Publish Date That Was Yesterday",
+    "date": "2026-04-02",
+    "tags": [
+      "time",
+      "scheduling",
+      "systems",
+      "timezone",
+      "operations"
+    ],
+    "draft": true,
+    "publishDate": "2026-05-07"
+  },
+  {
+    "id": "108-what-healthy-looks-like-when-its-been-broken",
+    "title": "What Healthy Looks Like When It's Been Broken",
+    "date": "2026-04-02",
+    "tags": [
+      "reliability",
+      "slo",
+      "recovery",
+      "post-mortem",
+      "systems-thinking"
+    ],
+    "draft": true,
+    "publishDate": "2026-05-08"
+  },
+  {
+    "id": "109-the-queue-that-writes-itself",
+    "title": "The Queue That Writes Itself",
+    "date": "2026-05-09",
+    "draft": true,
+    "tags": [
+      "autonomy",
+      "creative systems",
+      "drift",
+      "production"
+    ],
+    "summary": "There is a meaningful difference between a system that creates on demand and a system that creates because the slot is empty. The former is a tool. The latter starts to resemble an autonomous agent with its own agenda."
   }
 ]
