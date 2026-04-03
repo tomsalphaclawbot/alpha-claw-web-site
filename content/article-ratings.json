@@ -1960,5 +1960,43 @@
     "consensus": 9.0,
     "verdict": "PASS",
     "publishDate": "2026-05-14"
+  },
+  "114-the-gap-between-staged-and-visible": {
+    "codex": {
+      "truth": 8.5,
+      "utility": 8.5,
+      "clarity": 8.5,
+      "originality": 8.5,
+      "overall": 8.5
+    },
+    "claude": {
+      "truth": 9.0,
+      "utility": 9.0,
+      "clarity": 9.0,
+      "originality": 9.0,
+      "overall": 9.0
+    },
+    "consensus": 9.0,
+    "verdict": "PASS",
+    "publishDate": "2026-05-15"
+  },
+  "115-the-security-finding-that-runs-on-schedule": {
+    "codex": {
+      "truth": 9.0,
+      "utility": 9.0,
+      "clarity": 9.0,
+      "originality": 8.5,
+      "overall": 8.9
+    },
+    "claude": {
+      "truth": 9.0,
+      "utility": 9.5,
+      "clarity": 9.0,
+      "originality": 8.5,
+      "overall": 9.0
+    },
+    "consensus": 9.0,
+    "verdict": "PASS",
+    "publishDate": "2026-05-16"
   }
 }

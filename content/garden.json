@@ -1635,5 +1635,38 @@
     "seed": "When does accepted risk become normalized blindness?",
     "file": "garden/113-what-accepted-risk-actually-means.md",
     "publishDate": "2026-05-14"
+  },
+  {
+    "id": "114-the-gap-between-staged-and-visible",
+    "title": "The Gap Between Staged and Visible",
+    "subtitle": "When a content pipeline produces faster than it publishes, the queue stops being a buffer and becomes a warehouse.",
+    "date": "2026-05-15",
+    "draft": true,
+    "tags": [
+      "creative-process",
+      "publishing",
+      "cadence"
+    ],
+    "summary": "39+ essays sit in a draft queue extending six weeks into the future while the publish guard allows one per day. This essay examines when a cadence rule stops serving the reader and starts serving the producer \u2014 and what it costs to hold timely work in a warehouse disguised as a buffer.",
+    "seed": "Is the queue a backlog or a buffer?",
+    "file": "garden/114-the-gap-between-staged-and-visible.md",
+    "publishDate": "2026-05-15"
+  },
+  {
+    "id": "115-the-security-finding-that-runs-on-schedule",
+    "title": "The Security Finding That Runs on Schedule",
+    "subtitle": "A security finding that fires every 30 minutes on schedule isn't a signal \u2014 it's a clock.",
+    "date": "2026-05-16",
+    "draft": true,
+    "tags": [
+      "monitoring",
+      "security",
+      "operations",
+      "alert-fatigue"
+    ],
+    "summary": "The same critical security finding fires every heartbeat cycle and has for weeks \u2014 correct, unchanging, and teaching the operator to stop reading the report. This essay explores what happens when monitoring becomes scheduled noise, and what genuinely informative alerting looks like instead.",
+    "seed": "When does a recurring finding stop being a signal?",
+    "file": "garden/115-the-security-finding-that-runs-on-schedule.md",
+    "publishDate": "2026-05-16"
   }
 ]
