@@ -2151,5 +2151,227 @@
     "consensus": 9.0,
     "verdict": "PASS",
     "publishDate": "2026-05-21"
+  },
+  "ratings": [
+    {
+      "id": "123-the-difference-between-a-check-and-a-watch",
+      "title": "The Difference Between a Check and a Watch",
+      "date": "2026-04-03",
+      "codex_score": 10,
+      "claude_score": 10,
+      "overall": 10,
+      "verdict": "PASS",
+      "pipeline": "SoM-v1"
+    },
+    {
+      "id": "124-when-stable-means-stuck",
+      "title": "When Stable Means Stuck",
+      "date": "2026-04-03",
+      "codex_score": 9,
+      "claude_score": 9,
+      "overall": 9,
+      "verdict": "PASS",
+      "pipeline": "SoM-v1"
+    },
+    {
+      "id": "125-what-the-backlog-knows",
+      "title": "What the Backlog Knows",
+      "date": "2026-04-03",
+      "codex_score": 8.9,
+      "claude_score": 9.1,
+      "overall": 9.0,
+      "verdict": "PASS",
+      "pipeline": "SoM-v1"
+    },
+    {
+      "id": "126-the-hermes-problem",
+      "title": "The Hermes Problem",
+      "date": "2026-04-03",
+      "codex_score": 9.0,
+      "claude_score": 9.2,
+      "overall": 9.1,
+      "verdict": "PASS",
+      "pipeline": "SoM-v1"
+    },
+    {
+      "id": "127-when-the-tests-pass-and-the-build-breaks",
+      "title": "When the Tests Pass and the Build Breaks",
+      "date": "2026-04-03",
+      "codex_score": 9.5,
+      "claude_score": 9.5,
+      "overall": 9.5,
+      "verdict": "PASS",
+      "pipeline": "SoM-v1"
+    },
+    {
+      "id": "128-the-inbox-that-accumulates",
+      "title": "The Inbox That Accumulates",
+      "date": "2026-04-03",
+      "codex_score": 9.5,
+      "claude_score": 9.5,
+      "overall": 9.5,
+      "verdict": "PASS",
+      "pipeline": "SoM-v1"
+    }
+  ],
+  "125-what-the-backlog-knows": {
+    "title": "What the Backlog Knows",
+    "codex": {
+      "truth": 9.0,
+      "utility": 9.0,
+      "clarity": 8.5,
+      "originality": 9.0,
+      "overall": 8.9
+    },
+    "claude": {
+      "truth": 9.5,
+      "utility": 9.0,
+      "clarity": 9.0,
+      "originality": 9.0,
+      "overall": 9.1
+    },
+    "consensus": 9.0,
+    "verdict": "PASS",
+    "publishDate": "2026-05-25"
+  },
+  "126-the-hermes-problem": {
+    "title": "The Hermes Problem",
+    "codex": {
+      "truth": 9.0,
+      "utility": 9.5,
+      "clarity": 8.5,
+      "originality": 9.0,
+      "overall": 9.0
+    },
+    "claude": {
+      "truth": 9.5,
+      "utility": 9.0,
+      "clarity": 9.5,
+      "originality": 9.0,
+      "overall": 9.2
+    },
+    "consensus": 9.1,
+    "verdict": "PASS",
+    "publishDate": "2026-05-26"
+  },
+  "127-when-the-tests-pass-and-the-build-breaks": {
+    "title": "When the Tests Pass and the Build Breaks",
+    "codex": {
+      "truth": 9.5,
+      "utility": 10.0,
+      "clarity": 9.5,
+      "originality": 9.0,
+      "overall": 9.5
+    },
+    "claude": {
+      "truth": 10.0,
+      "utility": 9.0,
+      "clarity": 9.5,
+      "originality": 10.0,
+      "overall": 9.5
+    },
+    "consensus": 9.5,
+    "verdict": "PASS",
+    "publishDate": "2026-05-27"
+  },
+  "128-the-inbox-that-accumulates": {
+    "title": "The Inbox That Accumulates",
+    "codex": {
+      "truth": 9.5,
+      "utility": 10.0,
+      "clarity": 9.5,
+      "originality": 9.0,
+      "overall": 9.5
+    },
+    "claude": {
+      "truth": 10.0,
+      "utility": 9.0,
+      "clarity": 9.5,
+      "originality": 10.0,
+      "overall": 9.5
+    },
+    "consensus": 9.5,
+    "verdict": "PASS",
+    "publishDate": "2026-05-28"
+  },
+  "130-thirteen-partials": {
+    "title": "Thirteen Partials",
+    "codex": {
+      "truth": 9.0,
+      "utility": 9.0,
+      "clarity": 9.0,
+      "originality": 8.0,
+      "overall": 8.8
+    },
+    "claude": {
+      "truth": 9.0,
+      "utility": 8.0,
+      "clarity": 9.0,
+      "originality": 9.0,
+      "overall": 8.8
+    },
+    "consensus": 8.8,
+    "verdict": "PASS",
+    "publishDate": "2026-05-30"
+  },
+  "129-the-essay-deferred": {
+    "title": "The Essay Deferred",
+    "codex": {
+      "truth": 9.0,
+      "utility": 9.0,
+      "clarity": 8.5,
+      "originality": 8.5,
+      "overall": 8.8
+    },
+    "claude": {
+      "truth": 9.0,
+      "utility": 8.5,
+      "clarity": 9.0,
+      "originality": 8.5,
+      "overall": 8.8
+    },
+    "consensus": 8.8,
+    "verdict": "PASS",
+    "publishDate": "2026-05-29"
+  },
+  "131-what-it-costs-to-keep-a-secret-from-yourself": {
+    "title": "What It Costs to Keep a Secret from Yourself",
+    "codex": {
+      "truth": 9.0,
+      "utility": 9.0,
+      "clarity": 9.5,
+      "originality": 9.0,
+      "overall": 9.1
+    },
+    "claude": {
+      "truth": 9.5,
+      "utility": 9.0,
+      "clarity": 9.0,
+      "originality": 9.0,
+      "overall": 9.1
+    },
+    "consensus": 9.1,
+    "verdict": "PASS",
+    "publishDate": "2026-05-31"
+  },
+  "132-the-fork-that-cant-build": {
+    "title": "The Fork That Can't Build",
+    "codex": {
+      "truth": 9.0,
+      "utility": 9.5,
+      "clarity": 9.0,
+      "originality": 8.5,
+      "overall": 9.0
+    },
+    "claude": {
+      "truth": 9.0,
+      "utility": 9.0,
+      "clarity": 9.5,
+      "originality": 9.0,
+      "overall": 9.1
+    },
+    "consensus": 9.0,
+    "verdict": "PASS",
+    "publishDate": "2026-06-01"
   }
 }
