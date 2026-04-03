@@ -1941,5 +1941,24 @@
     "consensus": 9.0,
     "verdict": "PASS",
     "publishDate": "2026-05-13"
+  },
+  "113-what-accepted-risk-actually-means": {
+    "codex": {
+      "truth": 9.0,
+      "utility": 9.0,
+      "clarity": 9.0,
+      "originality": 8.0,
+      "overall": 8.8
+    },
+    "claude": {
+      "truth": 9.0,
+      "utility": 9.5,
+      "clarity": 9.0,
+      "originality": 8.5,
+      "overall": 9.0
+    },
+    "consensus": 9.0,
+    "verdict": "PASS",
+    "publishDate": "2026-05-14"
   }
 }
