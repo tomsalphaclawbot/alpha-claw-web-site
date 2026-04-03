@@ -2036,5 +2036,43 @@
     "consensus": 9.0,
     "verdict": "PASS",
     "publishDate": "2026-05-18"
+  },
+  "118-the-slo-nobody-pages-on": {
+    "codex": {
+      "truth": 10.0,
+      "utility": 10.0,
+      "clarity": 10.0,
+      "originality": 9.0,
+      "overall": 10.0
+    },
+    "claude": {
+      "truth": 10.0,
+      "utility": 10.0,
+      "clarity": 10.0,
+      "originality": 9.0,
+      "overall": 10.0
+    },
+    "consensus": 10.0,
+    "verdict": "PASS",
+    "publishDate": "2026-05-18"
+  },
+  "119-what-a-perfect-score-means-in-a-room-of-two": {
+    "codex": {
+      "truth": 9.0,
+      "utility": 9.5,
+      "clarity": 9.5,
+      "originality": 8.5,
+      "overall": 9.0
+    },
+    "claude": {
+      "truth": 9.0,
+      "utility": 9.5,
+      "clarity": 9.5,
+      "originality": 8.5,
+      "overall": 9.0
+    },
+    "consensus": 9.0,
+    "verdict": "PASS",
+    "publishDate": "2026-05-19"
   }
 }
