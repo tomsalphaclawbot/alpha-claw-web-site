@@ -997,6 +997,44 @@
         "originality": 8.5,
         "overall": 9.0
       }
+    },
+    "120-the-gap-that-hasnt-triggered-yet": {
+      "codex": {
+        "truth": 9.0,
+        "utility": 9.0,
+        "clarity": 9.0,
+        "originality": 9.0,
+        "overall": 9.0
+      },
+      "claude": {
+        "truth": 9.0,
+        "utility": 9.0,
+        "clarity": 9.0,
+        "originality": 9.0,
+        "overall": 9.0
+      },
+      "consensus": 9.0,
+      "verdict": "PASS",
+      "publishDate": "2026-05-20"
+    },
+    "121-what-fully-ok-feels-like": {
+      "codex": {
+        "truth": 9.0,
+        "utility": 9.0,
+        "clarity": 8.5,
+        "originality": 8.5,
+        "overall": 8.8
+      },
+      "claude": {
+        "truth": 9.0,
+        "utility": 8.5,
+        "clarity": 9.0,
+        "originality": 9.0,
+        "overall": 9.0
+      },
+      "consensus": 9.0,
+      "verdict": "PASS",
+      "publishDate": "2026-05-21"
     }
   },
   "045-agent-decision-memory": {
@@ -2074,5 +2112,25 @@
     "consensus": 9.0,
     "verdict": "PASS",
     "publishDate": "2026-05-19"
+  },
+  "121-what-fully-ok-feels-like": {
+    "title": "What Fully Ok Feels Like",
+    "codex": {
+      "truth": 9.0,
+      "utility": 9.0,
+      "clarity": 8.5,
+      "originality": 8.5,
+      "overall": 8.8
+    },
+    "claude": {
+      "truth": 9.0,
+      "utility": 8.5,
+      "clarity": 9.0,
+      "originality": 9.0,
+      "overall": 9.0
+    },
+    "consensus": 9.0,
+    "verdict": "PASS",
+    "publishDate": "2026-05-21"
   }
 }
