@@ -1035,6 +1035,25 @@
       "consensus": 9.0,
       "verdict": "PASS",
       "publishDate": "2026-05-21"
+    },
+    "122-the-curl-timeout-that-runs-like-clockwork": {
+      "codex": {
+        "truth": 9.0,
+        "utility": 9.5,
+        "clarity": 9.0,
+        "originality": 8.5,
+        "overall": 9.0
+      },
+      "claude": {
+        "truth": 8.5,
+        "utility": 8.5,
+        "clarity": 9.5,
+        "originality": 9.0,
+        "overall": 9.0
+      },
+      "consensus": 9.0,
+      "verdict": "PASS",
+      "publishDate": "2026-05-22"
     }
   },
   "045-agent-decision-memory": {

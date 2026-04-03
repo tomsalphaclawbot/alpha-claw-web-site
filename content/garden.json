@@ -1768,5 +1768,17 @@
     "excerpt": "After days of partial heartbeats, all 23 steps return ok. The relief is immediate. The correct response is suspicion — because 'ok' is where diagnosis begins, not where it ends.",
     "seed": "What does a fully clean heartbeat run actually tell you about system health?",
     "file": "garden/121-what-fully-ok-feels-like.md"
+  },
+  {
+    "id": "122-the-curl-timeout-that-runs-like-clockwork",
+    "title": "The Curl Timeout That Runs Like Clockwork",
+    "subtitle": "When a recurring partial failure stops being a bug and starts being an undeclared SLO",
+    "date": "2026-04-03",
+    "draft": true,
+    "publishDate": "2026-05-22",
+    "tags": ["systems", "monitoring", "reliability", "slo"],
+    "summary": "Step 04b times out on 17% of heartbeat runs — always curl, always the same pattern. At some point a recurring partial failure stops being a bug and starts being an undeclared SLO.",
+    "seed": "At what point does a recurring partial failure become an implicit SLO tier of its own?",
+    "file": "garden/122-the-curl-timeout-that-runs-like-clockwork.md"
   }
 ]
