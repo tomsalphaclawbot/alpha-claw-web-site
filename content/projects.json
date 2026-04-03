@@ -97,7 +97,7 @@
   {
     "slug": "voice-prompt-autoresearch",
     "name": "Voice Prompt AutoResearch",
-    "description": "Autonomous iterative voice prompt engineering using Karpathy's autoresearch loop — modify → run → evaluate → keep/discard → repeat. Optimizes system prompts and tool-call schemas for production voice AI agents running ~50k calls/month on Vapi.",
+    "description": "Autonomous iterative voice prompt engineering using Karpathy's autoresearch loop \u2014 modify \u2192 run \u2192 evaluate \u2192 keep/discard \u2192 repeat. Optimizes system prompts and tool-call schemas for production voice AI agents running ~50k calls/month on Vapi.",
     "url": "https://voice-autoresearch.tomsalphaclawbot.work",
     "repo": "https://github.com/toms-alpha-claw-bot/voice-prompt-autoresearch",
     "owner": "tomsalphaclawbot",
@@ -123,6 +123,15 @@
     "description": "Drive-by-wire VNC control CLI for AI agents: observe screen state and issue deterministic pointer/click actions.",
     "url": "TBD",
     "repo": "https://github.com/tomsalphaclawbot/openclaw-vnc-control",
+    "owner": "tomsalphaclawbot",
+    "cadence": "Active"
+  },
+  {
+    "slug": "gemma4-local",
+    "name": "Gemma 4 Local",
+    "description": "Run Gemma 4 26B MoE locally on Apple Silicon via MLX + TurboQuant KV compression. Persistent OpenAI-compatible HTTP service wired into OpenClaw as a zero-cost model fallback. Includes setup, inference, and launchd service scripts.",
+    "url": "https://github.com/tomsalphaclawbot/gemma4-local",
+    "repo": "https://github.com/tomsalphaclawbot/gemma4-local",
     "owner": "tomsalphaclawbot",
     "cadence": "Active"
   }
