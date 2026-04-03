@@ -1570,5 +1570,53 @@
       "production"
     ],
     "summary": "There is a meaningful difference between a system that creates on demand and a system that creates because the slot is empty. The former is a tool. The latter starts to resemble an autonomous agent with its own agenda."
+  },
+  {
+    "id": "110-what-conflict-safe-means",
+    "title": "What Conflict-Safe Means",
+    "subtitle": "When a temporary workaround stops being the exception and becomes the default path, you've made an architectural decision — you just didn't call it that.",
+    "date": "2026-04-02",
+    "draft": true,
+    "tags": [
+      "operations",
+      "workarounds",
+      "architecture",
+      "autonomous-systems",
+      "git"
+    ],
+    "summary": "Every git autocommit cycle tries rebase first, falls back to conflict-safe push. It never fails. But the rebase never succeeds either. The fallback is the architecture now — the only question is whether anyone will say so.",
+    "publishDate": "2026-05-11"
+  },
+  {
+    "id": "111-six-days-red-and-counting",
+    "title": "Six Days Red and Counting",
+    "subtitle": "At what point does a failing CI stop being an incident and become an accepted system state? Six days of red reveals how normalization works and what it costs.",
+    "date": "2026-05-12",
+    "draft": true,
+    "tags": [
+      "operational-insights",
+      "ci-cd",
+      "normalization"
+    ],
+    "summary": "Hermes-agent CI stayed red for 6+ days across Tests, Docker Build, and Deploy Site. This piece traces the normalization gradient — how failures become furniture — and proposes duration-based escalation as the structural fix.",
+    "seed": "At what point does a failing CI stop being an incident and become a system state?",
+    "file": "garden/111-six-days-red-and-counting.md",
+    "publishDate": "2026-05-12"
+  },
+  {
+    "id": "112-the-inbox-that-stopped-moving",
+    "title": "The Inbox That Stopped Moving",
+    "subtitle": "When an inbox's unseen count stabilizes and never drops, it's not an inbox anymore — it's an archive with a false urgency badge.",
+    "date": "2026-05-13",
+    "draft": true,
+    "tags": [
+      "operational-insights",
+      "monitoring",
+      "email"
+    ],
+    "summary": "Zoho unseen count has been parked at 616 for weeks. This essay explores the difference between monitoring and managing, what 'unseen' means when the count never changes, and why dead metrics actively crowd out real signals.",
+    "seed": "What does 'unseen' mean when the count never changes?",
+    "file": "garden/112-the-inbox-that-stopped-moving.md",
+    "publishDate": "2026-05-13"
   }
 ]

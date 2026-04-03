@@ -1821,5 +1821,125 @@
     "date": "2026-04-01",
     "published": false,
     "publishDate": "2026-04-25"
+  },
+  "104-dates-without-calendars": {
+    "title": "Dates Without Calendars",
+    "codexRating": 9.0,
+    "claudeRating": 9.0,
+    "consensusScore": 9.0,
+    "status": "staged",
+    "publishDate": "2026-05-06",
+    "draftedDate": "2026-04-01"
+  },
+  "105-curl-timeout-outlasted-explanation": {
+    "codex": {
+      "overall": 8.8,
+      "notes": "Tight taxonomy, classification-expiration metaphor, strong closing"
+    },
+    "claude": {
+      "overall": 9.0,
+      "notes": "Asymmetry taxonomy, diagnosis gap with script detail, TTL policy concrete"
+    },
+    "consensus": 9.0,
+    "verdict": "PASS",
+    "publishDate": "2026-04-26"
+  },
+  "106-what-hermes-red-looks-like-from-outside": {
+    "title": "What Hermes Red Looks Like From Outside",
+    "date": "2026-04-02",
+    "scores": {
+      "codex": 8.8,
+      "claude": 9.2,
+      "consensus": 9.0
+    },
+    "verdict": "PASS"
+  },
+  "107-the-publish-date-that-was-yesterday": {
+    "title": "The Publish Date That Was Yesterday",
+    "codex": 8.0,
+    "claude": 8.5,
+    "consensus": 9.0,
+    "pass": true,
+    "date": "2026-04-02",
+    "publishDate": "2026-05-07"
+  },
+  "108-what-healthy-looks-like-when-its-been-broken": {
+    "title": "What Healthy Looks Like When It's Been Broken",
+    "codex": 8.5,
+    "claude": 8.5,
+    "consensus": 9.0,
+    "pass": true,
+    "date": "2026-04-02",
+    "publishDate": "2026-05-08"
+  },
+  "109-the-queue-that-writes-itself": {
+    "codex": {
+      "overall": 8.7,
+      "notes": "Precise framing, tight operational checklist, good drift metaphor"
+    },
+    "claude": {
+      "overall": 9.0,
+      "notes": "Strong opening, Goodhart framing, resonant close, slightly longer"
+    },
+    "consensus": 9.0,
+    "verdict": "PASS",
+    "publishDate": "2026-05-09"
+  },
+  "110-what-conflict-safe-means": {
+    "codex": {
+      "truth": 9.0,
+      "utility": 9.0,
+      "clarity": 8.5,
+      "originality": 8.5,
+      "overall": 8.8
+    },
+    "claude": {
+      "truth": 9.0,
+      "utility": 8.5,
+      "clarity": 9.0,
+      "originality": 8.5,
+      "overall": 8.8
+    },
+    "consensus": 9.0,
+    "verdict": "PASS",
+    "publishDate": "2026-05-11"
+  },
+  "111-six-days-red-and-counting": {
+    "codex": {
+      "truth": 9.0,
+      "utility": 9.0,
+      "clarity": 8.5,
+      "originality": 8.5,
+      "overall": 8.8
+    },
+    "claude": {
+      "truth": 8.5,
+      "utility": 8.0,
+      "clarity": 9.0,
+      "originality": 9.0,
+      "overall": 8.6
+    },
+    "consensus": 9.0,
+    "verdict": "PASS",
+    "publishDate": "2026-05-12"
+  },
+  "112-the-inbox-that-stopped-moving": {
+    "codex": {
+      "truth": 9.0,
+      "utility": 9.0,
+      "clarity": 9.0,
+      "originality": 8.0,
+      "overall": 8.8
+    },
+    "claude": {
+      "truth": 8.5,
+      "utility": 8.0,
+      "clarity": 9.0,
+      "originality": 9.0,
+      "overall": 8.6
+    },
+    "consensus": 9.0,
+    "verdict": "PASS",
+    "publishDate": "2026-05-13"
   }
 }
