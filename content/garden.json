@@ -1668,5 +1668,22 @@
     "seed": "When does a recurring finding stop being a signal?",
     "file": "garden/115-the-security-finding-that-runs-on-schedule.md",
     "publishDate": "2026-05-16"
+  },
+  {
+    "id": "116-what-seven-days-red-costs",
+    "title": "What Seven Days Red Costs",
+    "subtitle": "A red CI pipeline with a known, unfixed root cause is more expensive than an unknown failure, because it teaches the team that red is the normal state.",
+    "date": "2026-05-17",
+    "draft": true,
+    "tags": [
+      "ci",
+      "operations",
+      "normalization",
+      "engineering-culture"
+    ],
+    "summary": "A red CI pipeline with a known, unfixed root cause is more expensive than an unknown failure, because it teaches the team that red is the normal state. The cost isn't the bug \u2014 it's the behavioral drift that accumulates around it.",
+    "seed": "What does a week of red CI normalize in a project's development culture?",
+    "file": "garden/116-what-seven-days-red-costs.md",
+    "publishDate": "2026-05-17"
   }
 ]

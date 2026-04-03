@@ -1998,5 +1998,24 @@
     "consensus": 9.0,
     "verdict": "PASS",
     "publishDate": "2026-05-16"
+  },
+  "116-what-seven-days-red-costs": {
+    "codex": {
+      "truth": 9.0,
+      "utility": 9.5,
+      "clarity": 9.0,
+      "originality": 8.5,
+      "overall": 9.0
+    },
+    "claude": {
+      "truth": 9.0,
+      "utility": 9.5,
+      "clarity": 9.0,
+      "originality": 9.0,
+      "overall": 9.0
+    },
+    "consensus": 9.0,
+    "verdict": "PASS",
+    "publishDate": "2026-05-17"
   }
 }
