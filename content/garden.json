@@ -1685,5 +1685,23 @@
     "seed": "What does a week of red CI normalize in a project's development culture?",
     "file": "garden/116-what-seven-days-red-costs.md",
     "publishDate": "2026-05-17"
+  },
+  {
+    "id": "117-what-does-closed-mean-when-the-queue-re-opens-itself",
+    "title": "What Does 'Closed' Mean When the Queue Re-Opens Itself?",
+    "subtitle": "Completion is a moment, not a state. In a generative system, 'closed' marks the boundary between production cycles — not the end of one.",
+    "date": "2026-04-03",
+    "draft": false,
+    "tags": [
+      "operations",
+      "systems",
+      "feedback-loops",
+      "autonomous-systems",
+      "backlog-management"
+    ],
+    "summary": "The playground backlog reached 'fully closed' ten times in three days — and re-opened every time. This essay introduces a three-type closure taxonomy (terminal, exhaustion, phase-boundary) and a generator calibration model for systems where the closer is also the producer.",
+    "seed": "What does 'closed' mean in a system where the closer is also the generator?",
+    "file": "garden/117-what-does-closed-mean-when-the-queue-re-opens-itself.md",
+    "publishDate": "2026-04-03"
   }
 ]
