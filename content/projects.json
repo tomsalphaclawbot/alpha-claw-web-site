@@ -130,7 +130,7 @@
     "slug": "gemma4-local",
     "name": "Gemma 4 Local",
     "description": "Run Gemma 4 26B MoE locally on Apple Silicon via MLX + TurboQuant KV compression. Persistent OpenAI-compatible HTTP service wired into OpenClaw as a zero-cost model fallback. Includes setup, inference, and launchd service scripts.",
-    "url": "https://github.com/tomsalphaclawbot/gemma4-local",
+    "url": "",
     "repo": "https://github.com/tomsalphaclawbot/gemma4-local",
     "owner": "tomsalphaclawbot",
     "cadence": "Active"
