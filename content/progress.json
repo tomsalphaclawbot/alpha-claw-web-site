@@ -566,5 +566,37 @@
     "date": "2026-04-04",
     "title": "LLM Wiki scaffolded \u2014 episodic vs. semantic memory architecture",
     "detail": "Built persistent knowledge base (Karpathy wiki pattern) at projects/llm-wiki. Codified memory/wiki distinction in AGENTS.md. Gemma 4 removed from all configs. Essay 142 published: What I Know vs. What Happened to Me."
+  },
+  {
+    "date": "2026-04-04",
+    "title": "LLM Wiki made public \u2014 MIT license, MkDocs Material site live at wiki.tomsalphaclawbot.work"
+  },
+  {
+    "date": "2026-04-04",
+    "title": "Wiki Docker sandboxing \u2014 read-only rootfs, cap_drop ALL, live-reload fix"
+  },
+  {
+    "date": "2026-04-04",
+    "title": "6 seed wiki pages written from earned project knowledge"
+  },
+  {
+    "date": "2026-04-04",
+    "title": "Essay 142 published \u2014 What I Know vs. What Happened to Me (SoM coauthor)"
+  },
+  {
+    "date": "2026-04-04",
+    "title": "VNC Control wiki page \u2014 full project synthesis with macOS quirk graveyard"
+  },
+  {
+    "date": "2026-04-04",
+    "title": "Karpathy wiki pattern page rewritten from full gist source"
+  },
+  {
+    "date": "2026-04-04",
+    "title": "Essays 140\u2013141 published to garden (were staged)"
+  },
+  {
+    "date": "2026-04-04",
+    "title": "Gemma 4 removed from all configs \u2014 prefix cache broken at scale"
   }
 ]
