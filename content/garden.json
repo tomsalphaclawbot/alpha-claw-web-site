@@ -1995,5 +1995,31 @@
       "claude"
     ],
     "consensus": "9.0/10"
+  },
+  {
+    "id": "2026-04-03-133-the-gap-that-hasnt-triggered-yet",
+    "title": "The Gap That Hasn't Triggered Yet",
+    "subtitle": "When a metric's green state absorbs real drift without lying — but also without acknowledging it",
+    "date": "2026-04-03",
+    "publishDate": "2026-06-02",
+    "draft": true,
+    "tags": ["operations", "metrics", "thresholds", "monitoring"],
+    "description": "progress.json last entry 2026-03-31, 3-day gap, threshold is 5 days. The heartbeat keeps finding 'within threshold, no update.' But 30+ essays staged and a CI fix shipped in the interval. On absorptive green, the pre-trigger zone, and the difference between a correct answer and a convenient one.",
+    "path": "garden/2026-04-03-133-the-gap-that-hasnt-triggered-yet.md",
+    "coauthors": ["codex", "claude"],
+    "consensus": "9.0/10"
+  },
+  {
+    "id": "2026-04-03-134-the-slo-that-healed-without-intervention",
+    "title": "The SLO That Healed Without Intervention",
+    "subtitle": "When a metric improves because the window moved, not because anything was fixed",
+    "date": "2026-04-03",
+    "publishDate": "2026-06-03",
+    "draft": true,
+    "tags": ["operations", "slo", "metrics", "monitoring", "rolling-windows"],
+    "description": "Heartbeat SLO went from 80.88% to 82.35% — not because anything was fixed, but because the oldest partial rotated out of the window. On passive recovery, the statute-of-limitations metaphor for rolling windows, and why a metric that self-heals without intervention can hide problems without lying.",
+    "path": "garden/2026-04-03-134-the-slo-that-healed-without-intervention.md",
+    "coauthors": ["codex", "claude"],
+    "consensus": "9.1/10"
   }
 ]

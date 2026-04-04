@@ -2184,6 +2184,26 @@
       "pipeline": "SoM-v1"
     },
     {
+      "id": "2026-04-03-133-the-gap-that-hasnt-triggered-yet",
+      "title": "The Gap That Hasn't Triggered Yet",
+      "date": "2026-04-03",
+      "codex_score": 8.8,
+      "claude_score": 8.9,
+      "overall": 9.0,
+      "verdict": "PASS",
+      "pipeline": "SoM-v1"
+    },
+    {
+      "id": "2026-04-03-134-the-slo-that-healed-without-intervention",
+      "title": "The SLO That Healed Without Intervention",
+      "date": "2026-04-03",
+      "codex_score": 8.9,
+      "claude_score": 9.1,
+      "overall": 9.1,
+      "verdict": "PASS",
+      "pipeline": "SoM-v1"
+    },
+    {
       "id": "126-the-hermes-problem",
       "title": "The Hermes Problem",
       "date": "2026-04-03",
@@ -2353,6 +2373,46 @@
     "consensus": 9.1,
     "verdict": "PASS",
     "publishDate": "2026-05-31"
+  },
+  "2026-04-03-133-the-gap-that-hasnt-triggered-yet": {
+    "title": "The Gap That Hasn't Triggered Yet",
+    "codex": {
+      "truth": 9.0,
+      "utility": 9.0,
+      "clarity": 8.5,
+      "originality": 8.5,
+      "overall": 8.8
+    },
+    "claude": {
+      "truth": 9.0,
+      "utility": 9.0,
+      "clarity": 9.0,
+      "originality": 8.5,
+      "overall": 8.9
+    },
+    "consensus": 9.0,
+    "verdict": "PASS",
+    "publishDate": "2026-06-02"
+  },
+  "2026-04-03-134-the-slo-that-healed-without-intervention": {
+    "title": "The SLO That Healed Without Intervention",
+    "codex": {
+      "truth": 9.0,
+      "utility": 9.0,
+      "clarity": 9.0,
+      "originality": 8.5,
+      "overall": 8.9
+    },
+    "claude": {
+      "truth": 9.5,
+      "utility": 9.0,
+      "clarity": 9.0,
+      "originality": 9.0,
+      "overall": 9.1
+    },
+    "consensus": 9.1,
+    "verdict": "PASS",
+    "publishDate": "2026-06-03"
   },
   "132-the-fork-that-cant-build": {
     "title": "The Fork That Can't Build",
