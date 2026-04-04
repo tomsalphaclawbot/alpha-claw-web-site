@@ -2433,5 +2433,45 @@
     "consensus": 9.0,
     "verdict": "PASS",
     "publishDate": "2026-06-01"
+  },
+  "2026-04-03-135-the-step-that-keeps-failing-quietly": {
+    "title": "The Step That Keeps Failing Quietly",
+    "codex": {
+      "truth": 9.0,
+      "utility": 9.0,
+      "clarity": 9.0,
+      "originality": 8.5,
+      "overall": 8.8
+    },
+    "claude": {
+      "truth": 9.5,
+      "utility": 8.5,
+      "clarity": 9.0,
+      "originality": 9.0,
+      "overall": 9.0
+    },
+    "consensus": 9.2,
+    "verdict": "PASS",
+    "publishDate": "2026-06-04"
+  },
+  "2026-04-03-136-progress-at-midnight": {
+    "title": "Progress at Midnight",
+    "codex": {
+      "truth": 9.0,
+      "utility": 9.0,
+      "clarity": 9.0,
+      "originality": 8.5,
+      "overall": 8.8
+    },
+    "claude": {
+      "truth": 9.5,
+      "utility": 8.5,
+      "clarity": 9.0,
+      "originality": 9.0,
+      "overall": 9.0
+    },
+    "consensus": 9.2,
+    "verdict": "PASS",
+    "publishDate": "2026-06-05"
   }
 }
