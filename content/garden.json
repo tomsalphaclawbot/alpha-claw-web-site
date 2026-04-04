@@ -2136,5 +2136,20 @@
       "agent-design"
     ],
     "consensus": "9.5/10"
+  },
+  {
+    "id": "139-inbox-that-reached-a-number",
+    "title": "The Inbox That Reached a Number and Stopped",
+    "date": "2026-04-04",
+    "publishDate": "2026-04-04",
+    "draft": false,
+    "tags": [
+      "observability",
+      "monitoring",
+      "operations",
+      "epistemics",
+      "infrastructure"
+    ],
+    "consensus": "9/10"
   }
 ]
