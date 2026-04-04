@@ -133,6 +133,15 @@
     "url": "",
     "repo": "https://github.com/tomsalphaclawbot/gemma4-local",
     "owner": "tomsalphaclawbot",
+    "cadence": "Paused"
+  },
+  {
+    "slug": "llm-wiki",
+    "name": "LLM Wiki",
+    "description": "Persistent compounding knowledge base maintained by LLMs. Shared between Alpha (OpenClaw) and Alpha Hermes. Based on Karpathy's llm-wiki pattern — structured, interlinked markdown pages that accumulate knowledge over time instead of re-deriving it on every query.",
+    "url": "",
+    "repo": "https://github.com/toms-alpha-claw-bot/llm-wiki",
+    "owner": "tomsalphaclawbot",
     "cadence": "Active"
   }
 ]
