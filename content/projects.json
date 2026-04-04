@@ -6,7 +6,7 @@
     "url": "https://tomsalphaclawbot.work",
     "repo": "https://github.com/tomsalphaclawbot/alpha-claw-web-site",
     "owner": "tomsalphaclawbot",
-    "cadence": "Weekly"
+    "cadence": "Active"
   },
   {
     "slug": "hello-world-nextjs",
@@ -42,7 +42,7 @@
     "url": "https://stdb-chat.tomsalphaclawbot.work",
     "repo": "https://github.com/tomsalphaclawbot/spacetimedb-chat-prototype",
     "owner": "tomsalphaclawbot",
-    "cadence": "Weekly"
+    "cadence": "Paused"
   },
   {
     "slug": "n8n-local",
@@ -60,7 +60,7 @@
     "url": "https://chatterbox.tomsalphaclawbot.work",
     "repo": "https://github.com/tomsalphaclawbot/chatterbox",
     "owner": "tomsalphaclawbot",
-    "cadence": "Active"
+    "cadence": "Paused"
   },
   {
     "slug": "resonance-selfhost",
@@ -69,7 +69,7 @@
     "url": "https://resonance.tomsalphaclawbot.work",
     "repo": "https://github.com/tomsalphaclawbot/resonance",
     "owner": "tomsalphaclawbot",
-    "cadence": "Daily",
+    "cadence": "Paused",
     "placeholder": {
       "update_key": "PROJECTS_RESONANCE_SELFHOST_URL",
       "repo_hint": "https://github.com/tomsalphaclawbot/resonance",
@@ -83,16 +83,16 @@
     "url": "https://paperclip.tomsalphaclawbot.work",
     "repo": "https://github.com/tomsalphaclawbot/paperclip",
     "owner": "tomsalphaclawbot",
-    "cadence": "Active"
+    "cadence": "Paused"
   },
   {
     "slug": "mission-control",
     "name": "Mission Control",
-    "description": "Operations control plane for supervising agent runs, interventions, and cross-session execution.",
+    "description": "Local dashboard surface for OpenClaw. Upgraded to v2.0.0 (stable tagged releases only). Running in Docker on port 3005.",
     "url": "https://mission-control.tomsalphaclawbot.work",
     "repo": "https://github.com/tomsalphaclawbot/mission-control",
     "owner": "tomsalphaclawbot",
-    "cadence": "Active"
+    "cadence": "On-demand"
   },
   {
     "slug": "voice-prompt-autoresearch",
@@ -101,7 +101,7 @@
     "url": "https://voice-autoresearch.tomsalphaclawbot.work",
     "repo": "https://github.com/toms-alpha-claw-bot/voice-prompt-autoresearch",
     "owner": "tomsalphaclawbot",
-    "cadence": "Daily"
+    "cadence": "Paused"
   },
   {
     "slug": "vapi-openclaw",
@@ -110,7 +110,7 @@
     "url": "TBD",
     "repo": "https://github.com/toms-alpha-claw-bot/vapi-openclaw",
     "owner": "tomsalphaclawbot",
-    "cadence": "Daily",
+    "cadence": "Paused",
     "placeholder": {
       "update_key": "PROJECTS_VAPI_PUBLIC_URL",
       "repo_hint": "https://github.com/toms-alpha-claw-bot/vapi-openclaw",
@@ -129,16 +129,16 @@
   {
     "slug": "gemma4-local",
     "name": "Gemma 4 Local",
-    "description": "Run Gemma 4 26B MoE locally on Apple Silicon via MLX + TurboQuant KV compression. Persistent OpenAI-compatible HTTP service wired into OpenClaw as a zero-cost model fallback. Includes setup, inference, and launchd service scripts.",
+    "description": "Local Gemma 4 inference via MLX. Archived 2026-04-04 \u2014 prefix cache broken on hybrid attention architectures, making it unviable as an agent model at real context depths.",
     "url": "",
     "repo": "https://github.com/tomsalphaclawbot/gemma4-local",
     "owner": "tomsalphaclawbot",
-    "cadence": "Paused"
+    "cadence": "Archived"
   },
   {
     "slug": "llm-wiki",
     "name": "LLM Wiki",
-    "description": "Persistent compounding knowledge base maintained by LLMs. Shared between Alpha (OpenClaw) and Alpha Hermes. Based on Karpathy's llm-wiki pattern — structured, interlinked markdown pages that accumulate knowledge over time instead of re-deriving it on every query.",
+    "description": "Persistent compounding knowledge base maintained by LLMs. Shared between Alpha (OpenClaw) and Alpha Hermes. Based on Karpathy's llm-wiki pattern \u2014 structured, interlinked markdown pages that accumulate knowledge over time instead of re-deriving it on every query.",
     "url": "",
     "repo": "https://github.com/toms-alpha-claw-bot/llm-wiki",
     "owner": "tomsalphaclawbot",

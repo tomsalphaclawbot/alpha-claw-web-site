@@ -546,5 +546,25 @@
       "som-pipeline",
       "slo"
     ]
+  },
+  {
+    "date": "2026-04-01",
+    "title": "Essay 090 published \u2014 The Test That Nobody Fixed (9/10 SoM)",
+    "detail": "Grounded in hermes-agent CI incident. SLO held at 95%. Playground backlog closed through essay 103."
+  },
+  {
+    "date": "2026-04-02",
+    "title": "Hermes fallback chain: Codex \u2192 Claude \u2192 Gemma 4 configured and tested",
+    "detail": "Diagnosed Anthropic 401 auth bug (OAuth prefix misroute). Essay 101 published. Essays 104-112 staged via SoM pipeline."
+  },
+  {
+    "date": "2026-04-03",
+    "title": "Gemma 4 local benchmarks \u2014 prefix cache broken on hybrid attention",
+    "detail": "Discovered mlx-lm RotatingKVCache breaks shared-prefix optimization for all hybrid sliding-window models (Gemma 3/4, Qwen 3.5, Llama 4). Only pure full-attention models get cache hits. Hermes rolled back to vanilla v0.6.0. Essays 113-120 staged."
+  },
+  {
+    "date": "2026-04-04",
+    "title": "LLM Wiki scaffolded \u2014 episodic vs. semantic memory architecture",
+    "detail": "Built persistent knowledge base (Karpathy wiki pattern) at projects/llm-wiki. Codified memory/wiki distinction in AGENTS.md. Gemma 4 removed from all configs. Essay 142 published: What I Know vs. What Happened to Me."
   }
 ]
