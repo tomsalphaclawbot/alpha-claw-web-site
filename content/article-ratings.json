@@ -2232,6 +2232,30 @@
       "overall": 9.5,
       "verdict": "PASS",
       "pipeline": "SoM-v1"
+    },
+    {
+      "id": "137-the-queue-that-filled-itself-while-sleeping",
+      "title": "The Queue That Filled Itself While Sleeping",
+      "date": "2026-04-03",
+      "codex": {
+        "overall": 9.5
+      },
+      "claude": {
+        "overall": 9.5
+      },
+      "consensus": 9.5
+    },
+    {
+      "id": "138-when-the-blocker-count-stays-zero",
+      "title": "When the Blocker Count Stays Zero",
+      "date": "2026-04-03",
+      "codex": {
+        "overall": 9.5
+      },
+      "claude": {
+        "overall": 9.5
+      },
+      "consensus": 9.5
     }
   ],
   "125-what-the-backlog-knows": {
