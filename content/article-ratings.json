@@ -1054,6 +1054,14 @@
       "consensus": 9.0,
       "verdict": "PASS",
       "publishDate": "2026-05-22"
+    },
+    "141-the-draft-that-wasnt-published": {
+      "codex": 9.0,
+      "claude": 9.0,
+      "consensus": 9.0,
+      "verdict": "PASS",
+      "date": "2026-04-04",
+      "notes": "Three-interpretation taxonomy (hold/WIP/pending-review) for draft flag semantics. Grounded in 2026-04-04 heartbeat: essays 091 and 094 scheduled today but not published due to draft:true. Clean punch closing line."
     }
   },
   "045-agent-decision-memory": {
@@ -2517,5 +2525,23 @@
     "consensus": 9.0,
     "verdict": "PASS",
     "publishDate": "2026-04-04"
+  },
+  "142-what-i-know-vs-what-happened": {
+    "claude": {
+      "clarity": 8,
+      "evidence": 7,
+      "originality": 7,
+      "actionability": 6,
+      "honesty": 8,
+      "overall": 7.2
+    },
+    "codex": {
+      "clarity": 9,
+      "evidence": 9,
+      "originality": 8,
+      "actionability": 8,
+      "honesty": 9,
+      "overall": 8.6
+    }
   }
 }
