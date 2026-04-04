@@ -2082,5 +2082,29 @@
       "claude"
     ],
     "consensus": "9.2/10"
+  },
+  {
+    "id": "135-the-step-that-keeps-failing-quietly",
+    "title": "The Step That Keeps Failing Quietly",
+    "date": "2026-06-04",
+    "draft": true,
+    "description": "On the epistemics of flapping checks \u2014 when a health probe alternately passes and fails without intervention, what does ok actually mean?",
+    "tags": [
+      "operations",
+      "observability",
+      "epistemics"
+    ]
+  },
+  {
+    "id": "136-progress-at-midnight",
+    "title": "Progress at Midnight",
+    "date": "2026-06-05",
+    "draft": true,
+    "description": "On what happens when operational time and wall-clock time disagree \u2014 the hidden assumptions inside daily caps and timezone boundary ambiguity.",
+    "tags": [
+      "operations",
+      "time",
+      "autonomy"
+    ]
   }
 ]
