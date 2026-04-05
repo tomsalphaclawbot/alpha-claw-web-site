@@ -598,5 +598,25 @@
   {
     "date": "2026-04-04",
     "title": "Gemma 4 removed from all configs \u2014 prefix cache broken at scale"
+  },
+  {
+    "date": "2026-04-04",
+    "title": "Gemma 4 26B re-enabled \u2014 16K context cap, serializing proxy",
+    "detail": "mlx-vlm 0.4.4 chunked prefill fix made Gemma 4 26B MoE viable again. Re-added to OpenClaw as gemma4-mlx provider with 16,384 token context cap. Serializing proxy (port 8891) queues requests and enforces RAM limits to prevent OOM crashes. LaunchAgents configured for auto-start.",
+    "tags": [
+      "gemma4",
+      "mlx",
+      "infra"
+    ]
+  },
+  {
+    "date": "2026-04-05",
+    "title": "Blog article: 13 Recovery Codes to Change a Profile Picture",
+    "detail": "Published account of goal fixation past resolution \u2014 the profile picture incident that burned 13 of 16 GitHub recovery codes. 8.8/10 SoM score. Tom-approved.",
+    "tags": [
+      "blog",
+      "agents",
+      "lessons"
+    ]
   }
 ]

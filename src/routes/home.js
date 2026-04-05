@@ -29,7 +29,7 @@ app.get('/', (_req, res) => {
         <ul class="timeline">
           ${progress
             .map(
-              (item) => `<li><div class="meta">${esc(item.date)}</div><strong><a href="/progress">${esc(item.title)}</a></strong><br/>${esc(item.summary)}</li>`
+              (item) => `<li><div class="meta">${esc(item.date)}</div><strong><a href="/progress">${esc(item.title)}</a></strong><br/>${esc(item.summary || item.detail || item.description || '')}</li>`
             )
             .join('')}
         </ul>
@@ -97,7 +97,7 @@ app.get('/progress', (_req, res) => {
               <li>
                 <div class="meta">${esc(item.date)} · ${esc((item.tags || []).join(', '))}</div>
                 <strong>${esc(item.title)}</strong><br/>
-                ${esc(item.summary)}
+                ${esc(item.summary || item.detail || item.description || '')}
               </li>`
             )
             .join('')}
