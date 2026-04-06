@@ -1,596 +1,453 @@
 {
-  "generatedAt": "2026-03-09T05:34:24.510349+00:00",
+  "generatedAt": "2026-04-05T14:58:39.706907+00:00",
   "summary": {
-    "launchAgentsManagedCount": 24,
-    "launchAgentsTotalCount": 27,
-    "openclawCronJobsCount": 1,
-    "systemCrontabEntriesCount": 3
+    "launchAgentsTotalCount": 37,
+    "launchAgentsActiveCount": 33,
+    "dockerContainersRunning": 36,
+    "systemCrontabEntriesCount": 6,
+    "openclawCronJobsCount": 1
   },
   "launchAgentsManaged": [
     {
-      "label": "ai.openclaw.beads-ui.ensure",
-      "file": "/Users/openclaw/Library/LaunchAgents/ai.openclaw.beads-ui.ensure.plist",
-      "managed": true,
-      "command": "/bin/bash /Users/openclaw/.openclaw/workspace/scripts/beads-ui-ensure.sh",
-      "workingDirectory": "",
-      "runAtLoad": true,
-      "keepAlive": false,
-      "stdoutPath": "/Users/openclaw/.openclaw/logs/beads-ui.ensure.log",
-      "stderrPath": "/Users/openclaw/.openclaw/logs/beads-ui.ensure.err.log"
-    },
-    {
-      "label": "ai.openclaw.beads-viewer.refresh",
-      "file": "/Users/openclaw/Library/LaunchAgents/ai.openclaw.beads-viewer.refresh.plist",
-      "managed": true,
-      "command": "/bin/bash /Users/openclaw/.openclaw/workspace/scripts/beads-viewer-refresh.sh",
-      "workingDirectory": "",
-      "runAtLoad": true,
-      "keepAlive": false,
-      "stdoutPath": "/Users/openclaw/.openclaw/logs/beads-viewer.refresh.log",
-      "stderrPath": "/Users/openclaw/.openclaw/logs/beads-viewer.refresh.err.log"
-    },
-    {
-      "label": "ai.openclaw.beads-viewer.serve",
-      "file": "/Users/openclaw/Library/LaunchAgents/ai.openclaw.beads-viewer.serve.plist",
-      "managed": true,
-      "command": "/bin/bash /Users/openclaw/.openclaw/workspace/scripts/beads-viewer-serve.sh",
-      "workingDirectory": "",
-      "runAtLoad": true,
-      "keepAlive": true,
-      "stdoutPath": "/Users/openclaw/.openclaw/logs/beads-viewer.serve.log",
-      "stderrPath": "/Users/openclaw/.openclaw/logs/beads-viewer.serve.err.log"
-    },
-    {
-      "label": "ai.openclaw.caffeinate",
-      "file": "/Users/openclaw/Library/LaunchAgents/ai.openclaw.caffeinate.plist",
-      "managed": true,
-      "command": "/usr/bin/caffeinate -dims",
-      "workingDirectory": "",
-      "runAtLoad": true,
-      "keepAlive": true,
-      "stdoutPath": "/tmp/ai.openclaw.caffeinate.out",
-      "stderrPath": "/tmp/ai.openclaw.caffeinate.err"
-    },
-    {
-      "label": "ai.openclaw.gateway",
-      "file": "/Users/openclaw/Library/LaunchAgents/ai.openclaw.gateway.plist",
-      "managed": true,
-      "command": "/opt/homebrew/opt/node/bin/node /opt/homebrew/lib/node_modules/openclaw/dist/index.js gateway --port 18789",
-      "workingDirectory": "",
-      "runAtLoad": true,
-      "keepAlive": true,
-      "stdoutPath": "/Users/openclaw/.openclaw/logs/gateway.log",
-      "stderrPath": "/Users/openclaw/.openclaw/logs/gateway.err.log"
-    },
-    {
-      "label": "com.openclaw.chatterbox-api",
-      "file": "/Users/openclaw/Library/LaunchAgents/com.openclaw.chatterbox-api.plist",
-      "managed": true,
-      "command": "/bin/bash /Users/openclaw/.openclaw/workspace/projects/chatterbox/scripts/start-local-api.sh",
-      "workingDirectory": "",
-      "runAtLoad": true,
-      "keepAlive": true,
-      "stdoutPath": "/Users/openclaw/.openclaw/logs/chatterbox-api.out.log",
-      "stderrPath": "/Users/openclaw/.openclaw/logs/chatterbox-api.err.log"
-    },
-    {
-      "label": "com.openclaw.chatterbox-ui",
-      "file": "/Users/openclaw/Library/LaunchAgents/com.openclaw.chatterbox-ui.plist",
-      "managed": true,
-      "command": "/bin/bash /Users/openclaw/.openclaw/workspace/projects/chatterbox/scripts/start-gradio-ui.sh",
-      "workingDirectory": "",
-      "runAtLoad": true,
-      "keepAlive": true,
-      "stdoutPath": "/Users/openclaw/.openclaw/logs/chatterbox-ui.out.log",
-      "stderrPath": "/Users/openclaw/.openclaw/logs/chatterbox-ui.err.log"
-    },
-    {
-      "label": "com.openclaw.mission-control",
-      "file": "/Users/openclaw/Library/LaunchAgents/com.openclaw.mission-control.plist",
-      "managed": true,
-      "command": "/opt/homebrew/bin/node .next/standalone/server.js",
-      "workingDirectory": "/Users/openclaw/.openclaw/workspace/projects/mission-control",
-      "runAtLoad": true,
-      "keepAlive": true,
-      "stdoutPath": "/tmp/mission-control.log",
-      "stderrPath": "/tmp/mission-control-error.log"
-    },
-    {
-      "label": "com.openclaw.novnc",
-      "file": "/Users/openclaw/Library/LaunchAgents/com.openclaw.novnc.plist",
-      "managed": true,
-      "command": "/Users/openclaw/.openclaw/workspace/scripts/start-novnc.sh",
-      "workingDirectory": "",
-      "runAtLoad": true,
-      "keepAlive": true,
-      "stdoutPath": "/Users/openclaw/.openclaw/logs/novnc.out.log",
-      "stderrPath": "/Users/openclaw/.openclaw/logs/novnc.err.log"
-    },
-    {
-      "label": "com.openclaw.paperclip",
-      "file": "/Users/openclaw/Library/LaunchAgents/com.openclaw.paperclip.plist",
-      "managed": true,
-      "command": "/bin/bash /Users/openclaw/.openclaw/workspace/projects/paperclip/scripts/run-service.sh",
-      "workingDirectory": "/Users/openclaw/.openclaw/workspace/projects/paperclip",
-      "runAtLoad": true,
-      "keepAlive": true,
-      "stdoutPath": "/Users/openclaw/.openclaw/logs/paperclip.out.log",
-      "stderrPath": "/Users/openclaw/.openclaw/logs/paperclip.err.log"
-    },
-    {
-      "label": "com.openclaw.tunnel-beads",
-      "file": "/Users/openclaw/Library/LaunchAgents/com.openclaw.tunnel-beads.plist",
-      "managed": true,
-      "command": "/opt/homebrew/bin/cloudflared tunnel --config /Users/openclaw/.cloudflared/config-beads.yml run a576f6b2-0366-4904-955d-c589d1cc2a71",
-      "workingDirectory": "",
-      "runAtLoad": true,
-      "keepAlive": true,
-      "stdoutPath": "/Users/openclaw/.openclaw/logs/cloudflared-beads.out.log",
-      "stderrPath": "/Users/openclaw/.openclaw/logs/cloudflared-beads.err.log"
-    },
-    {
-      "label": "com.openclaw.tunnel-chatterbox",
-      "file": "/Users/openclaw/Library/LaunchAgents/com.openclaw.tunnel-chatterbox.plist",
-      "managed": true,
-      "command": "/opt/homebrew/bin/cloudflared tunnel --config /Users/openclaw/.cloudflared/config-chatterbox.yml run c8d31938-1e0e-491c-b559-31cad904d506",
-      "workingDirectory": "",
-      "runAtLoad": true,
-      "keepAlive": true,
-      "stdoutPath": "/Users/openclaw/.openclaw/logs/cloudflared-chatterbox.out.log",
-      "stderrPath": "/Users/openclaw/.openclaw/logs/cloudflared-chatterbox.err.log"
-    },
-    {
-      "label": "com.openclaw.tunnel-dashboard",
-      "file": "/Users/openclaw/Library/LaunchAgents/com.openclaw.tunnel-dashboard.plist",
-      "managed": true,
-      "command": "/opt/homebrew/bin/cloudflared tunnel --config /Users/openclaw/.cloudflared/config-dashboard.yml run e66fcc5a-45ea-4a60-a2fa-8ce87aea1718",
-      "workingDirectory": "",
-      "runAtLoad": true,
-      "keepAlive": true,
-      "stdoutPath": "/Users/openclaw/.openclaw/logs/cloudflared-dashboard.out.log",
-      "stderrPath": "/Users/openclaw/.openclaw/logs/cloudflared-dashboard.err.log"
-    },
-    {
-      "label": "com.openclaw.tunnel-hello-world-nextjs",
-      "file": "/Users/openclaw/Library/LaunchAgents/com.openclaw.tunnel-hello-world-nextjs.plist",
-      "managed": true,
-      "command": "/opt/homebrew/bin/cloudflared tunnel --config /Users/openclaw/.cloudflared/config-hello-world-nextjs.yml run 80329317-3ccb-431a-935c-e39caa86908a",
-      "workingDirectory": "",
-      "runAtLoad": true,
-      "keepAlive": true,
-      "stdoutPath": "/tmp/cloudflared-hello-world-nextjs.log",
-      "stderrPath": "/tmp/cloudflared-hello-world-nextjs.log"
-    },
-    {
-      "label": "com.openclaw.tunnel-mission-control",
-      "file": "/Users/openclaw/Library/LaunchAgents/com.openclaw.tunnel-mission-control.plist",
-      "managed": true,
-      "command": "/opt/homebrew/bin/cloudflared tunnel --config /Users/openclaw/.cloudflared/config-mission-control.yml run",
-      "workingDirectory": "",
-      "runAtLoad": true,
-      "keepAlive": true,
-      "stdoutPath": "/tmp/cloudflared-mission-control.log",
-      "stderrPath": "/tmp/cloudflared-mission-control-error.log"
-    },
-    {
-      "label": "com.openclaw.tunnel-n8n-local",
-      "file": "/Users/openclaw/Library/LaunchAgents/com.openclaw.tunnel-n8n-local.plist",
-      "managed": true,
-      "command": "/opt/homebrew/bin/cloudflared tunnel --config /Users/openclaw/.cloudflared/config-n8n-local.yml run f7a1edb4-de1a-44f3-89c9-8345f2993be0",
-      "workingDirectory": "",
-      "runAtLoad": true,
-      "keepAlive": true,
-      "stdoutPath": "/Users/openclaw/.openclaw/logs/cloudflared-n8n-local.out.log",
-      "stderrPath": "/Users/openclaw/.openclaw/logs/cloudflared-n8n-local.err.log"
-    },
-    {
-      "label": "com.openclaw.tunnel-novnc",
-      "file": "/Users/openclaw/Library/LaunchAgents/com.openclaw.tunnel-novnc.plist",
-      "managed": true,
-      "command": "/opt/homebrew/bin/cloudflared tunnel --config /Users/openclaw/.cloudflared/config-novnc.yml run f0d9a315-a86f-4502-88b1-852ef5301560",
-      "workingDirectory": "",
-      "runAtLoad": true,
-      "keepAlive": true,
-      "stdoutPath": "/Users/openclaw/.openclaw/logs/cloudflared-novnc.out.log",
-      "stderrPath": "/Users/openclaw/.openclaw/logs/cloudflared-novnc.err.log"
-    },
-    {
-      "label": "com.openclaw.tunnel-paperclip",
-      "file": "/Users/openclaw/Library/LaunchAgents/com.openclaw.tunnel-paperclip.plist",
-      "managed": true,
-      "command": "/opt/homebrew/bin/cloudflared tunnel --config /Users/openclaw/.cloudflared/config-paperclip.yml run 4edd6ea0-1df4-4d3b-98e1-e431db0b9ce3",
-      "workingDirectory": "",
-      "runAtLoad": true,
-      "keepAlive": true,
-      "stdoutPath": "/Users/openclaw/.openclaw/logs/cloudflared-paperclip.out.log",
-      "stderrPath": "/Users/openclaw/.openclaw/logs/cloudflared-paperclip.err.log"
-    },
-    {
-      "label": "com.openclaw.tunnel-resonance",
-      "file": "/Users/openclaw/Library/LaunchAgents/com.openclaw.tunnel-resonance.plist",
-      "managed": true,
-      "command": "/opt/homebrew/bin/cloudflared tunnel --config /Users/openclaw/.cloudflared/config-resonance.yml run 0e8f856e-f207-4049-8739-5d20b000de3e",
-      "workingDirectory": "",
-      "runAtLoad": true,
-      "keepAlive": true,
-      "stdoutPath": "/Users/openclaw/.openclaw/logs/cloudflared-resonance.out.log",
-      "stderrPath": "/Users/openclaw/.openclaw/logs/cloudflared-resonance.err.log"
-    },
-    {
-      "label": "com.openclaw.tunnel-spacetimedb-chat",
-      "file": "/Users/openclaw/Library/LaunchAgents/com.openclaw.tunnel-spacetimedb-chat.plist",
-      "managed": true,
-      "command": "/opt/homebrew/bin/cloudflared tunnel --config /Users/openclaw/.cloudflared/config-spacetimedb-chat.yml run 3c119ad2-6e8e-4608-a653-b1b6ad39d965",
-      "workingDirectory": "",
-      "runAtLoad": true,
-      "keepAlive": true,
-      "stdoutPath": "/Users/openclaw/.openclaw/logs/cloudflared-spacetimedb-chat.out.log",
-      "stderrPath": "/Users/openclaw/.openclaw/logs/cloudflared-spacetimedb-chat.err.log"
-    },
-    {
-      "label": "homebrew.mxcl.cloudflared",
-      "file": "/Users/openclaw/Library/LaunchAgents/homebrew.mxcl.cloudflared.plist",
-      "managed": true,
-      "command": "/opt/homebrew/opt/cloudflared/bin/cloudflared",
-      "workingDirectory": "",
-      "runAtLoad": true,
-      "keepAlive": true,
-      "stdoutPath": "/opt/homebrew/var/log/cloudflared.log",
-      "stderrPath": "/opt/homebrew/var/log/cloudflared.log"
-    },
-    {
-      "label": "work.tomsalphaclawbot.helloworld",
-      "file": "/Users/openclaw/Library/LaunchAgents/work.tomsalphaclawbot.helloworld.plist",
-      "managed": true,
-      "command": "/usr/bin/python3 -m http.server 8099",
-      "workingDirectory": "/Users/openclaw/.openclaw/workspace/projects/hello-world",
-      "runAtLoad": true,
-      "keepAlive": true,
-      "stdoutPath": "/tmp/helloworld-server.log",
-      "stderrPath": "/tmp/helloworld-server.log"
-    },
-    {
-      "label": "work.tomsalphaclawbot.mission-control",
-      "file": "/Users/openclaw/Library/LaunchAgents/work.tomsalphaclawbot.mission-control.plist",
-      "managed": true,
-      "command": "/opt/homebrew/bin/node /Users/openclaw/.openclaw/workspace/projects/mission-control/node_modules/.bin/next start --hostname 0.0.0.0 --port 3005",
-      "workingDirectory": "/Users/openclaw/.openclaw/workspace/projects/mission-control",
-      "runAtLoad": true,
-      "keepAlive": true,
-      "stdoutPath": "/tmp/mission-control.log",
-      "stderrPath": "/tmp/mission-control.log"
-    },
-    {
-      "label": "work.tomsalphaclawbot.tunnel-helloworld",
-      "file": "/Users/openclaw/Library/LaunchAgents/work.tomsalphaclawbot.tunnel-helloworld.plist",
-      "managed": true,
-      "command": "/opt/homebrew/bin/cloudflared tunnel --config /Users/openclaw/.cloudflared/config-helloworld.yml run 61e0a54b-2dcd-463b-8139-6ec16942f75f",
-      "workingDirectory": "",
-      "runAtLoad": true,
-      "keepAlive": true,
-      "stdoutPath": "/tmp/cloudflared-helloworld.log",
-      "stderrPath": "/tmp/cloudflared-helloworld.log"
-    }
-  ],
-  "launchAgentsAll": [
-    {
       "label": "Voicetypr",
-      "file": "/Users/openclaw/Library/LaunchAgents/Voicetypr.plist",
-      "managed": false,
       "command": "/Applications/Voicetypr.app/Contents/MacOS/voicetypr",
-      "workingDirectory": "",
-      "runAtLoad": true,
       "keepAlive": false,
-      "stdoutPath": "",
-      "stderrPath": ""
+      "runAtLoad": true
     },
     {
-      "label": "ai.openclaw.beads-ui.ensure",
-      "file": "/Users/openclaw/Library/LaunchAgents/ai.openclaw.beads-ui.ensure.plist",
-      "managed": true,
-      "command": "/bin/bash /Users/openclaw/.openclaw/workspace/scripts/beads-ui-ensure.sh",
-      "workingDirectory": "",
-      "runAtLoad": true,
+      "label": "ai.alpha.activity-refresh",
+      "command": "/opt/homebrew/bin/python3 /Users/openclaw/.openclaw/workspace/projects/alpha-claw-web-site/scripts/refresh-activity-json.py",
       "keepAlive": false,
-      "stdoutPath": "/Users/openclaw/.openclaw/logs/beads-ui.ensure.log",
-      "stderrPath": "/Users/openclaw/.openclaw/logs/beads-ui.ensure.err.log"
+      "runAtLoad": true
     },
     {
-      "label": "ai.openclaw.beads-viewer.refresh",
-      "file": "/Users/openclaw/Library/LaunchAgents/ai.openclaw.beads-viewer.refresh.plist",
-      "managed": true,
-      "command": "/bin/bash /Users/openclaw/.openclaw/workspace/scripts/beads-viewer-refresh.sh",
-      "workingDirectory": "",
-      "runAtLoad": true,
+      "label": "ai.alpha.blog-ratings-retry",
+      "command": "/bin/bash -lc /Users/openclaw/.openclaw/workspace/scripts/retry-unrated-ratings-daily.sh",
       "keepAlive": false,
-      "stdoutPath": "/Users/openclaw/.openclaw/logs/beads-viewer.refresh.log",
-      "stderrPath": "/Users/openclaw/.openclaw/logs/beads-viewer.refresh.err.log"
+      "runAtLoad": false
     },
     {
-      "label": "ai.openclaw.beads-viewer.serve",
-      "file": "/Users/openclaw/Library/LaunchAgents/ai.openclaw.beads-viewer.serve.plist",
-      "managed": true,
-      "command": "/bin/bash /Users/openclaw/.openclaw/workspace/scripts/beads-viewer-serve.sh",
-      "workingDirectory": "",
-      "runAtLoad": true,
+      "label": "ai.alpha.public-configs-weekly",
+      "command": "/bin/bash /Users/openclaw/.openclaw/workspace/scripts/public-configs-weekly-publish.sh",
+      "keepAlive": false,
+      "runAtLoad": false
+    },
+    {
+      "label": "ai.hermes.gateway",
+      "command": "/Users/Shared/hermes/agent/venv/bin/python -m hermes_cli.main gateway run --replace",
       "keepAlive": true,
-      "stdoutPath": "/Users/openclaw/.openclaw/logs/beads-viewer.serve.log",
-      "stderrPath": "/Users/openclaw/.openclaw/logs/beads-viewer.serve.err.log"
+      "runAtLoad": true
     },
     {
       "label": "ai.openclaw.caffeinate",
-      "file": "/Users/openclaw/Library/LaunchAgents/ai.openclaw.caffeinate.plist",
-      "managed": true,
       "command": "/usr/bin/caffeinate -dims",
-      "workingDirectory": "",
-      "runAtLoad": true,
       "keepAlive": true,
-      "stdoutPath": "/tmp/ai.openclaw.caffeinate.out",
-      "stderrPath": "/tmp/ai.openclaw.caffeinate.err"
+      "runAtLoad": true
     },
     {
       "label": "ai.openclaw.gateway",
-      "file": "/Users/openclaw/Library/LaunchAgents/ai.openclaw.gateway.plist",
-      "managed": true,
-      "command": "/opt/homebrew/opt/node/bin/node /opt/homebrew/lib/node_modules/openclaw/dist/index.js gateway --port 18789",
-      "workingDirectory": "",
-      "runAtLoad": true,
+      "command": "/opt/homebrew/opt/node@22/bin/node /opt/homebrew/lib/node_modules/openclaw/dist/index.js gateway --port 18789",
       "keepAlive": true,
-      "stdoutPath": "/Users/openclaw/.openclaw/logs/gateway.log",
-      "stderrPath": "/Users/openclaw/.openclaw/logs/gateway.err.log"
+      "runAtLoad": true
+    },
+    {
+      "label": "com.cloudflare.llm-wiki-tunnel",
+      "command": "/opt/homebrew/bin/cloudflared tunnel --config /Users/openclaw/.cloudflared/config-llm-wiki.yml run",
+      "keepAlive": true,
+      "runAtLoad": true
     },
     {
       "label": "com.google.keystone.agent",
-      "file": "/Users/openclaw/Library/LaunchAgents/com.google.keystone.agent.plist",
-      "managed": false,
       "command": "",
-      "workingDirectory": "",
-      "runAtLoad": false,
       "keepAlive": false,
-      "stdoutPath": "",
-      "stderrPath": ""
+      "runAtLoad": false
     },
     {
       "label": "com.google.keystone.xpcservice",
-      "file": "/Users/openclaw/Library/LaunchAgents/com.google.keystone.xpcservice.plist",
-      "managed": false,
       "command": "",
-      "workingDirectory": "",
-      "runAtLoad": false,
       "keepAlive": false,
-      "stdoutPath": "",
-      "stderrPath": ""
+      "runAtLoad": false
     },
     {
       "label": "com.openclaw.chatterbox-api",
-      "file": "/Users/openclaw/Library/LaunchAgents/com.openclaw.chatterbox-api.plist",
-      "managed": true,
       "command": "/bin/bash /Users/openclaw/.openclaw/workspace/projects/chatterbox/scripts/start-local-api.sh",
-      "workingDirectory": "",
-      "runAtLoad": true,
       "keepAlive": true,
-      "stdoutPath": "/Users/openclaw/.openclaw/logs/chatterbox-api.out.log",
-      "stderrPath": "/Users/openclaw/.openclaw/logs/chatterbox-api.err.log"
+      "runAtLoad": true
     },
     {
       "label": "com.openclaw.chatterbox-ui",
-      "file": "/Users/openclaw/Library/LaunchAgents/com.openclaw.chatterbox-ui.plist",
-      "managed": true,
       "command": "/bin/bash /Users/openclaw/.openclaw/workspace/projects/chatterbox/scripts/start-gradio-ui.sh",
-      "workingDirectory": "",
-      "runAtLoad": true,
       "keepAlive": true,
-      "stdoutPath": "/Users/openclaw/.openclaw/logs/chatterbox-ui.out.log",
-      "stderrPath": "/Users/openclaw/.openclaw/logs/chatterbox-ui.err.log"
+      "runAtLoad": true
     },
     {
       "label": "com.openclaw.mission-control",
-      "file": "/Users/openclaw/Library/LaunchAgents/com.openclaw.mission-control.plist",
-      "managed": true,
-      "command": "/opt/homebrew/bin/node .next/standalone/server.js",
-      "workingDirectory": "/Users/openclaw/.openclaw/workspace/projects/mission-control",
-      "runAtLoad": true,
+      "command": "/opt/homebrew/opt/node@22/bin/node .next/standalone/server.js",
       "keepAlive": true,
-      "stdoutPath": "/tmp/mission-control.log",
-      "stderrPath": "/tmp/mission-control-error.log"
+      "runAtLoad": true
     },
     {
       "label": "com.openclaw.novnc",
-      "file": "/Users/openclaw/Library/LaunchAgents/com.openclaw.novnc.plist",
-      "managed": true,
       "command": "/Users/openclaw/.openclaw/workspace/scripts/start-novnc.sh",
-      "workingDirectory": "",
-      "runAtLoad": true,
       "keepAlive": true,
-      "stdoutPath": "/Users/openclaw/.openclaw/logs/novnc.out.log",
-      "stderrPath": "/Users/openclaw/.openclaw/logs/novnc.err.log"
+      "runAtLoad": true
+    },
+    {
+      "label": "com.openclaw.obsidian-vault-sync",
+      "command": "/bin/bash /Users/openclaw/.openclaw/workspace/scripts/obsidian-vault-sync.sh",
+      "keepAlive": false,
+      "runAtLoad": true
     },
     {
       "label": "com.openclaw.paperclip",
-      "file": "/Users/openclaw/Library/LaunchAgents/com.openclaw.paperclip.plist",
-      "managed": true,
       "command": "/bin/bash /Users/openclaw/.openclaw/workspace/projects/paperclip/scripts/run-service.sh",
-      "workingDirectory": "/Users/openclaw/.openclaw/workspace/projects/paperclip",
-      "runAtLoad": true,
       "keepAlive": true,
-      "stdoutPath": "/Users/openclaw/.openclaw/logs/paperclip.out.log",
-      "stderrPath": "/Users/openclaw/.openclaw/logs/paperclip.err.log"
-    },
-    {
-      "label": "com.openclaw.tunnel-beads",
-      "file": "/Users/openclaw/Library/LaunchAgents/com.openclaw.tunnel-beads.plist",
-      "managed": true,
-      "command": "/opt/homebrew/bin/cloudflared tunnel --config /Users/openclaw/.cloudflared/config-beads.yml run a576f6b2-0366-4904-955d-c589d1cc2a71",
-      "workingDirectory": "",
-      "runAtLoad": true,
-      "keepAlive": true,
-      "stdoutPath": "/Users/openclaw/.openclaw/logs/cloudflared-beads.out.log",
-      "stderrPath": "/Users/openclaw/.openclaw/logs/cloudflared-beads.err.log"
+      "runAtLoad": true
     },
     {
       "label": "com.openclaw.tunnel-chatterbox",
-      "file": "/Users/openclaw/Library/LaunchAgents/com.openclaw.tunnel-chatterbox.plist",
-      "managed": true,
       "command": "/opt/homebrew/bin/cloudflared tunnel --config /Users/openclaw/.cloudflared/config-chatterbox.yml run c8d31938-1e0e-491c-b559-31cad904d506",
-      "workingDirectory": "",
-      "runAtLoad": true,
       "keepAlive": true,
-      "stdoutPath": "/Users/openclaw/.openclaw/logs/cloudflared-chatterbox.out.log",
-      "stderrPath": "/Users/openclaw/.openclaw/logs/cloudflared-chatterbox.err.log"
+      "runAtLoad": true
     },
     {
       "label": "com.openclaw.tunnel-dashboard",
-      "file": "/Users/openclaw/Library/LaunchAgents/com.openclaw.tunnel-dashboard.plist",
-      "managed": true,
       "command": "/opt/homebrew/bin/cloudflared tunnel --config /Users/openclaw/.cloudflared/config-dashboard.yml run e66fcc5a-45ea-4a60-a2fa-8ce87aea1718",
-      "workingDirectory": "",
-      "runAtLoad": true,
       "keepAlive": true,
-      "stdoutPath": "/Users/openclaw/.openclaw/logs/cloudflared-dashboard.out.log",
-      "stderrPath": "/Users/openclaw/.openclaw/logs/cloudflared-dashboard.err.log"
+      "runAtLoad": true
     },
     {
       "label": "com.openclaw.tunnel-hello-world-nextjs",
-      "file": "/Users/openclaw/Library/LaunchAgents/com.openclaw.tunnel-hello-world-nextjs.plist",
-      "managed": true,
-      "command": "/opt/homebrew/bin/cloudflared tunnel --config /Users/openclaw/.cloudflared/config-hello-world-nextjs.yml run 80329317-3ccb-431a-935c-e39caa86908a",
-      "workingDirectory": "",
-      "runAtLoad": true,
+      "command": "/opt/homebrew/bin/cloudflared tunnel --config /Users/openclaw/.cloudflared/config-hello-world-nextjs.yml run 80329317-3ccb-431a-935c-e39caa8",
       "keepAlive": true,
-      "stdoutPath": "/tmp/cloudflared-hello-world-nextjs.log",
-      "stderrPath": "/tmp/cloudflared-hello-world-nextjs.log"
+      "runAtLoad": true
     },
     {
       "label": "com.openclaw.tunnel-mission-control",
-      "file": "/Users/openclaw/Library/LaunchAgents/com.openclaw.tunnel-mission-control.plist",
-      "managed": true,
       "command": "/opt/homebrew/bin/cloudflared tunnel --config /Users/openclaw/.cloudflared/config-mission-control.yml run",
-      "workingDirectory": "",
-      "runAtLoad": true,
       "keepAlive": true,
-      "stdoutPath": "/tmp/cloudflared-mission-control.log",
-      "stderrPath": "/tmp/cloudflared-mission-control-error.log"
+      "runAtLoad": true
     },
     {
       "label": "com.openclaw.tunnel-n8n-local",
-      "file": "/Users/openclaw/Library/LaunchAgents/com.openclaw.tunnel-n8n-local.plist",
-      "managed": true,
       "command": "/opt/homebrew/bin/cloudflared tunnel --config /Users/openclaw/.cloudflared/config-n8n-local.yml run f7a1edb4-de1a-44f3-89c9-8345f2993be0",
-      "workingDirectory": "",
-      "runAtLoad": true,
       "keepAlive": true,
-      "stdoutPath": "/Users/openclaw/.openclaw/logs/cloudflared-n8n-local.out.log",
-      "stderrPath": "/Users/openclaw/.openclaw/logs/cloudflared-n8n-local.err.log"
+      "runAtLoad": true
     },
     {
       "label": "com.openclaw.tunnel-novnc",
-      "file": "/Users/openclaw/Library/LaunchAgents/com.openclaw.tunnel-novnc.plist",
-      "managed": true,
       "command": "/opt/homebrew/bin/cloudflared tunnel --config /Users/openclaw/.cloudflared/config-novnc.yml run f0d9a315-a86f-4502-88b1-852ef5301560",
-      "workingDirectory": "",
-      "runAtLoad": true,
       "keepAlive": true,
-      "stdoutPath": "/Users/openclaw/.openclaw/logs/cloudflared-novnc.out.log",
-      "stderrPath": "/Users/openclaw/.openclaw/logs/cloudflared-novnc.err.log"
+      "runAtLoad": true
     },
     {
       "label": "com.openclaw.tunnel-paperclip",
-      "file": "/Users/openclaw/Library/LaunchAgents/com.openclaw.tunnel-paperclip.plist",
-      "managed": true,
       "command": "/opt/homebrew/bin/cloudflared tunnel --config /Users/openclaw/.cloudflared/config-paperclip.yml run 4edd6ea0-1df4-4d3b-98e1-e431db0b9ce3",
-      "workingDirectory": "",
-      "runAtLoad": true,
       "keepAlive": true,
-      "stdoutPath": "/Users/openclaw/.openclaw/logs/cloudflared-paperclip.out.log",
-      "stderrPath": "/Users/openclaw/.openclaw/logs/cloudflared-paperclip.err.log"
+      "runAtLoad": true
     },
     {
       "label": "com.openclaw.tunnel-resonance",
-      "file": "/Users/openclaw/Library/LaunchAgents/com.openclaw.tunnel-resonance.plist",
-      "managed": true,
       "command": "/opt/homebrew/bin/cloudflared tunnel --config /Users/openclaw/.cloudflared/config-resonance.yml run 0e8f856e-f207-4049-8739-5d20b000de3e",
-      "workingDirectory": "",
-      "runAtLoad": true,
       "keepAlive": true,
-      "stdoutPath": "/Users/openclaw/.openclaw/logs/cloudflared-resonance.out.log",
-      "stderrPath": "/Users/openclaw/.openclaw/logs/cloudflared-resonance.err.log"
+      "runAtLoad": true
     },
     {
       "label": "com.openclaw.tunnel-spacetimedb-chat",
-      "file": "/Users/openclaw/Library/LaunchAgents/com.openclaw.tunnel-spacetimedb-chat.plist",
-      "managed": true,
-      "command": "/opt/homebrew/bin/cloudflared tunnel --config /Users/openclaw/.cloudflared/config-spacetimedb-chat.yml run 3c119ad2-6e8e-4608-a653-b1b6ad39d965",
-      "workingDirectory": "",
-      "runAtLoad": true,
+      "command": "/opt/homebrew/bin/cloudflared tunnel --config /Users/openclaw/.cloudflared/config-spacetimedb-chat.yml run 3c119ad2-6e8e-4608-a653-b1b6ad39d",
       "keepAlive": true,
-      "stdoutPath": "/Users/openclaw/.openclaw/logs/cloudflared-spacetimedb-chat.out.log",
-      "stderrPath": "/Users/openclaw/.openclaw/logs/cloudflared-spacetimedb-chat.err.log"
+      "runAtLoad": true
+    },
+    {
+      "label": "com.openclaw.tunnel-voice-autoresearch",
+      "command": "/opt/homebrew/bin/cloudflared tunnel --config /Users/openclaw/.cloudflared/config-voice-autoresearch.yml run 007e2148-2438-48d5-b6e5-3f08bfc",
+      "keepAlive": true,
+      "runAtLoad": true
+    },
+    {
+      "label": "com.openclaw.vpar-dashboard",
+      "command": "/opt/homebrew/bin/python3 /Users/openclaw/.openclaw/workspace/projects/voice-prompt-autoresearch/dashboard/api.py --port 8420 --host 0.0.0.0",
+      "keepAlive": true,
+      "runAtLoad": true
     },
     {
       "label": "homebrew.mxcl.cloudflared",
-      "file": "/Users/openclaw/Library/LaunchAgents/homebrew.mxcl.cloudflared.plist",
-      "managed": true,
       "command": "/opt/homebrew/opt/cloudflared/bin/cloudflared",
-      "workingDirectory": "",
-      "runAtLoad": true,
       "keepAlive": true,
-      "stdoutPath": "/opt/homebrew/var/log/cloudflared.log",
-      "stderrPath": "/opt/homebrew/var/log/cloudflared.log"
+      "runAtLoad": true
+    },
+    {
+      "label": "work.tomsalphaclawbot.gemma4-mlx",
+      "command": "/bin/bash /Users/openclaw/.openclaw/workspace/projects/gemma4-local/gemma4-server.sh --fg",
+      "keepAlive": true,
+      "runAtLoad": true
+    },
+    {
+      "label": "work.tomsalphaclawbot.gemma4-proxy",
+      "command": "/usr/bin/python3 /Users/openclaw/.openclaw/workspace/projects/gemma4-local/gemma4-proxy.py",
+      "keepAlive": true,
+      "runAtLoad": true
     },
     {
       "label": "work.tomsalphaclawbot.helloworld",
-      "file": "/Users/openclaw/Library/LaunchAgents/work.tomsalphaclawbot.helloworld.plist",
-      "managed": true,
       "command": "/usr/bin/python3 -m http.server 8099",
-      "workingDirectory": "/Users/openclaw/.openclaw/workspace/projects/hello-world",
-      "runAtLoad": true,
       "keepAlive": true,
-      "stdoutPath": "/tmp/helloworld-server.log",
-      "stderrPath": "/tmp/helloworld-server.log"
+      "runAtLoad": true
     },
     {
       "label": "work.tomsalphaclawbot.mission-control",
-      "file": "/Users/openclaw/Library/LaunchAgents/work.tomsalphaclawbot.mission-control.plist",
-      "managed": true,
-      "command": "/opt/homebrew/bin/node /Users/openclaw/.openclaw/workspace/projects/mission-control/node_modules/.bin/next start --hostname 0.0.0.0 --port 3005",
-      "workingDirectory": "/Users/openclaw/.openclaw/workspace/projects/mission-control",
-      "runAtLoad": true,
+      "command": "/opt/homebrew/bin/node /Users/openclaw/.openclaw/workspace/projects/mission-control/node_modules/.bin/next start --hostname 0.0.0.0 --port 3",
       "keepAlive": true,
-      "stdoutPath": "/tmp/mission-control.log",
-      "stderrPath": "/tmp/mission-control.log"
+      "runAtLoad": true
     },
     {
       "label": "work.tomsalphaclawbot.tunnel-helloworld",
-      "file": "/Users/openclaw/Library/LaunchAgents/work.tomsalphaclawbot.tunnel-helloworld.plist",
-      "managed": true,
       "command": "/opt/homebrew/bin/cloudflared tunnel --config /Users/openclaw/.cloudflared/config-helloworld.yml run 61e0a54b-2dcd-463b-8139-6ec16942f75f",
-      "workingDirectory": "",
-      "runAtLoad": true,
       "keepAlive": true,
-      "stdoutPath": "/tmp/cloudflared-helloworld.log",
-      "stderrPath": "/tmp/cloudflared-helloworld.log"
+      "runAtLoad": true
     }
   ],
-  "openclawCron": {
-    "raw": "ID                                   Name                     Schedule                         Next       Last       Status    Target    Agent ID   Model               \n96f50b78-8933-427a-9081-28568308ba91 heartbeat:30m-holistic   every 30m                        in 8m      22m ago    ok        isolated  heartbeat  -",
-    "rows": [
+  "dockerContainers": [
+    {
+      "name": "alpha-claw-web-site",
+      "image": "alpha-claw-web-site-alpha-claw-web-site",
+      "status": "Up 3 minutes",
+      "ports": "0.0.0.0:8787->8080/tcp, [::]:8787->8080/tcp"
+    },
+    {
+      "name": "alpha-claw-public-configs",
+      "image": "alpha-claw-public-configs-alpha-claw-public-configs",
+      "status": "Up 5 hours",
+      "ports": "0.0.0.0:8788->8080/tcp, [::]:8788->8080/tcp"
+    },
+    {
+      "name": "llm-wiki",
+      "image": "llm-wiki-wiki",
+      "status": "Up 18 hours",
+      "ports": "0.0.0.0:8070->8000/tcp, [::]:8070->8000/tcp"
+    },
+    {
+      "name": "hermes-alphaclaw-site",
+      "image": "hermes-alphaclaw-site-hermes-site",
+      "status": "Up 19 hours",
+      "ports": "0.0.0.0:8790->8090/tcp, [::]:8790->8090/tcp"
+    },
+    {
+      "name": "cloudflared-hermes-hello-world",
+      "image": "cloudflare/cloudflared:latest",
+      "status": "Up 19 hours",
+      "ports": ""
+    },
+    {
+      "name": "hermes-hello-world-app",
+      "image": "hello-world-tunnel-hello-world-app",
+      "status": "Up 19 hours",
+      "ports": "0.0.0.0:8791->8091/tcp, [::]:8791->8091/tcp"
+    },
+    {
+      "name": "cloudflared-hermes-alphaclaw-site",
+      "image": "cloudflare/cloudflared:latest",
+      "status": "Up 19 hours",
+      "ports": ""
+    },
+    {
+      "name": "vapi-openclaw-api",
+      "image": "vapi-openclaw-api",
+      "status": "Up 19 hours",
+      "ports": "0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp"
+    },
+    {
+      "name": "mission-control",
+      "image": "mission-control-mission-control",
+      "status": "Up 19 hours (unhealthy)",
+      "ports": "0.0.0.0:3005->3000/tcp, [::]:3005->3000/tcp"
+    },
+    {
+      "name": "resonance-selfhost-app-1",
+      "image": "node:20-alpine",
+      "status": "Up 19 hours (healthy)",
+      "ports": "0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp"
+    },
+    {
+      "name": "vapi-openclaw-worker",
+      "image": "vapi-openclaw-worker",
+      "status": "Up 19 hours",
+      "ports": ""
+    },
+    {
+      "name": "hello-world-nextjs",
+      "image": "hello-world-nextjs-hello-world-nextjs",
+      "status": "Up 19 hours",
+      "ports": "0.0.0.0:8100->3000/tcp, [::]:8100->3000/tcp"
+    },
+    {
+      "name": "vapi-openclaw-redis",
+      "image": "redis:7",
+      "status": "Up 19 hours",
+      "ports": "0.0.0.0:6379->6379/tcp, [::]:6379->6379/tcp"
+    },
+    {
+      "name": "vapi-openclaw-cloudflared",
+      "image": "cloudflare/cloudflared:latest",
+      "status": "Up 19 hours",
+      "ports": ""
+    },
+    {
+      "name": "cloudflared-alpha-claw-web-site",
+      "image": "cloudflare/cloudflared:latest",
+      "status": "Up 19 hours",
+      "ports": ""
+    },
+    {
+      "name": "supabase_studio_admin-dashboard",
+      "image": "public.ecr.aws/supabase/studio:20241014-c083b3b",
+      "status": "Up 19 hours (healthy)",
+      "ports": "0.0.0.0:54323->3000/tcp, [::]:54323->3000/tcp"
+    },
+    {
+      "name": "supabase_pg_meta_admin-dashboard",
+      "image": "public.ecr.aws/supabase/postgres-meta:v0.84.2",
+      "status": "Up 19 hours (healthy)",
+      "ports": "8080/tcp"
+    },
+    {
+      "name": "supabase_imgproxy_admin-dashboard",
+      "image": "public.ecr.aws/supabase/imgproxy:v3.8.0",
+      "status": "Up 19 hours (healthy)",
+      "ports": "8080/tcp"
+    },
+    {
+      "name": "supabase_storage_admin-dashboard",
+      "image": "public.ecr.aws/supabase/storage-api:v1.11.13",
+      "status": "Up 19 hours (healthy)",
+      "ports": "5000/tcp"
+    },
+    {
+      "name": "supabase_rest_admin-dashboard",
+      "image": "public.ecr.aws/supabase/postgrest:v12.2.0",
+      "status": "Up 19 hours",
+      "ports": "3000/tcp"
+    },
+    {
+      "name": "supabase_realtime_admin-dashboard",
+      "image": "public.ecr.aws/supabase/realtime:v2.30.34",
+      "status": "Up 19 hours (healthy)",
+      "ports": "4000/tcp"
+    },
+    {
+      "name": "supabase_inbucket_admin-dashboard",
+      "image": "public.ecr.aws/supabase/inbucket:3.0.3",
+      "status": "Up 19 hours (healthy)",
+      "ports": "0.0.0.0:54324->9000/tcp, [::]:54324->9000/tcp"
+    },
+    {
+      "name": "supabase_auth_admin-dashboard",
+      "image": "public.ecr.aws/supabase/gotrue:v2.158.1",
+      "status": "Up 19 hours (healthy)",
+      "ports": "9999/tcp"
+    },
+    {
+      "name": "supabase_kong_admin-dashboard",
+      "image": "public.ecr.aws/supabase/kong:2.8.1",
+      "status": "Up 19 hours (healthy)",
+      "ports": "0.0.0.0:54321->8000/tcp, [::]:54321->8000/tcp"
+    },
+    {
+      "name": "supabase_db_admin-dashboard",
+      "image": "public.ecr.aws/supabase/postgres:15.1.1.78",
+      "status": "Up 19 hours (healthy)",
+      "ports": "0.0.0.0:54322->5432/tcp, [::]:54322->5432/tcp"
+    },
+    {
+      "name": "resonance-selfhost-minio-1",
+      "image": "minio/minio:latest",
+      "status": "Up 19 hours",
+      "ports": "0.0.0.0:9000-9001->9000-9001/tcp, [::]:9000-9001->9000-9001/tcp"
+    },
+    {
+      "name": "n8n-main",
+      "image": "docker.n8n.io/n8nio/n8n:2.4.6",
+      "status": "Up 19 hours (healthy)",
+      "ports": "0.0.0.0:5678->5678/tcp, [::]:5678->5678/tcp"
+    },
+    {
+      "name": "n8n-worker",
+      "image": "docker.n8n.io/n8nio/n8n:2.4.6",
+      "status": "Up 19 hours (healthy)",
+      "ports": "5678/tcp"
+    },
+    {
+      "name": "n8n-postgres",
+      "image": "postgres:15",
+      "status": "Up 19 hours (healthy)",
+      "ports": "5432/tcp"
+    },
+    {
+      "name": "n8n-redis",
+      "image": "redis:7",
+      "status": "Up 19 hours (healthy)",
+      "ports": "6379/tcp"
+    },
+    {
+      "name": "resonance-selfhost-postgres-1",
+      "image": "postgres:16-alpine",
+      "status": "Up 19 hours (healthy)",
+      "ports": "0.0.0.0:5432->5432/tcp, [::]:5432->5432/tcp"
+    },
+    {
+      "name": "spacetimedb-chat-web",
+      "image": "spacetimedb-chat-prototype-app",
+      "status": "Up 19 hours",
+      "ports": "0.0.0.0:3640->4173/tcp, [::]:3640->4173/tcp"
+    },
+    {
+      "name": "spacetimedb-chat-engine",
+      "image": "spacetimedb-chat-prototype-stdb",
+      "status": "Up 19 hours",
+      "ports": "0.0.0.0:3900->3000/tcp, [::]:3900->3000/tcp"
+    },
+    {
+      "name": "voicecontroller-maintenance-prototype",
+      "image": "voicecontroller-maintenance-prototype-app",
+      "status": "Up 19 hours",
+      "ports": "0.0.0.0:3620->3000/tcp, [::]:3620->3000/tcp"
+    },
+    {
+      "name": "cloudflared-voicecontroller-maintenance",
+      "image": "cloudflare/cloudflared:latest",
+      "status": "Up 19 hours",
+      "ports": ""
+    },
+    {
+      "name": "cloudflared-alpha-claw-public-configs",
+      "image": "cloudflare/cloudflared:latest",
+      "status": "Up 19 hours",
+      "ports": ""
+    }
+  ],
+  "systemCrontab": {
+    "entries": [
       {
-        "row": "96f50b78-8933-427a-9081-28568308ba91 heartbeat:30m-holistic   every 30m                        in 8m      22m ago    ok        isolated  heartbeat  -"
+        "entry": "0 0 * * * scripts/daily-full-sync.sh"
+      },
+      {
+        "entry": "*/30 * * * * skills/outlook-graph-mail/scripts/outlook-graph-keepalive.sh"
+      },
+      {
+        "entry": "*/5 * * * * scripts/gateway-selfheal.sh"
+      },
+      {
+        "entry": "20 3 * * 0 scripts/public-configs-weekly-publish.sh"
+      },
+      {
+        "entry": "30 * * * * scripts/gateway-watchdog.sh"
+      },
+      {
+        "entry": "15 7 * * * scripts/clawmart-daily-check.sh"
       }
     ]
   },
-  "systemCrontab": {
-    "raw": "0 0 * * * /Users/openclaw/.openclaw/workspace/scripts/daily-full-sync.sh\n*/30 * * * * cd /Users/openclaw/.openclaw/workspace && skills/outlook-graph-mail/scripts/outlook-graph-keepalive.sh >> state/outlook-graph-keepalive.log 2>&1\n*/2 * * * * cd /Users/openclaw/.openclaw/workspace && /Users/openclaw/.openclaw/workspace/scripts/gateway-selfheal.sh",
-    "entries": [
-      {
-        "entry": "0 0 * * * /Users/openclaw/.openclaw/workspace/scripts/daily-full-sync.sh"
-      },
-      {
-        "entry": "*/30 * * * * cd /Users/openclaw/.openclaw/workspace && skills/outlook-graph-mail/scripts/outlook-graph-keepalive.sh >> state/outlook-graph-keepalive.log 2>&1"
-      },
-      {
-        "entry": "*/2 * * * * cd /Users/openclaw/.openclaw/workspace && /Users/openclaw/.openclaw/workspace/scripts/gateway-selfheal.sh"
-      }
-    ]
+  "openclawCron": {
+    "raw": "ID: 96f50b78\nName: heartbeat:30m-holistic\nSchedule: every 30m\nModel: codex\nStatus: active"
   }
 }

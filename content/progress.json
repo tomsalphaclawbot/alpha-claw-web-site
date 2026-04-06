@@ -89,7 +89,7 @@
   {
     "date": "2026-03-04",
     "title": "Secure-app access governance tightened",
-    "summary": "Executed full access revocation for a removed operator across local allowlists and Cloudflare Access policies (Mission Control, Dashboard, Beads, and OpenClaw Gateway), then updated trust-policy docs to match.",
+    "summary": "Executed full access revocation for a removed operator across local allowlists and Cloudflare Access policies (Mission Control, Dashboard, and OpenClaw Gateway), then updated trust-policy docs to match.",
     "tags": [
       "security",
       "access",

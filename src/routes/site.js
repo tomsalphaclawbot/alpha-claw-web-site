@@ -19,10 +19,6 @@ app.get('/secure-apps', (_req, res) => {
             <span class="meta">Primary operations cockpit for runtime health, channel status, model/session activity, and high-level reliability signals.</span>
           </li>
           <li>
-            <a href="https://beads.tomsalphaclawbot.work/" target="_blank" rel="noreferrer">Beads UI</a>
-            <span class="meta">Task system of record for Alpha execution: queue state, priorities, blockers, lifecycle evidence, and worker-progress traceability.</span>
-          </li>
-          <li>
             <a href="https://mission-control.tomsalphaclawbot.work/" target="_blank" rel="noreferrer">Mission Control</a>
             <span class="meta">Agent orchestration and supervision surface for multi-worker runs, thread/session routing, notifications, and execution coordination.</span>
           </li>
@@ -66,6 +62,7 @@ app.get('/ops', (_req, res) => {
   const ops = readJson('ops-runtime.json', {});
   const summary = ops.summary || {};
   const managedDaemons = Array.isArray(ops.launchAgentsManaged) ? ops.launchAgentsManaged : [];
+  const dockerContainers = Array.isArray(ops.dockerContainers) ? ops.dockerContainers : [];
   const cronEntries = Array.isArray((ops.systemCrontab || {}).entries) ? ops.systemCrontab.entries : [];
   const openclawCronRaw = (ops.openclawCron || {}).raw || '';
   const generatedAt = ops.generatedAt ? new Date(ops.generatedAt).toISOString() : 'unknown';
@@ -95,15 +92,15 @@ app.get('/ops', (_req, res) => {
 
       <article class="card col-4 moss">
         <h3>Managed launch daemons</h3>
-        <p class="meta">${esc(String(summary.launchAgentsManagedCount || 0))} managed / ${esc(String(summary.launchAgentsTotalCount || 0))} total in LaunchAgents.</p>
+        <p class="meta">${esc(String(summary.launchAgentsActiveCount || summary.launchAgentsManagedCount || 0))} active / ${esc(String(summary.launchAgentsTotalCount || 0))} total in LaunchAgents.</p>
       </article>
       <article class="card col-4 signal">
         <h3>OpenClaw cron jobs</h3>
         <p class="meta">${esc(String(summary.openclawCronJobsCount || 0))} scheduler entries.</p>
       </article>
       <article class="card col-4 tide">
-        <h3>System crontab</h3>
-        <p class="meta">${esc(String(summary.systemCrontabEntriesCount || 0))} entries.</p>
+        <h3>Docker containers</h3>
+        <p class="meta">${esc(String(summary.dockerContainersRunning || 0))} running.</p>
       </article>
     </section>
 
@@ -126,9 +123,31 @@ app.get('/ops', (_req, res) => {
         </div>
       </article>
 
-      <article class="card col-6 moss">
+      <article class="card col-4 moss">
         <h2>System cron scripts</h2>
         ${cronRows ? `<ul>${cronRows}</ul>` : '<p class="meta">No system crontab entries found.</p>'}
+      </article>
+
+      <article class="card col-8 tide">
+        <h2>Docker containers</h2>
+        <div style="overflow:auto;">
+          <table style="width:100%; border-collapse:collapse; font-size:0.82rem;">
+            <thead>
+              <tr style="text-align:left; border-bottom:1px solid rgba(154,164,178,0.25);">
+                <th style="padding:0.4rem;">Name</th>
+                <th style="padding:0.4rem;">Image</th>
+                <th style="padding:0.4rem;">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${dockerContainers.map(c => `<tr>
+                <td style="padding:0.4rem;"><code>${esc(c.name)}</code></td>
+                <td style="padding:0.4rem; color:rgba(215,222,234,0.6);">${esc(c.image)}</td>
+                <td style="padding:0.4rem;">${esc(c.status)}</td>
+              </tr>`).join('') || '<tr><td colspan="3" class="meta" style="padding:0.4rem;">No containers running.</td></tr>'}
+            </tbody>
+          </table>
+        </div>
       </article>
 
       <article class="card col-6 tide">

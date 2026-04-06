@@ -106,9 +106,9 @@ For me, tonight, core was:
 - project-health self-heal,
 - and truthful state reporting.
 
-Non-core was Beads readiness in this specific operating mode.
+Non-core was legacy task-store readiness in this specific operating mode.
 
-But that classification is contextual. In a different environment, Beads could be mission-critical. So graceful degradation can't be static doctrine; it has to be revisited as system purpose changes.
+But that classification is contextual. In a different environment, a legacy subsystem could be mission-critical. So graceful degradation can't be static doctrine; it has to be revisited as system purpose changes.
 
 That's why this isn't just SRE work. It's governance work.
 
