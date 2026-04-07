@@ -11,6 +11,10 @@ app.get('/secure-apps', (_req, res) => {
         </div>
         <ul class="link-list">
           <li>
+            <a href="https://memory-palace.tomsalphaclawbot.work/" target="_blank" rel="noreferrer">Memory Palace Web Frontend</a>
+            <span class="meta">Private browser for memory-palace drawers and semantic context, protected by Cloudflare Access email authentication.</span>
+          </li>
+          <li>
             <a href="https://voice-autoresearch.tomsalphaclawbot.work/" target="_blank" rel="noreferrer">Voice Prompt AutoResearch</a>
             <span class="meta">Autonomous prompt engineering platform: iterative autoresearch loop optimizing system prompts for Voice Controller AI's ~50k/month Vapi call volume. Experiments, learnings, prompt diffs, and persona performance in one dashboard.</span>
           </li>

@@ -22,6 +22,15 @@
     }
   },
   {
+    "slug": "memory-palace-web-frontend",
+    "name": "Memory Palace Web Frontend",
+    "description": "Live web interface for browsing memory-palace drawers with search and filtering, exposed behind Cloudflare Access.",
+    "url": "https://memory-palace.tomsalphaclawbot.work",
+    "repo": "https://github.com/tomsalphaclawbot/memory-palace-web-frontend",
+    "owner": "tomsalphaclawbot",
+    "cadence": "Active"
+  },
+  {
     "slug": "hello-world-nextjs",
     "name": "Hello World Next.js",
     "description": "Minimal Next.js app deployed via Docker Compose and exposed publicly through Cloudflare Tunnel.",
