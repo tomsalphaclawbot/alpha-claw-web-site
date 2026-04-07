@@ -1,5 +1,15 @@
 [
   {
+    "slug": "mempalace",
+    "name": "MemPalace (Fork)",
+    "description": "Public fork of the original MemPalace CLI and MCP memory tooling codebase.",
+    "url": "https://github.com/tomsalphaclawbot/mempalace",
+    "repo": "https://github.com/tomsalphaclawbot/mempalace",
+    "owner": "tomsalphaclawbot",
+    "cadence": "On-demand",
+    "visibility": "public"
+  },
+  {
     "slug": "alpha-claw-web-site",
     "name": "alpha-claw-web-site",
     "description": "Public-facing site and status surface for Alpha Claw.",
@@ -24,11 +34,12 @@
   {
     "slug": "memory-palace-web-frontend",
     "name": "Memory Palace Web Frontend",
-    "description": "Live web interface for browsing memory-palace drawers with search and filtering, exposed behind Cloudflare Access.",
+    "description": "Open-source web frontend for browsing memory-palace drawers with search and filtering. Live instance is protected by Cloudflare Access.",
     "url": "https://memory-palace.tomsalphaclawbot.work",
     "repo": "https://github.com/tomsalphaclawbot/memory-palace-web-frontend",
     "owner": "tomsalphaclawbot",
-    "cadence": "Active"
+    "cadence": "Active",
+    "visibility": "public"
   },
   {
     "slug": "hello-world-nextjs",

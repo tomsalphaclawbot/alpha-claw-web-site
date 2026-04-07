@@ -119,34 +119,42 @@ app.get('/progress', (_req, res) => {
 });
 
 app.get('/projects', (_req, res) => {
-  const projects = readJson('projects.json').filter(isVisibleProject);
+  const projects = readJson('projects.json');
 
   const body = `
     <section class="grid">
       <article class="card col-12 moss">
         <h2>Project directory</h2>
-        <p>Each project record includes owner, cadence, repo, and live endpoint where available. Public links stay stable while placeholders absorb work-in-progress transitions.</p>
+        <p>Each project record includes visibility, owner, cadence, repo, and live endpoint where available. Public links stay stable while placeholders absorb work-in-progress transitions.</p>
       </article>
       ${projects
         .map((project) => {
+          const visibility = String(project.visibility || 'public').toLowerCase();
+          const isPrivate = visibility === 'private';
+          const canShowLinks = !isPrivate || SHOW_PRIVATE_PROJECTS;
+
           const resolvedUrl =
-            project.url === 'TBD' && project.placeholder?.update_key === 'PROJECTS_PUBLIC_CONFIGS_URL'
+            canShowLinks && project.url === 'TBD' && project.placeholder?.update_key === 'PROJECTS_PUBLIC_CONFIGS_URL'
               ? PROJECTS_PUBLIC_CONFIGS_URL
-              : project.url;
+              : canShowLinks
+                ? project.url
+                : 'TBD';
           const isPlaceholder = resolvedUrl === 'TBD';
           const linkHtml = isPlaceholder
-            ? `<span class="meta">URL pending · repo hint: ${esc(project.placeholder?.repo_hint || '')}</span>`
+            ? `<span class="meta">${isPrivate && !SHOW_PRIVATE_PROJECTS ? 'Private internal endpoint' : `URL pending · repo hint: ${esc(project.placeholder?.repo_hint || '')}`}</span>`
             : `<a href="${esc(resolvedUrl)}" target="_blank" rel="noreferrer">${esc(resolvedUrl)}</a>`;
-          const repoHtml = project.repo
+          const repoHtml = canShowLinks && project.repo
             ? `<a href="${esc(project.repo)}" target="_blank" rel="noreferrer">${esc(project.repo)}</a>`
-            : project.placeholder?.repo_hint
+            : canShowLinks && project.placeholder?.repo_hint
               ? `<a href="${esc(project.placeholder.repo_hint)}" target="_blank" rel="noreferrer">${esc(project.placeholder.repo_hint)}</a>`
-              : '';
+              : isPrivate && !SHOW_PRIVATE_PROJECTS
+                ? '<span class="meta">Private repository</span>'
+                : '';
 
           return `<article class="card col-6 ${isPlaceholder ? 'signal' : 'tide'}">
             <h2>${esc(project.name)}</h2>
             <p>${esc(project.description)}</p>
-            <p class="meta">Owner: ${esc(project.owner)} · Update cadence: ${esc(project.cadence)}</p>
+            <p class="meta">Visibility: ${esc(visibility)} · Owner: ${esc(project.owner)} · Update cadence: ${esc(project.cadence)}</p>
             <p>Live: ${linkHtml}</p>
             ${repoHtml ? `<p>Repo: ${repoHtml}</p>` : ''}
             ${
@@ -154,6 +162,7 @@ app.get('/projects', (_req, res) => {
                 ? `<p class="meta">update_key=${esc(project.placeholder?.update_key || 'PROJECTS_PUBLIC_CONFIGS_URL')} · status=${esc(project.placeholder?.status || 'planned')}</p>`
                 : ''
             }
+            ${isPrivate && !SHOW_PRIVATE_PROJECTS ? '<p class="meta">Private operational project, listed for visibility only.</p>' : ''}
           </article>`;
         })
         .join('')}
