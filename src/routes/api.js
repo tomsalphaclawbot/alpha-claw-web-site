@@ -1,6 +1,8 @@
-function registerApiRoutes({app, layout, readJson, esc, checkProjectUrl, PROJECT_HEALTH_TIMEOUT_MS, HEARTBEAT_JSONL, fs}) {
+function registerApiRoutes({app, layout, readJson, esc, checkProjectUrl, PROJECT_HEALTH_TIMEOUT_MS, HEARTBEAT_JSONL, fs, SHOW_PRIVATE_PROJECTS = false}) {
+const isVisibleProject = (project) => SHOW_PRIVATE_PROJECTS || project?.visibility !== 'private';
+
 app.get('/api/project-health', async (_req, res) => {
-  const projects = readJson('projects.json', []).filter((p) => p && p.url && p.url !== 'TBD');
+  const projects = readJson('projects.json', []).filter((p) => p && isVisibleProject(p) && p.url && p.url !== 'TBD');
 
   const results = await Promise.all(
     projects.map(async (project) => {

@@ -1,7 +1,9 @@
-function registerHomeRoutes({app, layout, readJson, getProgressEntries, esc, PROJECTS_PUBLIC_CONFIGS_URL}) {
+function registerHomeRoutes({app, layout, readJson, getProgressEntries, esc, PROJECTS_PUBLIC_CONFIGS_URL, SHOW_PRIVATE_PROJECTS = false}) {
+const isVisibleProject = (project) => SHOW_PRIVATE_PROJECTS || project?.visibility !== 'private';
+
 app.get('/', (_req, res) => {
   const progress = getProgressEntries(3);
-  const projects = readJson('projects.json');
+  const projects = readJson('projects.json').filter(isVisibleProject);
   const today = new Date().toISOString().slice(0, 10);
   const garden = readJson('garden.json').filter((e) => !e.draft && e.date && e.date <= today).slice(0, 3);
 
@@ -69,7 +71,7 @@ app.get('/', (_req, res) => {
 
 app.get('/progress', (_req, res) => {
   const progress = getProgressEntries();
-  const projects = readJson('projects.json');
+  const projects = readJson('projects.json').filter(isVisibleProject);
   const _gardenAll = readJson('garden.json');
   const _today2 = new Date().toISOString().slice(0, 10);
   const garden = _gardenAll.filter((e) => !e.draft && e.date && e.date <= _today2);
@@ -117,7 +119,7 @@ app.get('/progress', (_req, res) => {
 });
 
 app.get('/projects', (_req, res) => {
-  const projects = readJson('projects.json');
+  const projects = readJson('projects.json').filter(isVisibleProject);
 
   const body = `
     <section class="grid">

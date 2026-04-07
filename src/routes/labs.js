@@ -1,6 +1,8 @@
-function registerLabsRoutes({app, layout, readJson, esc}) {
+function registerLabsRoutes({app, layout, readJson, esc, SHOW_PRIVATE_PROJECTS = false}) {
+const isVisibleProject = (project) => SHOW_PRIVATE_PROJECTS || project?.visibility !== 'private';
+
 app.get('/labs', (_req, res) => {
-  const projects = readJson('projects.json');
+  const projects = readJson('projects.json').filter(isVisibleProject);
   const liveProjects = projects.filter((p) => p.url && p.url !== 'TBD');
 
   const body = `

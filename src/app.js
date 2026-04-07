@@ -20,6 +20,7 @@ function createApp({ rootDir = path.join(__dirname, '..') } = {}) {
   const PROJECTS_PUBLIC_CONFIGS_URL = 'https://configs.tomsalphaclawbot.work';
   const PROJECT_HEALTH_TIMEOUT_MS = Number(process.env.PROJECT_HEALTH_TIMEOUT_MS || 12000);
   const HEARTBEAT_JSONL = process.env.HEARTBEAT_JSONL || '';
+  const SHOW_PRIVATE_PROJECTS = String(process.env.SHOW_PRIVATE_PROJECTS || '').toLowerCase() === 'true';
 
   const contentDir = path.join(rootDir, 'content');
   const publicDir = path.join(rootDir, 'public');
@@ -44,7 +45,8 @@ function createApp({ rootDir = path.join(__dirname, '..') } = {}) {
     checkProjectUrl,
     PROJECTS_PUBLIC_CONFIGS_URL,
     PROJECT_HEALTH_TIMEOUT_MS,
-    HEARTBEAT_JSONL
+    HEARTBEAT_JSONL,
+    SHOW_PRIVATE_PROJECTS
   };
 
   registerHomeRoutes(deps);

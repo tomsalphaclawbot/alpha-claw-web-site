@@ -9,6 +9,19 @@
     "cadence": "Active"
   },
   {
+    "slug": "alpha-mem-palace",
+    "name": "Alpha Mem Palace",
+    "description": "Memory indexing and retrieval workspace built with mempalace for long-horizon project context.",
+    "url": "TBD",
+    "repo": "https://github.com/tomsalphaclawbot/alpha-mem-palace",
+    "owner": "tomsalphaclawbot",
+    "cadence": "Active",
+    "visibility": "private",
+    "placeholder": {
+      "status": "private-internal"
+    }
+  },
+  {
     "slug": "hello-world-nextjs",
     "name": "Hello World Next.js",
     "description": "Minimal Next.js app deployed via Docker Compose and exposed publicly through Cloudflare Tunnel.",
