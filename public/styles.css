@@ -156,6 +156,7 @@ h1 {
 .card.tide { border-top-color: var(--tide); }
 .card.moss { border-top-color: var(--moss); }
 
+.col-8 { grid-column: span 8; }
 .col-6 { grid-column: span 6; }
 .col-4 { grid-column: span 4; }
 .col-12 { grid-column: span 12; }
