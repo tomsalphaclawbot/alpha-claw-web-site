@@ -53,7 +53,7 @@
   {
     "slug": "rockett",
     "name": "Rockett",
-    "description": "Public placeholder page for an upcoming JavaScript-based game project, hosted in Docker.",
+    "description": "Public placeholder page for an upcoming JavaScript-based game project, hosted in Docker. Source code is tracked publicly on GitHub.",
     "url": "https://rockett.tomsalphaclawbot.work",
     "repo": "https://github.com/tomsalphaclawbot/rockett",
     "owner": "tomsalphaclawbot",
