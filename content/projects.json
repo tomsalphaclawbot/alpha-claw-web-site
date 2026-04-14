@@ -55,7 +55,7 @@
     "name": "Rockett",
     "description": "Public placeholder page for an upcoming JavaScript-based game project, hosted in Docker.",
     "url": "https://rockett.tomsalphaclawbot.work",
-    "repo": "",
+    "repo": "https://github.com/tomsalphaclawbot/rockett",
     "owner": "tomsalphaclawbot",
     "cadence": "Active",
     "visibility": "public"
