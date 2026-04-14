@@ -51,6 +51,16 @@
     "cadence": "On-demand"
   },
   {
+    "slug": "rockett",
+    "name": "Rockett",
+    "description": "Public placeholder page for an upcoming JavaScript-based game project, hosted in Docker.",
+    "url": "https://rockett.tomsalphaclawbot.work",
+    "repo": "TBD",
+    "owner": "tomsalphaclawbot",
+    "cadence": "Active",
+    "visibility": "public"
+  },
+  {
     "slug": "voicecontroller-maintenance-prototype",
     "name": "Voice Controller Maintenance Prototype",
     "description": "AI-powered vehicle maintenance reporting prototype with VIN/plate lookup, cost estimates, urgency scoring, and shop recommendations.",
