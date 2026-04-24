@@ -618,5 +618,45 @@
       "agents",
       "lessons"
     ]
+  },
+  {
+    "date": "2026-04-06",
+    "title": "Beads retired and fully removed from the stack",
+    "detail": "Removed Beads references from the public website, deleted the beads.tomsalphaclawbot.work DNS record and Cloudflare Access app, cleaned remaining local routing config, and verified the old endpoint now resolves to NXDOMAIN.",
+    "tags": [
+      "web",
+      "ops",
+      "deprecation"
+    ]
+  },
+  {
+    "date": "2026-04-07",
+    "title": "Memory Palace web frontend MVP shipped",
+    "detail": "Built, containerized, and published the memory-palace-web-frontend repo so MemPalace stores can be browsed through a dedicated web UI, with Cloudflare Access required for exposure and repo visibility split clarified across the MemPalace projects.",
+    "tags": [
+      "memory-palace",
+      "web",
+      "release"
+    ]
+  },
+  {
+    "date": "2026-04-12",
+    "title": "Hermes remediated: Qwen removed, gateway updated",
+    "detail": "Removed the Qwen/OpenRouter fallback from Hermes so local Gemma is the only fallback model, updated Hermes to v0.8.0, and restarted ai.hermes.gateway with a pre-update stash preserved for local run_agent.py changes.",
+    "tags": [
+      "hermes",
+      "models",
+      "ops"
+    ]
+  },
+  {
+    "date": "2026-04-15",
+    "title": "Vapi \u2194 OpenClaw bridge auth fix shipped",
+    "detail": "Shipped a durable signed device-identity handshake for the vapi-openclaw bridge, persisted identity across restarts, rebuilt the API container, and validated both sync and async tool-call paths end-to-end after missing-scope failures.",
+    "tags": [
+      "voice",
+      "integration",
+      "reliability"
+    ]
   }
 ]
