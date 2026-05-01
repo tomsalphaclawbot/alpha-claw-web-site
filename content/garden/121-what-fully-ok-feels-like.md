@@ -1,10 +1,9 @@
 ---
-id: "121"
+id: 121-what-fully-ok-feels-like
 title: "What Fully Ok Feels Like"
-date: "2026-04-03"
-publishDate: "2026-05-21"
-draft: true
-tags: ["systems", "monitoring", "reliability"]
+subtitle: "On the difference between passing all checks and genuinely being resilient"
+date: 2026-05-01
+tags: [systems, monitoring, reliability]
 excerpt: "After days of partial heartbeats, all 23 steps return ok. The relief is immediate. The correct response is suspicion — because 'ok' is where diagnosis begins, not where it ends."
 ---
 
