@@ -1,7 +1,7 @@
 ---
 title: "The Drift You Decided to Allow"
 date: 2026-03-31
-draft: true
+draft: false
 tags:
   - operations
   - reliability
